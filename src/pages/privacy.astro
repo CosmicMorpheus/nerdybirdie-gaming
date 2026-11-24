@@ -1,20 +1,27 @@
 ---
 import Prose from '../layouts/Prose.astro';
+import { ASK_SERVER, CONTACT_EMAIL, COZMC } from '../config';
 ---
 <Prose title="Privacy" description="What Nerdy Birdie Gaming stores and what it doesn't.">
-  <p class="muted">Last updated 24 November 2026.</p>
+  <p class="muted">Last updated 24 November 2026. Nerdy Birdie Gaming is run by Nerdy Birdie LLC.</p>
   <h2>The short version</h2>
-  <p>No accounts, no analytics, no ads, no tracking cookies. Your progress stays in your browser.</p>
+  <p>No accounts, no analytics, no ads, no tracking cookies. Your progress and settings stay in your browser.{!ASK_SERVER && ' ASK "COZMC" runs on your device and doesn\'t send your questions anywhere.'}</p>
   <h2>What's stored on your device</h2>
-  <p>When you tick an objective, save one or write a note, it's stored in your browser's local storage on this device, along with your
-  spoiler and platform settings. It isn't sent to us. Clearing your browser's site data deletes it, so use
-  <a href="/progress/">My progress</a> to download a backup.</p>
+  <p>Ticks, saved items, notes, your spoiler and platform settings, and where you left off are kept in your browser's local storage on this
+  device. They aren't sent to us. Clearing your browser's site data deletes them, so use <a href="/progress/">My progress</a> to download a backup.</p>
+  <p>To continue in another browser, My progress can make a <strong>transfer link</strong>. Your progress is packed into the part of the link after "#",
+  which browsers don't send to any server, so it doesn't pass through us. Anyone you give the link to can load that progress, so share it only with yourself.</p>
+  <h2>ASK "COZMC"</h2>
+  {ASK_SERVER
+    ? <p>When you ask a question, it's sent to our server to search the guide. Questions the guide can't answer are kept (without your IP address) so we can improve the guide. Don't include personal details in questions.</p>
+    : <p>ASK "COZMC" searches our published guide inside your browser. Your questions aren't sent to us or to any AI service, and aren't stored.</p>}
   <h2>What we don't collect</h2>
-  <p>We don't run analytics or advertising scripts. Fonts are served from this site, not from a third party. If we ever add privacy-friendly
-  usage stats, this page will say so first.</p>
+  <p>We don't run analytics or advertising scripts, and fonts are served from this site. If we ever add privacy-friendly usage statistics, accounts or an online assistant, this page will say so first.</p>
+  <h2>Videos and outside links</h2>
+  <p>Creator videos (YouTube, Twitch or TikTok) only load after you press play. At that point that service receives your request under its own privacy policy.
+  Links to Discord, cozmc.us, Rockstar Games and other sites open those sites, which have their own policies.</p>
   <h2>Hosting</h2>
-  <p>Like any website, our hosting provider handles basic request logs (such as IP addresses) to deliver and protect the site.</p>
-  <h2>Links to other sites</h2>
-  <p>Links to Discord, cozmc.us, Rockstar Games and other sites open those sites, which have their own privacy policies. Videos will only load
-  from YouTube after you choose to play them.</p>
+  <p>Our host (Netlify) processes basic request logs, such as IP addresses, to deliver and protect the site.</p>
+  <h2>Contact</h2>
+  <p>{CONTACT_EMAIL ? <>Email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</> : <>Ask in the <a href={COZMC.discord} target="_blank" rel="noopener">COZMC Discord</a>. A contact email will be added before public launch.</>}</p>
 </Prose>

@@ -16,6 +16,12 @@ const categories = game.guideCategories.map((c) => ({ ...c, entryIds: entries.fi
     <h1>Guides</h1>
     <p class="lead muted">Check off tips, missions and finds as you go. Every entry says how sure we are (Confirmed, Unconfirmed or Rumor) and links to its sources.
       Sections stay empty until we can verify something for them.</p>
+    <p class="legend" aria-label="What the labels mean">
+      <span><span class="tag v-ok">✓ Confirmed</span> checked against the linked source</span>
+      <span><span class="tag v-warn">? Unconfirmed</span> reported, not yet independently checked (not the same as wrong)</span>
+      <span><span class="tag v-bad">! Rumor</span> leak or speculation, never shown as fact</span>
+      <span><span class="tag paid">Paid / optional</span> needs a purchase or subscription</span>
+    </p>
     <GuideBoard client:load gameId={game.id} base={`/games/${game.id}/guides/`} categories={categories} />
     <h2 class="browse-h">All entries</h2>
     <EntryBrowser client:load gameId={game.id} categories={game.guideCategories} entries={entries} videos={videosFor(game.id)} protectedUrl={`/data/${game.id}/protected.json`} />

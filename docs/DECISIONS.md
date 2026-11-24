@@ -4,6 +4,10 @@ Newest first. "Proposed" means waiting for the founder; only "Approved" decision
 
 | Date | Decision | Status | Notes |
 |---|---|---|---|
+| 2026-11-24 | ASK "COZMC" = option A: browser-only guide search, no AI cost to players; AI research done at editing time; server features off behind ASK_SERVER / ASK_SERVER_ENABLED | Approved (founder) | Chief-of-staff review cycle 02 |
+| 2026-11-24 | Community arrows keep flashing (COS suggested static) | Approved (founder) | Static with reduced motion |
+| 2026-11-24 | Cross-browser progress via transfer link/code (no account) | Done (founder request) | Code lives in the URL fragment, never sent to a server |
+| 2026-11-24 | Achievements hidden from the menu while no list is verified; checklist progress never claims game 100% | Done | COS review |
 | 2026-11-24 | ASK "COZMC": guide-first answers, Claude + web search only for missing details, private Guide Updates queue with approve/undo, daily source checks; nothing auto-publishes | Built, needs keys | docs/ASK_COZMC.md. Model claude-opus-5-5 (changeable via ASK_COZMC_MODEL) |
 | 2026-11-24 | Review fixes from independent code and security reviews | Done | See commit 174b4ba |
 | 2026-11-24 | Map data: Open GTA 6 Map @ d8609016 (CC BY 4.0), location records + traced geometry only; our own drawing; no tiles, pins, screenshots or game art | Done | License read at that revision; credit shown on the map |

@@ -9,9 +9,12 @@ interface Props { gameId: string; base: string; categories: { id: string; label:
 export default function GuideBoard({ gameId, base, categories }: Props) {
   const { progress, ready } = useProgress();
   const done = progress.contexts[contextKey(gameId, GUIDES_CONTEXT)]?.completed ?? {};
+  const filled = categories.filter((c) => c.entryIds.length);
+  const empty = categories.filter((c) => !c.entryIds.length);
   return (
+    <>
     <ul class="board">
-      {categories.map((c) => {
+      {filled.map((c) => {
         const t = tally(c.entryIds, done);
         return (
           <li key={c.id} class={`quest${c.entryIds.length ? '' : ' locked'}`}>
@@ -29,5 +32,9 @@ export default function GuideBoard({ gameId, base, categories }: Props) {
         );
       })}
     </ul>
+    {empty.length > 0 && (
+      <p class="small muted soon-line">Coming as we verify them: {empty.map((c, i) => <>{i ? ', ' : ''}<a href={`${base}${c.id}/`}>{c.label}</a></>)}.</p>
+    )}
+    </>
   );
 }

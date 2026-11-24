@@ -20,6 +20,12 @@ const entries = publicEntries(game.id).filter((e) => e.category === section.id);
     <p class="eyebrow">{game.shortTitle} guide</p>
     <h1>{section.label}</h1>
     <p class="lead muted">{section.blurb}</p>
+    <p class="legend" aria-label="What the labels mean">
+      <span><span class="tag v-ok">✓ Confirmed</span> checked against the linked source</span>
+      <span><span class="tag v-warn">? Unconfirmed</span> reported, not yet independently checked (not the same as wrong)</span>
+      <span><span class="tag v-bad">! Rumor</span> leak or speculation, never shown as fact</span>
+      <span><span class="tag paid">Paid / optional</span> needs a purchase or subscription</span>
+    </p>
     {section.id === 'collectibles' && mapData(game.id) && (
       <MapChecklist client:visible gameId={game.id} dataUrl={`/data/${game.id}/map-checklist.json`} mapHref={`/games/${game.id}/map/`} />
     )}

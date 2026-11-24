@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'preact/hooks';
 import { answerFromGuide, type AskAction, type AskDoc } from '../lib/ask/retrieve';
 import type { AskResult } from '../lib/ask/engine';
 import { modeAllows } from '../lib/spoilers';
+import { ASK_SERVER } from '../config';
 import { useProgress } from './useProgress';
 import './ask.css';
 
@@ -34,14 +35,18 @@ export default function AskCozmc({ gameId, greeting, discord }: Props) {
     return () => removeEventListener('keydown', onKey);
   }, [open]);
 
-  async function localAnswer(question: string): Promise<AskResult> {
-    const idx = (await fetch(`/data/${gameId}/ask-index.json`).then((r) => r.json())) as { docs: AskDoc[] };
+  const index = useRef<Promise<{ docs: AskDoc[] }> | null>(null);
+  /** Browser-only answer from the published guide. Nothing is sent anywhere. */
+  async function localAnswer(question: string, serverDown = false): Promise<AskResult> {
+    index.current ??= fetch(`/data/${gameId}/ask-index.json`).then((r) => r.json());
+    const idx = await index.current;
     const g = answerFromGuide(question, idx.docs, mode);
     return {
       status: g.coverage === 'answered' ? 'guide' : 'unanswered',
       guide: { coverage: g.coverage, text: g.text, actions: g.actions, spoilerGate: g.spoilerGate, confirms: g.confirms, title: g.top?.doc.title ?? null, sources: g.top?.doc.sources ?? [] },
       outside: null, outsideSpoilerHidden: false, recorded: null,
-      notes: [`${NAME} couldn't reach its server, so this answer only uses our guide, and your question wasn't saved for the guide team.`],
+      notes: serverDown ? [`${NAME} couldn't reach its server, so this answer only uses our guide.`]
+        : g.coverage === 'answered' ? [] : ["We don't have a verified answer for that yet. Try different words, or browse the guide and map."],
       community: g.coverage === 'answered' ? null : { label: 'Ask in the COZMC Discord', href: discord },
     };
   }
@@ -55,26 +60,34 @@ export default function AskCozmc({ gameId, greeting, discord }: Props) {
     setBusy(true);
     let result: AskResult;
     let offline = false;
+    if (!ASK_SERVER) {
+      result = await localAnswer(question).catch(() => offlineResult());
+      setMsgs((m) => [...m, { role: 'ask', result }]);
+      setBusy(false);
+      return;
+    }
     try {
       const r = await fetch('/api/ask', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ question, spoilerMode: mode }), signal: AbortSignal.timeout(45000) });
       if (!r.ok || !r.headers.get('content-type')?.includes('json')) throw new Error(String(r.status));
       result = await r.json();
     } catch {
       offline = true;
-      result = await localAnswer(question).catch(() => ({
-        status: 'unanswered', guide: { coverage: 'none', text: '', actions: [], spoilerGate: null, confirms: [], title: null, sources: [] },
-        outside: null, outsideSpoilerHidden: false, recorded: null, notes: [`${NAME} is offline right now. Try the guide search or the map.`], community: { label: 'Ask in the COZMC Discord', href: discord },
-      } as AskResult));
+      result = await localAnswer(question, true).catch(() => offlineResult());
     }
     setMsgs((m) => [...m, { role: 'ask', result, offline }]);
     setBusy(false);
+  }
+
+  function offlineResult(): AskResult {
+    return { status: 'unanswered', guide: { coverage: 'none', text: '', actions: [], spoilerGate: null, confirms: [], title: null, sources: [] },
+      outside: null, outsideSpoilerHidden: false, recorded: null, notes: [`${NAME} couldn't load the guide. Check your connection and try again.`], community: { label: 'Ask in the COZMC Discord', href: discord } };
   }
 
   async function reveal(id: string) {
     if (!secrets[id]) {
       const [base, extra] = await Promise.all([
         fetch(`/data/${gameId}/protected.json`).then((r) => (r.ok ? r.json() : {})).catch(() => ({})),
-        fetch('/api/guide-overrides?protected=1').then((r) => (r.ok && r.headers.get('content-type')?.includes('json') ? r.json() : {})).catch(() => ({})),
+        ASK_SERVER ? fetch('/api/guide-overrides?protected=1').then((r) => (r.ok && r.headers.get('content-type')?.includes('json') ? r.json() : {})).catch(() => ({})) : Promise.resolve({}),
       ]);
       setSecrets((s) => ({ ...s, ...base, ...extra }));
     }
@@ -93,7 +106,7 @@ export default function AskCozmc({ gameId, greeting, discord }: Props) {
       {open && (
         <section id="ask-panel" class="ask-panel" role="dialog" aria-label={NAME}>
           <header class="ask-head">
-            <h2>{NAME}</h2>
+            <h2>{NAME}<small>GTA VI guide helper</small></h2>
             <span class="ask-mode">Spoilers: {mode === 'safe' ? 'off' : mode === 'minor' ? 'minor' : 'all'}</span>
             <button type="button" class="ask-close" aria-label={`Close ${NAME}`} onClick={() => { setOpen(false); fab.current?.focus(); }}>✕</button>
           </header>
@@ -110,7 +123,8 @@ export default function AskCozmc({ gameId, greeting, discord }: Props) {
                       : <button type="button" class="ask-reveal" onClick={() => void reveal(m.result.guide.spoilerGate!.id)}>
                           This has a {m.result.guide.spoilerGate.level === 'major' ? 'major' : 'mild'} story detail. Reveal it?
                         </button>)}
-                    {m.result.guide.actions.length > 0 && <p class="ask-acts">{m.result.guide.actions.map((a) => <Action a={a} />)}</p>}
+                    {m.result.guide.actions.length > 0 && (!m.result.guide.spoilerGate || revealed.has(m.result.guide.spoilerGate.id)) &&
+                      <p class="ask-acts">{m.result.guide.actions.map((a) => <Action a={a} />)}</p>}
                   </div>
                 )}
                 {m.result.outside && (
@@ -133,14 +147,16 @@ export default function AskCozmc({ gameId, greeting, discord }: Props) {
                 {m.result.community && <p class="ask-acts"><a class="ask-act ask-discord" href={m.result.community.href} target="_blank" rel="noopener">{m.result.community.label} →</a></p>}
               </div>
             ))}
-            {busy && <p class="ask-bubble ask-from ask-busy">Checking our guide…</p>}
+            {busy && <p class="ask-bubble ask-from ask-busy">Searching our guide…</p>}
           </div>
           <form class="ask-form" onSubmit={send}>
             <label class="sr-only" for="ask-q">Your question</label>
             <input id="ask-q" ref={input} type="text" maxLength={300} autoComplete="off" placeholder="e.g. Where is the Pricilla Pace card?" value={q} onInput={(e) => setQ((e.target as HTMLInputElement).value)} />
             <button type="submit" class="btn btn-primary" disabled={busy || q.trim().length < 3}>Ask</button>
           </form>
-          <p class="ask-foot">Free, no sign-up. Answers use our guide first; outside sources are labelled. Questions help us improve the guide.</p>
+          <p class="ask-foot">{ASK_SERVER
+            ? 'Free, no sign-up. Answers use our guide first; outside sources are labelled. Questions help us improve the guide.'
+            : 'Free, no sign-up. Searches our published guide on your device; your questions aren’t sent anywhere. Unofficial fan guide.'}</p>
         </section>
       )}
     </>

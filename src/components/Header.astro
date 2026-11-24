@@ -1,12 +1,14 @@
 ---
 import { BRAND, COZMC, SITE_NAME } from '../config';
+import { publicObjectives } from '../lib/content/load';
 interface Props { current?: string }
 const { current } = Astro.props;
 const nav = [
   { href: '/games/', label: 'Games', key: 'games' },
   { href: '/games/gta-vi/guides/', label: 'Guides', key: 'guides' },
   { href: '/games/gta-vi/map/', label: 'Map', key: 'map' },
-  { href: '/games/gta-vi/achievements/', label: 'Achievements', key: 'achievements' },
+  // Shown once a verified achievement list exists (the page itself stays reachable from the game page).
+  ...(publicObjectives('gta-vi').length ? [{ href: '/games/gta-vi/achievements/', label: 'Achievements', key: 'achievements' }] : []),
   { href: '/progress/', label: 'My Progress', key: 'progress' },
   { href: '/updates/', label: 'Updates', key: 'updates' },
 ];

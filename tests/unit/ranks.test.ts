@@ -8,7 +8,7 @@ describe('ranks', () => {
     expect(rankFor(24)!.title).toBe('Local');
     expect(rankFor(25)!.title).toBe('Hustler');
     expect(rankFor(99)!.title).toBe('Legend');
-    expect(rankFor(100)!.title).toBe('100% Club');
+    expect(rankFor(100)!.title).toBe('List Cleared');
     expect(nextRank(60)!.title).toBe('Legend');
     expect(nextRank(100)).toBeNull();
   });

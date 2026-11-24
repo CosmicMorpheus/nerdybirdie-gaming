@@ -148,6 +148,8 @@ export const Entry = z.strictObject({
   objectiveIds: z.array(z.string()),
   /** draft = hidden from the public site. */
   status: z.enum(['draft', 'published']),
+  /** Needs a purchase or subscription (e.g. GTA+, a special edition). Shown as "Paid / optional". */
+  paid: z.boolean().optional(),
 });
 export type Entry = z.infer<typeof Entry>;
 

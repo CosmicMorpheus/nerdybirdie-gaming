@@ -10,6 +10,7 @@ import { SaveStatus } from './SaveStatus';
 import { StorageNotice } from './StorageNotice';
 import { useProgress } from './useProgress';
 import VideoEmbed from './VideoEmbed';
+import { ASK_SERVER } from '../config';
 import './tracker.css';
 
 interface Props {
@@ -53,6 +54,7 @@ export default function EntryBrowser({ gameId, categories, entries: builtEntries
   // Changes approved in the Guide Updates queue show up here right away, before the next site build.
   const [approved, setApproved] = useState<PublicEntry[]>([]);
   useEffect(() => {
+    if (!ASK_SERVER) return;
     fetch('/api/guide-overrides').then((r) => (r.ok && r.headers.get('content-type')?.includes('json') ? r.json() : [])).then((list: PublicEntry[]) => {
       if (Array.isArray(list)) setApproved(list.filter((e) => !fixedCategory || e.category === fixedCategory));
     }).catch(() => {});
@@ -181,6 +183,7 @@ export default function EntryBrowser({ gameId, categories, entries: builtEntries
                       <div class="tags">
                         <span class={`tag ${v.cls}`} title={v.hint}>{v.label}</span>
                         {e.spoilerLevel !== 'none' && <span class="tag miss">{SPOILER_LABEL[e.spoilerLevel]}</span>}
+                        {e.paid && <span class="tag paid" title="Needs a purchase or subscription. Nothing in the game requires it.">Paid / optional</span>}
                         {category === 'all' && !fixedCategory && <span class="tag">{catLabel(e.category)}</span>}
                         {e.chapter && <span class="tag">Chapter {e.chapter}</span>}
                         {e.mode === 'online' && <span class="tag">Online</span>}

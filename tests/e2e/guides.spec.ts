@@ -117,7 +117,8 @@ test('home HUD counts achievements and guide entries', async ({ page }) => {
   const hud = page.locator('.hud');
   await expect(hud.locator('.hud-meter', { hasText: 'Achievements' })).toContainText('1/7');
   await expect(hud.locator('.hud-meter', { hasText: 'Guide entries' })).toContainText('1/7'); // 7 entries in the test build
-  await expect(hud).toContainText('14% complete'); // 2 of 14
+  await expect(hud).toContainText('2 of 14 checked off');
+  await expect(hud).toContainText("not the game's own 100%");
 });
 
 test('spoiler videos hide their title until shown; Twitch embeds list this host as parent', async ({ page }) => {

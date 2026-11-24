@@ -158,7 +158,8 @@
     "gameVersion": null,
     "mapPinIds": [],
     "objectiveIds": [],
-    "status": "published"
+    "status": "published",
+    "paid": true
   },
   {
     "id": "gta-vi:entry:gta-plus-perks",
@@ -205,7 +206,8 @@
     "gameVersion": null,
     "mapPinIds": [],
     "objectiveIds": [],
-    "status": "published"
+    "status": "published",
+    "paid": true
   },
   {
     "id": "gta-vi:entry:gta-plus-elegy",
@@ -255,6 +257,7 @@
     "gameVersion": null,
     "mapPinIds": [],
     "objectiveIds": [],
-    "status": "published"
+    "status": "published",
+    "paid": true
   }
 ]

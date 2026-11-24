@@ -49,3 +49,10 @@ export const SHOW_UNREVIEWED_MEDIA = !INDEXABLE;
 
 /** Hosts allowed to embed Twitch players (Twitch requires every host to be listed). Add the production domain at launch. */
 export const TWITCH_PARENTS = ['localhost', 'nerdybirdie-gaming-preview.netlify.app'] as const;
+
+/**
+ * ASK "COZMC" server features (question queue, live AI research, approved overrides). OFF by default: ASK then runs
+ * entirely in the player's browser, searches the published guide, and sends nothing anywhere (founder decision, option A).
+ * Turning it on also needs ASK_SERVER_ENABLED=on in Netlify, a privacy page update and founder approval.
+ */
+export const ASK_SERVER = import.meta.env.PUBLIC_ASK_SERVER === 'true';

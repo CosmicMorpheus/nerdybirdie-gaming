@@ -14,7 +14,7 @@ import './tracker.css';
 import './map.css';
 
 interface Category { id: string; label: string; colour: string; group: string; trackable: boolean }
-interface MapJson { provenance: { source: string; repo: string; revision: string; license: string; licenseUrl: string; credit: string; checkedAt: string }; categories: Category[]; pins: MapPin[] }
+interface MapJson { withheld?: number; provenance: { source: string; repo: string; revision: string; license: string; licenseUrl: string; credit: string; checkedAt: string }; categories: Category[]; pins: MapPin[] }
 interface Geometry { land: [number, number][][][]; roads: { k: 'h' | 'm'; c: [number, number][] }[]; labels: { name: string; x: number; y: number }[] }
 type Moment = { target: string; start: number | null; label: string };
 interface Props { gameId: string; dataUrl: string; geometryUrl: string; protectedUrl: string; videos: (VideoLike & { spoilerLevel: 'none' | 'minor' | 'major'; moments: Moment[] })[]; base: string }
@@ -230,6 +230,13 @@ export default function MapView({ gameId, dataUrl, geometryUrl, protectedUrl, vi
             <p class="big pixel">{ready ? `${overall.done}/${overall.total}` : '…'}</p>
             <div class="bar" role="progressbar" aria-label="Map collectibles found" aria-valuemin={0} aria-valuemax={overall.total} aria-valuenow={overall.done}><i style={{ width: `${overall.percent ?? 0}%` }} /></div>
             <p class="small muted">Found, out of every checklist pin we publish. Filters never change this count. It isn't the game's own 100%, which hasn't been verified.</p>
+            {data && (
+              <details class="small muted counts">
+                <summary>Why do the numbers differ?</summary>
+                <p>{data.pins.length.toLocaleString()} pins are drawn on the map. {overall.total.toLocaleString()} of them count toward the checklist; shops and places are for reference only.
+                  {data.withheld ? ` ${data.withheld.toLocaleString()} chance spawns (vehicles, weapons, events) are held back until confirmed.` : ''} All pins are community-reported and Unconfirmed until checked; that doesn't mean they're wrong.</p>
+              </details>
+            )}
             <SaveStatus state={state} />
           </div>
           <StorageNotice state={state} />

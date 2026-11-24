@@ -38,3 +38,7 @@
 }
 /* On the map page the phone bottom sheet owns the bottom edge: sit above it. */
 @media (max-width: 860px) { body:has(.map-panel) .ask-fab { bottom: 64px; } }
+
+.ask-head h2 small { display: block; font: 500 11px var(--body); color: var(--cz-soft); margin-top: 2px; }
+/* Phones: the selected-pin card and the open map sheet own the bottom of the screen, so the ASK button steps aside. */
+@media (max-width: 860px) { body:has(.pin-detail) .ask-fab, body:has(.map-panel.open) .ask-fab { display: none; } }

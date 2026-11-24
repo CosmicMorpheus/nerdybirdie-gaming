@@ -56,3 +56,5 @@
   .pin-detail { left: 8px; right: 8px; top: auto; bottom: 60px; width: auto; max-height: 60%; }
   .map-credit { order: 3; padding-bottom: 64px; }
 }
+.counts summary { cursor: pointer; min-height: 32px; display: flex; align-items: center; }
+.counts p { margin: 6px 0 0 !important; }

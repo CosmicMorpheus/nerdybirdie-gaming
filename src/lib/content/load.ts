@@ -122,7 +122,8 @@ export function mapData(gameId: string) {
   const m = bundles.find((x) => x.game.id === gameId)?.map;
   if (!m) return null;
   // Spoiler notes are stripped here and served only from protected.json, after a deliberate reveal.
-  return { provenance: m.provenance, categories: m.categories, pins: m.pins.filter((p) => p.exact).map((p) => (p.spoiler === 'none' ? p : { ...p, note: '' })) };
+  return { provenance: m.provenance, categories: m.categories, withheld: m.pins.filter((p) => !p.exact).length,
+    pins: m.pins.filter((p) => p.exact).map((p) => (p.spoiler === 'none' ? p : { ...p, note: '' })) };
 }
 
 export function sourcesFor(game: Game, ids: string[]) {

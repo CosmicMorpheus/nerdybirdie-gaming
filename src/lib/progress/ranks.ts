@@ -7,7 +7,8 @@ export const RANKS: Rank[] = [
   { min: 25, title: 'Hustler', level: 3 },
   { min: 50, title: 'Big Shot', level: 4 },
   { min: 75, title: 'Legend', level: 5 },
-  { min: 100, title: '100% Club', level: 6 },
+  // Top rank means "our published list is cleared", never "the game is 100% complete".
+  { min: 100, title: 'List Cleared', level: 6 },
 ];
 
 export const CHECKPOINTS = [25, 50, 75, 100] as const;

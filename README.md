@@ -15,7 +15,7 @@ Separate from the cozmc.us site and repo.
 | `/games/gta-vi/guides/` | Quest board (progress per section) plus every entry, searchable and filterable by section, spoiler level and verification |
 | `/games/gta-vi/guides/<section>/` | One section: check entries off, "More details", spoiler reveals, sources and last-checked dates |
 | `/games/gta-vi/map/` | Leonida map: search, filters, mark found, shareable pin links, creator videos at the right moment |
-| `/progress/` | Your progress by section, backup download and restore |
+| `/progress/` | Your progress by section; continue in another browser (transfer link); backup file download and restore |
 | `/account/` | Optional sign-in to sync progress (switched off until set up; see docs/ACCOUNTS.md) |
 | `/review/` | Editor review queue (preview builds only) |
 | `/admin/guide-updates/` | Private Guide Updates queue for ASK "COZMC" (editor token) |
@@ -77,7 +77,7 @@ See **`docs/CONTENT_GUIDE.md`** for the rules, a copy-paste template and example
 
 ## Saved progress
 
-Guests: saved in the browser. Account sync is built but switched off until a Supabase project is set up. See `docs/ACCOUNTS.md`.
+Saved in the browser; move it to another browser with a transfer link or a backup file (no account). ASK "COZMC" runs browser-only by default (`ASK_SERVER` in `src/config.ts`). Account sync is built but switched off; see `docs/ACCOUNTS.md`.
 
 ## Links and settings
 

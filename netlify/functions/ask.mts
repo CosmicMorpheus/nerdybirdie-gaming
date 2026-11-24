@@ -5,7 +5,11 @@ import { isSpoilerMode } from '../../src/lib/spoilers.ts';
 import { askConfig, guideIndex, json, researcher, store } from '../lib/shared.mts';
 
 /** POST /api/ask {question, spoilerMode} → answer. Free; no account needed. */
+/** Off unless the founder turns ASK server features on (ASK_SERVER_ENABLED=on); otherwise nothing is stored or served. */
+const enabled = () => process.env.ASK_SERVER_ENABLED === 'on';
+
 export default async (req: Request, context: Context) => {
+  if (!enabled()) return json({ error: 'ASK server features are switched off' }, 404);
   if (req.method !== 'POST') return json({ error: 'POST only' }, 405);
   const body = (await req.json().catch(() => null)) as { question?: unknown; spoilerMode?: unknown } | null;
   const question = typeof body?.question === 'string' ? body.question.trim() : '';

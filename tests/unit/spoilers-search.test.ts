@@ -39,3 +39,16 @@ describe('search', () => {
     expect(search(docs, '   ')).toEqual([]);
   });
 });
+
+import { answerFromGuide, type AskDoc } from '../../src/lib/ask/retrieve';
+describe('ASK guide search abstains instead of guessing', () => {
+  const docs: AskDoc[] = [{ id: 'gta-vi:entry:x', kind: 'entry', title: 'GTA+ perks', text: 'Sell vehicles for 10% more.', category: 'Money', spoilerLevel: 'none',
+    hasSpoilerDetails: false, verification: 'confirmed', answers: ['info', 'money'], sources: [], actions: [] }];
+  it('unrelated question: no answer', () => {
+    expect(answerFromGuide('Where is the best fishing spot?', docs, 'safe').coverage).toBe('none');
+    expect(answerFromGuide('???', docs, 'safe').coverage).toBe('none');
+  });
+  it('related subject but different question: partial, not answered', () => {
+    expect(answerFromGuide('Where do I find GTA+ perks?', docs, 'safe').coverage).toBe('partial');
+  });
+});

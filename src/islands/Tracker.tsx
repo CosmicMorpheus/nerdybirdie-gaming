@@ -60,7 +60,7 @@ export default function Tracker({ gameId, gameShortTitle, platforms, categories,
     if (!ready || prev === undefined) return;
     const hit = crossedCheckpoint(prev, pct);
     if (hit) {
-      const msg = hit === 100 ? `100%! ${platform.shortLabel} ${platform.objectiveNoun.toLowerCase()} cleared!` : `Checkpoint! ${hit}% reached · Rank: ${rankFor(pct)!.title}`;
+      const msg = hit === 100 ? `${platform.shortLabel} ${platform.objectiveNoun.toLowerCase()} list cleared!` : `Checkpoint! ${hit}% reached · Rank: ${rankFor(pct)!.title}`;
       setToast(msg);
       setAnnounce(msg);
       const t = setTimeout(() => setToast(null), 3500);
@@ -266,7 +266,7 @@ export default function Tracker({ gameId, gameShortTitle, platforms, categories,
 
       <div class="local">
         <p class="muted small">
-          Progress saves automatically and isn't synced with your console. <a href="/progress/">Back up or restore</a>.
+          Progress saves automatically and isn't synced with your console. <a href="/progress/#move">Continue in another browser</a> or back up.
         </p>
         {Object.keys(ctx.completed).length > 0 && (confirmReset ? (
           <div class="confirm" role="group" aria-label="Confirm reset">

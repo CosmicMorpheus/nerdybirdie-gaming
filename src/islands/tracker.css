@@ -200,3 +200,17 @@
 .mc-list i { width: 12px; height: 12px; border-radius: 50%; border: 1px solid #000; }
 .mc-list small { display: block; color: var(--vc-muted); font-size: 12px; }
 .mc-list b { font-size: 14px; }
+
+.hud-scope { margin: 0 0 6px; }
+.tag.paid { background: #2b2350; color: #d7ccff; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 0 0 22px; padding: 12px 14px; border: 1px dashed var(--vc-line); border-radius: 8px; font-size: 14px; color: var(--vc-muted); }
+.legend b { color: var(--vc-pearl); }
+.backup summary { cursor: pointer; list-style: none; }
+.backup summary::-webkit-details-marker { display: none; }
+.backup summary h2 { display: inline; }
+.backup summary::after { content: ' ▾'; color: var(--vc-muted); }
+.backup[open] summary::after { content: ' ▴'; }
+.soon-line { margin-top: 14px; }
+.soon-line a { color: var(--vc-sunset); }
+.move { border-color: #3a5a8a; }
+.code { width: 100%; font: 12px/1.4 ui-monospace, monospace; background: #0e1322; color: var(--vc-pearl); border: 1px solid var(--vc-line); border-radius: 8px; padding: 8px; word-break: break-all; }
