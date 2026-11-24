@@ -18,6 +18,8 @@ Separate from the cozmc.us site and repo.
 | `/progress/` | Your progress by section, backup download and restore |
 | `/account/` | Optional sign-in to sync progress (switched off until set up; see docs/ACCOUNTS.md) |
 | `/review/` | Editor review queue (preview builds only) |
+| `/admin/guide-updates/` | Private Guide Updates queue for ASK "COZMC" (editor token) |
+| ASK "COZMC" | Guide assistant on every page; see docs/ASK_COZMC.md |
 | `/search/` | Spoiler-safe site search |
 | `/about/`, `/privacy/`, `/corrections/`, `/updates/` | Required pages, including the unofficial disclaimer |
 

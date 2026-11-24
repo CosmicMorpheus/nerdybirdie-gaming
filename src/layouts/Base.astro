@@ -4,6 +4,9 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { INDEXABLE, SITE_NAME } from '../config';
 import { USING_FIXTURES } from '../lib/content/load';
+import AskCozmc from '../islands/AskCozmc';
+import askConfig from '../../content/ask/config.json';
+import { COZMC } from '../config';
 
 interface Props {
   /** Spoiler-safe. Used for <title> and social previews. */
@@ -43,5 +46,6 @@ const robots = !INDEXABLE || noindex || USING_FIXTURES ? 'noindex, nofollow' : '
     <Header current={current} />
     <main id="main" tabindex="-1"><slot /></main>
     <Footer />
+    <AskCozmc client:idle gameId="gta-vi" greeting={askConfig.greeting} discord={COZMC.gtaHelpChannel || COZMC.discord} />
   </body>
 </html>

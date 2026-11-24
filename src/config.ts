@@ -13,6 +13,8 @@ export const COZMC = {
   discord: 'https://discord.gg/VBeBE7MSSq',
   /** Approved in docs/02_PRODUCT_SPEC.md. */
   site: 'https://cozmc.us/',
+  /** The GTA help channel invite, once it exists. Empty = ASK "COZMC" offers the main server invite instead. */
+  gtaHelpChannel: '',
 } as const;
 
 /** The future central Nerdy Birdie site. Hidden everywhere until the founder supplies it. */

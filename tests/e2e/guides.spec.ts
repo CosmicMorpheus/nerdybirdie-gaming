@@ -158,3 +158,10 @@ test('revealing a video does not reveal the written spoiler details (and vice ve
   await w2.getByRole('button', { name: /More details/ }).click();
   await expect(w2).not.toContainText('FIXTURE-SECRET');
 });
+
+test('every guide checkbox is labelled by its entry title (no duplicate ids)', async ({ page }) => {
+  await page.goto(G);
+  const dupes = await page.evaluate(() => { const ids = [...document.querySelectorAll('[id]')].map((e) => e.id); return ids.filter((id, i) => ids.indexOf(id) !== i); });
+  expect(dupes).toEqual([]);
+  for (const c of await page.locator('li.entry input[type=checkbox]').all()) await expect(c).toHaveAccessibleName(/Fixture entry/);
+});

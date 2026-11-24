@@ -12,6 +12,6 @@ export default defineConfig({
   site,
   outDir: fixtures ? './dist-test' : './dist',
   trailingSlash: 'always',
-  integrations: [preact(), ...(site ? [sitemap({ filter: (p) => !/\/(data|search|review|account|404)\b/.test(p) })] : [])],
+  integrations: [preact(), ...(site ? [sitemap({ filter: (p) => !/\/(data|search|review|account|admin|404)\b/.test(p) })] : [])],
   vite: { define: { __NBG_FIXTURES__: JSON.stringify(fixtures) } },
 });

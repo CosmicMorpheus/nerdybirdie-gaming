@@ -4,6 +4,8 @@ Newest first. "Proposed" means waiting for the founder; only "Approved" decision
 
 | Date | Decision | Status | Notes |
 |---|---|---|---|
+| 2026-11-24 | ASK "COZMC": guide-first answers, Claude + web search only for missing details, private Guide Updates queue with approve/undo, daily source checks; nothing auto-publishes | Built, needs keys | docs/ASK_COZMC.md. Model claude-opus-5-5 (changeable via ASK_COZMC_MODEL) |
+| 2026-11-24 | Review fixes from independent code and security reviews | Done | See commit 174b4ba |
 | 2026-11-24 | Map data: Open GTA 6 Map @ d8609016 (CC BY 4.0), location records + traced geometry only; our own drawing; no tiles, pins, screenshots or game art | Done | License read at that revision; credit shown on the map |
 | 2026-11-24 | All imported pins labelled "Unconfirmed · community map data" (single source). Chance spawns/pickups (vehicle, weapon, random event) kept in the review queue, not pinned or counted | Done | Founder's evidence rule: exact spawns need gameplay evidence or independent corroboration |
 | 2026-11-24 | Supplied videos (GTA Series Videos, Jay Dunna, DarkViperAU, @nahvwz) held in review; shown labelled on the preview only | Done | YouTube/Twitch/TikTok blocked in the build environment, so none could be watched |

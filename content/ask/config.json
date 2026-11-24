@@ -1,0 +1,17 @@
+{
+  "name": "ASK \"COZMC\"",
+  "greeting": "What are you trying to find in GTA?",
+  "model": "claude-opus-5-5",
+  "limits": {
+    "questionsPerVisitorPerDay": 40,
+    "webSearchesPerDay": 300,
+    "maxWebSearchesPerQuestion": 3,
+    "answerCacheHours": 72
+  },
+  "trustedSearchDomains": ["rockstargames.com", "support.rockstargames.com", "ign.com", "gamespot.com", "powerpyx.com", "gtabase.com", "youtube.com", "polygon.com", "gamesradar.com", "pcgamer.com"],
+  "sourceChecks": [
+    { "id": "rockstar-newswire", "name": "Rockstar Newswire", "url": "https://www.rockstargames.com/newswire", "kind": "official", "looksFor": "GTA VI patch notes, title updates, official changes" },
+    { "id": "rockstar-support-launch-updates", "name": "Rockstar Support: GTA VI launch updates", "url": "https://support.rockstargames.com/articles/sN5pEdFYZdlvijKXd6xpJ/grand-theft-auto-vi-launch-updates-ps5-xbox-series-x-or-s", "kind": "official", "looksFor": "Patch notes and fixes" },
+    { "id": "open-gta6-map", "name": "Open GTA 6 Map (data)", "url": "https://raw.githubusercontent.com/fbritoferreira/gta6/main/public/data/locations.json", "kind": "community", "looksFor": "New or corrected collectible locations" }
+  ]
+}

@@ -1,0 +1,19 @@
+---
+import Base from '../../layouts/Base.astro';
+import AdminQueue from '../../islands/AdminQueue';
+---
+<Base title="Guide Updates" description="Private review queue." noindex>
+  <div class="wrap">
+    <h1>Guide Updates</h1>
+    <p class="muted">Questions ASK "COZMC" couldn't fully answer, and changes found by the scheduled source checks. Nothing is published until you approve it.</p>
+    <AdminQueue client:load gameId="gta-vi" />
+  </div>
+</Base>
+<style>
+  h1 { padding-top: 28px; }
+  :global(.admin-cols) { display: grid; grid-template-columns: 360px minmax(0, 1fr); gap: 18px; margin-bottom: 18px; }
+  :global(.admin-detail h3) { font-size: 16px; margin: 16px 0 4px; }
+  :global(.admin-compare) { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  :global(.admin-compare pre), :global(.admin-compare textarea) { width: 100%; max-height: 420px; overflow: auto; font: 12px/1.5 ui-monospace, monospace; background: #0e1322; color: var(--vc-pearl); border: 1px solid var(--vc-line); border-radius: 8px; padding: 10px; white-space: pre-wrap; }
+  @media (max-width: 960px) { :global(.admin-cols), :global(.admin-compare) { grid-template-columns: 1fr; } }
+</style>

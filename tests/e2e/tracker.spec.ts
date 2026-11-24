@@ -13,6 +13,7 @@ const checkbox = (page: Page, title: string) => page.getByRole('checkbox', { nam
 async function open(page: Page) {
   await page.goto(T);
   await expect(page.locator('.tracker .summary')).toContainText('of'); // hydrated, list loaded
+  await expect(page.locator('li.row input[type=checkbox]').first()).toBeEnabled(); // saved progress loaded
 }
 
 test('spoiler text is not in the page, its metadata, or the search index', async ({ page, request }) => {
@@ -119,6 +120,7 @@ test('reset asks first, and cancel keeps everything', async ({ page }) => {
 
 test('keyboard only: tick an objective', async ({ page }) => {
   await open(page);
+  await expect(checkbox(page, 'Fixture objective 01')).toBeEnabled(); // saved progress loaded
   await checkbox(page, 'Fixture objective 01').focus();
   await page.keyboard.press('Space');
   await expect(checkbox(page, 'Fixture objective 01')).toBeChecked();

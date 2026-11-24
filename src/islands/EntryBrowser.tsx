@@ -32,7 +32,7 @@ const VERIFY: Record<PublicEntry['verification'], { label: string; cls: string; 
 };
 
 /** Searchable, filterable guide entries with checkboxes, "More details" and spoiler reveals. */
-export default function EntryBrowser({ gameId, categories, entries, videos, protectedUrl, fixedCategory }: Props) {
+export default function EntryBrowser({ gameId, categories, entries: builtEntries, videos, protectedUrl, fixedCategory }: Props) {
   const state = useProgress();
   const { progress, update, remember, ready } = state;
   const key = contextKey(gameId, GUIDES_CONTEXT);
@@ -50,6 +50,16 @@ export default function EntryBrowser({ gameId, categories, entries, videos, prot
   const [detailsError, setDetailsError] = useState(false);
   const loading = useRef<Promise<Details | null> | null>(null);
   const catLabel = (id: string) => categories.find((c) => c.id === id)?.label ?? id;
+  // Changes approved in the Guide Updates queue show up here right away, before the next site build.
+  const [approved, setApproved] = useState<PublicEntry[]>([]);
+  useEffect(() => {
+    fetch('/api/guide-overrides').then((r) => (r.ok && r.headers.get('content-type')?.includes('json') ? r.json() : [])).then((list: PublicEntry[]) => {
+      if (Array.isArray(list)) setApproved(list.filter((e) => !fixedCategory || e.category === fixedCategory));
+    }).catch(() => {});
+  }, []);
+  const entries = useMemo(() => approved.length
+    ? builtEntries.filter((e) => !approved.some((a) => a.id === e.id)).concat(approved)
+    : builtEntries, [builtEntries, approved]);
   // Remember this section for "Continue where you left off".
   useEffect(() => {
     if (ready) remember((s) => setResume(s, { href: location.pathname, label: fixedCategory ? `Guide: ${catLabel(fixedCategory)}` : 'Guide: all entries', at: new Date().toISOString() }));
@@ -57,7 +67,10 @@ export default function EntryBrowser({ gameId, categories, entries, videos, prot
 
   function loadDetails() {
     if (details) return Promise.resolve(details);
-    loading.current ??= fetch(protectedUrl).then((r) => (r.ok ? r.json() : Promise.reject()))
+    loading.current ??= Promise.all([
+      fetch(protectedUrl).then((r) => (r.ok ? r.json() : Promise.reject())),
+      approved.length ? fetch('/api/guide-overrides?protected=1').then((r) => (r.ok ? r.json() : {})).catch(() => ({})) : Promise.resolve({}),
+    ]).then(([base, extra]: [Details, Details]) => ({ ...base, ...extra }))
       .then((d: Details) => { setDetails(d); setDetailsError(false); return d; })
       .catch(() => { loading.current = null; setDetailsError(true); return null; });
     return loading.current;
@@ -159,7 +172,7 @@ export default function EntryBrowser({ gameId, categories, entries, videos, prot
               const v = VERIFY[e.verification];
               const vids = videos.flatMap((x) => x.moments.filter((m) => m.target === e.id).map((m) => ({ x, m })));
               return (
-                <li key={e.id} class={`entry${done ? ' done' : ''}`}>
+                <li key={e.id} id={`entry-${e.slug}`} class={`entry${done ? ' done' : ''}`}>
                   <div class="entry-head">
                     <input id={inputId} class="check" type="checkbox" checked={done} disabled={!ready}
                       onChange={(ev) => update((p) => setCompleted(p, key, e.id, (ev.target as HTMLInputElement).checked))} />
