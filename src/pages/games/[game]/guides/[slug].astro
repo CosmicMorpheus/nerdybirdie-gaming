@@ -1,0 +1,65 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import CozmcInline from '../../../../components/CozmcInline.astro';
+import GuideChecklist from '../../../../islands/GuideChecklist';
+import { games, getPlatform, publicGuides, sourcesFor, videosFor } from '../../../../lib/content/load';
+
+export function getStaticPaths() {
+  return games.flatMap((game) => {
+    const all = publicGuides(game.id);
+    return all.map((guide, i) => ({ params: { game: game.id, slug: guide.slug }, props: { game, guide, next: all[i + 1] ?? null } }));
+  });
+}
+const { game, guide, next } = Astro.props;
+const cat = game.guideCategories.find((c) => c.id === guide.category)!;
+const allSourceIds = [...new Set([...guide.sourceIds, ...guide.steps.flatMap((s) => s.sourceIds)])];
+const sources = sourcesFor(game, allSourceIds);
+const videoIds = new Set(guide.steps.map((s) => s.videoId).filter(Boolean));
+const videos = videosFor(game.id).filter((v) => videoIds.has(v.id));
+const platforms = guide.platformIds.length ? guide.platformIds.map((p) => getPlatform(p).shortLabel).join(' · ') : game.platforms.map((p) => getPlatform(p.platformId).shortLabel).join(' · ');
+const verified = { official_confirmed: 'Official', independently_verified: 'Verified', community_reported: 'Community reported', unverified: 'Unverified', outdated_or_patched: 'Outdated' }[guide.verificationStatus];
+---
+<Base title={`${guide.safeTitle} · ${game.shortTitle}`} current="guides" description={guide.safeSummary}>
+  <div class="wrap guide">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/games/">Games</a> / <a href={`/games/${game.id}/`}>{game.shortTitle}</a> / <a href={`/games/${game.id}/guides/`}>Guides</a> / <span aria-current="page">{cat.label}</span></nav>
+    <p class="eyebrow">{cat.label}</p>
+    <h1>{guide.safeTitle}</h1>
+    {guide.draft && <p class="notice">Draft · not yet verified for publication.</p>}
+    <ul class="meta">
+      <li class="badge-px on">{verified}</li>
+      {guide.checkedAt && <li class="badge-px">Checked {guide.checkedAt}</li>}
+      {guide.founderVerifiedAt && <li class="badge-px">Tested by us {guide.founderVerifiedAt}</li>}
+      <li class="badge-px">{platforms}</li>
+      <li class="badge-px">{guide.mode === 'story' ? 'Story mode' : guide.mode === 'online' ? 'Online' : 'Any mode'}</li>
+      {guide.gameVersion && <li class="badge-px">v{guide.gameVersion}</li>}
+    </ul>
+    <div class="intro">{guide.intro.map((p) => <p>{p}</p>)}</div>
+
+    <GuideChecklist client:load gameId={game.id} steps={guide.steps} videos={videos} protectedUrl={`/data/${game.id}/protected.json`}
+      sources={sources.map((s) => ({ id: s.id, label: s.publisher, url: s.url }))} />
+
+    <section class="sources">
+      <h2>Sources</h2>
+      <p class="small muted">Written in our own words from these pages. Follow the links for the originals.</p>
+      <ol>
+        {sources.map((s) => <li><a href={s.url} target="_blank" rel="noopener">{s.publisher}: {s.title}</a> <span class="muted">· checked {s.checkedAt}</span></li>)}
+      </ol>
+    </section>
+
+    <nav class="after" aria-label="More guides">
+      <a class="btn btn-quiet" href={`/games/${game.id}/guides/`}>← All guides</a>
+      {next && <a class="btn btn-primary" href={`/games/${game.id}/guides/${next.slug}/`}>Next quest: {next.safeTitle} →</a>}
+    </nav>
+    <CozmcInline text="Got a better route? Share it in the community." />
+  </div>
+</Base>
+<style>
+  .guide { max-width: 900px; }
+  .crumbs { font-size: 14px; color: var(--vc-muted); padding-top: 22px; }
+  .meta { list-style: none; padding: 0; margin: 0 0 18px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .intro p { font-size: 18px; color: #e2e0e8; max-width: 66ch; }
+  .sources { margin: 36px 0 24px; }
+  .sources h2 { font-size: 22px; }
+  .sources ol { padding-left: 20px; font-size: 15px; }
+  .after { display: flex; gap: 12px; flex-wrap: wrap; justify-content: space-between; margin-bottom: 28px; }
+</style>

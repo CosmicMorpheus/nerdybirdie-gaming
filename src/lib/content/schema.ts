@@ -63,7 +63,10 @@ export const Game = z.strictObject({
       }),
     )
     .min(1),
+  /** Achievement/trophy categories. */
   categories: z.array(Category).min(1),
+  /** Guide sections, in display order (from the original brief's site structure). */
+  guideCategories: z.array(Category.extend({ blurb: z.string().min(1) })).min(1),
   sources: z.array(Source),
 });
 export type Game = z.infer<typeof Game>;
@@ -96,3 +99,62 @@ export type Objective = z.infer<typeof Objective>;
 
 /** What the browser gets: the protected text stripped out. */
 export type PublicObjective = Omit<Objective, 'protected'> & { hasProtected: boolean; draft: boolean };
+
+const protectedText = z.strictObject({ title: z.string().min(1), body: z.string() });
+
+/** One checkable step in a guide. Ids are permanent, like objective ids. */
+export const GuideStep = z.strictObject({
+  id: z.string().regex(/^[a-z0-9-]+:[a-z0-9:-]+$/),
+  title: z.string().min(1),
+  body: z.string(),
+  spoilerLevel: SpoilerLevel,
+  protected: protectedText.nullable(),
+  sourceIds: z.array(slug),
+  videoId: slug.nullable(),
+});
+export type GuideStep = z.infer<typeof GuideStep>;
+
+export const Guide = z.strictObject({
+  id: z.string().regex(/^[a-z0-9-]+:guide:[a-z0-9-]+$/),
+  gameId: slug,
+  slug,
+  category: slug,
+  safeTitle: z.string().min(1),
+  safeSummary: z.string().min(1),
+  spoilerLevel: SpoilerLevel,
+  /** Empty = applies to every platform the game supports. */
+  platformIds: z.array(slug),
+  mode: z.enum(['story', 'online', 'any']),
+  gameVersion: z.string().nullable(),
+  /** Short intro paragraphs (plain text, spoiler-safe). */
+  intro: z.array(z.string()),
+  steps: z.array(GuideStep),
+  /** Related tracker objectives. */
+  objectiveIds: z.array(z.string()),
+  sourceIds: z.array(slug).min(1),
+  verificationStatus: VerificationStatus,
+  publicationStatus: PublicationStatus,
+  checkedAt: isoDate.nullable(),
+  founderVerifiedAt: isoDate.nullable(),
+  revision: z.number().int().min(1),
+});
+export type Guide = z.infer<typeof Guide>;
+
+/** A YouTube video. Loaded only when the viewer presses play; always credited. */
+export const Video = z.strictObject({
+  id: slug,
+  provider: z.literal('youtube'),
+  youtubeId: z.string().regex(/^[A-Za-z0-9_-]{11}$/),
+  /** Spoiler-safe title we write; the creator's own title can be a spoiler. */
+  safeTitle: z.string().min(1),
+  creator: z.string().min(1),
+  channelUrl: httpsUrl,
+  startSeconds: z.number().int().nonnegative().nullable(),
+  spoilerLevel: SpoilerLevel,
+  embedAllowed: z.boolean(),
+  checkedAt: isoDate,
+});
+export type Video = z.infer<typeof Video>;
+
+/** What the browser gets for a step: spoiler text removed. */
+export type PublicStep = Omit<GuideStep, 'protected'> & { hasProtected: boolean };

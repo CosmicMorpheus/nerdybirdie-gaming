@@ -4,6 +4,9 @@
 @import '@fontsource/inter/700.css';
 @import '@fontsource/space-grotesk/600.css';
 @import '@fontsource/space-grotesk/700.css';
+@import '@fontsource/pixelify-sans/500.css';
+@import '@fontsource/pixelify-sans/700.css';
+@import '@fontsource/press-start-2p/400.css';
 
 /* ---- Tokens: three layers, kept apart (docs/03_DESIGN_SYSTEM.md) ---- */
 :root {
@@ -31,7 +34,11 @@
   --cz-soft: #cfcbe0;
   --cz-line: #3a2d5e;
 
-  --head: 'Space Grotesk', system-ui, sans-serif;
+  /* Retro arcade layer (founder direction 2026-11-24): pixel type for headings and HUD labels only. */
+  --head: 'Pixelify Sans', 'Space Grotesk', system-ui, sans-serif;
+  --pixel: 'Press Start 2P', ui-monospace, monospace;
+  --shadow-px: 4px 4px 0 #000;
+  --vc-cyan: #5ce1e6;
   --body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --radius: 12px;
   --gutter: 24px;
@@ -60,11 +67,14 @@ a { color: inherit; }
 .prose h2 { margin-top: 2em; }
 .prose p, .prose li { color: #e2e0e8; }
 
-h1, h2, h3 { font-family: var(--head); letter-spacing: -0.015em; line-height: 1.15; }
+h1, h2, h3 { font-family: var(--head); font-weight: 700; letter-spacing: 0; line-height: 1.1; font-variant-ligatures: none; font-feature-settings: 'liga' 0, 'calt' 0; }
+/* Pixel type only at large sizes; small headings use the clean face so letters like c/o stay distinct. */
+h3 { font-family: 'Space Grotesk', var(--body); font-size: 20px; }
 h1 { font-size: clamp(34px, 5.5vw, 64px); margin: 8px 0 14px; }
 h2 { font-size: clamp(22px, 2.6vw, 28px); margin: 0 0 6px; }
 h3 { font-size: 18px; margin: 0 0 4px; }
-.eyebrow { font: 600 13px/1.2 var(--body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--vc-sunset); }
+.eyebrow { font: 400 11px/1.6 var(--pixel); letter-spacing: 0.04em; text-transform: uppercase; color: var(--vc-sunset); }
+.pixel { font-family: var(--pixel); font-weight: 400; letter-spacing: 0.02em; }
 .muted { color: var(--vc-muted); }
 .small { font-size: 14px; }
 
@@ -77,9 +87,11 @@ h3 { font-size: 18px; margin: 0 0 4px; }
 .banner.fixtures { background: #5a0f1c; color: #fff; }
 
 /* ---- Buttons ---- */
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 22px; border-radius: 10px;
-  font: 600 16px/1 var(--body); text-decoration: none; border: 1px solid transparent; cursor: pointer; background: none; color: inherit; }
-.btn-primary { background: var(--vc-pink); color: #1a0d16; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 22px; border-radius: 6px;
+  font: 600 16px/1 var(--body); text-decoration: none; border: 2px solid transparent; cursor: pointer; background: none; color: inherit;
+  box-shadow: var(--shadow-px); transition: transform 80ms, box-shadow 80ms; }
+.btn:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 #000; }
+.btn-primary { background: var(--vc-pink); color: #1a0d16; border-color: #ffb3d4; }
 .btn-primary:hover { background: #f283b5; }
 .btn-ghost { border-color: rgba(255, 255, 255, 0.45); color: var(--vc-pearl); background: rgba(11, 16, 27, 0.4); }
 .btn-ghost:hover { border-color: var(--vc-pearl); }
@@ -88,15 +100,18 @@ h3 { font-size: 18px; margin: 0 0 4px; }
 .btn-danger { min-height: 44px; padding: 0 14px; background: #7a1f2b; color: #fff; font-size: 15px; }
 .btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
-.panel { background: var(--vc-slate); border: 1px solid var(--vc-line); border-radius: 14px; padding: 22px; }
+.panel { background: var(--vc-slate); border: 2px solid var(--vc-line); border-radius: 8px; padding: 22px; box-shadow: var(--shadow-px); }
 .chip { display: inline-flex; align-items: center; border: 1px solid rgba(255, 255, 255, 0.35); border-radius: 6px; padding: 3px 10px; font: 600 13px/1.4 var(--body); background: rgba(11, 16, 27, 0.45); }
 .notice { border: 1px solid var(--vc-line); border-left: 3px solid var(--vc-sunset); background: var(--vc-slate); border-radius: 10px; padding: 12px 14px; font-size: 15px; }
 .notice.error { border-left-color: var(--vc-warn); }
 .empty { border: 1px dashed var(--vc-line); border-radius: 12px; padding: 22px; color: var(--vc-muted); }
 .empty strong { color: var(--vc-pearl); }
 
-.bar { height: 8px; border-radius: 99px; background: #0e1322; overflow: hidden; }
-.bar > i { display: block; height: 100%; background: linear-gradient(90deg, var(--vc-pink), var(--vc-sunset)); }
+.bar { height: 14px; border-radius: 2px; background: #0e1322; overflow: hidden; border: 2px solid #000; box-shadow: inset 0 0 0 1px var(--vc-line); }
+/* Segmented "XP bar": blocks with 2px gaps */
+.bar > i { display: block; height: 100%; background:
+  repeating-linear-gradient(90deg, transparent 0 10px, #0e1322 10px 12px),
+  linear-gradient(90deg, var(--vc-pink), var(--vc-sunset)); }
 
 /* ---- COZMC: its own identity ---- */
 .cozmc { --c-bg: var(--cz-space); color: var(--cz-star); }
@@ -108,3 +123,14 @@ h3 { font-size: 18px; margin: 0 0 4px; }
 .cz-site { border: 1px solid var(--cz-violet); color: var(--cz-star); }
 .cz-site:hover { background: rgba(145, 118, 222, 0.15); }
 .cz-unavailable { border: 1px dashed var(--cz-line); color: var(--cz-soft); }
+
+/* ---- Retro HUD bits ---- */
+.hud-label { font: 400 10px/1.6 var(--pixel); text-transform: uppercase; color: var(--vc-muted); letter-spacing: 0.04em; }
+.stamp { display: inline-block; font: 400 10px/1 var(--pixel); color: #0b101b; background: var(--vc-ok); padding: 6px 8px; border-radius: 2px;
+  box-shadow: 2px 2px 0 #000; transform: rotate(-3deg); text-transform: uppercase; }
+.badge-px { display: inline-flex; align-items: center; gap: 6px; font: 400 10px/1 var(--pixel); padding: 6px 8px; border: 2px solid var(--vc-line);
+  border-radius: 2px; color: var(--vc-muted); background: #0e1322; text-transform: uppercase; }
+.badge-px.on { color: #1a0d16; background: var(--vc-sunset); border-color: #000; box-shadow: 2px 2px 0 #000; }
+.scanlines { position: relative; }
+.scanlines::after { content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.18) 0 1px, transparent 1px 3px); mix-blend-mode: multiply; }

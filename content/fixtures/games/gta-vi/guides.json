@@ -1,0 +1,116 @@
+[
+  {
+    "id": "gta-vi:guide:fixture-money",
+    "gameId": "gta-vi",
+    "slug": "fixture-money",
+    "category": "money",
+    "safeTitle": "Fixture guide: fixture-money",
+    "safeSummary": "Test data only. Not real GTA VI information.",
+    "spoilerLevel": "none",
+    "platformIds": [],
+    "mode": "story",
+    "gameVersion": null,
+    "intro": [
+      "Test data only. This guide exists to test the guide pages."
+    ],
+    "steps": [
+      {
+        "id": "gta-vi:guide:fixture-money:step-1",
+        "title": "Fixture step 1",
+        "body": "Test data only. Step 1 of guide fixture-money.",
+        "spoilerLevel": "none",
+        "protected": null,
+        "sourceIds": [
+          "fixture-source"
+        ],
+        "videoId": "fixture-video-1"
+      },
+      {
+        "id": "gta-vi:guide:fixture-money:step-2",
+        "title": "Fixture step 2",
+        "body": "Test data only. Step 2 of guide fixture-money.",
+        "spoilerLevel": "none",
+        "protected": null,
+        "sourceIds": [
+          "fixture-source"
+        ],
+        "videoId": null
+      },
+      {
+        "id": "gta-vi:guide:fixture-money:step-3",
+        "title": "Fixture hidden step 3",
+        "body": "Details are hidden in spoiler-free mode.",
+        "spoilerLevel": "major",
+        "protected": {
+          "title": "FIXTURE-SECRET-STEP-fixture-money-3",
+          "body": "FIXTURE-SECRET-STEP-BODY-fixture-money-3"
+        },
+        "sourceIds": [
+          "fixture-source"
+        ],
+        "videoId": null
+      }
+    ],
+    "objectiveIds": [
+      "gta-vi:fixture:xbox-series-01"
+    ],
+    "sourceIds": [
+      "fixture-source"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-24",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:guide:fixture-tips",
+    "gameId": "gta-vi",
+    "slug": "fixture-tips",
+    "category": "tips",
+    "safeTitle": "Fixture guide: fixture-tips",
+    "safeSummary": "Test data only. Not real GTA VI information.",
+    "spoilerLevel": "none",
+    "platformIds": [],
+    "mode": "story",
+    "gameVersion": null,
+    "intro": [
+      "Test data only. This guide exists to test the guide pages."
+    ],
+    "steps": [
+      {
+        "id": "gta-vi:guide:fixture-tips:step-1",
+        "title": "Fixture step 1",
+        "body": "Test data only. Step 1 of guide fixture-tips.",
+        "spoilerLevel": "none",
+        "protected": null,
+        "sourceIds": [
+          "fixture-source"
+        ],
+        "videoId": null
+      },
+      {
+        "id": "gta-vi:guide:fixture-tips:step-2",
+        "title": "Fixture step 2",
+        "body": "Test data only. Step 2 of guide fixture-tips.",
+        "spoilerLevel": "none",
+        "protected": null,
+        "sourceIds": [
+          "fixture-source"
+        ],
+        "videoId": null
+      }
+    ],
+    "objectiveIds": [
+      "gta-vi:fixture:xbox-series-01"
+    ],
+    "sourceIds": [
+      "fixture-source"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-24",
+    "founderVerifiedAt": null,
+    "revision": 1
+  }
+]

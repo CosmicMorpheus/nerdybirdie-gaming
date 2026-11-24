@@ -151,7 +151,8 @@ test('backup: export, bad import rejected without data loss, good import restore
   await expect(page.getByText(/isn't a Nerdy Birdie Gaming backup. Nothing was changed/)).toBeVisible();
 
   // Untick, then restore the backup: preview first, then confirm.
-  await page.goto(T);
+  await open(page);
+  await expect(checkbox(page, 'Fixture objective 01')).toBeChecked(); // saved state loaded
   await checkbox(page, 'Fixture objective 01').uncheck();
   await page.goto('http://localhost:4322/progress/');
   const good = join(dir, 'good.json');
@@ -159,7 +160,7 @@ test('backup: export, bad import rejected without data loss, good import restore
   await page.locator('input[type=file]').setInputFiles(good);
   await expect(page.getByRole('alertdialog')).toContainText('1 new');
   await page.getByRole('button', { name: 'Restore backup' }).click();
-  await page.goto(T);
+  await open(page);
   await expect(checkbox(page, 'Fixture objective 01')).toBeChecked();
 });
 

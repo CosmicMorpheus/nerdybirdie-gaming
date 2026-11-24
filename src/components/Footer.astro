@@ -1,11 +1,11 @@
 ---
-import { COZMC, PARENT_SITE_URL } from '../config';
+import { BRAND, COZMC, PARENT_SITE_URL } from '../config';
 ---
 <footer class="ftr">
   <div class="wrap">
     <div class="cols">
       <div class="brand">
-        <img src="/brand/nerdy-birdie-256.webp" alt="Nerdy Birdie logo" width="96" height="96" loading="lazy" decoding="async" />
+        <img src={BRAND.footerLogo} alt="Nerdy Birdie logo" width="96" height="96" loading="lazy" decoding="async" />
         <p class="muted small">Free guides and trackers for players. Brick by Brick, WE Build.</p>
       </div>
       <nav aria-label="Site">

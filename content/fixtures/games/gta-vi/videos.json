@@ -1,0 +1,14 @@
+[
+  {
+    "id": "fixture-video-1",
+    "provider": "youtube",
+    "youtubeId": "FIXTURE0001",
+    "safeTitle": "Fixture video (test data)",
+    "creator": "Fixture Creator",
+    "channelUrl": "https://example.com/fixture-channel",
+    "startSeconds": 42,
+    "spoilerLevel": "none",
+    "embedAllowed": true,
+    "checkedAt": "2026-11-24"
+  }
+]

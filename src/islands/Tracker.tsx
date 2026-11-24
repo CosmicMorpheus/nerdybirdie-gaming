@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
 import type { PublicObjective } from '../lib/content/schema';
 import { contextKey, emptyContext, resetContext, setBookmark, setCompleted, setNote, setPrefs } from '../lib/progress/model';
 import { formatTally, progressFor } from '../lib/progress/totals';
+import { CHECKPOINTS, crossedCheckpoint, nextRank, nextUp, rankFor } from '../lib/progress/ranks';
 import { search } from '../lib/search';
 import { displayText, modeAllows, SPOILER_MODES, isSpoilerMode, type SpoilerMode } from '../lib/spoilers';
 import { StorageNotice } from './StorageNotice';
@@ -39,11 +40,30 @@ export default function Tracker({ gameId, gameShortTitle, platforms, categories,
   const [openNote, setOpenNote] = useState<string | null>(null);
   const [confirmReset, setConfirmReset] = useState(false);
   const [announce, setAnnounce] = useState('');
+  const [toast, setToast] = useState<string | null>(null);
+  const lastPct = useRef<number | null | undefined>(undefined);
   const loading = useRef<Promise<Protected | null> | null>(null);
 
   const forPlatform = useMemo(() => objectives.filter((o) => o.platformIds.includes(platform.id)), [objectives, platform.id]);
   const totals = useMemo(() => progressFor(forPlatform, ctx.completed, categories.map((c) => c.id)), [forPlatform, ctx.completed, categories]);
   const catLabel = (id: string) => categories.find((c) => c.id === id)?.label ?? id;
+
+  // Celebrate a checkpoint when it's crossed by ticking (not on page load or platform switch).
+  useEffect(() => {
+    const pct = totals.overall.percent;
+    const prev = lastPct.current;
+    lastPct.current = pct;
+    if (!ready || prev === undefined) return;
+    const hit = crossedCheckpoint(prev, pct);
+    if (hit) {
+      const msg = hit === 100 ? `100%! ${platform.shortLabel} ${platform.objectiveNoun.toLowerCase()} cleared!` : `Checkpoint! ${hit}% reached · Rank: ${rankFor(pct)!.title}`;
+      setToast(msg);
+      setAnnounce(msg);
+      const t = setTimeout(() => setToast(null), 3500);
+      return () => clearTimeout(t);
+    }
+  }, [totals.overall.percent, ready]);
+  useEffect(() => { lastPct.current = undefined; }, [platform.id]);
 
   function loadProtected(): Promise<Protected | null> {
     if (prot) return Promise.resolve(prot);
@@ -75,12 +95,15 @@ export default function Tracker({ gameId, gameShortTitle, platforms, categories,
 
   const tabs = [
     { id: 'all', label: 'All', count: formatTally(totals.overall) },
-    ...categories.map((c) => ({ id: c.id, label: c.label, count: forPlatform.some((o) => o.category === c.id) ? formatTally(totals.byCategory[c.id]!) : '—' })),
+    ...categories.map((c) => ({ id: c.id, label: c.label, count: forPlatform.some((o) => o.category === c.id) ? formatTally(totals.byCategory[c.id]!) : '—', cleared: totals.byCategory[c.id]!.percent === 100 })),
     { id: 'bookmarked', label: 'Saved', count: String(ctx.bookmarks.filter((b) => forPlatform.some((o) => o.id === b)).length) },
   ];
 
   const pct = totals.overall.percent;
+  const rank = rankFor(pct);
+  const next = nextRank(pct);
   const noun = platform.objectiveNoun.toLowerCase();
+  const upNext = nextUp(forPlatform, ctx.completed, ctx.bookmarks);
 
   return (
     <div class="tracker">
@@ -110,17 +133,26 @@ export default function Tracker({ gameId, gameShortTitle, platforms, categories,
 
       <StorageNotice state={state} />
 
-      <div class="summary panel" aria-live="polite">
-        <div>
+      <div class="summary panel">
+        <div class="ranks">
+          <p class="hud-label">{rank ? `Rank · LV ${rank.level}` : 'Rank'}</p>
           <p class="big">{pct === null ? '—' : `${pct}%`}</p>
           <p class="muted small">
             {pct === null ? `No verified ${noun} yet for ${platform.shortLabel}` : `${totals.overall.done} of ${totals.overall.total} ${noun} · ${platform.shortLabel}`}
           </p>
         </div>
-        <div class="bar" role="progressbar" aria-label={`${gameShortTitle} ${noun} completed`} aria-valuemin={0} aria-valuemax={totals.overall.total} aria-valuenow={totals.overall.done}>
-          <i style={{ width: `${pct ?? 0}%` }} />
+        <div class="xp">
+          <p class="hud-rank">{rank ? rank.title : 'Ready to start'}</p>
+          <div class="bar" role="progressbar" aria-label={`${gameShortTitle} ${noun} completed`} aria-valuemin={0} aria-valuemax={totals.overall.total} aria-valuenow={totals.overall.done}>
+            <i style={{ width: `${pct ?? 0}%` }} />
+          </div>
+          <ul class="hud-cps" aria-label="Checkpoints">
+            {CHECKPOINTS.map((c) => <li key={c} class={`badge-px${pct !== null && pct >= c ? ' on' : ''}`}>{pct !== null && pct >= c ? '★' : '☆'} {c}%</li>)}
+          </ul>
+          {pct !== null && next && <p class="muted small">{next.min - pct}% to {next.title}</p>}
         </div>
       </div>
+      {toast && <div class="toast" role="status">{toast}</div>}
 
       {forPlatform.length === 0 ? (
         <div class="empty" role="status">
@@ -129,10 +161,22 @@ export default function Tracker({ gameId, gameShortTitle, platforms, categories,
         </div>
       ) : (
         <>
+          {upNext.length > 0 && (
+            <section class="next-up" aria-labelledby="next-up-h">
+              <h2 id="next-up-h" class="hud-label">Next up</h2>
+              <ol>
+                {upNext.map((o) => (
+                  <li key={o.id}>{displayText(o, mode, revealed, prot).title}
+                    {o.missable === true ? <span class="why">Missable, do it early</span> : ctx.bookmarks.includes(o.id) ? <span class="why" style={{ color: 'var(--vc-sunset)' }}>Saved</span> : null}</li>
+                ))}
+              </ol>
+            </section>
+          )}
+
           <nav class="cats" aria-label="Categories">
             {tabs.map((t) => (
               <button key={t.id} type="button" class="cat" aria-pressed={category === t.id} onClick={() => setCategory(t.id)}>
-                <span>{t.label}</span><span class="count">{t.count}</span>
+                <span>{t.label}</span><span class="count">{t.count}</span>{'cleared' in t && t.cleared && <span class="stamp">Cleared</span>}
               </button>
             ))}
           </nav>
@@ -166,7 +210,7 @@ export default function Tracker({ gameId, gameShortTitle, platforms, categories,
               const inputId = `o-${o.id.replace(/[^a-z0-9]/g, '-')}`;
               return (
                 <li key={o.id} class={`row${done ? ' done' : ''}`}>
-                  <input id={inputId} class="check" type="checkbox" checked={done}
+                  <input id={inputId} class="check" type="checkbox" checked={done} disabled={!ready}
                     onChange={(e) => {
                       const on = (e.target as HTMLInputElement).checked;
                       update((s) => setCompleted(s, key, o.id, on));

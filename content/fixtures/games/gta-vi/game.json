@@ -51,6 +51,58 @@
       "label": "Other"
     }
   ],
+  "guideCategories": [
+    {
+      "id": "roadmap",
+      "label": "100% roadmap",
+      "blurb": "The order to do things in so nothing gets missed."
+    },
+    {
+      "id": "money",
+      "label": "Money",
+      "blurb": "Legit in-game ways to earn, by stage of the game."
+    },
+    {
+      "id": "vehicles",
+      "label": "Rare vehicles",
+      "blurb": "Where to find the cars, bikes and boats worth keeping."
+    },
+    {
+      "id": "weapons",
+      "label": "Weapons",
+      "blurb": "Where to get them and what they're good for."
+    },
+    {
+      "id": "collectibles",
+      "label": "Collectibles",
+      "blurb": "Every hidden item, grouped by area."
+    },
+    {
+      "id": "missions",
+      "label": "Story missions",
+      "blurb": "Spoiler-safe help for tough missions."
+    },
+    {
+      "id": "side-missions",
+      "label": "Side missions",
+      "blurb": "Side activities and how to clear them."
+    },
+    {
+      "id": "secrets",
+      "label": "Secrets & easter eggs",
+      "blurb": "Hidden spots and surprises. Spoiler-gated."
+    },
+    {
+      "id": "tips",
+      "label": "Tips & tricks",
+      "blurb": "Small things that save a lot of time."
+    },
+    {
+      "id": "settings",
+      "label": "Settings & controls",
+      "blurb": "Recommended settings for each platform."
+    }
+  ],
   "sources": [
     {
       "id": "rockstar-launch-post",

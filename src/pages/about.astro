@@ -1,9 +1,10 @@
 ---
 import Prose from '../layouts/Prose.astro';
 import CozmcPanel from '../components/CozmcPanel.astro';
+import { BRAND } from '../config';
 ---
 <Prose title="About" description="Who makes Nerdy Birdie Gaming and how we check what we publish.">
-  <img src="/brand/nerdy-birdie-512.webp" alt="Nerdy Birdie logo: a cosmic bird in a cap and sunglasses" width="240" height="240" class="logo" />
+  <img src={BRAND.fullLogo} alt="Nerdy Birdie logo: a cosmic bird in a cap and sunglasses" width="240" height="240" class="logo" />
   <p>Nerdy Birdie Gaming makes free guides and trackers for players, starting with Grand Theft Auto VI. It's built to be checked on a phone
   next to the console: quick answers, no clutter, and no spoilers unless you ask for them.</p>
   <h2>How we check things</h2>

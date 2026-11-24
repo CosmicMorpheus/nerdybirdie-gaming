@@ -1,28 +1,31 @@
 ---
 import Base from '../../../../layouts/Base.astro';
 import CozmcInline from '../../../../components/CozmcInline.astro';
-import { games, getGame } from '../../../../lib/content/load';
+import GuideBoard from '../../../../islands/GuideBoard';
+import { games, getGame, publicGuides } from '../../../../lib/content/load';
 export function getStaticPaths() { return games.map((g) => ({ params: { game: g.id } })); }
 const game = getGame(Astro.params.game!);
-const planned = ['Money (story mode)', 'Rare vehicles', 'Weapons', 'Collectibles', 'Settings & controls', 'Tips'];
+const guides = publicGuides(game.id);
+const categories = game.guideCategories.map((c) => ({
+  ...c,
+  guides: guides.filter((g) => g.category === c.id).map((g) => ({
+    slug: g.slug, title: g.safeTitle, summary: g.safeSummary, stepIds: g.steps.map((s) => s.id), checkedAt: g.checkedAt, draft: g.draft,
+  })),
+}));
+const published = guides.length;
 ---
-<Base title={`${game.shortTitle} guides`} current="guides" description={`Verified ${game.title} guides, spoiler-free by default.`}>
+<Base title={`${game.shortTitle} guides`} current="guides" description={`Spoiler-safe ${game.title} guides with checklists. Every fact is linked to its source.`}>
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/games/">Games</a> / <a href={`/games/${game.id}/`}>{game.shortTitle}</a> / <span aria-current="page">Guides</span></nav>
-    <p class="eyebrow">{game.shortTitle}</p>
+    <p class="eyebrow">{game.shortTitle} · Quest board</p>
     <h1>Guides</h1>
-    <div class="empty">
-      <strong>No guides are published yet.</strong> Each guide goes up once it's checked against sources and tested in-game,
-      with the date it was last checked. Until then this page stays honest rather than full.
-    </div>
-    <h2 class="planned-h">Planned</h2>
-    <ul class="planned">{planned.map((p) => <li>{p}</li>)}</ul>
-    <CozmcInline text="Found something? Share it in the community." />
+    <p class="lead muted">Each guide is a checklist: tick steps off as you play and clear every section. Every fact links to where it came from.
+      {published === 0 && ' Guides are being researched now and will unlock here as they are verified.'}</p>
+    <GuideBoard client:load gameId={game.id} base={`/games/${game.id}/guides/`} categories={categories} />
+    <div style="margin-top:32px"><CozmcInline text="Found something? Share it in the community." /></div>
   </div>
 </Base>
 <style>
   .crumbs { font-size: 14px; color: var(--vc-muted); padding-top: 22px; }
-  .planned-h { margin-top: 36px; font-size: 18px; }
-  .planned { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 10px 0 32px; }
-  .planned li { border: 1px dashed var(--vc-line); border-radius: 999px; padding: 6px 14px; color: var(--vc-muted); font-size: 14px; }
+  .lead { max-width: 70ch; margin: 0 0 28px; }
 </style>

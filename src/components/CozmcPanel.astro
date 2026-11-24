@@ -1,10 +1,11 @@
 ---
 import CommunityLinks from './CommunityLinks.astro';
+import { BRAND } from '../config';
 /** Home-page community module, in COZMC's own purple/coral identity. */
 ---
 <section class="cozmc cz-panel" aria-labelledby="cozmc-heading">
   <div class="cz-copy">
-    <img src="/brand/cozmc/cozmc-logo-272.png" alt="COZMC" width="136" height="36" loading="lazy" decoding="async" />
+    <img src={BRAND.cozmcLogo} alt="COZMC" width="136" height="36" loading="lazy" decoding="async" />
     <p class="cz-k">We Are All COZMC</p>
     <h2 id="cozmc-heading">Play together. Build together.</h2>
     <p class="cz-p">Connect with fellow gamers, share discoveries and grow with our community.</p>

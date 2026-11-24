@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { games, getPlatform, publicObjectives } from '../../lib/content/load';
+import { games, getPlatform, publicGuides, publicObjectives } from '../../lib/content/load';
 import type { SearchDoc } from '../../lib/search';
 
 /** Search index built from spoiler-safe fields only. */
@@ -8,6 +8,12 @@ export const GET: APIRoute = () => {
   for (const g of games) {
     docs.push({ id: g.id, title: g.title, text: g.summary, url: `/games/${g.id}/`, kind: 'Game' });
     docs.push({ id: `${g.id}:tracker`, title: `${g.shortTitle} achievements & trophies tracker`, text: 'Track achievements and trophies, spoiler-free', url: `/games/${g.id}/achievements/`, kind: 'Tracker' });
+    docs.push({ id: `${g.id}:guides`, title: `${g.shortTitle} guides (quest board)`, text: g.guideCategories.map((c) => c.label).join(', '), url: `/games/${g.id}/guides/`, kind: 'Guides' });
+    for (const gd of publicGuides(g.id)) {
+      // Safe fields only: guide titles/summaries and step titles (never protected text).
+      const cat = g.guideCategories.find((c) => c.id === gd.category)?.label ?? '';
+      docs.push({ id: gd.id, title: gd.safeTitle, text: `${cat} · ${gd.safeSummary}`, url: `/games/${g.id}/guides/${gd.slug}/`, kind: 'Guide' });
+    }
     for (const o of publicObjectives(g.id)) {
       const platforms = o.platformIds.map((p) => getPlatform(p).shortLabel).join(', ');
       docs.push({ id: o.id, title: o.safeTitle, text: `${o.safeSummary} · ${platforms}`, url: `/games/${g.id}/achievements/`, kind: getPlatform(o.platformIds[0]!).objectiveNoun.replace(/s$/, '') });
