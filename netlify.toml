@@ -1,5 +1,5 @@
 # Netlify settings for the Nerdy Birdie Gaming site (a separate Netlify site from cozmc.us).
-# Not deployed yet: deploying needs founder approval.
+# Public since 2026-11-24 at https://nerdybirdiegameguides.netlify.app (founder approved: public, listed on search engines).
 [build]
   command = "npm run build"
   publish = "dist"
@@ -11,7 +11,11 @@
 [build.environment]
   NODE_VERSION = "22"
   ASTRO_TELEMETRY_DISABLED = "1"
-  # At launch, after approval: set SITE_URL and PUBLIC_INDEXABLE = "true" in the Netlify UI.
+  # Public build: canonical URLs + sitemap, search engines allowed, preview-only content hidden.
+  SITE_URL = "https://nerdybirdiegameguides.netlify.app"
+  PUBLIC_INDEXABLE = "true"
+  # Keep the What's New creator feed on in the public build (founder, 24 Nov 2026).
+  PUBLIC_DISCOVERY_FEED = "true"
 
 # Spoiler data and the search index are never indexed.
 [[headers]]

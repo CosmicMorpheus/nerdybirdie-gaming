@@ -84,9 +84,9 @@ Saved in the browser; move it to another browser with a transfer link or a backu
 
 `src/config.ts`: COZMC Discord invite and cozmc.us, the future Nerdy Birdie parent site (hidden while empty), contact email, tagline.
 
-## Deploying (needs approval first)
+## Deploying
 
-`netlify.toml` is ready for a **new** Netlify site linked to this repo. The site shows a "Preview" banner and tells search engines not to index it until `PUBLIC_INDEXABLE=true` and `SITE_URL` are set at launch.
+Live at **https://nerdybirdiegameguides.netlify.app** (Netlify project `nerdybirdiegameguides`, public and indexable since 24 Nov 2026). `netlify.toml` sets `SITE_URL`, `PUBLIC_INDEXABLE=true` and `PUBLIC_DISCOVERY_FEED=true` for Netlify builds. Local builds (`npm run build`) stay in preview mode (noindex, "Preview" banner, unreviewed videos shown) so tests and reviews keep working. Every deploy needs the founder's go-ahead.
 
 ## Docs
 

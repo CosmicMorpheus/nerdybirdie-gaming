@@ -130,7 +130,7 @@ test('spoiler videos hide their title until shown; Twitch embeds list this host 
   await expect(e).toContainText('Fixture spoiler moment');
   await page.route(/player\.twitch\.tv/, (r) => r.fulfill({ body: '<html></html>', contentType: 'text/html' }));
   await e.getByRole('button', { name: /Play from 1:02:03/ }).click();
-  await expect(e.locator('iframe')).toHaveAttribute('src', /^https:\/\/player\.twitch\.tv\/\?video=v1234567890&parent=localhost&parent=nerdybirdie-gaming-preview\.netlify\.app&autoplay=true&time=1h2m3s$/);
+  await expect(e.locator('iframe')).toHaveAttribute('src', /^https:\/\/player\.twitch\.tv\/\?video=v1234567890&parent=localhost&parent=nerdybirdiegameguides\.netlify\.app&autoplay=true&time=1h2m3s$/);
 });
 
 test('videos still in review are labelled on the preview, and the original link is always offered', async ({ page }) => {
