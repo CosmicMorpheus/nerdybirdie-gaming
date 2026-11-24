@@ -4,6 +4,7 @@ Newest first. "Proposed" means waiting for the founder; only "Approved" decision
 
 | Date | Decision | Status | Notes |
 |---|---|---|---|
+| 2026-11-24 | Creators followed: GTA Series Videos, MKIceAndFire, TGG (creators file, handle-checked each run); panels in every mapped guide section; click-to-play embeds when the creator allows; ASK knows the creators | Approved (founder), built | Channel ids supplied by founder; matched against @handles by the daily check (not verifiable from the build environment). Community confirmation is the next milestone and needs accounts |
 | 2026-11-24 | v3.0 daily guide updates (YouTube discovery feed): staging on `nerdybirdie-gaming-preview` with the kit's Blobs adapter; panel on Updates + Rare vehicles; category mapping as in the audit; community review waits for accounts | Approved (founder), built | docs/DAILY_FEED.md. Idle until the founder adds a creator channel id and a restricted YouTube key in Netlify |
 | 2026-11-24 | ASK "COZMC" = option A: browser-only guide search, no AI cost to players; AI research done at editing time; server features off behind ASK_SERVER / ASK_SERVER_ENABLED | Approved (founder) | Chief-of-staff review cycle 02 |
 | 2026-11-24 | Community arrows keep flashing (COS suggested static) | Approved (founder) | Static with reduced motion |

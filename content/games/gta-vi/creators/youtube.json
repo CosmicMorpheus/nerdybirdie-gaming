@@ -1,0 +1,29 @@
+{
+  "note": "Trusted YouTube creators the daily check follows (docs/DAILY_FEED.md). Supplied by the founder 2026-11-24. To add one: append an entry with its permanent channel id (UC…) and @handle; the daily check skips any channel whose handle doesn't match its id. Set status to \"paused\" to stop checking a creator and hide their videos.",
+  "creators": [
+    {
+      "channelId": "UCuWcjpKbIDAbZfHoru1toFg",
+      "handle": "@GTASeriesVideos",
+      "name": "GTA Series Videos",
+      "focus": "Complete mission walkthroughs, 100% completion, collectibles, achievements, Easter eggs, secrets and hidden locations",
+      "status": "approved",
+      "addedAt": "2026-11-24"
+    },
+    {
+      "channelId": "UC1bwliGvJogr7cWK0nT2Eag",
+      "handle": "@MKIceAndFire",
+      "name": "MKIceAndFire",
+      "focus": "Full-game walkthroughs, high-quality gameplay footage, mission objectives and visual references",
+      "status": "approved",
+      "addedAt": "2026-11-24"
+    },
+    {
+      "channelId": "UC72PuhDwKtZ5MikpGNhPAtA",
+      "handle": "@TGG_",
+      "name": "TGG",
+      "focus": "Money-making strategies, rare vehicles, gameplay discoveries, hidden mechanics, settings, tips and tricks",
+      "status": "approved",
+      "addedAt": "2026-11-24"
+    }
+  ]
+}

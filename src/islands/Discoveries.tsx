@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'preact/hooks';
 import { useProgress } from './useProgress';
+import VideoEmbed from './VideoEmbed';
+import { parseVideoUrl } from '../lib/video';
 import './tracker.css';
 import './discoveries.css';
 
@@ -11,7 +13,7 @@ import './discoveries.css';
  */
 interface Item {
   id: string; category: string; status: string; discoveredAt: string;
-  title?: string; creator?: string; publishedAt?: string; url?: string;
+  title?: string; creator?: string; publishedAt?: string; url?: string; channelUrl?: string; embeddable?: boolean;
 }
 interface Feed { lastAttempt: string | null; lastSuccessfulCheck: string | null; lastPublication: string | null; paused: boolean; items: Item[] }
 interface Props {
@@ -20,13 +22,14 @@ interface Props {
   /** One guide section only; omit for all discoveries (What's New). */
   category?: string;
   heading: string;
-  /** Render nothing until the daily check has been set up (used inside guides). */
+  /** Inside guides: render only when this section has new videos (nothing while loading, off, unavailable or empty). */
   hideWhenOff?: boolean;
   endpoint?: string;
 }
 type Load = { state: 'loading' } | { state: 'off' } | { state: 'error' } | { state: 'ok'; feed: Feed };
 
 const YT = /^https:\/\/www\.youtube\.com\/watch\?v=[\w-]{11}$/;
+const CH = /^https:\/\/www\.youtube\.com\/channel\/UC[\w-]{22}$/;
 const when = (v: string | null) => (v ? new Date(v).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' }) : 'not yet');
 const day = (v: string) => new Date(v).toLocaleDateString(undefined, { dateStyle: 'medium' });
 
@@ -56,7 +59,7 @@ export default function Discoveries({ sections, guidesHref, category, heading, h
     return () => ctl.abort();
   }, [ready, reveal, category, endpoint]);
 
-  if (hideWhenOff && load.state === 'off') return null;
+  if (hideWhenOff && (load.state !== 'ok' || load.feed.items.length === 0)) return null;
   const label = (id: string) => sections.find((s) => s.id === id)?.label;
   const feed = load.state === 'ok' ? load.feed : null;
   const stale = feed?.lastAttempt && (!feed.lastSuccessfulCheck || feed.lastAttempt > feed.lastSuccessfulCheck);
@@ -94,10 +97,18 @@ export default function Discoveries({ sections, guidesHref, category, heading, h
             return (
               <li key={it.id}>
                 {shown ? (
-                  <p class="disc-title">
-                    <a href={it.url} target="_blank" rel="noopener noreferrer">{it.title}<span class="sr-only"> (YouTube, opens in a new tab)</span></a>
-                    {it.creator && <span class="muted"> · {it.creator} on YouTube</span>}
-                  </p>
+                  <>
+                    <p class="disc-title">
+                      <a href={it.url} target="_blank" rel="noopener noreferrer">{it.title}<span class="sr-only"> (YouTube, opens in a new tab)</span></a>
+                      {it.creator && <span class="muted"> · by {it.channelUrl && CH.test(it.channelUrl)
+                        ? <a href={it.channelUrl} target="_blank" rel="noopener noreferrer">{it.creator}<span class="sr-only"> (YouTube channel, opens in a new tab)</span></a>
+                        : it.creator} on YouTube</span>}
+                    </p>
+                    {it.embeddable && parseVideoUrl(it.url!) && (
+                      <VideoEmbed start={null} label={it.title} video={{ url: it.url!, title: it.title!, creator: it.creator ?? 'YouTube creator',
+                        channelUrl: it.channelUrl && CH.test(it.channelUrl) ? it.channelUrl : it.url!, parsed: parseVideoUrl(it.url!)!, unreviewed: false, availability: 'available' }} />
+                    )}
+                  </>
                 ) : (
                   <p class="disc-title">YouTube video <span class="muted">· title hidden (spoiler-safe)</span></p>
                 )}

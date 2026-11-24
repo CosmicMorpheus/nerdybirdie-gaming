@@ -43,3 +43,17 @@ export function videoDocs(v: { url: string; title: string; creator: string; spoi
     actions: [{ label: 'Watch walkthrough', href: watchUrl(v.url, p, m.start), kind: 'video' as const }],
   }));
 }
+
+/** A trusted creator the daily check follows. Lets ASK point players to who covers what, and to new videos. */
+export function creatorDoc(c: { channelId: string; handle: string; name: string; focus: string }): AskDoc {
+  const channel = `https://www.youtube.com/channel/${c.channelId}`;
+  return {
+    // ASK matches question words against titles, so the creator's focus goes in the title.
+    id: `creator:youtube:${c.channelId}`, kind: 'video', title: `${c.name} (${c.handle}) on YouTube: ${c.focus}`,
+    text: `We check this creator's new GTA VI videos every day. New ones appear in What's New, marked Needs Community Review, with titles hidden until you choose to see spoilers.`,
+    category: 'Creators we follow', spoilerLevel: 'none', hasSpoilerDetails: false, verification: 'unconfirmed',
+    answers: ['howto', 'info', 'money', 'location', 'unlock', 'keep', 'missable'],
+    sources: [{ publisher: 'YouTube', title: `${c.name} channel`, url: channel, checkedAt: null, creator: c.name }],
+    actions: [{ label: `Visit ${c.name} on YouTube`, href: channel, kind: 'video' }, { label: 'See new creator videos', href: '/updates/#disc-h', kind: 'guide' }],
+  };
+}

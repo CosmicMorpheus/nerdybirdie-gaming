@@ -1,9 +1,10 @@
 import type { APIRoute } from 'astro';
-import { entryDoc, pinDoc, videoDocs } from '../../../lib/ask/docs';
+import { creatorDoc, entryDoc, pinDoc, videoDocs } from '../../../lib/ask/docs';
 import type { AskDoc } from '../../../lib/ask/retrieve';
-import { games, getPlatform, mapData, publicEntries, publicObjectives, videosFor } from '../../../lib/content/load';
+import { creatorsFor, games, getPlatform, mapData, publicEntries, publicObjectives, videosFor } from '../../../lib/content/load';
+import { DISCOVERY_FEED } from '../../../config';
 
-/** Everything ASK "COZMC" can search: published entries, exact map pins, achievements, approved videos. Spoiler-free fields only. */
+/** Everything ASK "COZMC" can search: published entries, exact map pins, achievements, approved videos, creators we follow. Spoiler-free fields only. */
 export function getStaticPaths() { return games.map((g) => ({ params: { game: g.id } })); }
 export const GET: APIRoute = ({ params }) => {
   const game = games.find((g) => g.id === params.game)!;
@@ -20,5 +21,6 @@ export const GET: APIRoute = ({ params }) => {
       answers: ['unlock', 'howto', 'info'], sources: [], actions: [{ label: 'Open checklist', href: `/games/${game.id}/achievements/`, kind: 'checklist' }] });
   }
   for (const v of videosFor(game.id).filter((x) => !x.unreviewed)) docs.push(...videoDocs(v));
+  if (DISCOVERY_FEED) for (const c of creatorsFor(game.id)) docs.push(creatorDoc(c));
   return new Response(JSON.stringify({ docs, sectionLabels: label }), { headers: { 'content-type': 'application/json' } });
 };

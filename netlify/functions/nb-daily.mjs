@@ -10,8 +10,8 @@ export default async function daily(_request, context) {
   // Maintenance also runs when discovery is disabled, paused, or a source is unavailable.
   await prune(store);
   if (process.env.NB_DISCOVERY_ENABLED !== 'true') return;
-  const { channels, apiKey, limit } = settings(process.env);
-  const run = await runDaily({ store, channels, read: youtubeReader({ apiKey, limit }) });
+  const { channels, handles, apiKey, limit } = settings(process.env);
+  const run = await runDaily({ store, channels, read: youtubeReader({ apiKey, limit, handles }) });
   console.info('Nerdy Birdie discovery', JSON.stringify(run));
   if (run.outcome === 'incomplete') throw new Error('Source check incomplete. Inspect the run and retry.');
 }

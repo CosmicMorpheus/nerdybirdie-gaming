@@ -1,5 +1,5 @@
 import platformsJson from '../../../content/platforms.json';
-import { Platform, type Game, type Objective, type PublicEntry, type PublicObjective, type Video } from './schema';
+import { CreatorsFile, Platform, type Creator, type Game, type Objective, type PublicEntry, type PublicObjective, type Video } from './schema';
 import { isPublishable, validateGameBundle, type GameBundle } from './validate';
 import { z } from 'zod';
 import { parseVideoUrl, type ParsedVideo } from '../video';
@@ -146,4 +146,14 @@ export function mapChecklist(gameId: string) {
   return m.categories.filter((c) => c.trackable)
     .map((c) => ({ id: c.id, label: c.label, colour: c.colour, group: c.group, ids: m.pins.filter((p) => p.kind === c.id && ids.has(p.id)).map((p) => p.id) }))
     .filter((c) => c.ids.length);
+}
+
+const creatorFiles = import.meta.glob('/content/games/*/creators/youtube.json', { eager: true, import: 'default' });
+/** Approved creators the daily check follows, validated at build time. Paused creators are left out. */
+export function creatorsFor(gameId: string): Creator[] {
+  const raw = creatorFiles[`/content/games/${gameId}/creators/youtube.json`];
+  if (!raw) return [];
+  const list = CreatorsFile.parse(raw).creators;
+  if (new Set(list.map((c) => c.channelId)).size !== list.length) throw new Error(`${gameId}: duplicate creator`);
+  return list.filter((c) => c.status === 'approved');
 }

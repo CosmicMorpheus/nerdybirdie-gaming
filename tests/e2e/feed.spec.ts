@@ -10,7 +10,7 @@ const item = { id: 'a'.repeat(64), category: 'vehicles', kind: 'source', status:
 const feed = (reveal: boolean) => ({
   gameId: 'gta-vi', revision: 1, lastAttempt: '2026-11-24T10:17:00.000Z', lastSuccessfulCheck: '2026-11-24T10:17:00.000Z',
   lastPublication: '2026-11-24T10:17:00.000Z', lastCommunityVerification: null, paused: false,
-  items: [reveal ? { ...item, title: TITLE, creator: 'Test creator', publishedAt: '2026-11-23T05:00:00.000Z', url: 'https://www.youtube.com/watch?v=sample00001' } : item],
+  items: [reveal ? { ...item, title: TITLE, creator: 'Test creator', publishedAt: '2026-11-23T05:00:00.000Z', url: 'https://www.youtube.com/watch?v=sample00001', channelUrl: 'https://www.youtube.com/channel/UC72PuhDwKtZ5MikpGNhPAtA', embeddable: true } : item],
 });
 async function stub(page: Page, seen: string[] = []) {
   await page.route('**/.netlify/functions/nb-feed*', (r: Route) => {
@@ -77,6 +77,35 @@ test('vehicles guide: same source, filtered by section, saved progress untouched
   await page.goto(R + '/');
   await hydrated(page);
   await expect(page.locator('.hud-meter', { hasText: /guide/i }).first()).toContainText('1/6');
+});
+
+test('revealed videos credit the creator and play only on request, from youtube-nocookie', async ({ page }) => {
+  await stub(page);
+  await page.goto(R + '/updates/');
+  await page.getByRole('button', { name: /Show video titles/ }).click();
+  await expect(page.locator('.disc-title a', { hasText: 'Test creator' })).toHaveAttribute('href', 'https://www.youtube.com/channel/UC72PuhDwKtZ5MikpGNhPAtA');
+  await expect(page.locator('.disc iframe')).toHaveCount(0);
+  await page.locator('.disc').getByRole('button', { name: /Play/ }).click();
+  await expect(page.locator('.disc iframe')).toHaveAttribute('src', /^https:\/\/www\.youtube-nocookie\.com\/embed\/sample00001/);
+});
+
+test('Updates credits the creators we follow', async ({ page }) => {
+  await page.goto(R + '/updates/');
+  const list = page.locator('.creators');
+  for (const [name, id] of [['GTA Series Videos', 'UCuWcjpKbIDAbZfHoru1toFg'], ['MKIceAndFire', 'UC1bwliGvJogr7cWK0nT2Eag'], ['TGG', 'UC72PuhDwKtZ5MikpGNhPAtA']])
+    await expect(list.getByRole('link', { name: new RegExp(`^${name}`) })).toHaveAttribute('href', `https://www.youtube.com/channel/${id}`);
+});
+
+test('every mapped guide section has a panel; sections the feed never fills do not', async ({ page }) => {
+  const seen = await stub(page);
+  await page.goto(R + '/games/gta-vi/guides/walkthrough/');
+  await hydrated(page);
+  await page.locator('.disc').scrollIntoViewIfNeeded();
+  await expect(page.locator('.disc')).toBeVisible();
+  await expect.poll(() => seen.some((q) => q.includes('category=walkthrough'))).toBe(true);
+  await page.goto(R + '/games/gta-vi/guides/videos/');
+  await hydrated(page);
+  await expect(page.locator('.disc')).toHaveCount(0);
 });
 
 test('feed failure leaves the page usable', async ({ page }) => {

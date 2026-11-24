@@ -1,18 +1,32 @@
 ---
 import Prose from '../layouts/Prose.astro';
 import Discoveries from '../islands/Discoveries';
-import { getGame } from '../lib/content/load';
+import { creatorsFor, getGame } from '../lib/content/load';
 import { DISCOVERY_FEED } from '../config';
 const game = getGame('gta-vi');
+const creators = creatorsFor(game.id);
 ---
 <Prose title="Updates" current="updates" description="What's new on Nerdy Birdie Gaming.">
   {DISCOVERY_FEED && (
     <Discoveries client:load heading="What's New from creators" sections={game.guideCategories.map((c) => ({ id: c.id, label: c.label }))}
       guidesHref={`/games/${game.id}/guides/`} />
   )}
+  {DISCOVERY_FEED && creators.length > 0 && (
+    <section class="creators" aria-labelledby="creators-h">
+      <h2 id="creators-h">Creators we follow</h2>
+      <p class="small muted">We check these YouTube channels every day for new GTA VI videos. All credit for their videos goes to them.</p>
+      <ul>
+        {creators.map((c) => (
+          <li><a href={`https://www.youtube.com/channel/${c.channelId}`} target="_blank" rel="noopener noreferrer">{c.name}<span class="sr-only"> (YouTube channel, opens in a new tab)</span></a>
+            <span class="muted"> {c.handle}</span><br /><span class="small muted">{c.focus}.</span></li>
+        ))}
+      </ul>
+    </section>
+  )}
   <h2>24 November 2026 · Preview 6</h2>
   <ul>
-    <li>What's New from creators: a daily check for new GTA VI videos from approved creators, shown here and in the Rare vehicles guide. Titles stay hidden until you choose to see them, and nothing counts toward your progress. It starts once the first creator is approved.</li>
+    <li>What's New from creators: a daily check for new GTA VI videos from the creators we follow (GTA Series Videos, MKIceAndFire and TGG), shown here and in the matching guide sections. Titles and videos stay hidden until you choose to see spoilers, and nothing counts toward your progress.</li>
+    <li>ASK "COZMC" can point you to the right creator for walkthroughs, money, vehicles, secrets and tips.</li>
   </ul>
   <h2>24 November 2026 · Preview 5</h2>
   <ul>
@@ -45,3 +59,8 @@ const game = getGame('gta-vi');
     <li>The achievement and trophy lists themselves are not published yet. They'll appear once verified.</li>
   </ul>
 </Prose>
+<style>
+  .creators { margin: 0 0 28px; }
+  .creators ul { padding-left: 1.2em; }
+  .creators li { margin: 6px 0; }
+</style>

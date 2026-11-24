@@ -186,3 +186,15 @@ export type Video = z.infer<typeof Video>;
 
 /** What the browser gets: spoiler details removed. */
 export type PublicEntry = Omit<Entry, 'details'> & { hasDetails: boolean };
+
+/** A trusted YouTube creator the daily check follows (content/games/<game>/creators/youtube.json). */
+export const Creator = z.strictObject({
+  channelId: z.string().regex(/^UC[A-Za-z0-9_-]{22}$/),
+  handle: z.string().regex(/^@[A-Za-z0-9._-]{3,30}$/),
+  name: z.string().min(1).max(80),
+  focus: z.string().min(1).max(300),
+  status: z.enum(['approved', 'paused']),
+  addedAt: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+});
+export const CreatorsFile = z.strictObject({ note: z.string().optional(), creators: z.array(Creator) });
+export type Creator = z.infer<typeof Creator>;

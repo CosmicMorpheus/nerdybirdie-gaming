@@ -65,7 +65,7 @@ export function answerFromGuide(question: string, docs: readonly AskDoc[], mode:
   const d = top.doc;
   const covers = d.answers.includes(intent) || (intent === 'info' && d.text.length > 0) || (intent === 'howto' && d.answers.includes('unlock'));
   const gate = d.hasSpoilerDetails && d.spoilerLevel !== 'none' && !modeAllows(d.spoilerLevel, mode) ? { id: d.id, level: d.spoilerLevel } : null;
-  const label = d.verification === 'confirmed' ? 'Our guide (confirmed)' : d.verification === 'community' ? 'Our map (community-reported, not yet confirmed)' : `Our guide (${d.verification})`;
+  const label = d.id.startsWith('creator:') ? 'A creator we follow' : d.verification === 'confirmed' ? 'Our guide (confirmed)' : d.verification === 'community' ? 'Our map (community-reported, not yet confirmed)' : `Our guide (${d.verification})`;
   return {
     coverage: covers ? 'answered' : 'partial',
     intent,

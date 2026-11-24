@@ -64,5 +64,5 @@ export const ASK_SERVER = import.meta.env.PUBLIC_ASK_SERVER === 'true';
  */
 const FEED_FLAG = import.meta.env.PUBLIC_DISCOVERY_FEED;
 export const DISCOVERY_FEED = FEED_FLAG === 'true' || (FEED_FLAG !== 'false' && !INDEXABLE);
-/** Guide sections that show their discoveries. Pilot: one busy section (founder-approved plan). */
-export const DISCOVERY_SECTIONS: readonly string[] = ['vehicles'];
+/** Guide sections that show their discoveries: every section the daily check can sort videos into (founder, 24 Nov). */
+export const DISCOVERY_SECTIONS: readonly string[] = ['walkthrough', 'side-missions', 'money', 'vehicles', 'weapons', 'collectibles', 'secrets', 'settings', 'tips'];

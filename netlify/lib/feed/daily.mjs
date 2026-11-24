@@ -38,9 +38,11 @@ export async function runDaily({ store, channels, read, clock = Date.now, force 
   const live = new Set(channels);
   let next = s.rows.filter(row => live.has(row.channel) && fresh(row, start));
   let failed = 0, fetched = 0, existing = 0;
+  const problems = [];
   result.forEach((r, index) => {
     const channel = pending[index];
-    if (r.status !== 'fulfilled') { failed++; return; }
+    // Reasons are our own short messages or "YouTube returned HTTP n": never a key or a URL with one.
+    if (r.status !== 'fulfilled') { failed++; problems.push({ channel, reason: String(r.reason?.message || 'failed').slice(0, 140) }); return; }
     const unique = new Map();
     for (const row of r.value) {
       if (row.channel !== channel || row.gameId !== GAME || row.status !== REVIEW) throw new Error('Adapter contract mismatch.');
@@ -64,7 +66,7 @@ export async function runDaily({ store, channels, read, clock = Date.now, force 
   s.lease = null;
   const run = { at: stamp, outcome: failed ? 'incomplete' : 'complete', checked: pending.length,
     failed, fetched, duplicates: existing, revision: s.revision, changed,
-    added: next.filter(row => !byId.has(row.id)).length };
+    added: next.filter(row => !byId.has(row.id)).length, ...(problems.length ? { problems } : {}) };
   s.runs = [run, ...s.runs].slice(0, 30);
   if (!await store.write(locked.etag, s)) return { outcome: 'superseded' };
   return run;
@@ -113,7 +115,8 @@ export function publicFeed(entry, { reveal = false, category = null, channels, n
         const base = { id: r.id, category: r.category, kind: 'source', status: REVIEW,
           discoveredAt: r.discoveredAt, lastVerified: null };
         return reveal ? { ...base, title: r.title, creator: r.creator, publishedAt: r.publishedAt,
-          url: 'https://www.youtube.com/watch?v=' + r.videoId } : base;
+          url: 'https://www.youtube.com/watch?v=' + r.videoId,
+          channelUrl: 'https://www.youtube.com/channel/' + r.channel, embeddable: r.embeddable === true } : base;
       })
   };
 }
