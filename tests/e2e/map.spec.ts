@@ -64,6 +64,7 @@ test('shared links carry filters and the pin but never the spoiler setting', asy
   const other = await context.browser()!.newContext();
   const p2 = await other.newPage();
   await p2.goto('http://localhost:4322/games/gta-vi/guides/tips/');
+  await p2.waitForFunction(() => !document.querySelector('astro-island[ssr]')); // hydrated before changing settings
   await p2.getByLabel('Spoilers').selectOption('all');
   await p2.goto(page.url());
   await expect(p2.locator('.pin-detail h2')).toHaveText('Fixture card two');

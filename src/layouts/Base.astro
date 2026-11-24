@@ -46,6 +46,6 @@ const robots = !INDEXABLE || noindex || USING_FIXTURES ? 'noindex, nofollow' : '
     <Header current={current} />
     <main id="main" tabindex="-1"><slot /></main>
     <Footer />
-    <AskCozmc client:idle gameId="gta-vi" greeting={askConfig.greeting} discord={COZMC.gtaHelpChannel || COZMC.discord} />
+    <AskCozmc client:load gameId="gta-vi" greeting={askConfig.greeting} discord={COZMC.gtaHelpChannel || COZMC.discord} />
   </body>
 </html>

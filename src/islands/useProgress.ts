@@ -32,7 +32,9 @@ export interface ProgressState extends Snapshot {
  * immediately. Guests: this browser only. Signed in (when accounts are switched on): a per-account copy on this
  * device plus automatic sync after every change, with retries. Other tabs are picked up via the storage event.
  */
-let snap: Snapshot = { progress: emptyProgress(), ready: false, status: 'empty', saveError: null, saveState: null, sync: 'disabled', account: null };
+/** What the server renders. Every island's FIRST render must use this, or hydration keeps stale attributes. */
+const INITIAL: Snapshot = { progress: emptyProgress(), ready: false, status: 'empty', saveError: null, saveState: null, sync: 'disabled', account: null };
+let snap: Snapshot = INITIAL;
 const listeners = new Set<(s: Snapshot) => void>();
 let storage: KV | null = null;
 let canSave = false;
@@ -127,7 +129,9 @@ const remember = (f: (p: Progress) => Progress) => {
 };
 
 export function useProgress(): ProgressState {
-  const [s, setS] = useState(snap);
+  // Start from the server-rendered state even if another island already loaded progress: Preact's hydration doesn't
+  // patch attributes that differ from the HTML (e.g. a checkbox stuck `disabled`). The effect below syncs right after.
+  const [s, setS] = useState(INITIAL);
   useEffect(() => {
     listeners.add(setS);
     start();

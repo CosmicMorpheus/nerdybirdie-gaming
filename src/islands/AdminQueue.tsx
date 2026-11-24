@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'preact/hooks';
+import { useEffect, useRef, useState } from 'preact/hooks';
 import type { HistoryRecord, Override, QueueItem } from '../lib/ask/queue';
 import './tracker.css';
 import './ask.css';
@@ -15,6 +15,7 @@ export default function AdminQueue({ gameId }: { gameId: string }) {
   const [draft, setDraft] = useState('');
   const [msg, setMsg] = useState<{ kind: 'ok' | 'error'; text: string } | null>(null);
   const [filter, setFilter] = useState<'open' | 'all'>('open');
+  const tokenField = useRef<HTMLInputElement>(null);
 
   useEffect(() => { try { setToken(sessionStorage.getItem(KEY) ?? ''); } catch {} }, []);
   useEffect(() => { fetch(`/data/${gameId}/entries.json`).then((r) => r.json()).then((list: { id: string }[]) => setCurrent(Object.fromEntries(list.map((e) => [e.id, e])))).catch(() => {}); }, []);
@@ -38,10 +39,12 @@ export default function AdminQueue({ gameId }: { gameId: string }) {
     <section class="panel">
       <h2>Editor sign-in</h2>
       <p class="muted small">Enter the editor token (the GUIDE_ADMIN_TOKEN set in Netlify). It's kept in this browser tab only.</p>
-      <form class="btn-row" onSubmit={(e) => { e.preventDefault(); void load(); }}>
-        <label class="search-field"><span class="sr-only">Editor token</span><input type="password" autoComplete="off" value={token} onInput={(e) => setToken((e.target as HTMLInputElement).value)} /></label>
-        <button class="btn btn-primary" type="submit">Open queue</button>
-      </form>
+      {/* A plain button (not a form submit), so a click before the page is ready can't reload it; the token is read from the field itself. */}
+      <div class="btn-row">
+        <label class="search-field"><span class="sr-only">Editor token</span><input ref={tokenField} type="password" autoComplete="off" value={token}
+          onInput={(e) => setToken((e.target as HTMLInputElement).value)} onKeyDown={(e) => { if (e.key === 'Enter') void load(tokenField.current?.value ?? token); }} /></label>
+        <button class="btn btn-primary" type="button" onClick={() => { const t = tokenField.current?.value ?? token; setToken(t); void load(t); }}>Open queue</button>
+      </div>
       {msg && <p class="notice error">{msg.text}</p>}
     </section>
   );

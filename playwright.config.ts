@@ -4,6 +4,9 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: 'tests/e2e',
   fullyParallel: true,
+  // The test machine runs several browsers at once; give hydration a little headroom.
+  workers: 3,
+  expect: { timeout: 10_000 },
   reporter: [['list']],
   use: { trace: 'off' },
   projects: [

@@ -66,6 +66,7 @@ test('review page: approve and undo call the private API with the editor token',
     return r.fulfill({ contentType: 'application/json', body: JSON.stringify({ items: [item], overrides: {}, history: [{ id: 'h1', at: '2026-11-24T11:00:00Z', itemId: item.id, entryId: 'gta-vi:entry:fx-tip-1', before: null, after: { version: 1 } }] }) });
   });
   await page.goto(T + '/admin/guide-updates/');
+  await page.waitForFunction(() => !document.querySelector('astro-island[ssr]')); // all islands hydrated
   await page.getByLabel('Editor token').fill('test-editor-token-0123456789abcdef');
   await page.getByRole('button', { name: 'Open queue' }).click();
   await page.locator('.pin-list button', { hasText: 'Can I keep the Fixture Comet?' }).click();
