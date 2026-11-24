@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Tracker wireframe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="wireframe.css">
+</head>
+<body>
+<div class="label">WIREFRAME · rows are placeholders, not game data</div>
+
+<header class="hdr">
+  <div class="wrap">
+    <a class="brand" href="#"><img src="logo-160.png" alt="" width="40" height="40"><span>Nerdy Birdie <small>Gaming</small></span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#">Games</a><a href="#" aria-current="page">Guides</a><a href="#">My Progress</a><a href="#">Updates</a>
+    </nav>
+    <div class="hdr-right">
+      <div class="search-btn">⌕ <span>Search guides</span> <kbd>/</kbd></div>
+      <a class="cz-pill" href="#"><i class="cz-dot"></i>COZMC Discord</a>
+      <button class="menu-btn">Menu</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="crumbs">Games / GTA VI / Achievements</div>
+  <div class="page-head">
+    <div>
+      <div class="eyebrow">GTA VI tracker</div>
+      <h1>Achievements</h1>
+      <div class="meta"><span>Source: official platform list</span><span>Checked: date</span></div>
+    </div>
+    <div class="controls">
+      <label class="select">Platform<div>Xbox Series X|S ▾</div></label>
+      <label class="select">Spoilers<div class="safe">Spoiler-free ▾</div></label>
+    </div>
+  </div>
+
+  <div class="tracker">
+    <nav class="cats" aria-label="Categories">
+      <a href="#" aria-current="true">All <span>—/—</span></a>
+      <a href="#">Story <span>—/—</span></a>
+      <a href="#">Exploration <span>—/—</span></a>
+      <a href="#">Activities <span>—/—</span></a>
+      <a href="#">Collectibles <span>—/—</span></a>
+      <a href="#">Bookmarked <span>—</span></a>
+    </nav>
+    <div>
+      <div class="cat-select"><span aria-current="true">All</span><span>Story</span><span>Exploration</span><span>Activities</span><span>Collectibles</span></div>
+      <div class="summary panel" style="margin-top:12px">
+        <div class="big">34% <small>· example of total</small></div>
+        <div class="bar"><i style="width:34%"></i></div>
+      </div>
+
+      <div class="toolbar">
+        <div class="field">⌕ Search achievements (spoiler-safe)</div>
+        <div class="seg"><span aria-pressed="true">All</span><span>To do</span><span>Done</span></div>
+      </div>
+
+      <div class="row"><div class="box on"></div><div><h4>Achievement title</h4><p>Safe one-line description from the verified list.</p></div><div class="tags"><span class="tag">Story</span></div></div>
+      <div class="row"><div class="box"></div><div><h4>Achievement title</h4><p>Safe one-line description from the verified list.</p></div><div class="tags"><span class="tag miss">Missable</span><span class="tag">★ Saved</span></div></div>
+      <div class="row hidden"><div class="box"></div><div class="hidden"><h4>Hidden achievement</h4><p>Details are hidden in spoiler-free mode.</p></div><span class="reveal">Reveal details</span></div>
+      <div class="row"><div class="box"></div><div><h4>Achievement title</h4><p>Safe one-line description from the verified list.</p></div><div class="tags"><span class="tag">Exploration</span></div></div>
+
+      <div class="empty"><b>Collectibles: not verified yet.</b> We only list items we can source. This category doesn't count toward your total until it has entries.</div>
+
+      <p class="local-note">Progress is saved in this browser only, not synced with your console. <u>Export backup</u> · <u>Import</u> · <u>Reset…</u></p>
+
+      <div class="cz-inline">
+        <p><b style="color:#FF6F61">COZMC</b> · Stuck on one? Ask the community.</p>
+        <div class="links"><a class="cz-btn cz-discord" href="#">Join the Discord ↗</a><a class="cz-btn cz-site" href="#">cozmc.us ↗</a></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="disclaimer">Independent, unofficial fan guide. Not affiliated with Rockstar Games, Take-Two Interactive, Microsoft/Xbox or Sony/PlayStation.</p>
+  </div>
+</footer>
+</body>
+</html>
