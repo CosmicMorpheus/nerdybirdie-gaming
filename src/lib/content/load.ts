@@ -1,5 +1,5 @@
 import platformsJson from '../../../content/platforms.json';
-import { Platform, type Game, type Guide, type Objective, type PublicObjective, type PublicStep, type Video } from './schema';
+import { Platform, type Game, type Objective, type PublicEntry, type PublicObjective, type Video } from './schema';
 import { isPublishable, validateGameBundle, type GameBundle } from './validate';
 import { z } from 'zod';
 
@@ -9,13 +9,13 @@ export const USING_FIXTURES: boolean = typeof __NBG_FIXTURES__ !== 'undefined' &
 const real = {
   games: import.meta.glob('/content/games/*/game.json', { eager: true, import: 'default' }),
   objectives: import.meta.glob('/content/games/*/objectives.json', { eager: true, import: 'default' }),
-  guides: import.meta.glob('/content/games/*/guides.json', { eager: true, import: 'default' }),
+  entries: import.meta.glob('/content/games/*/entries.json', { eager: true, import: 'default' }),
   videos: import.meta.glob('/content/games/*/videos.json', { eager: true, import: 'default' }),
 };
 const fixture = {
   games: import.meta.glob('/content/fixtures/games/*/game.json', { eager: true, import: 'default' }),
   objectives: import.meta.glob('/content/fixtures/games/*/objectives.json', { eager: true, import: 'default' }),
-  guides: import.meta.glob('/content/fixtures/games/*/guides.json', { eager: true, import: 'default' }),
+  entries: import.meta.glob('/content/fixtures/games/*/entries.json', { eager: true, import: 'default' }),
   videos: import.meta.glob('/content/fixtures/games/*/videos.json', { eager: true, import: 'default' }),
 };
 
@@ -26,7 +26,7 @@ function loadAll(): GameBundle[] {
   return Object.entries(src.games).map(([path, rawGame]) => {
     const at = (f: string) => path.replace(/game\.json$/, f);
     return validateGameBundle(rawGame, src.objectives[at('objectives.json')] ?? [], platforms,
-      src.guides[at('guides.json')] ?? [], src.videos[at('videos.json')] ?? []);
+      src.entries[at('entries.json')] ?? [], src.videos[at('videos.json')] ?? []);
   });
 }
 
@@ -63,27 +63,24 @@ export function publicObjectives(gameId: string): PublicObjective[] {
   }));
 }
 
-/** Spoiler text for objectives and guide steps, keyed by id. Served only from /data/<game>/protected.json. */
-export function protectedText(gameId: string): Record<string, { title: string; summary: string }> {
+/** Spoiler text for objectives and entries, keyed by id. Served only from /data/<game>/protected.json. */
+export function protectedText(gameId: string): Record<string, { title: string; summary: string; steps?: string[] }> {
   const b = bundles.find((x) => x.game.id === gameId);
-  const out: Record<string, { title: string; summary: string }> = {};
+  const out: Record<string, { title: string; summary: string; steps?: string[] }> = {};
   for (const o of b?.objectives ?? []) if (o.protected && visible(o)) out[o.id] = o.protected;
-  for (const g of publicGuides(gameId))
-    for (const s of b!.guides.find((x) => x.id === g.id)!.steps)
-      if (s.protected) out[s.id] = { title: s.protected.title, summary: s.protected.body };
+  for (const e of b?.entries ?? []) if (e.details && entryVisible(e)) out[e.id] = { title: e.title, summary: e.details.summary, steps: e.details.steps };
   return out;
 }
 
-export type PublicGuide = Omit<Guide, 'steps'> & { steps: PublicStep[]; draft: boolean };
+/** Published entries; the fixture test build also shows drafts so their handling can be tested. */
+function entryVisible(e: { status: string }): boolean {
+  return e.status === 'published' || USING_FIXTURES;
+}
 
-/** Guides shown on the site, with spoiler text removed from steps. */
-export function publicGuides(gameId: string): PublicGuide[] {
+/** Guide entries for the browser, in file order, with spoiler details removed. */
+export function publicEntries(gameId: string): PublicEntry[] {
   const b = bundles.find((x) => x.game.id === gameId);
-  return (b?.guides ?? []).filter(visible).map((g) => ({
-    ...g,
-    draft: !isPublishable(g),
-    steps: g.steps.map(({ protected: p, ...s }) => ({ ...s, hasProtected: p !== null })),
-  }));
+  return (b?.entries ?? []).filter(entryVisible).map(({ details, ...e }) => ({ ...e, hasDetails: details !== null }));
 }
 
 export function videosFor(gameId: string): Video[] {

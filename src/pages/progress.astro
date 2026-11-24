@@ -1,8 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
 import ProgressManager from '../islands/ProgressManager';
-import { games, getPlatform, publicObjectives } from '../lib/content/load';
+import { GUIDES_CONTEXT } from '../islands/Hud';
+import { games, getPlatform, publicEntries, publicObjectives } from '../lib/content/load';
 import { contextKey } from '../lib/progress/model';
+const game = games[0]!;
 const contexts = games.flatMap((g) => {
   const objs = publicObjectives(g.id);
   return g.platforms.map((gp) => {
@@ -10,13 +12,26 @@ const contexts = games.flatMap((g) => {
     return { key: contextKey(g.id, p.id), label: `${g.shortTitle} · ${p.shortLabel} ${p.objectiveNoun.toLowerCase()}`, href: `/games/${g.id}/achievements/`,
       objectiveIds: objs.filter((o) => o.platformIds.includes(p.id)).map((o) => o.id) };
   });
-});
+}).concat(games.map((g) => ({ key: contextKey(g.id, GUIDES_CONTEXT), label: `${g.shortTitle} · guide entries`, href: `/games/${g.id}/guides/`, objectiveIds: publicEntries(g.id).map((e) => e.id) })));
+const entries = publicEntries(game.id);
+const sections = game.guideCategories.map((c) => ({ label: c.label, href: `/games/${game.id}/guides/${c.id}/`, entryIds: entries.filter((e) => e.category === c.id).map((e) => e.id) }));
 ---
-<Base title="My progress" current="progress" description="Your saved progress on this device, with backup and restore. No account needed.">
+<Base title="My progress" current="progress" description="Your saved progress, by section, with backup and restore. No sign-up needed.">
   <div class="wrap narrow">
     <h1>My progress</h1>
-    <p class="muted">No account, no sign-up. Everything below is stored in this browser only.</p>
-    <ProgressManager client:load contexts={contexts} />
+    <aside class="notice account" aria-labelledby="acct-h">
+      <h2 id="acct-h" class="hud-label">Where your progress is saved</h2>
+      <p>Progress is saved <strong>in this browser on this device only</strong>. There are no accounts yet, so it won't follow you to another
+        phone, browser or computer, and clearing your browser's site data erases it. Use <strong>Download backup</strong> below to keep a copy
+        or move it to another device. Account sign-in with cloud saving is planned; when it arrives, you'll be offered a merge that never unticks anything.</p>
+    </aside>
+    <ProgressManager client:load contexts={contexts} guideKey={contextKey(game.id, GUIDES_CONTEXT)} sections={sections} />
   </div>
 </Base>
-<style> h1 { padding-top: 28px; } .narrow { max-width: 860px; } </style>
+<style>
+  h1 { padding-top: 28px; }
+  .narrow { max-width: 860px; }
+  .account { margin-bottom: 18px; }
+  .account h2 { margin: 0 0 6px; }
+  .account p { margin: 0; }
+</style>

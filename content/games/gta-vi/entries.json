@@ -1,0 +1,260 @@
+[
+  {
+    "id": "gta-vi:entry:platforms-and-release",
+    "gameId": "gta-vi",
+    "slug": "platforms-and-release",
+    "category": "tips",
+    "title": "Which consoles GTA VI is on",
+    "summary": "GTA VI came out worldwide on 19 November 2026 for PlayStation 5 and Xbox Series X|S. Rockstar hasn't announced a PC version.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Released",
+        "value": "19 November 2026"
+      },
+      {
+        "label": "Platforms",
+        "value": "PlayStation 5, Xbox Series X|S"
+      },
+      {
+        "label": "PC",
+        "value": "Not announced (as of 24 Nov 2026)"
+      }
+    ],
+    "chapter": null,
+    "mode": "any",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "Rockstar Games",
+        "title": "Grand Theft Auto VI Now Available",
+        "url": "https://www.rockstargames.com/newswire/article/39akk424a9oo53",
+        "checkedAt": "2026-11-24",
+        "supports": "Release date and platforms"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "videoIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:leonida-regions",
+    "gameId": "gta-vi",
+    "slug": "leonida-regions",
+    "category": "tips",
+    "title": "The regions of Leonida",
+    "summary": "The game is set in Leonida, a fictional US state. Rockstar's own guide to the state names six areas to explore, with Vice City as the main city.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Areas named by Rockstar",
+        "value": "Vice City, Leonida Keys, Grassrivers, Port Gellhorn, Ambrosia, Mount Kalaga"
+      }
+    ],
+    "chapter": null,
+    "mode": "any",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "Rockstar Games",
+        "title": "Only in Leonida",
+        "url": "https://www.rockstargames.com/VI/only-in-leonida",
+        "checkedAt": "2026-11-24",
+        "supports": "Area names"
+      },
+      {
+        "publisher": "Rockstar Games",
+        "title": "Grand Theft Auto VI (official site)",
+        "url": "https://www.rockstargames.com/VI",
+        "checkedAt": "2026-11-24",
+        "supports": "Setting: Vice City in the state of Leonida"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "videoIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:main-characters",
+    "gameId": "gta-vi",
+    "slug": "main-characters",
+    "category": "tips",
+    "title": "Meet the main characters",
+    "summary": "You play as two leads, Jason Duval and Lucia Caminos. Rockstar has published short bios of them and the people around them. Open the details for that background.",
+    "steps": [],
+    "facts": [],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "minor",
+    "details": {
+      "summary": "Background from Rockstar's official character bios, in brief.",
+      "steps": [
+        "Jason Duval grew up around con artists, did a stint in the Army, and now does work for drug runners in the Keys.",
+        "Lucia Caminos was taught to fight by her father. Fighting for her family landed her in Leonida Penitentiary; she's just out and has a plan.",
+        "Cal Hampton: Jason's friend, a homebody who listens in on Coast Guard radio and believes every conspiracy online.",
+        "Brian Heder: a veteran smuggler in the Keys who lets Jason live in one of his properties in return for help with local jobs.",
+        "Boobie Ike: a Vice City figure who turned street money into real estate, a strip club and a recording studio, and co-runs Only Raw Records with Dre'Quan Priest.",
+        "Real Dimez (Bae-Luxe and Roxy): a rap duo signed to Only Raw Records, chasing a second hit.",
+        "Raul Bautista: an experienced bank robber who recruits people willing to take big risks."
+      ]
+    },
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "Rockstar Games",
+        "title": "Only in Leonida",
+        "url": "https://www.rockstargames.com/VI/only-in-leonida",
+        "checkedAt": "2026-11-24",
+        "supports": "All character backgrounds"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "videoIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:editions-and-add-ons",
+    "gameId": "gta-vi",
+    "slug": "editions-and-add-ons",
+    "category": "tips",
+    "title": "Editions and paid add-ons",
+    "summary": "Besides the standard game, Rockstar sells an Ultimate Edition and a separate digital add-on called the Vintage Vice City Pack. Rockstar's main page only describes them briefly, so check the store listing for exact contents before you buy.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Ultimate Edition",
+        "value": "Extra items tied to Jason and Lucia's story (contents not itemised on Rockstar's page)"
+      },
+      {
+        "label": "Vintage Vice City Pack",
+        "value": "Digital add-on with retro-themed bonuses (contents not itemised on Rockstar's page)"
+      }
+    ],
+    "chapter": null,
+    "mode": "any",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "Rockstar Games",
+        "title": "Grand Theft Auto VI (official site)",
+        "url": "https://www.rockstargames.com/VI",
+        "checkedAt": "2026-11-24",
+        "supports": "Both products and their one-line descriptions"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "videoIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:gta-plus-perks",
+    "gameId": "gta-vi",
+    "slug": "gta-plus-perks",
+    "category": "money",
+    "title": "GTA+ perks: sell vehicles for more, pay less in shops",
+    "summary": "If you have a GTA+ membership on console, Rockstar lists optional perks in the story: 10% more money when you sell a vehicle you own, 10% off at many shops, and free or upgraded ways to get around. Skip this if you don't subscribe; nothing in the game requires it.",
+    "steps": [
+      "GTA+ is a paid monthly membership bought through the PlayStation Store or Microsoft Store. It renews automatically until you cancel.",
+      "Keep the membership active and play online to claim the perks.",
+      "Sell vehicles you own rather than abandoning them: members get a 10% higher sale price.",
+      "Buy weapons, clothes, haircuts, tattoos and vehicle mods at participating shops to get the 10% discount."
+    ],
+    "facts": [
+      {
+        "label": "Vehicle sales",
+        "value": "+10% on vehicles you own"
+      },
+      {
+        "label": "Shop discount",
+        "value": "10% at select businesses: weapons and clothes shops, hairdressers, tattooists, vehicle mod shops and more"
+      },
+      {
+        "label": "Getting around",
+        "value": "Scooter Bros Premium vehicle care, RydeMe rideshare premium, free scooter and bike rentals, Leonida metro benefits"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "Rockstar Games",
+        "title": "GTA+ benefits in GTA VI",
+        "url": "https://www.rockstargames.com/VI/gta-plus",
+        "checkedAt": "2026-11-24",
+        "supports": "All perks, requirements and how GTA+ is sold"
+      }
+    ],
+    "platformNote": "Console only (PS5, Xbox Series X|S). Needs an active GTA+ membership and an internet connection; fees and benefits can change.",
+    "gameVersion": null,
+    "videoIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:gta-plus-elegy",
+    "gameId": "gta-vi",
+    "slug": "gta-plus-elegy",
+    "category": "vehicles",
+    "title": "'90 Annis Venturas BLVD Elegy (GTA+)",
+    "summary": "A widebody sports car that GTA+ members on console can claim from Chapter 3, along with a garage in the Crosstown District.",
+    "steps": [
+      "Have an active GTA+ membership on console.",
+      "Play until Chapter 3: Rockstar says the car can be claimed from then.",
+      "Claim the car and the Crosstown District garage. Rockstar doesn't say exactly where to claim it in-game; we'll add that once we've confirmed it."
+    ],
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Widebody sports car"
+      },
+      {
+        "label": "Available from",
+        "value": "Chapter 3"
+      },
+      {
+        "label": "Comes with",
+        "value": "A garage in the Crosstown District"
+      },
+      {
+        "label": "Requires",
+        "value": "GTA+ membership (console)"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "Rockstar Games",
+        "title": "GTA+ benefits in GTA VI",
+        "url": "https://www.rockstargames.com/VI/gta-plus",
+        "checkedAt": "2026-11-24",
+        "supports": "Car, garage, Chapter 3 availability"
+      }
+    ],
+    "platformNote": "Console only, GTA+ members.",
+    "gameVersion": null,
+    "videoIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  }
+]

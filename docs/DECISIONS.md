@@ -4,6 +4,9 @@ Newest first. "Proposed" means waiting for the founder; only "Approved" decision
 
 | Date | Decision | Status | Notes |
 |---|---|---|---|
+| 2026-11-24 | Guide content is one entry list (`entries.json`) with per-entry sources, check dates and Confirmed/Unconfirmed/Rumor; replaces the guide-with-steps model, which only ever held test data | Done | Founder spec for content types and fields |
+| 2026-11-24 | First content pass uses Rockstar's official pages only (6 entries) | Done | IGN pages couldn't be reached from this environment by any route (network proxy and fetch tool both refuse ign.com); nothing was written from memory or search snippets |
+| 2026-11-24 | Progress stays browser-only; account saving documented, not faked | Proposed | No login or database exists to reuse; needs a founder decision on a provider (docs/ACCOUNTS.md). Merge rule built and tested. |
 | 2026-11-24 | Research from IGN, YouTube and guide sites is allowed if every fact links to the original page and guides are written in our own words | Approved | Founder request. Search snippets alone are not enough (they disagree, e.g. on the platinum trophy's name); only full pages from established outlets are used. Blocked until those hosts are allowed in the environment's network settings. |
 | 2026-11-24 | Retro arcade direction: Pixelify Sans for large headings, Press Start 2P for HUD labels, synthwave hero, chunky pixel shadows; body text stays Inter | Approved | Founder request ("retro gamer feel"). Pixel fonts only at large sizes, with ligatures off; small headings use Space Grotesk so c/o stay distinct. |
 | 2026-11-24 | Completion motivation: ranks (New Arrival → 100% Club), checkpoints at 25/50/75/100%, Next up (missable first), Cleared stamps, guides as checklists | Approved | Founder request. Cosmetic only; never tied to rewards. |

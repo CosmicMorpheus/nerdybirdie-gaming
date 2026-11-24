@@ -12,7 +12,8 @@ Separate from the cozmc.us site and repo.
 | `/` | Home: featured game, your progress, quick links, COZMC community panel |
 | `/games/gta-vi/` | Game overview: release date and platforms, with the official source |
 | `/games/gta-vi/achievements/` | Tracker: separate Xbox and PS5 lists, ranks, checkpoints, "Next up", spoiler modes, search, filters, saved items, notes, reset |
-| `/games/gta-vi/guides/` | Quest board: ten guide sections; each guide is a checklist with sources and click-to-play videos |
+| `/games/gta-vi/guides/` | Quest board (progress per section) plus every entry, searchable and filterable by section, spoiler level and verification |
+| `/games/gta-vi/guides/<section>/` | One section: check entries off, "More details", spoiler reveals, sources and last-checked dates |
 | `/progress/` | Your progress, backup download and restore |
 | `/search/` | Spoiler-safe site search |
 | `/about/`, `/privacy/`, `/corrections/`, `/updates/` | Required pages, including the unofficial disclaimer |
@@ -60,12 +61,14 @@ All logo paths are in `src/config.ts` under `BRAND`. The easiest way is to repla
 
 PNG or WebP both work; if you change the file type, update the path in `BRAND`. Keep the original master in `assets/brand/`.
 
-## Adding a guide
+## Adding guide entries
 
-Guides live in `content/games/gta-vi/guides.json`; videos in `videos.json`; sources in `game.json` → `sources`.
-Every guide needs at least one source, and each step can cite its own. Write in your own words and link the original page.
-A YouTube video needs its 11-character id (from `youtube.com/watch?v=XXXXXXXXXXX`), the creator's name and channel link.
-Videos never load until the viewer presses play.
+Tips, walkthrough missions, money methods, vehicles, weapons, collectibles and videos all go in `content/games/gta-vi/entries.json`.
+See **`docs/CONTENT_GUIDE.md`** for the rules, a copy-paste template and examples.
+
+## Saved progress
+
+Progress is saved in the visitor's browser only; there are no accounts yet. `docs/ACCOUNTS.md` explains what account saving needs and what's already built for it.
 
 ## Links and settings
 

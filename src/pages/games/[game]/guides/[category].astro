@@ -1,0 +1,35 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import CozmcInline from '../../../../components/CozmcInline.astro';
+import EntryBrowser from '../../../../islands/EntryBrowser';
+import { games, publicEntries, videosFor } from '../../../../lib/content/load';
+
+export function getStaticPaths() {
+  return games.flatMap((game) => game.guideCategories.map((section, i) => ({
+    params: { game: game.id, category: section.id },
+    props: { game, section, next: game.guideCategories[i + 1] ?? null },
+  })));
+}
+const { game, section, next } = Astro.props;
+const entries = publicEntries(game.id).filter((e) => e.category === section.id);
+---
+<Base title={`${section.label} · ${game.shortTitle}`} current="guides" description={`${game.title}: ${section.blurb} Spoiler-safe, with sources.`}>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/games/">Games</a> / <a href={`/games/${game.id}/`}>{game.shortTitle}</a> / <a href={`/games/${game.id}/guides/`}>Guides</a> / <span aria-current="page">{section.label}</span></nav>
+    <p class="eyebrow">{game.shortTitle} guide</p>
+    <h1>{section.label}</h1>
+    <p class="lead muted">{section.blurb}</p>
+    <EntryBrowser client:load gameId={game.id} categories={game.guideCategories} entries={entries} videos={videosFor(game.id)}
+      protectedUrl={`/data/${game.id}/protected.json`} fixedCategory={section.id} />
+    <nav class="after" aria-label="More sections">
+      <a class="btn btn-quiet" href={`/games/${game.id}/guides/`}>← Quest board</a>
+      {next && <a class="btn btn-primary" href={`/games/${game.id}/guides/${next.id}/`}>Next: {next.label} →</a>}
+    </nav>
+    <CozmcInline text="Know something we're missing? Tell the community." />
+  </div>
+</Base>
+<style>
+  .crumbs { font-size: 14px; color: var(--vc-muted); padding-top: 22px; }
+  .lead { max-width: 70ch; margin: 0 0 24px; }
+  .after { display: flex; gap: 12px; flex-wrap: wrap; justify-content: space-between; margin: 28px 0; }
+</style>

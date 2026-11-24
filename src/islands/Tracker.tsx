@@ -6,6 +6,7 @@ import { CHECKPOINTS, crossedCheckpoint, nextRank, nextUp, rankFor } from '../li
 import { search } from '../lib/search';
 import { displayText, modeAllows, SPOILER_MODES, isSpoilerMode, type SpoilerMode } from '../lib/spoilers';
 import { StorageNotice } from './StorageNotice';
+import { SaveStatus } from './SaveStatus';
 import { useProgress } from './useProgress';
 import './tracker.css';
 
@@ -132,6 +133,7 @@ export default function Tracker({ gameId, gameShortTitle, platforms, categories,
       </div>
 
       <StorageNotice state={state} />
+      <SaveStatus state={state} />
 
       <div class="summary panel">
         <div class="ranks">

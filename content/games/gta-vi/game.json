@@ -53,54 +53,54 @@
   ],
   "guideCategories": [
     {
-      "id": "roadmap",
-      "label": "100% roadmap",
-      "blurb": "The order to do things in so nothing gets missed."
+      "id": "tips",
+      "label": "Beginner tips & basics",
+      "blurb": "What to know before and during your first hours."
+    },
+    {
+      "id": "walkthrough",
+      "label": "Walkthrough",
+      "blurb": "Chapter-by-chapter mission help, spoiler-safe."
     },
     {
       "id": "money",
       "label": "Money",
-      "blurb": "Legit in-game ways to earn, by stage of the game."
+      "blurb": "Legit in-game ways to earn and save."
     },
     {
       "id": "vehicles",
       "label": "Rare vehicles",
-      "blurb": "Where to find the cars, bikes and boats worth keeping."
+      "blurb": "Cars, bikes and boats worth getting."
     },
     {
       "id": "weapons",
-      "label": "Weapons",
+      "label": "Rare weapons",
       "blurb": "Where to get them and what they're good for."
     },
     {
       "id": "collectibles",
-      "label": "Collectibles",
-      "blurb": "Every hidden item, grouped by area."
-    },
-    {
-      "id": "missions",
-      "label": "Story missions",
-      "blurb": "Spoiler-safe help for tough missions."
+      "label": "Collectibles & locations",
+      "blurb": "Hidden items and places, by area."
     },
     {
       "id": "side-missions",
-      "label": "Side missions",
-      "blurb": "Side activities and how to clear them."
+      "label": "Side missions & activities",
+      "blurb": "Side content and how to clear it."
     },
     {
       "id": "secrets",
       "label": "Secrets & easter eggs",
-      "blurb": "Hidden spots and surprises. Spoiler-gated."
-    },
-    {
-      "id": "tips",
-      "label": "Tips & tricks",
-      "blurb": "Small things that save a lot of time."
+      "blurb": "Hidden surprises. Spoiler-gated."
     },
     {
       "id": "settings",
       "label": "Settings & controls",
       "blurb": "Recommended settings for each platform."
+    },
+    {
+      "id": "videos",
+      "label": "Videos",
+      "blurb": "Credited videos we've checked and found useful."
     }
   ],
   "sources": [

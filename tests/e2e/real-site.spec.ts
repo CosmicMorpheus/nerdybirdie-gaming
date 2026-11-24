@@ -4,7 +4,7 @@ import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
 const REAL = 'http://localhost:4321';
-const PAGES = ['/', '/games/', '/games/gta-vi/', '/games/gta-vi/achievements/', '/games/gta-vi/guides/', '/progress/', '/search/', '/about/', '/privacy/', '/corrections/', '/updates/'];
+const PAGES = ['/', '/games/', '/games/gta-vi/', '/games/gta-vi/achievements/', '/games/gta-vi/guides/', '/games/gta-vi/guides/tips/', '/games/gta-vi/guides/walkthrough/', '/progress/', '/search/', '/about/', '/privacy/', '/corrections/', '/updates/'];
 
 test('COZMC links are exact, separate, and open safely', async ({ page }) => {
   await page.goto(REAL + '/');
@@ -69,4 +69,28 @@ test('@phone mobile menu has both community links', async ({ page }) => {
   const sheet = page.locator('.sheet');
   await expect(sheet.getByRole('link', { name: /Join the COZMC Discord/ })).toHaveAttribute('href', 'https://discord.gg/VBeBE7MSSq');
   await expect(sheet.getByRole('link', { name: /Explore COZMC.US/ })).toHaveAttribute('href', 'https://cozmc.us/');
+});
+
+test('real guide entries: every entry cites Rockstar with a check date; walkthrough is honestly empty', async ({ page }) => {
+  await page.goto(REAL + '/games/gta-vi/guides/tips/');
+  const entries = page.locator('li.entry');
+  await expect(entries.first()).toBeVisible();
+  for (const e of await entries.all()) {
+    await e.getByRole('button', { name: /More details/ }).click();
+    await e.locator('summary', { hasText: 'Sources and last checked' }).click();
+    await expect(e.locator('.sources-box a').first()).toHaveAttribute('href', /^https:\/\/www\.rockstargames\.com\//);
+    await expect(e.locator('.sources-box')).toContainText(/checked \d{4}-\d{2}-\d{2}/);
+  }
+  await page.goto(REAL + '/games/gta-vi/guides/walkthrough/');
+  await expect(page.getByText(/Nothing verified for Walkthrough yet/)).toBeVisible();
+});
+
+test('character bios are behind a deliberate reveal', async ({ page }) => {
+  await page.goto(REAL + '/games/gta-vi/guides/tips/');
+  await expect(page.locator('body')).not.toContainText('Leonida Penitentiary');
+  const e = page.locator('li.entry', { hasText: 'Meet the main characters' });
+  await expect(e).toContainText('Mild spoiler');
+  await e.getByRole('button', { name: /More details/ }).click();
+  await e.getByRole('button', { name: /Reveal mild spoiler/ }).click();
+  await expect(e).toContainText('Leonida Penitentiary');
 });

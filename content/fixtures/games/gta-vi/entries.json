@@ -1,0 +1,260 @@
+[
+  {
+    "id": "gta-vi:entry:fx-tip-1",
+    "gameId": "gta-vi",
+    "slug": "fx-tip-1",
+    "category": "tips",
+    "title": "Fixture entry fx-tip-1",
+    "summary": "Test data only. Not real GTA VI information.",
+    "steps": [
+      "Fixture step one.",
+      "Fixture step two."
+    ],
+    "facts": [
+      {
+        "label": "Fixture fact",
+        "value": "Test value"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "Test fixture",
+        "title": "Test fixture source",
+        "url": "https://example.com/fixture",
+        "checkedAt": "2026-11-24"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "videoIds": [
+      "fixture-video-1"
+    ],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:fx-tip-2",
+    "gameId": "gta-vi",
+    "slug": "fx-tip-2",
+    "category": "tips",
+    "title": "Fixture entry fx-tip-2",
+    "summary": "Test data only. Not real GTA VI information.",
+    "steps": [
+      "Fixture step one.",
+      "Fixture step two."
+    ],
+    "facts": [
+      {
+        "label": "Fixture fact",
+        "value": "Test value"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "unconfirmed",
+    "sources": [
+      {
+        "publisher": "Test fixture",
+        "title": "Test fixture source",
+        "url": "https://example.com/fixture",
+        "checkedAt": "2026-11-24"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "videoIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:fx-tip-3",
+    "gameId": "gta-vi",
+    "slug": "fx-tip-3",
+    "category": "tips",
+    "title": "Fixture entry fx-tip-3",
+    "summary": "Test data only. Not real GTA VI information.",
+    "steps": [
+      "Fixture step one.",
+      "Fixture step two."
+    ],
+    "facts": [
+      {
+        "label": "Fixture fact",
+        "value": "Test value"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "rumor",
+    "sources": [
+      {
+        "publisher": "Test fixture",
+        "title": "Test fixture source",
+        "url": "https://example.com/fixture",
+        "checkedAt": "2026-11-24"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "videoIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:fx-walk-1",
+    "gameId": "gta-vi",
+    "slug": "fx-walk-1",
+    "category": "walkthrough",
+    "title": "Fixture entry fx-walk-1",
+    "summary": "Test data only. Not real GTA VI information.",
+    "steps": [
+      "Fixture step one.",
+      "Fixture step two."
+    ],
+    "facts": [
+      {
+        "label": "Fixture fact",
+        "value": "Test value"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "Test fixture",
+        "title": "Test fixture source",
+        "url": "https://example.com/fixture",
+        "checkedAt": "2026-11-24"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "videoIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:fx-walk-2",
+    "gameId": "gta-vi",
+    "slug": "fx-walk-2",
+    "category": "walkthrough",
+    "title": "Fixture entry fx-walk-2",
+    "summary": "Test data only. Not real GTA VI information.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Fixture fact",
+        "value": "Test value"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "major",
+    "details": {
+      "summary": "FIXTURE-SECRET-fx-walk-2",
+      "steps": [
+        "FIXTURE-SECRET-STEP-fx-walk-2"
+      ]
+    },
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "Test fixture",
+        "title": "Test fixture source",
+        "url": "https://example.com/fixture",
+        "checkedAt": "2026-11-24"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "videoIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:fx-money-1",
+    "gameId": "gta-vi",
+    "slug": "fx-money-1",
+    "category": "money",
+    "title": "Fixture entry fx-money-1",
+    "summary": "Test data only. Not real GTA VI information.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Fixture fact",
+        "value": "Test value"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "minor",
+    "details": {
+      "summary": "FIXTURE-SECRET-fx-money-1",
+      "steps": [
+        "FIXTURE-SECRET-STEP-fx-money-1"
+      ]
+    },
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "Test fixture",
+        "title": "Test fixture source",
+        "url": "https://example.com/fixture",
+        "checkedAt": "2026-11-24"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "videoIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:fx-draft-1",
+    "gameId": "gta-vi",
+    "slug": "fx-draft-1",
+    "category": "money",
+    "title": "Fixture entry fx-draft-1",
+    "summary": "Test data only. Not real GTA VI information.",
+    "steps": [
+      "Fixture step one.",
+      "Fixture step two."
+    ],
+    "facts": [
+      {
+        "label": "Fixture fact",
+        "value": "Test value"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "Test fixture",
+        "title": "Test fixture source",
+        "url": "https://example.com/fixture",
+        "checkedAt": "2026-11-24"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "videoIds": [],
+    "objectiveIds": [],
+    "status": "draft"
+  }
+]

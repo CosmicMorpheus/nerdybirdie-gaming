@@ -2,19 +2,19 @@
 import Base from '../layouts/Base.astro';
 import CozmcPanel from '../components/CozmcPanel.astro';
 import Hud from '../islands/Hud';
-import { getGame, getPlatform, publicGuides, publicObjectives } from '../lib/content/load';
+import { getGame, getPlatform, publicEntries, publicObjectives } from '../lib/content/load';
 import { SITE_NAME, TAGLINE } from '../config';
 
 const game = getGame('gta-vi');
 const objectives = publicObjectives(game.id);
-const guides = publicGuides(game.id);
+const entries = publicEntries(game.id);
 const platforms = game.platforms.map((gp) => {
   const p = getPlatform(gp.platformId);
   return { id: p.id, shortLabel: p.shortLabel, objectiveNoun: p.objectiveNoun, objectiveIds: objectives.filter((o) => o.platformIds.includes(p.id)).map((o) => o.id) };
 });
 const trackerHref = `/games/${game.id}/achievements/`;
 const guidesHref = `/games/${game.id}/guides/`;
-const quests = game.guideCategories.map((c) => ({ ...c, count: guides.filter((g) => g.category === c.id).length }));
+const quests = game.guideCategories.map((c) => ({ ...c, count: entries.filter((e) => e.category === c.id).length }));
 ---
 <Base title={SITE_NAME} description={`${TAGLINE} Free, spoiler-safe GTA VI achievement tracking and guide checklists, built for checking on your phone while you play.`}>
   <section class="hero">
@@ -36,14 +36,14 @@ const quests = game.guideCategories.map((c) => ({ ...c, count: guides.filter((g)
   <section class="wrap block two">
     <div class="panel">
       <h2 class="sr-only">Your progress</h2>
-      <Hud client:load gameId={game.id} platforms={platforms} guideStepIds={guides.flatMap((g) => g.steps.map((s) => s.id))} trackerHref={trackerHref} guidesHref={guidesHref} />
+      <Hud client:load gameId={game.id} platforms={platforms} guideEntryIds={entries.map((e) => e.id)} trackerHref={trackerHref} guidesHref={guidesHref} />
     </div>
     <div class="how panel">
       <h2>How to 100% it</h2>
       <ol>
         <li><span class="pixel">1</span><div><strong>Pick your platform</strong><br /><span class="muted small">Xbox and PS5 lists are tracked separately.</span></div></li>
         <li><span class="pixel">2</span><div><strong>Tick off as you play</strong><br /><span class="muted small">Missable items show up first in "Next up".</span></div></li>
-        <li><span class="pixel">3</span><div><strong>Clear the quest board</strong><br /><span class="muted small">Every guide is a checklist. Clear them all.</span></div></li>
+        <li><span class="pixel">3</span><div><strong>Clear the quest board</strong><br /><span class="muted small">Check off tips, missions and finds in every section.</span></div></li>
         <li><span class="pixel">4</span><div><strong>Rank up</strong><br /><span class="muted small">Checkpoints at 25, 50, 75 and 100%.</span></div></li>
       </ol>
       <p class="small muted">Spoiler-free by default. Saved on this device, no sign-up. <a href="/progress/">Back up your save</a>.</p>
@@ -55,10 +55,10 @@ const quests = game.guideCategories.map((c) => ({ ...c, count: guides.filter((g)
     <ul class="quests">
       {quests.map((q) => (
         <li class={q.count ? '' : 'soon'}>
-          <a href={guidesHref}>
+          <a href={`${guidesHref}${q.id}/`}>
             <span class="q-title">{q.label}</span>
             <span class="small muted">{q.blurb}</span>
-            <span class="badge-px">{q.count ? `${q.count} guide${q.count > 1 ? 's' : ''}` : 'Coming soon'}</span>
+            <span class="badge-px">{q.count ? `${q.count} entr${q.count > 1 ? 'ies' : 'y'}` : 'Coming soon'}</span>
           </a>
         </li>
       ))}

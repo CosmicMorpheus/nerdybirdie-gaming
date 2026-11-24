@@ -3,13 +3,15 @@ import { resetContext, type Progress } from '../lib/progress/model';
 import { diffImport, exportFileName, exportProgress, parseImport, type ContextDiff } from '../lib/progress/io';
 import { tally, formatTally } from '../lib/progress/totals';
 import { StorageNotice } from './StorageNotice';
+import { SaveStatus } from './SaveStatus';
 import { useProgress } from './useProgress';
 import './tracker.css';
 
 interface Ctx { key: string; label: string; href: string; objectiveIds: string[] }
-interface Props { contexts: Ctx[] }
+interface Section { label: string; href: string; entryIds: string[] }
+interface Props { contexts: Ctx[]; guideKey: string; sections: Section[] }
 
-export default function ProgressManager({ contexts }: Props) {
+export default function ProgressManager({ contexts, guideKey, sections }: Props) {
   const state = useProgress();
   const { progress, update, replace, ready } = state;
   const [pending, setPending] = useState<{ incoming: Progress; diff: ContextDiff[] } | null>(null);
@@ -68,6 +70,23 @@ export default function ProgressManager({ contexts }: Props) {
             </li>
           ))}
         </ul>
+      </section>
+
+      <section class="panel">
+        <h2>Guide progress by section</h2>
+        <ul class="ctx-list">
+          {sections.map((sec) => {
+            const t = tally(sec.entryIds, progress.contexts[guideKey]?.completed ?? {});
+            return (
+              <li key={sec.href}>
+                <a href={sec.href}>{sec.label}</a>
+                <span class="muted small">{!ready ? '…' : t.percent === null ? 'Nothing verified yet' : `${t.done} of ${t.total}${t.percent === 100 ? ' ★ Cleared' : ''}`}</span>
+                <span class="bar sec-bar" aria-hidden="true"><i style={{ width: `${t.percent ?? 0}%` }} /></span>
+              </li>
+            );
+          })}
+        </ul>
+        <SaveStatus state={state} />
       </section>
 
       <section class="panel">

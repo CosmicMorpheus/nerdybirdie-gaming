@@ -3,9 +3,9 @@ import realGame from '../../content/games/gta-vi/game.json';
 import realObjectives from '../../content/games/gta-vi/objectives.json';
 import fxGame from '../../content/fixtures/games/gta-vi/game.json';
 import fxObjectives from '../../content/fixtures/games/gta-vi/objectives.json';
-import fxGuides from '../../content/fixtures/games/gta-vi/guides.json';
+import fxEntries from '../../content/fixtures/games/gta-vi/entries.json';
 import fxVideos from '../../content/fixtures/games/gta-vi/videos.json';
-import realGuides from '../../content/games/gta-vi/guides.json';
+import realEntries from '../../content/games/gta-vi/entries.json';
 import realVideos from '../../content/games/gta-vi/videos.json';
 import platforms from '../../content/platforms.json';
 import { validateGameBundle, isPublishable } from '../../src/lib/content/validate';
@@ -16,14 +16,14 @@ const clone = <T,>(v: T): T => JSON.parse(JSON.stringify(v));
 
 describe('content', () => {
   it('real GTA VI content is valid and every platform claim has an official source', () => {
-    const b = validateGameBundle(realGame, realObjectives, P, realGuides, realVideos);
+    const b = validateGameBundle(realGame, realObjectives, P, realEntries, realVideos);
     for (const p of b.game.platforms) {
       expect(p.verificationStatus).toBe('official_confirmed');
       expect(b.game.sources.filter((s) => p.sourceIds.includes(s.id)).every((s) => s.official)).toBe(true);
     }
   });
   it('real content contains no fixture data', () => {
-    const text = JSON.stringify([realGame, realObjectives, realGuides, realVideos]);
+    const text = JSON.stringify([realGame, realObjectives, realEntries, realVideos]);
     expect(text).not.toMatch(/fixture|example\.com/i);
   });
   it('fixtures are valid too', () => {
@@ -49,28 +49,39 @@ describe('content', () => {
   });
 });
 
-describe('guides', () => {
-  it('fixture guides and videos are valid', () => {
-    const b = validateGameBundle(fxGame, fxObjectives, P, fxGuides, fxVideos);
-    expect(b.guides.length).toBe(2);
+describe('entries', () => {
+  it('fixture entries and videos are valid', () => {
+    expect(validateGameBundle(fxGame, fxObjectives, P, fxEntries, fxVideos).entries.length).toBe(7);
+  });
+  it('every real entry cites a source with a check date, and only confirmed entries are published', () => {
+    const b = validateGameBundle(realGame, realObjectives, P, realEntries, realVideos);
+    expect(b.entries.length).toBeGreaterThan(0);
+    for (const e of b.entries) {
+      expect(e.sources.length).toBeGreaterThan(0);
+      for (const s of e.sources) expect(s.checkedAt).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+      if (e.status === 'published') expect(e.verification).not.toBe('rumor');
+    }
   });
   it.each([
-    ['unknown guide category', (gs: any[]) => (gs[0].category = 'nope')],
-    ['id not matching slug', (gs: any[]) => (gs[0].id = 'gta-vi:guide:other')],
-    ['duplicate step id', (gs: any[]) => gs[0].steps.push(clone(gs[0].steps[0]))],
-    ['step id outside its guide', (gs: any[]) => (gs[0].steps[0].id = 'gta-vi:guide:fixture-tips:step-9')],
-    ['unknown video', (gs: any[]) => (gs[0].steps[0].videoId = 'nope')],
-    ['spoiler step without protected text', (gs: any[]) => { gs[0].steps[0].spoilerLevel = 'minor'; }],
-    ['guide without sources', (gs: any[]) => (gs[0].sourceIds = [])],
-    ['unknown objective link', (gs: any[]) => (gs[0].objectiveIds = ['gta-vi:nope'])],
+    ['unknown section', (es: any[]) => (es[0].category = 'nope')],
+    ['id not matching slug', (es: any[]) => (es[0].id = 'gta-vi:entry:other')],
+    ['duplicate id', (es: any[]) => es.push(clone(es[0]))],
+    ['unknown video', (es: any[]) => (es[0].videoIds = ['nope'])],
+    ['spoiler entry without details', (es: any[]) => { es[0].spoilerLevel = 'minor'; }],
+    ['details on a spoiler-free entry', (es: any[]) => { es[0].details = { summary: 'x', steps: [] }; }],
+    ['spoiler details repeated in the summary', (es: any[]) => { es[4].summary = es[4].details.summary; }],
+    ['no sources', (es: any[]) => (es[0].sources = [])],
+    ['source without check date', (es: any[]) => { delete es[0].sources[0].checkedAt; }],
+    ['rumor calling itself confirmed', (es: any[]) => { es[2].summary = 'This is confirmed.'; }],
+    ['bad verification value', (es: any[]) => (es[0].verification = 'probably')],
   ])('rejects: %s', (_n, mutate) => {
-    const gs = clone(fxGuides) as any[];
-    mutate(gs);
-    expect(() => validateGameBundle(fxGame, fxObjectives, P, gs, fxVideos)).toThrow();
+    const es = clone(fxEntries) as any[];
+    mutate(es);
+    expect(() => validateGameBundle(fxGame, fxObjectives, P, es, fxVideos)).toThrow();
   });
   it('rejects a malformed YouTube id', () => {
     const vs = clone(fxVideos) as any[];
     vs[0].youtubeId = 'https://youtu.be/x';
-    expect(() => validateGameBundle(fxGame, fxObjectives, P, fxGuides, vs)).toThrow();
+    expect(() => validateGameBundle(fxGame, fxObjectives, P, fxEntries, vs)).toThrow();
   });
 });

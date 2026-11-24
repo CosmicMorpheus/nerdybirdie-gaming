@@ -7,19 +7,19 @@ import './tracker.css';
 interface Props {
   gameId: string;
   platforms: { id: string; shortLabel: string; objectiveNoun: string; objectiveIds: string[] }[];
-  guideStepIds: string[];
+  guideEntryIds: string[];
   trackerHref: string;
   guidesHref: string;
 }
 export const GUIDES_CONTEXT = 'guides';
 
 /** "Player 1" status: rank, level, XP bar and checkpoints for one game. Everything counted is verified content only. */
-export default function Hud({ gameId, platforms, guideStepIds, trackerHref, guidesHref }: Props) {
+export default function Hud({ gameId, platforms, guideEntryIds, trackerHref, guidesHref }: Props) {
   const { progress, ready } = useProgress();
   const platform = platforms.find((p) => p.id === progress.prefs.platformByGame[gameId]) ?? platforms[0]!;
   const ach = tally(platform.objectiveIds, progress.contexts[contextKey(gameId, platform.id)]?.completed ?? {});
-  const gd = tally(guideStepIds, progress.contexts[contextKey(gameId, GUIDES_CONTEXT)]?.completed ?? {});
-  const all = tally([...platform.objectiveIds, ...guideStepIds], {
+  const gd = tally(guideEntryIds, progress.contexts[contextKey(gameId, GUIDES_CONTEXT)]?.completed ?? {});
+  const all = tally([...platform.objectiveIds, ...guideEntryIds], {
     ...(progress.contexts[contextKey(gameId, platform.id)]?.completed ?? {}),
     ...(progress.contexts[contextKey(gameId, GUIDES_CONTEXT)]?.completed ?? {}),
   });
@@ -61,7 +61,7 @@ export default function Hud({ gameId, platforms, guideStepIds, trackerHref, guid
       </ul>
       <div class="hud-meters">
         {meter(`${platform.objectiveNoun}`, ach, trackerHref)}
-        {meter('Guide steps', gd, guidesHref)}
+        {meter('Guide entries', gd, guidesHref)}
       </div>
     </div>
   );

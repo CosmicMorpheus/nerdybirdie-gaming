@@ -10,6 +10,8 @@ export interface ProgressState {
   ready: boolean;
   status: LoadStatus;
   saveError: SaveError | null;
+  /** Feedback after the last change: 'saved' (on this device) or 'error'. null before any change. */
+  saveState: 'saved' | 'error' | null;
   update: (f: (p: Progress) => Progress) => void;
   replace: (p: Progress) => SaveResult;
 }
@@ -23,6 +25,7 @@ export function useProgress(): ProgressState {
   const [ready, setReady] = useState(false);
   const [status, setStatus] = useState<LoadStatus>('empty');
   const [saveError, setSaveError] = useState<SaveError | null>(null);
+  const [saveState, setSaveState] = useState<'saved' | 'error' | null>(null);
 
   const load = useCallback(() => {
     const r = loadProgress(storage.current);
@@ -46,10 +49,11 @@ export function useProgress(): ProgressState {
     setProgress(p);
     const r = saveProgress(storage.current, p, canSave.current);
     setSaveError(r.ok ? null : r.reason);
+    setSaveState(r.ok ? 'saved' : 'error');
     return r;
   }, []);
 
   const update = useCallback((f: (p: Progress) => Progress) => { replace(f(latest.current)); }, [replace]);
 
-  return { progress, ready, status, saveError, update, replace };
+  return { progress, ready, status, saveError, saveState, update, replace };
 }
