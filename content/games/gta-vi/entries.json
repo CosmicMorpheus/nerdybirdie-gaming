@@ -4405,5 +4405,996 @@
     "mapPinIds": [],
     "objectiveIds": [],
     "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:money-kingfishers-fishing-shacks",
+    "gameId": "gta-vi",
+    "slug": "money-kingfishers-fishing-shacks",
+    "category": "money",
+    "title": "Rob the Fishing Shacks camp early (about $2,000)",
+    "summary": "The first optional illegal operation, on Wetman Bay north-west of Key Lento. Loot it thoroughly and it pays close to $2,000, a big head start in Chapter 1.",
+    "steps": [
+      "Search every enemy you take down and bag every bit of product in the camp.",
+      "Check the house on the dock on the camp's west side: there's a gold weapon icon there.",
+      "Then sell the product to a fence (see \"Sell your product quickly\")."
+    ],
+    "facts": [
+      {
+        "label": "Where",
+        "value": "Wetman Bay, north-west of Key Lento"
+      },
+      {
+        "label": "Payout",
+        "value": "Close to $2,000 if fully looted"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Best Ways to Make Money Early",
+        "url": "https://www.ign.com/wikis/gta-6/Best_Ways_to_Make_Money_Early",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Illegal Operations",
+        "url": "https://www.ign.com/wikis/gta-6/Illegal_Operations",
+        "checkedAt": "2026-11-24",
+        "supports": "Operation names, starting hints and locations"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:money-strange-noises",
+    "gameId": "gta-vi",
+    "slug": "money-strange-noises",
+    "category": "money",
+    "title": "Strange Noises behind the liquor store: hidden cash",
+    "summary": "After Shirley's rum errand, the noises behind Three Sheets Liquor lead to a gang guarding a talking parrot, and a stash of cash.",
+    "steps": [
+      "Buy the rum and give it to Shirley first. Investigating the noises before that starts a gunfight that gets in the way of her errand.",
+      "Go behind the store and deal with the armed guards.",
+      "Talk to the parrot, then open the small vent at the base of the store, left of where the parrot sits."
+    ],
+    "facts": [
+      {
+        "label": "Where",
+        "value": "Behind Three Sheets Liquor, Key Lento"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Best Ways to Make Money Early",
+        "url": "https://www.ign.com/wikis/gta-6/Best_Ways_to_Make_Money_Early",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Illegal Operations",
+        "url": "https://www.ign.com/wikis/gta-6/Illegal_Operations",
+        "checkedAt": "2026-11-24",
+        "supports": "Operation names, starting hints and locations"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:money-sell-product-fast",
+    "gameId": "gta-vi",
+    "slug": "money-sell-product-fast",
+    "category": "money",
+    "title": "Sell your product quickly, and compare fences",
+    "summary": "Drugs you pick up only become money once a fence buys them. Hover over each fence on the map to see what they'll pay, and sell to whoever pays most.",
+    "steps": [
+      "Brian: his lockup near the south-western tip of Key Lento. Enter 7700 on the keypad, then sell at the yellow crate.",
+      "Donnie (after Coming Home): his trailer is roughly mid Key Lento, just north of Nifty Threads. Leave the goods in the green crate at the back; he pays a little later. He often pays more than Brian.",
+      "Fences buy three kinds of goods: narcotics, jewelry and marked bills."
+    ],
+    "facts": [
+      {
+        "label": "Brian's lockup code",
+        "value": "7700"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "How to Sell Cars, Collectibles, and Stolen Goods - Fence Contact Locations",
+        "url": "https://www.ign.com/wikis/gta-6/How_to_Sell_Cars,_Collectibles,_and_Stolen_Goods_-_Fence_Contact_Locations",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Best Ways to Make Money Early",
+        "url": "https://www.ign.com/wikis/gta-6/Best_Ways_to_Make_Money_Early",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:money-bank-everything",
+    "gameId": "gta-vi",
+    "slug": "money-bank-everything",
+    "category": "money",
+    "title": "Bank your cash: carrying it is a risk",
+    "summary": "If you're busted or wasted you lose all the cash you're carrying, plus a small amount from your BuckMe checking account. Money in Family Savings is never touched.",
+    "steps": [
+      "After the Buck Me mission, deposit cash whenever you can, and empty the stash at your safehouse too.",
+      "Use the ATM finder in the BuckMe app to find the nearest machine.",
+      "Surrendering to the police doesn't reduce what you lose."
+    ],
+    "facts": [
+      {
+        "label": "Always safe",
+        "value": "Family Savings"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Best Ways to Make Money Early",
+        "url": "https://www.ign.com/wikis/gta-6/Best_Ways_to_Make_Money_Early",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      },
+      {
+        "publisher": "IGN",
+        "title": "What Happens If You Get Arrested",
+        "url": "https://www.ign.com/wikis/gta-6/What_Happens_If_You_Get_Arrested",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:money-savings-goal",
+    "gameId": "gta-vi",
+    "slug": "money-savings-goal",
+    "category": "money",
+    "title": "Hit the first BuckMe savings goal ($5,000)",
+    "summary": "BuckMe pays interest bonuses when your savings pass milestones. The first is $5,000, often within reach after the Fishing Shacks camp and the four lost drug packages.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "First milestone",
+        "value": "$5,000"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Best Ways to Make Money Early",
+        "url": "https://www.ign.com/wikis/gta-6/Best_Ways_to_Make_Money_Early",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:money-crashed-plane-hamlet",
+    "gameId": "gta-vi",
+    "slug": "money-crashed-plane-hamlet",
+    "category": "money",
+    "title": "Loot the crashed plane south of Hamlet",
+    "summary": "Smoke rising from a field south of Hamlet marks a crashed plane. You'll find a pistol and drugs you can sell, but an armed truck turns up soon after.",
+    "steps": [
+      "Use Focus mode to spot everything you can pick up.",
+      "Fight the arrivals or slip away into the woods. Their off-road truck is handy for the lost-drug run."
+    ],
+    "facts": [
+      {
+        "label": "Where",
+        "value": "Field south of Hamlet"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Best Ways to Make Money Early",
+        "url": "https://www.ign.com/wikis/gta-6/Best_Ways_to_Make_Money_Early",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:money-fences-chapter-2",
+    "gameId": "gta-vi",
+    "slug": "money-fences-chapter-2",
+    "category": "money",
+    "title": "Selling goods in Chapter 2",
+    "summary": "Your Chapter 1 fences aren't available in Chapter 2. Sell through Dunk instead, at his trailer in Port Gellhorn near Freedom Tattoo.",
+    "steps": [
+      "Put the goods in the trunk of his car; he pays you through BuckMe shortly after."
+    ],
+    "facts": [
+      {
+        "label": "Fence",
+        "value": "Dunk, Port Gellhorn"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "How to Sell Cars, Collectibles, and Stolen Goods - Fence Contact Locations",
+        "url": "https://www.ign.com/wikis/gta-6/How_to_Sell_Cars,_Collectibles,_and_Stolen_Goods_-_Fence_Contact_Locations",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:money-sell-cars-moses",
+    "gameId": "gta-vi",
+    "slug": "money-sell-cars-moses",
+    "category": "money",
+    "title": "Sell stolen cars to Moses (Chapter 2)",
+    "summary": "After the Moses mission, Moses buys any untracked car you bring in. Hover over his shop on the map to see what the car you're in would sell for, or what it costs to register it.",
+    "steps": [
+      "He also gives you a Slim Jim, so you can open locked cars without smashing a window and setting off the alarm.",
+      "Watch for his texts asking for specific cars: they pay extra, with a bonus for good condition."
+    ],
+    "facts": [
+      {
+        "label": "Unlocks",
+        "value": "After the Moses mission"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "How to Sell Cars, Collectibles, and Stolen Goods - Fence Contact Locations",
+        "url": "https://www.ign.com/wikis/gta-6/How_to_Sell_Cars,_Collectibles,_and_Stolen_Goods_-_Fence_Contact_Locations",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      },
+      {
+        "publisher": "IGN",
+        "title": "How to Keep Stolen Cars",
+        "url": "https://www.ign.com/wikis/gta-6/How_to_Keep_Stolen_Cars",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:money-pawn-shops",
+    "gameId": "gta-vi",
+    "slug": "money-pawn-shops",
+    "category": "money",
+    "title": "Pawn shops buy cards and sunken treasure",
+    "summary": "Sell collectible cards, plus underwater finds like meteorites and doubloons, at any pawn shop (green scales icon). The easiest one early on is in southern Hamlet.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Map icon",
+        "value": "Green scales"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "How to Sell Cars, Collectibles, and Stolen Goods - Fence Contact Locations",
+        "url": "https://www.ign.com/wikis/gta-6/How_to_Sell_Cars,_Collectibles,_and_Stolen_Goods_-_Fence_Contact_Locations",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:tip-wanted-star-colours",
+    "gameId": "gta-vi",
+    "slug": "tip-wanted-star-colours",
+    "category": "tips",
+    "title": "What the wanted star colours mean",
+    "summary": "Grey stars: a crime was reported and police are on the way with your description, the best moment to leave. White: they've seen you and are chasing. Red: they've lost you but the area is on alert for someone matching you.",
+    "steps": [
+      "White outline: an incident was reported but they don't know who did it.",
+      "Red outline: the area is on alert, but you no longer match the description.",
+      "If you're unarmed, officers often use Tasers first. Pull a gun and they respond in kind."
+    ],
+    "facts": [],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Wanted Guide - How to Escape the Cops and Clear Heat",
+        "url": "https://www.ign.com/wikis/gta-6/Wanted_Guide_-_How_to_Escape_the_Cops_and_Clear_Heat",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:tip-clear-heat-icons",
+    "gameId": "gta-vi",
+    "slug": "tip-clear-heat-icons",
+    "category": "tips",
+    "title": "Clear your heat icons to shake the police",
+    "summary": "The icons under your stars show how the police can recognise you. Clear each one and they lose track of you.",
+    "steps": [
+      "Appearance: change accessories or your hairstyle (wear a mask for planned jobs so you never get this one).",
+      "Vehicle: switch cars or get it resprayed.",
+      "Outfit: change clothes. Keeping a spare outfit in your trunk helps.",
+      "Visible weapon: holster sidearms; longarms go in the trunk or get dropped.",
+      "Partner: split up, or switch to your partner and change their look.",
+      "CCTV camera icon: destroy the footage. Cloud icon: it can't be destroyed, so just get away."
+    ],
+    "facts": [],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Wanted Guide - How to Escape the Cops and Clear Heat",
+        "url": "https://www.ign.com/wikis/gta-6/Wanted_Guide_-_How_to_Escape_the_Cops_and_Clear_Heat",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:tip-focus-mode",
+    "gameId": "gta-vi",
+    "slug": "tip-focus-mode",
+    "category": "tips",
+    "title": "Use Focus mode to spot loot and threats",
+    "summary": "Click both sticks to slow time and highlight things around you. It doesn't drain while you're not aiming, even when driving.",
+    "steps": [
+      "White: doors and usable items. Red: enemies, explosives, alarms and weapons on the ground. Purple: drugs to sell. Green: cash.",
+      "On foot it lasts 30 seconds; when driving fast it can drop to about 10. While driving, police officers glow blue."
+    ],
+    "facts": [
+      {
+        "label": "Button",
+        "value": "Click both sticks"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "How Focus Works",
+        "url": "https://www.ign.com/wikis/gta-6/How_Focus_Works",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:settings-control-scheme",
+    "gameId": "gta-vi",
+    "slug": "settings-control-scheme",
+    "category": "settings",
+    "title": "Change your control scheme",
+    "summary": "Choose between Default, Classic and Left-Handed layouts. None gives an advantage; pick what feels comfortable.",
+    "steps": [
+      "Open the menu (Options on PS5, Menu on Xbox) and go to Settings; Control Scheme is the first tab.",
+      "Scroll through the three layouts. The preview shows each input on foot, aiming and in vehicles.",
+      "Close the menu to save. Square/X restores the default."
+    ],
+    "facts": [
+      {
+        "label": "Layouts",
+        "value": "Default, Classic, Left-Handed"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "How to Change Control Scheme",
+        "url": "https://www.ign.com/wikis/gta-6/How_to_Change_Control_Scheme",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:settings-auto-drive",
+    "gameId": "gta-vi",
+    "slug": "settings-auto-drive",
+    "category": "settings",
+    "title": "Turn on auto-drive (the game doesn't tell you)",
+    "summary": "Your character can drive themselves to a waypoint, on roads or water. It's scenic and law-abiding, not fast.",
+    "steps": [
+      "Get in a vehicle and set a waypoint.",
+      "Hold D-pad Down for camera options and pick Cinematic view (Options/Menu).",
+      "Hold Circle/B to start driving. L2/LT and R2/RT change the speed."
+    ],
+    "facts": [],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "How to Auto-Drive",
+        "url": "https://www.ign.com/wikis/gta-6/How_to_Auto-Drive",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:settings-gps-voice",
+    "gameId": "gta-vi",
+    "slug": "settings-gps-voice",
+    "category": "settings",
+    "title": "Turn on spoken GPS directions",
+    "summary": "In Settings → Audio, the GPS Voice option lets you choose spoken directions or sound effects for navigation.",
+    "steps": [],
+    "facts": [],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Beginner's Guide - 67 Tips and Tricks",
+        "url": "https://www.ign.com/wikis/gta-6/Beginner%27s_Guide_-_67_Tips_and_Tricks",
+        "checkedAt": "2026-11-24",
+        "supports": "GPS voice setting"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:weapons-unique-variants",
+    "gameId": "gta-vi",
+    "slug": "weapons-unique-variants",
+    "category": "weapons",
+    "title": "127 unique weapon variants to collect",
+    "summary": "There are 127 unique weapon variants (two more with the Ultimate Edition). They come from the story, illegal operations, exploring, and sometimes Ammu-Nation.",
+    "steps": [
+      "They show as yellow gun icons in the world and yellow names in menus.",
+      "You can't modify them, but each one unlocks for both Jason and Lucia once collected."
+    ],
+    "facts": [
+      {
+        "label": "Total",
+        "value": "127 (+2 Ultimate Edition)"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Unique Weapon Variants",
+        "url": "https://www.ign.com/wikis/gta-6/Unique_Weapon_Variants",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:vehicles-rhino-tank-early",
+    "gameId": "gta-vi",
+    "slug": "vehicles-rhino-tank-early",
+    "category": "vehicles",
+    "title": "Steal a Rhino tank early (hard)",
+    "summary": "Rhino tanks are parked at the Mile Zero Air Station in the south-west, and you can steal one as early as Chapter 1. Getting in quickly earns a high wanted level.",
+    "steps": [
+      "Stock up first: body armour from Ammu-Nation and Zombix from a corner store.",
+      "Use the Mile Zero Air Station South stunt jump to get over the fence, just west of where the tanks are parked."
+    ],
+    "facts": [
+      {
+        "label": "Where",
+        "value": "Mile Zero Air Station (south-west)"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "How to Get a Rhino Tank",
+        "url": "https://www.ign.com/wikis/gta-6/How_to_Get_a_Rhino_Tank",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      },
+      {
+        "publisher": "TGG (YouTube)",
+        "title": "GTA 6: How To Break Into The Military Base & Steal a Jet or Tank (EASY GUIDE)",
+        "url": "https://www.youtube.com/watch?v=hlEojE7w0Zw",
+        "checkedAt": "2026-11-24",
+        "supports": "A second source that a tank can be stolen from the military base early (video title; not watched)"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:vehicles-keep-stolen-cars",
+    "gameId": "gta-vi",
+    "slug": "vehicles-keep-stolen-cars",
+    "category": "vehicles",
+    "title": "How to keep a stolen car",
+    "summary": "You can't keep new cars in Chapter 1. In Chapter 2 you can park them at your safehouse for a while, and after meeting Moses you can register them as yours for a fee.",
+    "steps": [
+      "Unregistered cars aren't safe: you can lose them if they're wrecked or you get wasted.",
+      "At first you can register one car per character; more space unlocks later."
+    ],
+    "facts": [
+      {
+        "label": "Register from",
+        "value": "Chapter 2, after the Moses mission"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "How to Keep Stolen Cars",
+        "url": "https://www.ign.com/wikis/gta-6/How_to_Keep_Stolen_Cars",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:vehicles-72-tulip",
+    "gameId": "gta-vi",
+    "slug": "vehicles-72-tulip",
+    "category": "vehicles",
+    "title": "Declasse '72 Tulip (free with the story)",
+    "summary": "A muscle car you get automatically during the Chapter 2 mission Breakfast Run. Finish the mission and both Jason and Lucia own one.",
+    "steps": [
+      "Tip: leave the diner with at least 10 seconds to spare after grabbing all the register cash."
+    ],
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Muscle"
+      },
+      {
+        "label": "Unlocked in",
+        "value": "Breakfast Run (Chapter 2)"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "How to Get the 72 Tulip",
+        "url": "https://www.ign.com/wikis/gta-6/How_to_Get_the_72_Tulip",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:vehicles-randys-wish-list",
+    "gameId": "gta-vi",
+    "slug": "vehicles-randys-wish-list",
+    "category": "vehicles",
+    "title": "Randy's Wish List (Chapter 3)",
+    "summary": "Randy, a car fence, gives you a list of cars to steal. After the first one he hands you the Key Cloner, which makes stealing far easier.",
+    "steps": [
+      "Some cars are only found after Randy gives you a hint; talk to him at each drop-off for the next one.",
+      "Others can be found straight away at dealerships, upscale homes and car meets."
+    ],
+    "facts": [
+      {
+        "label": "Starts after",
+        "value": "Clonin' Keys, Makin' Gs"
+      },
+      {
+        "label": "Tool",
+        "value": "Key Cloner"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Randy's Wish List - All Randy's Car Locations",
+        "url": "https://www.ign.com/wikis/gta-6/Randy%27s_Wish_List_-_All_Randy%27s_Car_Locations",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Chapter 3 Optional Missions",
+        "url": "https://www.ign.com/wikis/gta-6/Chapter_3_Optional_Missions",
+        "checkedAt": "2026-11-24",
+        "supports": "How each optional mission starts"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:vehicles-gauntlet-hellfire",
+    "gameId": "gta-vi",
+    "slug": "vehicles-gauntlet-hellfire",
+    "category": "vehicles",
+    "title": "Bravado Gauntlet Hellfire at Nova Auto Junkyard",
+    "summary": "One of Randy's Wish List cars, on the south side of the Nova Auto Junkyard in central Hamlet.",
+    "steps": [
+      "Barbed wire runs all along the fence, so go in through one of the two northern entrances.",
+      "M7 gang members guard it and attack on sight."
+    ],
+    "facts": [
+      {
+        "label": "Where",
+        "value": "Nova Auto Junkyard, central Hamlet"
+      },
+      {
+        "label": "List",
+        "value": "Randy's Wish List"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Where to Find the Gauntlet Hellfire",
+        "url": "https://www.ign.com/wikis/gta-6/Where_to_Find_the_Gauntlet_Hellfire",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:side-skunk-apeology-101",
+    "gameId": "gta-vi",
+    "slug": "side-skunk-apeology-101",
+    "category": "side-missions",
+    "title": "Skunk Apeology 101 (the Bigfoot hunt)",
+    "summary": "One of the first big side missions, possible from Chapter 1. It's set around Pelican Bay in Mariana County.",
+    "steps": [
+      "Start it by interacting with a Skunk Ape poster. The easiest one to reach early is at the Rusty Anchor bar in Key Lento."
+    ],
+    "facts": [
+      {
+        "label": "Starts at",
+        "value": "Skunk Ape poster (Rusty Anchor, Key Lento)"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Skunk Apeology 101 Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Skunk_Apeology_101_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:side-street-racer",
+    "gameId": "gta-vi",
+    "slug": "side-street-racer",
+    "category": "side-missions",
+    "title": "Street Racer: Yago Jiminez (Chapter 3)",
+    "summary": "A three-part street racing storyline that pays money and a unique car.",
+    "steps": [
+      "After the Dealer's Choice mission, wait for Dre'Quan to text you about a street race in Salton.",
+      "The parts: Join a Street Race, Learn the Ropes, and Brother to Brother."
+    ],
+    "facts": [
+      {
+        "label": "Starts after",
+        "value": "Dealer's Choice"
+      },
+      {
+        "label": "Parts",
+        "value": "3"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Yago Jiminez: Street Racer",
+        "url": "https://www.ign.com/wikis/gta-6/Yago_Yiminiz_-_Street_Racer",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Chapter 3 Optional Missions",
+        "url": "https://www.ign.com/wikis/gta-6/Chapter_3_Optional_Missions",
+        "checkedAt": "2026-11-24",
+        "supports": "How each optional mission starts"
+      }
+    ],
+    "platformNote": "IGN spells the name both \"Jiminez\" and \"Yiminiz\".",
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:side-take-out-kitty-litter",
+    "gameId": "gta-vi",
+    "slug": "side-take-out-kitty-litter",
+    "category": "side-missions",
+    "title": "Take Out Kitty Litter (Chapter 3)",
+    "summary": "An optional mission that opens after the Here, Kitty Kitty story mission. IGN has a page of every lab location.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Starts after",
+        "value": "Here, Kitty Kitty"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Chapter 3 Optional Missions",
+        "url": "https://www.ign.com/wikis/gta-6/Chapter_3_Optional_Missions",
+        "checkedAt": "2026-11-24",
+        "supports": "How each optional mission starts"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Take Out Kitty Litter - All Lab Locations",
+        "url": "https://www.ign.com/wikis/gta-6/Take_Out_Kitty_Litter_-_All_Lab_Locations",
+        "checkedAt": "2026-11-24",
+        "supports": "Lab locations (linked, not summarised)"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:side-dodos-rising-polar-bear",
+    "gameId": "gta-vi",
+    "slug": "side-dodos-rising-polar-bear",
+    "category": "side-missions",
+    "title": "Random event: the polar bear truck",
+    "summary": "On a freeway you may find Dodos Rising protesters blocking an animal-service truck carrying a polar bear. How you handle it is up to you.",
+    "steps": [
+      "Tell the driver to drive through, ask the driver to open the truck, or shoot the lock yourself. Focus mode shows the lock on the left handle.",
+      "Each option ends the event. It also introduces the Dodos Rising group, who have their own optional missions."
+    ],
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Random event on freeways"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "What Happens if You Free the Polar Bear",
+        "url": "https://www.ign.com/wikis/gta-6/What_Happens_if_You_Free_the_Polar_Bear",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Chapter 3 Optional Missions",
+        "url": "https://www.ign.com/wikis/gta-6/Chapter_3_Optional_Missions",
+        "checkedAt": "2026-11-24",
+        "supports": "How each optional mission starts"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
   }
 ]
