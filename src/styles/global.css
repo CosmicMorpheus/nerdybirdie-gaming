@@ -128,7 +128,7 @@ h3 { font-size: 18px; margin: 0 0 4px; }
 .hud-label { font: 400 10px/1.6 var(--pixel); text-transform: uppercase; color: var(--vc-muted); letter-spacing: 0.04em; }
 .stamp { display: inline-block; font: 400 10px/1 var(--pixel); color: #0b101b; background: var(--vc-ok); padding: 6px 8px; border-radius: 2px;
   box-shadow: 2px 2px 0 #000; transform: rotate(-3deg); text-transform: uppercase; }
-.badge-px { display: inline-flex; align-items: center; gap: 6px; font: 400 10px/1 var(--pixel); padding: 6px 8px; border: 2px solid var(--vc-line);
+.badge-px { white-space: nowrap; display: inline-flex; align-items: center; gap: 6px; font: 400 10px/1 var(--pixel); padding: 6px 8px; border: 2px solid var(--vc-line);
   border-radius: 2px; color: var(--vc-muted); background: #0e1322; text-transform: uppercase; }
 .badge-px.on { color: #1a0d16; background: var(--vc-sunset); border-color: #000; box-shadow: 2px 2px 0 #000; }
 .scanlines { position: relative; }

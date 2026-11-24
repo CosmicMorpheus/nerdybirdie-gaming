@@ -133,10 +133,11 @@
 .cite a { color: var(--vc-cyan); }
 @media (max-width: 640px) { .step-body { padding-left: 0; } .step-head { grid-template-columns: auto 40px minmax(0, 1fr); } }
 
-.board { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; }
+.board { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; align-items: start; }
 .quest { border: 2px solid var(--vc-line); border-radius: 8px; padding: 16px; background: var(--vc-slate); box-shadow: var(--shadow-px); }
 .quest.locked { background: transparent; border-style: dashed; box-shadow: none; }
 .quest header { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.quest header .badge-px, .quest header .stamp { white-space: nowrap; flex: none; }
 .quest h2 { font: 700 20px/1.2 'Space Grotesk', var(--body); margin: 0; }
 .quest > p { margin: 6px 0 0; }
 .quest ul { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
