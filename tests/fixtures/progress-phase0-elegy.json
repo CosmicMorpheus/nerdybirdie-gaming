@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 2,
+  "contexts": {
+    "gta-vi|guides": {
+      "completed": { "gta-vi:entry:gta-plus-elegy": "2026-11-24T18:00:00.000Z" },
+      "bookmarks": ["gta-vi:entry:gta-plus-elegy"],
+      "notes": { "gta-vi:entry:gta-plus-elegy": "Claimed from the GTA+ perks page" },
+      "unchecked": {}
+    },
+    "gta-vi|map": {
+      "completed": { "gta-vi:map:clothing-001": "2026-11-24T18:05:00.000Z" },
+      "bookmarks": [],
+      "notes": {},
+      "unchecked": {}
+    }
+  },
+  "prefs": {
+    "spoilerMode": "safe",
+    "platformByGame": { "gta-vi": "ps5" },
+    "resume": { "href": "/games/gta-vi/guides/vehicles/#entry-gta-plus-elegy", "label": "Vehicles", "at": "2026-11-24T18:00:00.000Z" },
+    "map": { "view": null, "filters": null, "pin": null }
+  },
+  "updatedAt": "2026-11-24T18:05:00.000Z"
+}

@@ -4,6 +4,7 @@ Newest first. "Proposed" means waiting for the founder; only "Approved" decision
 
 | Date | Decision | Status | Notes |
 |---|---|---|---|
+| 2026-11-24 | v3.0 daily guide updates (YouTube discovery feed): Phase 0 audit done; staging on `nerdybirdie-gaming-preview` with the kit's Blobs adapter, behind a flag; community review waits for accounts | Proposed | docs/PHASE0_DAILY_FEED_AUDIT.md. Needs: approval, one creator channel id, a restricted YouTube key, category mapping |
 | 2026-11-24 | ASK "COZMC" = option A: browser-only guide search, no AI cost to players; AI research done at editing time; server features off behind ASK_SERVER / ASK_SERVER_ENABLED | Approved (founder) | Chief-of-staff review cycle 02 |
 | 2026-11-24 | Community arrows keep flashing (COS suggested static) | Approved (founder) | Static with reduced motion |
 | 2026-11-24 | Cross-browser progress via transfer link/code (no account) | Done (founder request) | Code lives in the URL fragment, never sent to a server |
