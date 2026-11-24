@@ -1,0 +1,12 @@
+---
+import Base from '../layouts/Base.astro';
+import SiteSearch from '../islands/SiteSearch';
+---
+<Base title="Search" description="Search Nerdy Birdie Gaming." noindex>
+  <div class="wrap narrow">
+    <h1>Search</h1>
+    <p class="muted small">Search is spoiler-safe: it only looks at titles and descriptions that are safe in spoiler-free mode.</p>
+    <SiteSearch client:load indexUrl="/data/search.json" />
+  </div>
+</Base>
+<style> h1 { padding-top: 28px; } .narrow { max-width: 860px; } </style>

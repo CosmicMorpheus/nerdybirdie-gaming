@@ -1,0 +1,100 @@
+---
+import Base from '../layouts/Base.astro';
+import CozmcPanel from '../components/CozmcPanel.astro';
+import Resume from '../islands/Resume';
+import { getGame, getPlatform, publicObjectives } from '../lib/content/load';
+import { SITE_NAME, TAGLINE } from '../config';
+
+const game = getGame('gta-vi');
+const objectives = publicObjectives(game.id);
+const platforms = game.platforms.map((gp) => {
+  const p = getPlatform(gp.platformId);
+  return { id: p.id, shortLabel: p.shortLabel, objectiveNoun: p.objectiveNoun, objectiveIds: objectives.filter((o) => o.platformIds.includes(p.id)).map((o) => o.id) };
+});
+const trackerHref = `/games/${game.id}/achievements/`;
+const quick = [
+  { label: 'Achievements & trophies', note: 'Tracker', href: trackerHref },
+  { label: 'My progress', note: 'Backup & restore', href: '/progress/' },
+  { label: 'Money', note: 'Planned' },
+  { label: 'Rare vehicles', note: 'Planned' },
+  { label: 'Weapons', note: 'Planned' },
+  { label: 'Settings', note: 'Planned' },
+];
+---
+<Base title={SITE_NAME} description={`${TAGLINE} Free, spoiler-safe GTA VI achievement tracking and guides, built for checking on your phone while you play.`}>
+  <section class="hero">
+    <div class="hero-art" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <p class="eyebrow">Featured game</p>
+      <h1>{game.title}</h1>
+      <p class="promise">{game.summary}</p>
+      <ul class="platforms" aria-label="Platforms">
+        {game.platforms.map((p) => <li class="chip">{getPlatform(p.platformId).shortLabel}</li>)}
+      </ul>
+      <div class="cta">
+        <a class="btn btn-primary" href={trackerHref}>Open the tracker</a>
+        <a class="btn btn-ghost" href="/progress/">My progress</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap block resume">
+    <div class="panel">
+      <h2>Pick up where you left off</h2>
+      <Resume client:load gameId={game.id} gameShortTitle={game.shortTitle} href={trackerHref} platforms={platforms} />
+      <p class="muted small note">Saved on this device only. <a href="/progress/">Download a backup</a> any time.</p>
+    </div>
+    <nav class="quick" aria-label="GTA VI sections">
+      {quick.map((q) => q.href
+        ? <a href={q.href}><span>{q.label}</span><small>{q.note}</small></a>
+        : <div class="planned" aria-disabled="true"><span>{q.label}</span><small>{q.note}</small></div>)}
+    </nav>
+  </section>
+
+  <section class="wrap block">
+    <h2>Guides</h2>
+    <p class="muted guides-note">
+      Guides go up as they're checked against sources and tested in-game, each with the date it was last checked.
+      Nothing is published from guesswork. See <a href="/updates/">Updates</a> for what's new.
+    </p>
+  </section>
+
+  <section class="wrap block"><CozmcPanel /></section>
+</Base>
+
+<style>
+  .hero { position: relative; overflow: hidden; min-height: 500px; display: flex; align-items: flex-end; }
+  .hero-art { position: absolute; inset: 0;
+    background:
+      linear-gradient(180deg, rgba(11, 16, 27, 0) 30%, rgba(11, 16, 27, 0.96) 100%),
+      radial-gradient(900px 420px at 78% 18%, rgba(255, 170, 118, 0.55), transparent 65%),
+      linear-gradient(112deg, #120c26 0%, #3d1a45 38%, #b04d78 66%, #f39a72 88%, #ffc99a 100%); }
+  .hero-inner { position: relative; width: 100%; padding-top: 72px; padding-bottom: 56px; }
+  h1 { max-width: 12ch; }
+  .promise { font-size: 19px; color: #e6e3ec; max-width: 54ch; margin: 0 0 18px; }
+  .platforms { list-style: none; display: flex; gap: 8px; flex-wrap: wrap; padding: 0; margin: 0 0 26px; }
+  .cta { display: flex; gap: 12px; flex-wrap: wrap; }
+  .block { padding-top: 48px; }
+  .resume { display: grid; grid-template-columns: 1.2fr 1fr; gap: 20px; }
+  .note { margin: 14px 0 0; }
+  .resume :global(.resume-rows) { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; }
+  .resume :global(.meter) { display: grid; grid-template-columns: 1fr auto; gap: 6px 12px; padding: 10px 0; text-decoration: none; }
+  .resume :global(.m-label) { font-weight: 600; }
+  .resume :global(.m-val) { color: var(--vc-muted); font-size: 14px; }
+  .resume :global(.meter .bar) { grid-column: 1 / -1; }
+  .resume :global(.meter:hover .m-label) { text-decoration: underline; }
+  .quick { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .quick > * { display: flex; flex-direction: column; justify-content: space-between; gap: 12px; min-height: 92px; padding: 14px; border-radius: 12px;
+    background: var(--vc-slate); border: 1px solid var(--vc-line); text-decoration: none; font-weight: 600; font-size: 15px; line-height: 1.3; }
+  .quick a:hover { border-color: var(--vc-pink); }
+  .quick small { color: var(--vc-muted); font-weight: 500; font-size: 13px; }
+  .quick .planned { border-style: dashed; color: var(--vc-muted); background: transparent; }
+  .guides-note { max-width: 70ch; }
+  @media (max-width: 960px) { .resume { grid-template-columns: 1fr; } }
+  @media (max-width: 640px) {
+    .hero { min-height: 460px; }
+    .promise { font-size: 17px; }
+    .cta .btn { flex: 1; }
+    .quick { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>

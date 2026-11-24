@@ -1,0 +1,18 @@
+---
+/** The two COZMC links, always separate. If a link isn't configured it says so instead of linking nowhere. */
+import { COZMC } from '../config';
+interface Props { size?: 'full' | 'compact'; discordLabel?: string; siteLabel?: string }
+const { size = 'full', discordLabel = 'Join the COZMC Discord', siteLabel = 'Explore COZMC.US' } = Astro.props;
+---
+{COZMC.discord ? (
+  <a class="cz-btn cz-discord" href={COZMC.discord} target="_blank" rel="noopener" data-cozmc="discord">
+    {discordLabel} {size === 'full' && <small aria-hidden="true">discord.gg ↗</small>}
+    <span class="sr-only">(opens Discord in a new tab)</span>
+  </a>
+) : (
+  <span class="cz-btn cz-unavailable" data-cozmc="discord-unavailable">Discord invite coming soon</span>
+)}
+<a class="cz-btn cz-site" href={COZMC.site} target="_blank" rel="noopener" data-cozmc="site">
+  {siteLabel} {size === 'full' && <small aria-hidden="true">cozmc.us ↗</small>}
+  <span class="sr-only">(opens in a new tab)</span>
+</a>

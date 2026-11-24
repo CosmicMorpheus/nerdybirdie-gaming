@@ -1,0 +1,4 @@
+[
+  { "id": "xbox-series", "label": "Xbox Series X|S", "shortLabel": "Xbox Series X|S", "family": "xbox", "achievementSystem": "xbox-achievements", "objectiveNoun": "Achievements" },
+  { "id": "ps5", "label": "PlayStation 5", "shortLabel": "PS5", "family": "playstation", "achievementSystem": "playstation-trophies", "objectiveNoun": "Trophies" }
+]

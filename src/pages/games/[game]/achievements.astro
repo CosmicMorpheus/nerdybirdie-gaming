@@ -1,0 +1,54 @@
+---
+import Base from '../../../layouts/Base.astro';
+import CozmcInline from '../../../components/CozmcInline.astro';
+import Tracker from '../../../islands/Tracker';
+import { games, getGame, getPlatform, publicObjectives, sourcesFor } from '../../../lib/content/load';
+
+export function getStaticPaths() {
+  return games.map((g) => ({ params: { game: g.id } }));
+}
+const game = getGame(Astro.params.game!);
+const objectives = publicObjectives(game.id);
+const platforms = game.platforms.map((gp) => {
+  const p = getPlatform(gp.platformId);
+  return { id: p.id, label: p.label, shortLabel: p.shortLabel, objectiveNoun: p.objectiveNoun, family: p.family };
+});
+const objectiveSources = sourcesFor(game, [...new Set(objectives.flatMap((o) => o.sourceIds))]);
+const platformSources = sourcesFor(game, [...new Set(game.platforms.flatMap((p) => p.sourceIds))]);
+---
+<Base title={`${game.shortTitle} achievements and trophies tracker`} current="guides"
+  description={`Track ${game.title} achievements and trophies on Xbox and PlayStation. Spoiler-free by default, saved on your device, no sign-up.`}>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/games/">Games</a> / <a href={`/games/${game.id}/`}>{game.shortTitle}</a> / <span aria-current="page">Achievements</span></nav>
+    <header class="head">
+      <p class="eyebrow">{game.shortTitle} tracker</p>
+      <h1>Achievements &amp; trophies</h1>
+      <p class="muted">Tick them off as you go. Separate lists for each platform; hidden details stay hidden unless you choose otherwise.</p>
+    </header>
+
+    <Tracker client:load gameId={game.id} gameShortTitle={game.shortTitle} platforms={platforms}
+      categories={game.categories} objectives={objectives} protectedUrl={`/data/${game.id}/protected.json`} />
+
+    <section class="sources">
+      <h2 class="h">Sources</h2>
+      <ul>
+        {[...platformSources, ...objectiveSources].filter((s, i, a) => a.findIndex((x) => x.id === s.id) === i).map((s) => (
+          <li><a href={s.url} target="_blank" rel="noopener">{s.publisher}: {s.title}</a> <span class="muted">· checked {s.checkedAt}</span></li>
+        ))}
+      </ul>
+    </section>
+
+    <CozmcInline />
+  </div>
+</Base>
+
+<style>
+  .crumbs { font-size: 14px; color: var(--vc-muted); padding-top: 22px; }
+  .crumbs a { text-decoration: none; } .crumbs a:hover { text-decoration: underline; }
+  .head { padding: 6px 0 22px; margin-bottom: 22px; border-bottom: 1px solid var(--vc-line); }
+  .head h1 { font-size: clamp(30px, 4vw, 44px); margin: 6px 0; }
+  .head p { margin: 0; max-width: 62ch; }
+  .sources { margin: 36px 0 24px; }
+  .sources .h { font-size: 16px; font-family: var(--body); }
+  .sources ul { margin: 6px 0 0; padding-left: 18px; font-size: 14px; }
+</style>

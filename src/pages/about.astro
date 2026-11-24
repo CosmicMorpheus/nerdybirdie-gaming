@@ -1,0 +1,26 @@
+---
+import Prose from '../layouts/Prose.astro';
+import CozmcPanel from '../components/CozmcPanel.astro';
+---
+<Prose title="About" description="Who makes Nerdy Birdie Gaming and how we check what we publish.">
+  <img src="/brand/nerdy-birdie-512.webp" alt="Nerdy Birdie logo: a cosmic bird in a cap and sunglasses" width="240" height="240" class="logo" />
+  <p>Nerdy Birdie Gaming makes free guides and trackers for players, starting with Grand Theft Auto VI. It's built to be checked on a phone
+  next to the console: quick answers, no clutter, and no spoilers unless you ask for them.</p>
+  <h2>How we check things</h2>
+  <ul>
+    <li>Facts come from official sources first (the publisher, Xbox, PlayStation), then established guide sites and credited creators.</li>
+    <li>Every guide and list shows its sources and the date it was last checked. Things we can't verify aren't published.</li>
+    <li>We note when something has been tested in-game by us, on which platform.</li>
+    <li>Spotted a mistake? See <a href="/corrections/">Corrections</a>.</li>
+  </ul>
+  <h2>Free, no sign-up</h2>
+  <p>The guides and tracker are free. There's no account, no wallet, and nothing to join. Your progress stays on your device.</p>
+  <h2>Unofficial fan guide</h2>
+  <p>Nerdy Birdie Gaming is independent and unofficial. It is not affiliated with, endorsed or sponsored by Rockstar Games, Take-Two Interactive,
+  Microsoft/Xbox or Sony Interactive Entertainment/PlayStation. Grand Theft Auto and all related names are trademarks of their owners and are
+  used here only to say which game a guide is about.</p>
+  <h2>Community</h2>
+  <p>Nerdy Birdie Gaming is part of the COZMC community. Joining is optional.</p>
+</Prose>
+<div class="wrap" style="margin-top:28px"><CozmcPanel /></div>
+<style> .logo { width: 200px; height: 200px; border-radius: 20px; } </style>

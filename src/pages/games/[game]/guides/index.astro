@@ -1,0 +1,28 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import CozmcInline from '../../../../components/CozmcInline.astro';
+import { games, getGame } from '../../../../lib/content/load';
+export function getStaticPaths() { return games.map((g) => ({ params: { game: g.id } })); }
+const game = getGame(Astro.params.game!);
+const planned = ['Money (story mode)', 'Rare vehicles', 'Weapons', 'Collectibles', 'Settings & controls', 'Tips'];
+---
+<Base title={`${game.shortTitle} guides`} current="guides" description={`Verified ${game.title} guides, spoiler-free by default.`}>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/games/">Games</a> / <a href={`/games/${game.id}/`}>{game.shortTitle}</a> / <span aria-current="page">Guides</span></nav>
+    <p class="eyebrow">{game.shortTitle}</p>
+    <h1>Guides</h1>
+    <div class="empty">
+      <strong>No guides are published yet.</strong> Each guide goes up once it's checked against sources and tested in-game,
+      with the date it was last checked. Until then this page stays honest rather than full.
+    </div>
+    <h2 class="planned-h">Planned</h2>
+    <ul class="planned">{planned.map((p) => <li>{p}</li>)}</ul>
+    <CozmcInline text="Found something? Share it in the community." />
+  </div>
+</Base>
+<style>
+  .crumbs { font-size: 14px; color: var(--vc-muted); padding-top: 22px; }
+  .planned-h { margin-top: 36px; font-size: 18px; }
+  .planned { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 10px 0 32px; }
+  .planned li { border: 1px dashed var(--vc-line); border-radius: 999px; padding: 6px 14px; color: var(--vc-muted); font-size: 14px; }
+</style>

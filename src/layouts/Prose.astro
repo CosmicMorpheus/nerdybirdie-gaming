@@ -1,0 +1,9 @@
+---
+import Base from './Base.astro';
+interface Props { title: string; description: string; current?: string }
+const { title, description, current } = Astro.props;
+---
+<Base title={title} description={description} current={current}>
+  <article class="wrap prose"><h1>{title}</h1><slot /></article>
+</Base>
+<style> h1 { padding-top: 28px; font-size: clamp(32px, 4.5vw, 48px); } </style>

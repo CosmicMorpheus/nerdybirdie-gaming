@@ -1,0 +1,43 @@
+---
+import Base from '../../../layouts/Base.astro';
+import CozmcInline from '../../../components/CozmcInline.astro';
+import { games, getGame, getPlatform, sourcesFor } from '../../../lib/content/load';
+
+export function getStaticPaths() { return games.map((g) => ({ params: { game: g.id } })); }
+const game = getGame(Astro.params.game!);
+const src = sourcesFor(game, game.availability.sourceIds);
+const fmt = (d: string) => new Date(d + 'T12:00:00Z').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+---
+<Base title={game.title} current="games" description={`${game.title}: platforms, achievement tracker and verified guides. Spoiler-free by default.`}>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/games/">Games</a> / <span aria-current="page">{game.shortTitle}</span></nav>
+    <p class="eyebrow">Game overview</p>
+    <h1>{game.title}</h1>
+    <p class="lead">{game.summary}</p>
+    <dl class="facts panel">
+      <div><dt>Status</dt><dd>{game.availability.status === 'released' && game.availability.date ? `Released ${fmt(game.availability.date)}` : 'Not yet released'}</dd></div>
+      <div><dt>Platforms</dt><dd>{game.platforms.map((p) => getPlatform(p.platformId).label).join(' · ')}</dd></div>
+      <div><dt>Source</dt><dd>{src.map((s) => <a href={s.url} target="_blank" rel="noopener">{s.publisher}: {s.title}</a>)} <span class="muted">· checked {src[0]?.checkedAt}</span></dd></div>
+    </dl>
+    <h2>Pick a tool</h2>
+    <ul class="tools">
+      <li><a href={`/games/${game.id}/achievements/`}><strong>Achievements &amp; trophies</strong><span>Tracker with separate Xbox and PS5 lists</span></a></li>
+      <li><a href={`/games/${game.id}/guides/`}><strong>Guides</strong><span>Verified guides as they're published</span></a></li>
+      <li><a href="/progress/"><strong>My progress</strong><span>Back up or restore your ticks</span></a></li>
+    </ul>
+    <p class="muted small">PC isn't listed because Rockstar hasn't announced a PC version. We only list platforms Rockstar confirms.</p>
+    <CozmcInline text="Playing GTA VI? Swap tips with the community." />
+  </div>
+</Base>
+<style>
+  .crumbs { font-size: 14px; color: var(--vc-muted); padding-top: 22px; }
+  .lead { font-size: 18px; max-width: 60ch; color: #e2e0e8; }
+  .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 24px 0 36px; }
+  dt { font-size: 13px; color: var(--vc-muted); } dd { margin: 4px 0 0; font-weight: 600; }
+  dd a { font-weight: 500; }
+  .tools { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 14px 0 24px; }
+  .tools a { display: flex; flex-direction: column; gap: 6px; padding: 18px; border-radius: 12px; background: var(--vc-slate); border: 1px solid var(--vc-line); text-decoration: none; height: 100%; }
+  .tools a:hover { border-color: var(--vc-pink); }
+  .tools span { color: var(--vc-muted); font-size: 14px; }
+  @media (max-width: 760px) { .facts, .tools { grid-template-columns: 1fr; } }
+</style>

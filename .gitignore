@@ -5,3 +5,6 @@ dist/
 .env.*
 .DS_Store
 Thumbs.db
+dist-test/
+test-results/
+playwright-report/

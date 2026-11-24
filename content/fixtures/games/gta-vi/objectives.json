@@ -1,0 +1,350 @@
+[
+  {
+    "id": "gta-vi:fixture:xbox-series-01",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "story",
+    "safeTitle": "Fixture objective 01",
+    "safeSummary": "Test data only. Category story.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": false,
+    "points": 10,
+    "protected": null,
+    "sourceIds": [
+      "fixture-source"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-24",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:fixture:xbox-series-02",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "story",
+    "safeTitle": "Fixture objective 02",
+    "safeSummary": "Test data only. Category story.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": true,
+    "points": 10,
+    "protected": null,
+    "sourceIds": [
+      "fixture-source"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-24",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:fixture:xbox-series-03",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "activities",
+    "safeTitle": "Fixture objective 03",
+    "safeSummary": "Test data only. Category activities.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": false,
+    "points": 10,
+    "protected": null,
+    "sourceIds": [
+      "fixture-source"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-24",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:fixture:xbox-series-04",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "exploration",
+    "safeTitle": "Fixture objective 04",
+    "safeSummary": "Test data only. Category exploration.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": false,
+    "points": 10,
+    "protected": null,
+    "sourceIds": [
+      "fixture-source"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-24",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:fixture:xbox-series-05",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "story",
+    "safeTitle": "Fixture hidden objective 05",
+    "safeSummary": "Details are hidden in spoiler-free mode.",
+    "spoilerLevel": "major",
+    "hidden": true,
+    "missable": false,
+    "points": 10,
+    "protected": {
+      "title": "FIXTURE-SECRET-TITLE-xbox-series-05",
+      "summary": "FIXTURE-SECRET-SUMMARY-xbox-series-05"
+    },
+    "sourceIds": [
+      "fixture-source"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-24",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:fixture:xbox-series-06",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "activities",
+    "safeTitle": "Fixture hidden objective 06",
+    "safeSummary": "Details are hidden in spoiler-free mode.",
+    "spoilerLevel": "minor",
+    "hidden": false,
+    "missable": false,
+    "points": 10,
+    "protected": {
+      "title": "FIXTURE-SECRET-TITLE-xbox-series-06",
+      "summary": "FIXTURE-SECRET-SUMMARY-xbox-series-06"
+    },
+    "sourceIds": [
+      "fixture-source"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-24",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:fixture:xbox-series-07",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "activities",
+    "safeTitle": "Fixture objective 07",
+    "safeSummary": "Test data only. Category activities.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": false,
+    "points": 10,
+    "protected": null,
+    "sourceIds": [
+      "fixture-source"
+    ],
+    "verificationStatus": "unverified",
+    "publicationStatus": "draft",
+    "checkedAt": "2026-11-24",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:fixture:ps5-01",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "story",
+    "safeTitle": "Fixture objective 01",
+    "safeSummary": "Test data only. Category story.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": false,
+    "points": 10,
+    "protected": null,
+    "sourceIds": [
+      "fixture-source"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-24",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:fixture:ps5-02",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "story",
+    "safeTitle": "Fixture objective 02",
+    "safeSummary": "Test data only. Category story.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": true,
+    "points": 10,
+    "protected": null,
+    "sourceIds": [
+      "fixture-source"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-24",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:fixture:ps5-03",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "activities",
+    "safeTitle": "Fixture objective 03",
+    "safeSummary": "Test data only. Category activities.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": false,
+    "points": 10,
+    "protected": null,
+    "sourceIds": [
+      "fixture-source"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-24",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:fixture:ps5-04",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "exploration",
+    "safeTitle": "Fixture objective 04",
+    "safeSummary": "Test data only. Category exploration.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": false,
+    "points": 10,
+    "protected": null,
+    "sourceIds": [
+      "fixture-source"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-24",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:fixture:ps5-05",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "story",
+    "safeTitle": "Fixture hidden objective 05",
+    "safeSummary": "Details are hidden in spoiler-free mode.",
+    "spoilerLevel": "major",
+    "hidden": true,
+    "missable": false,
+    "points": 10,
+    "protected": {
+      "title": "FIXTURE-SECRET-TITLE-ps5-05",
+      "summary": "FIXTURE-SECRET-SUMMARY-ps5-05"
+    },
+    "sourceIds": [
+      "fixture-source"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-24",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:fixture:ps5-06",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "activities",
+    "safeTitle": "Fixture hidden objective 06",
+    "safeSummary": "Details are hidden in spoiler-free mode.",
+    "spoilerLevel": "minor",
+    "hidden": false,
+    "missable": false,
+    "points": 10,
+    "protected": {
+      "title": "FIXTURE-SECRET-TITLE-ps5-06",
+      "summary": "FIXTURE-SECRET-SUMMARY-ps5-06"
+    },
+    "sourceIds": [
+      "fixture-source"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-24",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:fixture:ps5-07",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "activities",
+    "safeTitle": "Fixture objective 07",
+    "safeSummary": "Test data only. Category activities.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": false,
+    "points": 10,
+    "protected": null,
+    "sourceIds": [
+      "fixture-source"
+    ],
+    "verificationStatus": "unverified",
+    "publicationStatus": "draft",
+    "checkedAt": "2026-11-24",
+    "founderVerifiedAt": null,
+    "revision": 1
+  }
+]

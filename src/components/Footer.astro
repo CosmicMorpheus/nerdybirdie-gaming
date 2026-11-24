@@ -1,0 +1,42 @@
+---
+import { COZMC, PARENT_SITE_URL } from '../config';
+---
+<footer class="ftr">
+  <div class="wrap">
+    <div class="cols">
+      <div class="brand">
+        <img src="/brand/nerdy-birdie-256.webp" alt="Nerdy Birdie logo" width="96" height="96" loading="lazy" decoding="async" />
+        <p class="muted small">Free guides and trackers for players. Brick by Brick, WE Build.</p>
+      </div>
+      <nav aria-label="Site">
+        <h2 class="h">Site</h2>
+        <a href="/about/">About</a><a href="/updates/">Updates</a><a href="/corrections/">Corrections</a><a href="/privacy/">Privacy</a>
+        {PARENT_SITE_URL && <a href={PARENT_SITE_URL}>Nerdy Birdie</a>}
+      </nav>
+      <nav aria-label="Community" class="cozmc">
+        <h2 class="h cz">COZMC community</h2>
+        {COZMC.discord && <a href={COZMC.discord} target="_blank" rel="noopener">COZMC Discord ↗<span class="sr-only"> (opens in a new tab)</span></a>}
+        <a href={COZMC.site} target="_blank" rel="noopener">cozmc.us ↗<span class="sr-only"> (opens in a new tab)</span></a>
+      </nav>
+    </div>
+    <p class="disclaimer">
+      Nerdy Birdie Gaming is an independent, unofficial fan guide. It is not affiliated with, endorsed or sponsored by Rockstar Games,
+      Take-Two Interactive, Microsoft/Xbox or Sony Interactive Entertainment/PlayStation. Game titles and trademarks belong to their owners.
+    </p>
+  </div>
+</footer>
+
+<style>
+  .ftr { border-top: 1px solid var(--vc-line); margin-top: 72px; padding: 40px 0 56px; background: var(--nb-black); }
+  .cols { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 32px; }
+  .brand img { width: 96px; height: 96px; border-radius: 14px; }
+  .brand p { max-width: 36ch; }
+  nav { display: flex; flex-direction: column; gap: 2px; }
+  nav a { color: var(--vc-muted); text-decoration: none; padding: 6px 0; font-size: 15px; }
+  nav a:hover { color: var(--vc-pearl); }
+  .h { font: 700 12px var(--body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--vc-pearl); margin: 0 0 6px; }
+  .h.cz { color: var(--cz-coral); }
+  .cozmc a { color: var(--cz-soft); }
+  .disclaimer { margin: 32px 0 0; font-size: 13px; color: var(--vc-muted); max-width: 90ch; }
+  @media (max-width: 760px) { .cols { grid-template-columns: 1fr 1fr; } .brand { grid-column: 1 / -1; } }
+</style>

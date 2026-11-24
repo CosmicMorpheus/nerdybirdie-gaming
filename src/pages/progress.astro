@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+import ProgressManager from '../islands/ProgressManager';
+import { games, getPlatform, publicObjectives } from '../lib/content/load';
+import { contextKey } from '../lib/progress/model';
+const contexts = games.flatMap((g) => {
+  const objs = publicObjectives(g.id);
+  return g.platforms.map((gp) => {
+    const p = getPlatform(gp.platformId);
+    return { key: contextKey(g.id, p.id), label: `${g.shortTitle} · ${p.shortLabel} ${p.objectiveNoun.toLowerCase()}`, href: `/games/${g.id}/achievements/`,
+      objectiveIds: objs.filter((o) => o.platformIds.includes(p.id)).map((o) => o.id) };
+  });
+});
+---
+<Base title="My progress" current="progress" description="Your saved progress on this device, with backup and restore. No account needed.">
+  <div class="wrap narrow">
+    <h1>My progress</h1>
+    <p class="muted">No account, no sign-up. Everything below is stored in this browser only.</p>
+    <ProgressManager client:load contexts={contexts} />
+  </div>
+</Base>
+<style> h1 { padding-top: 28px; } .narrow { max-width: 860px; } </style>

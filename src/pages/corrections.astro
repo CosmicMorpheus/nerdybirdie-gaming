@@ -1,0 +1,19 @@
+---
+import Prose from '../layouts/Prose.astro';
+import { COZMC, CONTACT_EMAIL } from '../config';
+---
+<Prose title="Corrections" description="How to report a mistake, and how we fix them.">
+  <p>Accuracy matters more than speed here. If something is wrong, out of date or spoils something it shouldn't, please tell us.</p>
+  <h2>How to report</h2>
+  <p>Say which page, what's wrong, your platform, and how you know (a screenshot helps).
+  {CONTACT_EMAIL ? <>Email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>, or post</> : <>Post</>} in the{' '}
+  {COZMC.discord ? <a href={COZMC.discord} target="_blank" rel="noopener">COZMC Discord</a> : 'COZMC Discord'}.</p>
+  <h2>What we do</h2>
+  <ul>
+    <li>Check the report against sources or in-game.</li>
+    <li>Fix it, update the "last checked" date, and note it on <a href="/updates/">Updates</a>.</li>
+    <li>Tracker items keep their IDs when corrected, so your ticks aren't lost.</li>
+  </ul>
+  <h2>Corrections log</h2>
+  <p class="muted">No corrections yet.</p>
+</Prose>

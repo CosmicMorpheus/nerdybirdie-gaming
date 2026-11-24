@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "id": "gta-vi",
+  "title": "Grand Theft Auto VI",
+  "shortTitle": "GTA VI",
+  "summary": "Achievement and trophy tracking, verified guides and quick answers you can check on your phone mid-session. Spoiler-free unless you choose otherwise.",
+  "availability": {
+    "status": "released",
+    "date": "2026-11-19",
+    "sourceIds": [
+      "rockstar-launch-post"
+    ]
+  },
+  "platforms": [
+    {
+      "platformId": "xbox-series",
+      "verificationStatus": "official_confirmed",
+      "checkedAt": "2026-11-24",
+      "sourceIds": [
+        "rockstar-launch-post"
+      ]
+    },
+    {
+      "platformId": "ps5",
+      "verificationStatus": "official_confirmed",
+      "checkedAt": "2026-11-24",
+      "sourceIds": [
+        "rockstar-launch-post"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "story",
+      "label": "Story"
+    },
+    {
+      "id": "activities",
+      "label": "Activities"
+    },
+    {
+      "id": "exploration",
+      "label": "Exploration"
+    },
+    {
+      "id": "collectibles",
+      "label": "Collectibles"
+    },
+    {
+      "id": "other",
+      "label": "Other"
+    }
+  ],
+  "sources": [
+    {
+      "id": "rockstar-launch-post",
+      "url": "https://www.rockstargames.com/newswire/article/39akk424a9oo53",
+      "publisher": "Rockstar Games",
+      "title": "Grand Theft Auto VI Now Available",
+      "checkedAt": "2026-11-24",
+      "supportedClaim": "Released worldwide on 19 November 2026 for PlayStation 5 and Xbox Series X|S (\"now available worldwide for PlayStation 5 and XBOX Series X|S\").",
+      "official": true
+    },
+    {
+      "id": "fixture-source",
+      "url": "https://example.com/fixture",
+      "publisher": "Test fixture",
+      "title": "Test fixture source",
+      "checkedAt": "2026-11-24",
+      "supportedClaim": "Nothing. Test data only.",
+      "official": false
+    }
+  ]
+}

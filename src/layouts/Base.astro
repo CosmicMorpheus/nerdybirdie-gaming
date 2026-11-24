@@ -1,0 +1,46 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { INDEXABLE, SITE_NAME } from '../config';
+import { USING_FIXTURES } from '../lib/content/load';
+
+interface Props {
+  /** Spoiler-safe. Used for <title> and social previews. */
+  title: string;
+  description: string;
+  current?: string;
+  /** Pages that must never be indexed (search results, etc). */
+  noindex?: boolean;
+}
+const { title, description, current, noindex = false } = Astro.props;
+const fullTitle = title === SITE_NAME ? title : `${title} · ${SITE_NAME}`;
+const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : null;
+const robots = !INDEXABLE || noindex || USING_FIXTURES ? 'noindex, nofollow' : 'index, follow';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta name="theme-color" content="#0B101B" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    {USING_FIXTURES && <div class="banner fixtures" role="note">TEST BUILD · objectives are fake fixtures, not GTA VI data</div>}
+    {!USING_FIXTURES && !INDEXABLE && <div class="banner staging" role="note">Preview · not yet launched</div>}
+    <Header current={current} />
+    <main id="main" tabindex="-1"><slot /></main>
+    <Footer />
+  </body>
+</html>

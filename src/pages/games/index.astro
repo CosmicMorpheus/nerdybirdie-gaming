@@ -1,0 +1,23 @@
+---
+import Base from '../../layouts/Base.astro';
+import { games, getPlatform } from '../../lib/content/load';
+---
+<Base title="Games" current="games" description="Games covered by Nerdy Birdie Gaming.">
+  <div class="wrap">
+    <h1>Games</h1>
+    <ul class="lib">
+      {games.map((g) => (
+        <li><a href={`/games/${g.id}/`}><span class="art" aria-hidden="true"></span><strong>{g.title}</strong><span class="muted small">{g.platforms.map((p) => getPlatform(p.platformId).shortLabel).join(' · ')}</span></a></li>
+      ))}
+    </ul>
+    <p class="muted">More games will be added over time.</p>
+  </div>
+</Base>
+<style>
+  h1 { padding-top: 28px; }
+  .lib { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+  .lib a { display: flex; flex-direction: column; gap: 6px; text-decoration: none; }
+  .art { aspect-ratio: 16 / 9; border-radius: 12px; border: 1px solid var(--vc-line); background: linear-gradient(112deg, #120c26, #3d1a45 40%, #b04d78 70%, #f39a72); }
+  .lib a:hover .art { border-color: var(--vc-pink); }
+  strong { font: 600 18px var(--head); }
+</style>
