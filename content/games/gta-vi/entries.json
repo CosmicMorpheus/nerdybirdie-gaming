@@ -259,5 +259,4151 @@
     "objectiveIds": [],
     "status": "published",
     "paid": true
+  },
+  {
+    "id": "gta-vi:entry:mission-prologue",
+    "gameId": "gta-vi",
+    "slug": "mission-prologue",
+    "category": "walkthrough",
+    "title": "Prologue",
+    "summary": "The opening mission. You play as Lucia.",
+    "steps": [
+      "Follow the prompts: this mission teaches movement, driving and how to lose a police chase."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "1"
+      },
+      {
+        "label": "Story recap order",
+        "value": "1 of 23"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Prologue Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Prologue_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-gone-fishing",
+    "gameId": "gta-vi",
+    "slug": "mission-gone-fishing",
+    "category": "walkthrough",
+    "title": "Gone Fishing",
+    "summary": "Jason helps Donnie take a cut from a drug shipment.",
+    "steps": [
+      "Catch up to the plane, then search the camp for Donnie. You can go in loud or stay hidden.",
+      "Optional: grab the cash from the trailer before you leave the camp.",
+      "Fly back to Brian's marina, then drive Cal home and head to Jason's house."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "1"
+      },
+      {
+        "label": "Story recap order",
+        "value": "2 of 23"
+      },
+      {
+        "label": "Approach",
+        "value": "Stealth or aggressive"
+      },
+      {
+        "label": "Optional extra",
+        "value": "Cash in the trailer"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Gone Fishing Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Gone_Fishing_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-gear-up",
+    "gameId": "gta-vi",
+    "slug": "mission-gear-up",
+    "category": "walkthrough",
+    "title": "Gear Up",
+    "summary": "Buy your first longarm at Chuck's Tackle & Shot, the Ammu-Nation in Key Lento.",
+    "steps": [
+      "Talk to the cashier, then open the Weapons & Mods menu.",
+      "Pick a shotgun or tactical rifle. It's only a starter gun, so don't overthink it. A magazine upgrade is a cheap first mod.",
+      "Tip: a shower boosts Focus, and a protein bar from the kitchen boosts Health and Stamina before you head out."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "1"
+      },
+      {
+        "label": "Story recap order",
+        "value": "3 of 23"
+      },
+      {
+        "label": "Carry limit",
+        "value": "Two sidearms and two longarms per character; the rest go in your trunk or a gun locker"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Gear Up Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Gear_Up_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-just-a-scratch",
+    "gameId": "gta-vi",
+    "slug": "mission-just-a-scratch",
+    "category": "walkthrough",
+    "title": "Just a Scratch",
+    "summary": "Get Jason's Ganado fixed and repainted at Joey's mod shop.",
+    "steps": [
+      "Drive to the mod shop, restore the engine, then choose a respray.",
+      "After this mission you can call Joey to have your car delivered to you."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "1"
+      },
+      {
+        "label": "Story recap order",
+        "value": "4 of 23"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Just a Scratch Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Just_a_Scratch_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-lab-fees",
+    "gameId": "gta-vi",
+    "slug": "mission-lab-fees",
+    "category": "walkthrough",
+    "title": "Lab Fees",
+    "summary": "Collect rent for Brian from the Moonstone Boutique.",
+    "steps": [
+      "Talk to the clerk and collect the money.",
+      "Get into the lab, then stash what you find in Brian's lockup."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "1"
+      },
+      {
+        "label": "Story recap order",
+        "value": "5 of 23"
+      },
+      {
+        "label": "Related guide",
+        "value": "IGN has a separate page on finding the lab code"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Lab Fees Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Lab_Fees_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-pipework",
+    "gameId": "gta-vi",
+    "slug": "mission-pipework",
+    "category": "walkthrough",
+    "title": "Pipework",
+    "summary": "Collect another tenant's rent for Brian, this time from Mandy.",
+    "steps": [
+      "When Mandy storms off, pick up the box of Macizo Cigars she throws down. They're missable."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "1"
+      },
+      {
+        "label": "Story recap order",
+        "value": "6 of 23"
+      },
+      {
+        "label": "Missable",
+        "value": "Macizo Cigars"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Pipework Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Pipework_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-unwanted-attention",
+    "gameId": "gta-vi",
+    "slug": "mission-unwanted-attention",
+    "category": "walkthrough",
+    "title": "Unwanted Attention",
+    "summary": "Meet Cal and find out what Brian needs taken care of.",
+    "steps": [
+      "Drive to Hamlet with Cal and search the impound lot for the car.",
+      "Lose the police, then repair and respray the car at a Pay 'n' Spray.",
+      "Deliver it to Brian's garage and collect the cash. You can buy an outfit at the gun store afterwards."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "1"
+      },
+      {
+        "label": "Story recap order",
+        "value": "7 of 23"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Unwanted Attention Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Unwanted_Attention_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-hey-arnold",
+    "gameId": "gta-vi",
+    "slug": "mission-hey-arnold",
+    "category": "walkthrough",
+    "title": "Hey Arnold!",
+    "summary": "Meet Brian at the Crastenburg Hotel to deal with a problem.",
+    "steps": [
+      "Find Arnold, then chase him down.",
+      "You decide what happens to Arnold at the end."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "1"
+      },
+      {
+        "label": "Story recap order",
+        "value": "8 of 23"
+      },
+      {
+        "label": "Choice",
+        "value": "Yes: what to do with Arnold"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Hey Arnold! Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Hey_Arnold!_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-island-dreams",
+    "gameId": "gta-vi",
+    "slug": "mission-island-dreams",
+    "category": "walkthrough",
+    "title": "Island Dreams",
+    "summary": "Work for Kenton, the treasure hunter, on a dive near Key Lento.",
+    "steps": [
+      "Go to the dive spot and guide the bachelor party through the trench.",
+      "Search for treasure near the wreck, then get everyone back to the boat."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "1"
+      },
+      {
+        "label": "Story recap order",
+        "value": "9 of 23"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Island Dreams Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Island_Dreams_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-feng-shui",
+    "gameId": "gta-vi",
+    "slug": "mission-feng-shui",
+    "category": "walkthrough",
+    "title": "Feng Shui",
+    "summary": "Cal comes over to hang out while Jason gets the house ready.",
+    "steps": [
+      "Get the house ready for Lucia. There are a couple of optional things to look at around the place."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "1"
+      },
+      {
+        "label": "Story recap order",
+        "value": "10 of 23"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Feng Shui Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Feng_Shui_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-coming-home",
+    "gameId": "gta-vi",
+    "slug": "mission-coming-home",
+    "category": "walkthrough",
+    "title": "Coming Home",
+    "summary": "Drive to Hamlet Correctional to pick Lucia up.",
+    "steps": [
+      "Pick Lucia up and drive to the Rusty Anchor bar.",
+      "Hang out with your friends. You can play pool here."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "1"
+      },
+      {
+        "label": "Story recap order",
+        "value": "11 of 23"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Coming Home Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Coming_Home_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-clean-up-after-donnie",
+    "gameId": "gta-vi",
+    "slug": "mission-clean-up-after-donnie",
+    "category": "walkthrough",
+    "title": "Clean Up After Donnie",
+    "summary": "Track down a lost package that's sending a signal near a fishing spot in Hamlet.",
+    "steps": [
+      "Search the shack for the package."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "1"
+      },
+      {
+        "label": "Story recap order",
+        "value": "12 of 23"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Clean Up After Donnie Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Clean_Up_After_Donnie_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-buck-me",
+    "gameId": "gta-vi",
+    "slug": "mission-buck-me",
+    "category": "walkthrough",
+    "title": "Buck Me",
+    "summary": "Meet Lucia at the Fleeca bank to set up her BuckMe account.",
+    "steps": [
+      "Deposit cash into BuckMe and set up savings.",
+      "Afterwards the Find the Lost Drugs side mission becomes available (it's missable)."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "1"
+      },
+      {
+        "label": "Story recap order",
+        "value": "13 of 23"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Buck Me Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Buck_Me_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-down-to-earth",
+    "gameId": "gta-vi",
+    "slug": "mission-down-to-earth",
+    "category": "walkthrough",
+    "title": "Down to Earth",
+    "summary": "Meet Brian at the marina for a flying job.",
+    "steps": [
+      "Fly to Bobcat Bay and make the three deliveries.",
+      "Head back to the house."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "1"
+      },
+      {
+        "label": "Story recap order",
+        "value": "14 of 23"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Down to Earth Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Down_to_Earth_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-clear-skies",
+    "gameId": "gta-vi",
+    "slug": "mission-clear-skies",
+    "category": "walkthrough",
+    "title": "Clear Skies",
+    "summary": "Join Donnie and Brian on a job in Southwind.",
+    "steps": [
+      "Talk to Brian, then fly to the intercept point and escort the other pilot."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "1"
+      },
+      {
+        "label": "Story recap order",
+        "value": "15 of 23"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "minor",
+    "details": {
+      "summary": "Later in the mission you have to find Donnie and get him out, then hold off a biker gang.",
+      "steps": []
+    },
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Clear Skies Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Clear_Skies_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-building-a-life",
+    "gameId": "gta-vi",
+    "slug": "mission-building-a-life",
+    "category": "walkthrough",
+    "title": "Building a Life",
+    "summary": "Spend some time with Lucia assembling furniture.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "1"
+      },
+      {
+        "label": "Story recap order",
+        "value": "16 of 23"
+      },
+      {
+        "label": "Note",
+        "value": "IGN lists this as a story mission; GTA Series Videos lists it with the Chapter 1 optional missions"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "unconfirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Building a Life Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Building_a_Life_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-day-release",
+    "gameId": "gta-vi",
+    "slug": "mission-day-release",
+    "category": "walkthrough",
+    "title": "Day Release",
+    "summary": "Meet Kat and Mattia with Lucia at the Rusty Anchor.",
+    "steps": [
+      "Find Mattia, then go for a drive in Vice City.",
+      "On the yacht, talk to the couple by the railing on the middle deck: they give Lucia sunglasses (missable)."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "1"
+      },
+      {
+        "label": "Story recap order",
+        "value": "17 of 23"
+      },
+      {
+        "label": "Missable",
+        "value": "Sunglasses for Lucia"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Day Release Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Day_Release_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-swamped",
+    "gameId": "gta-vi",
+    "slug": "mission-swamped",
+    "category": "walkthrough",
+    "title": "Swamped",
+    "summary": "Brian wants to meet at the marina again.",
+    "steps": [
+      "Before you reach the marina, you can visit the Rusty Anchor after Cal texts to start the missable Ring the Bell! side mission."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "1"
+      },
+      {
+        "label": "Story recap order",
+        "value": "18 of 23"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Swamped Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Swamped_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-don-gone",
+    "gameId": "gta-vi",
+    "slug": "mission-don-gone",
+    "category": "walkthrough",
+    "title": "Don Gone",
+    "summary": "A job for Brian at Donnie's trailer.",
+    "steps": [
+      "Check the bathroom shelf for Donnie's aviator sunglasses (missable).",
+      "After the fight outside, open the trunk of the car for a unique revolver (missable)."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "1"
+      },
+      {
+        "label": "Story recap order",
+        "value": "19 of 23"
+      },
+      {
+        "label": "Missable",
+        "value": "Donnie's aviator sunglasses and H&L .38 revolver"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "minor",
+    "details": {
+      "summary": "Brian wants the trailer to look like Donnie packed up and left town.",
+      "steps": []
+    },
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Don Gone Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Don_Gone_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-recalibration",
+    "gameId": "gta-vi",
+    "slug": "mission-recalibration",
+    "category": "walkthrough",
+    "title": "Recalibration",
+    "summary": "Talk to Lucia, then spend time with Cal.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "1"
+      },
+      {
+        "label": "Story recap order",
+        "value": "20 of 23"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "minor",
+    "details": {
+      "summary": "Cal is struggling, and Jason and Lucia support him through it.",
+      "steps": []
+    },
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Recalibration Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Recalibration_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-tourist-trap",
+    "gameId": "gta-vi",
+    "slug": "mission-tourist-trap",
+    "category": "walkthrough",
+    "title": "Tourist Trap",
+    "summary": "Take Mattia up on a job offer that could lead to bigger money.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "1"
+      },
+      {
+        "label": "Story recap order",
+        "value": "21 of 23"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Tourist Trap Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Tourist_Trap_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-home-sweet-home",
+    "gameId": "gta-vi",
+    "slug": "mission-home-sweet-home",
+    "category": "walkthrough",
+    "title": "Home Sweet Home",
+    "summary": "Go back to Jason's house to collect some of his things.",
+    "steps": [
+      "If you call Lucia to pick you up and reach her car without being spotted, she unlocks Andy's Jacket (missable)."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "1"
+      },
+      {
+        "label": "Story recap order",
+        "value": "22 of 23"
+      },
+      {
+        "label": "Missable",
+        "value": "Andy's Jacket for Lucia"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "minor",
+    "details": {
+      "summary": "The police are closing in, and Jason and Lucia are about to leave town.",
+      "steps": []
+    },
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Home Sweet Home Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Home_Sweet_Home_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-discharge-time",
+    "gameId": "gta-vi",
+    "slug": "mission-discharge-time",
+    "category": "walkthrough",
+    "title": "Discharge Time",
+    "summary": "The last story mission of Chapter 1.",
+    "steps": [
+      "Before you start it, spend your spare cash: see our Chapter 1 money tip."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "1"
+      },
+      {
+        "label": "Story recap order",
+        "value": "23 of 23"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Discharge Time Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Discharge_Time_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-whats-in-the-bag",
+    "gameId": "gta-vi",
+    "slug": "mission-whats-in-the-bag",
+    "category": "walkthrough",
+    "title": "What's In the Bag?",
+    "summary": "Finally find out what's in the bag.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "2"
+      },
+      {
+        "label": "Story recap order",
+        "value": "1 of 18"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "What's In the Bag? Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/What%27s_In_the_Bag%3F_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-overnight-charges",
+    "gameId": "gta-vi",
+    "slug": "mission-overnight-charges",
+    "category": "walkthrough",
+    "title": "Overnight Charges",
+    "summary": "Ask the motel's front desk how much you owe for the room.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "2"
+      },
+      {
+        "label": "Story recap order",
+        "value": "2 of 18"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Overnight Charges Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Overnight_Charges_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-just-moved-in",
+    "gameId": "gta-vi",
+    "slug": "mission-just-moved-in",
+    "category": "walkthrough",
+    "title": "Just Moved In",
+    "summary": "Pick up supplies from the Alpha convenience store near the motel.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "2"
+      },
+      {
+        "label": "Story recap order",
+        "value": "3 of 18"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Just Moved In Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Just_Moved_In_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-got-pills",
+    "gameId": "gta-vi",
+    "slug": "mission-got-pills",
+    "category": "walkthrough",
+    "title": "Got Pills?",
+    "summary": "Ask around the motel for painkillers.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "2"
+      },
+      {
+        "label": "Story recap order",
+        "value": "4 of 18"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "minor",
+    "details": {
+      "summary": "Jason is recovering from surgery and needs them.",
+      "steps": []
+    },
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Got Pills? Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Got_Pills%3F_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-girls-trip",
+    "gameId": "gta-vi",
+    "slug": "mission-girls-trip",
+    "category": "walkthrough",
+    "title": "Girls' Trip",
+    "summary": "Help Vicki track down some stronger painkillers.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "2"
+      },
+      {
+        "label": "Story recap order",
+        "value": "5 of 18"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Girls' Trip Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Girls%27_Trip_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-moses",
+    "gameId": "gta-vi",
+    "slug": "mission-moses",
+    "category": "walkthrough",
+    "title": "Moses",
+    "summary": "Take a low-key car to Moses' auto shop: Vicki says he can set you up with a ride.",
+    "steps": [
+      "Meeting Moses is what gives you more space to store vehicles."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "2"
+      },
+      {
+        "label": "Story recap order",
+        "value": "6 of 18"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Moses Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Moses_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-ambulance-chaser",
+    "gameId": "gta-vi",
+    "slug": "mission-ambulance-chaser",
+    "category": "walkthrough",
+    "title": "Ambulance Chaser",
+    "summary": "Get rid of a vehicle the police could trace back to you.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "2"
+      },
+      {
+        "label": "Story recap order",
+        "value": "7 of 18"
+      },
+      {
+        "label": "Also listed as",
+        "value": "Ambulance Chasers (GTA Series Videos)"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "minor",
+    "details": {
+      "summary": "It's the ambulance used to get out of the hospital.",
+      "steps": []
+    },
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Ambulance Chaser Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Ambulance_Chaser_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-new-look",
+    "gameId": "gta-vi",
+    "slug": "mission-new-look",
+    "category": "walkthrough",
+    "title": "New Look",
+    "summary": "Change your hair at the Pearl House Hair Salon.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "2"
+      },
+      {
+        "label": "Story recap order",
+        "value": "8 of 18"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "New Look Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/New_Look_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-how-do-i-look",
+    "gameId": "gta-vi",
+    "slug": "mission-how-do-i-look",
+    "category": "walkthrough",
+    "title": "How Do I Look?",
+    "summary": "Buy some new clothes. Bargain World is the cheap option.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "2"
+      },
+      {
+        "label": "Story recap order",
+        "value": "9 of 18"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "How Do I Look? Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/How_Do_I_Look%3F_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-play-nurse",
+    "gameId": "gta-vi",
+    "slug": "mission-play-nurse",
+    "category": "walkthrough",
+    "title": "Play Nurse",
+    "summary": "Keep checking on Jason at the motel and see what he needs.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "2"
+      },
+      {
+        "label": "Story recap order",
+        "value": "10 of 18"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Play Nurse Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Play_Nurse_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-behind-on-payments",
+    "gameId": "gta-vi",
+    "slug": "mission-behind-on-payments",
+    "category": "walkthrough",
+    "title": "Behind on Payments",
+    "summary": "Pay off the rent you owe. IGN's page shows how to check the amount.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "2"
+      },
+      {
+        "label": "Story recap order",
+        "value": "11 of 18"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Behind on Payments Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Behind_on_Payments_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-daily-driver",
+    "gameId": "gta-vi",
+    "slug": "mission-daily-driver",
+    "category": "walkthrough",
+    "title": "Daily Driver",
+    "summary": "Steal an '82 Canis Crawler for Moses from clients who didn't pay. It's by the old Trader's Union building.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "2"
+      },
+      {
+        "label": "Story recap order",
+        "value": "12 of 18"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Daily Driver Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Daily_Driver_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-slam-dunk",
+    "gameId": "gta-vi",
+    "slug": "mission-slam-dunk",
+    "category": "walkthrough",
+    "title": "Slam Dunk",
+    "summary": "Visit Dunk's trailer to hear his plan for getting stronger painkillers.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "2"
+      },
+      {
+        "label": "Story recap order",
+        "value": "13 of 18"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Slam Dunk Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Slam_Dunk_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-breakfast-run",
+    "gameId": "gta-vi",
+    "slug": "mission-breakfast-run",
+    "category": "walkthrough",
+    "title": "Breakfast Run",
+    "summary": "Head back to the motel to see how Jason is doing.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "2"
+      },
+      {
+        "label": "Story recap order",
+        "value": "14 of 18"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Breakfast Run Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Breakfast_Run_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-coffee-break",
+    "gameId": "gta-vi",
+    "slug": "mission-coffee-break",
+    "category": "walkthrough",
+    "title": "Coffee Break",
+    "summary": "Work out other ways to make money together.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "2"
+      },
+      {
+        "label": "Story recap order",
+        "value": "15 of 18"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Coffee Break Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Coffee_Break_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-thrillbillies",
+    "gameId": "gta-vi",
+    "slug": "mission-thrillbillies",
+    "category": "walkthrough",
+    "title": "Thrillbillies",
+    "summary": "Compete for prize money at the Thrillbilly Mud Club.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "2"
+      },
+      {
+        "label": "Story recap order",
+        "value": "16 of 18"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Thrillbillies Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Thrillbillies_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-afternoon-delight",
+    "gameId": "gta-vi",
+    "slug": "mission-afternoon-delight",
+    "category": "walkthrough",
+    "title": "Afternoon Delight",
+    "summary": "Meet Vicki at Delights. She has a plan to rob her boss and split the cash.",
+    "steps": [
+      "Find a way backstage.",
+      "You choose whether to help Frankie and Mario.",
+      "Escape the bikers, then meet up with Vicki."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "2"
+      },
+      {
+        "label": "Story recap order",
+        "value": "17 of 18"
+      },
+      {
+        "label": "Choice",
+        "value": "Yes: help Frankie and Mario or not"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Afternoon Delight Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Afternoon_Delight_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-checking-out",
+    "gameId": "gta-vi",
+    "slug": "mission-checking-out",
+    "category": "walkthrough",
+    "title": "Checking Out",
+    "summary": "When you're ready, pack up and leave the motel to meet Dre'Quan in Vice City.",
+    "steps": [
+      "Regroup with Lucia, defend yourselves, then get away with Jason."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "2"
+      },
+      {
+        "label": "Story recap order",
+        "value": "18 of 18"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Checking Out Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Checking_Out_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-welcome-to-vice-city",
+    "gameId": "gta-vi",
+    "slug": "mission-welcome-to-vice-city",
+    "category": "walkthrough",
+    "title": "Welcome to Vice City",
+    "summary": "Find Dre'Quan at the Jack of Hearts. He should know somewhere to lie low.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "1 of 27"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Welcome to Vice City Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Welcome_to_Vice_City_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-dealers-choice",
+    "gameId": "gta-vi",
+    "slug": "mission-dealers-choice",
+    "category": "walkthrough",
+    "title": "Dealer's Choice",
+    "summary": "Meet Dre'Quan to find out what Boobie wants to discuss.",
+    "steps": [
+      "Meet Tyrone, then choose how to handle the product: pure or cut."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "2 of 27"
+      },
+      {
+        "label": "Choice",
+        "value": "Yes: sell the product pure or cut"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Dealer's Choice Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Dealer%27s_Choice_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-dubious-provenance",
+    "gameId": "gta-vi",
+    "slug": "mission-dubious-provenance",
+    "category": "walkthrough",
+    "title": "Dubious Provenance",
+    "summary": "Take a statue to the antique store in Capri to get it valued.",
+    "steps": [
+      "You decide whether to trust Halifax. A second part has you track him down."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "3 of 27"
+      },
+      {
+        "label": "Choice",
+        "value": "Yes: trust Halifax or not"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Dubious Provenance Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Dubious_Provenance_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-mami-knows-best",
+    "gameId": "gta-vi",
+    "slug": "mission-mami-knows-best",
+    "category": "walkthrough",
+    "title": "Mami Knows Best",
+    "summary": "Meet Lucia's mom, Mia, for coffee at Los Bollos in Peacock Bay.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "4 of 27"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Mami Knows Best Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Mami_Knows_Best_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-tyrone",
+    "gameId": "gta-vi",
+    "slug": "mission-tyrone",
+    "category": "walkthrough",
+    "title": "Tyrone",
+    "summary": "Tyrone, Boobie's supplier, has extra work. Visit him at his apartment.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "5 of 27"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Tyrone Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Tyrone_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-here-kitty-kitty",
+    "gameId": "gta-vi",
+    "slug": "mission-here-kitty-kitty",
+    "category": "walkthrough",
+    "title": "Here, Kitty Kitty",
+    "summary": "A Chapter 3 story job that takes you to Charles' apartment.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "6 of 27"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Here, Kitty Kitty Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Here,_Kitty_Kitty_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-boobie-time",
+    "gameId": "gta-vi",
+    "slug": "mission-boobie-time",
+    "category": "walkthrough",
+    "title": "Boobie Time",
+    "summary": "Boobie has work for you. See him at the Jack of Hearts.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "7 of 27"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Boobie Time Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Boobie_Time_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-meet-the-heders",
+    "gameId": "gta-vi",
+    "slug": "mission-meet-the-heders",
+    "category": "walkthrough",
+    "title": "Meet the Heders",
+    "summary": "Change at the apartment, then meet Brian and Lori at the Effluvia rooftop bar.",
+    "steps": [
+      "Get to the van and into the dockyard.",
+      "Search the containers for the car, then deliver it to the lockup."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "8 of 27"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Meet the Heders Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Meet_the_Heders_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-car-service",
+    "gameId": "gta-vi",
+    "slug": "mission-car-service",
+    "category": "walkthrough",
+    "title": "Car Service",
+    "summary": "Steal a car from a chop shop in Salton for Raul, Brian's contact.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "9 of 27"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Car Service Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Car_Service_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-top-billing",
+    "gameId": "gta-vi",
+    "slug": "mission-top-billing",
+    "category": "walkthrough",
+    "title": "Top Billing",
+    "summary": "Join Dre'Quan to watch the Real Dimez perform at the Jack of Hearts.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "10 of 27"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Top Billing Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Top_Billing_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-yasmanis-jewelry-jobs",
+    "gameId": "gta-vi",
+    "slug": "mission-yasmanis-jewelry-jobs",
+    "category": "walkthrough",
+    "title": "Yasmani's Jewelry Jobs",
+    "summary": "Steal unique jewelry pieces from three stores for Yasmani.",
+    "steps": [
+      "The three stores are Richardson Jewelry, Donovan Banks & Co, and Casa de Empeño."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "11 of 27"
+      },
+      {
+        "label": "Stores",
+        "value": "3"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Yasmani's Jewelry Jobs Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Yasmani%27s_Jewelry_Jobs_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-first-impressions",
+    "gameId": "gta-vi",
+    "slug": "mission-first-impressions",
+    "category": "walkthrough",
+    "title": "First Impressions",
+    "summary": "Pick up the Schafter and deliver it to Raul in Ocean Beach.",
+    "steps": [
+      "Expect to hold off the police."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "12 of 27"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "First Impressions Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/First_Impressions_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-clonin-keys-makin-gs",
+    "gameId": "gta-vi",
+    "slug": "mission-clonin-keys-makin-gs",
+    "category": "walkthrough",
+    "title": "Clonin' Keys, Makin' Gs",
+    "summary": "Steal a Granforma Zorrusso for Randy's export list.",
+    "steps": [
+      "There's often one parked at Hathaway Apartments in Ocean Beach. Randy gives you a key cloner when you get there."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "13 of 27"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Clonin' Keys, Makin' Gs Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Clonin%27_Keys,_Makin%27_Gs_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-crosstown-traffic",
+    "gameId": "gta-vi",
+    "slug": "mission-crosstown-traffic",
+    "category": "walkthrough",
+    "title": "Crosstown Traffic",
+    "summary": "A two-part job: Lucia meets Raul in Stockyard, and Jason meets Raul's technician in La Perle.",
+    "steps": [
+      "Jason follows and hijacks a boat; Lucia catches up to a train.",
+      "Escape with the boat."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "14 of 27"
+      },
+      {
+        "label": "Played as",
+        "value": "Jason and Lucia (separate parts)"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Crosstown Traffic Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Crosstown_Traffic_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-credit-check",
+    "gameId": "gta-vi",
+    "slug": "mission-credit-check",
+    "category": "walkthrough",
+    "title": "Credit Check",
+    "summary": "Visit Raul's place to hear about another job. You need your partner for this one.",
+    "steps": [
+      "Hit three Fleeca branches (one in Washington Beach, two in Ocean Beach), then escape the police."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "15 of 27"
+      },
+      {
+        "label": "Played as",
+        "value": "Both: requires your partner"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Credit Check Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Credit_Check_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-ride-or-die",
+    "gameId": "gta-vi",
+    "slug": "mission-ride-or-die",
+    "category": "walkthrough",
+    "title": "Ride or Die",
+    "summary": "Help Dre'Quan with his plan to get back at DWNPLY.",
+    "steps": [
+      "Get a pair of DWNPLY sneakers, follow Dre'Quan to the VIP lounge, and get DWNPLY's keys.",
+      "Escape with Dre'Quan and the car."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "16 of 27"
+      },
+      {
+        "label": "Played as",
+        "value": "Jason only"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Ride or Die Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Ride_or_Die_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-sinfrontera-national-bank",
+    "gameId": "gta-vi",
+    "slug": "mission-sinfrontera-national-bank",
+    "category": "walkthrough",
+    "title": "Sinfrontera National Bank",
+    "summary": "Scope out the bank's security for Raul's heist.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "17 of 27"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Sinfrontera National Bank Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Sinfrontera_National_Bank_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-security-expert",
+    "gameId": "gta-vi",
+    "slug": "mission-security-expert",
+    "category": "walkthrough",
+    "title": "Security Expert",
+    "summary": "Grab the safe expert and bring her to Raul.",
+    "steps": [
+      "You can go in violently or stay stealthy."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "18 of 27"
+      },
+      {
+        "label": "Approach",
+        "value": "Violent or stealth"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Security Expert Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Security_Expert_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-caught-slipping",
+    "gameId": "gta-vi",
+    "slug": "mission-caught-slipping",
+    "category": "walkthrough",
+    "title": "Caught Slipping",
+    "summary": "Your apartment's been broken into. Catch the robbers before they get away.",
+    "steps": [
+      "The trail leads to Big House Storage."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "19 of 27"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Caught Slipping Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Caught_Slipping_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-company-property",
+    "gameId": "gta-vi",
+    "slug": "mission-company-property",
+    "category": "walkthrough",
+    "title": "Company Property",
+    "summary": "Meet Brian at Skeeters to collect hardware for Raul.",
+    "steps": [
+      "Escape with Pete, protect the cargo and land the plane."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "20 of 27"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Company Property Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Company_Property_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-cooties",
+    "gameId": "gta-vi",
+    "slug": "mission-cooties",
+    "category": "walkthrough",
+    "title": "Cooties",
+    "summary": "Help Dre'Quan and the Real Dimez shoot their music video in Crosstown.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "21 of 27"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Cooties Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Cooties_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-south-leonida-real-estate",
+    "gameId": "gta-vi",
+    "slug": "mission-south-leonida-real-estate",
+    "category": "walkthrough",
+    "title": "South Leonida Real Estate",
+    "summary": "Meet Mia at her office about a house she's selling.",
+    "steps": [
+      "Show the buyer around the available properties and keep Mia safe."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "22 of 27"
+      },
+      {
+        "label": "Played as",
+        "value": "Lucia only"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "South Leonida Real Estate Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/South_Leonida_Real_Estate_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-the-missing-link",
+    "gameId": "gta-vi",
+    "slug": "mission-the-missing-link",
+    "category": "walkthrough",
+    "title": "The Missing Link",
+    "summary": "Go with Andrea to meet a senior cartel member and learn which safe boxes to hit.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "23 of 27"
+      },
+      {
+        "label": "Played as",
+        "value": "Lucia only"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "The Missing Link Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/The_Missing_Link_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-safe-word",
+    "gameId": "gta-vi",
+    "slug": "mission-safe-word",
+    "category": "walkthrough",
+    "title": "Safe Word",
+    "summary": "Practise safe-cracking before the heist by stealing a similar safe.",
+    "steps": [
+      "Get into the mansion and find the safe. IGN's page explains how safe-cracking works."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "24 of 27"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Safe Word Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Safe_Word_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-hidden-charges",
+    "gameId": "gta-vi",
+    "slug": "mission-hidden-charges",
+    "category": "walkthrough",
+    "title": "Hidden Charges",
+    "summary": "Catch up with Karim in the planning room about the explosives.",
+    "steps": [
+      "Plant the charges."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "25 of 27"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Hidden Charges Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Hidden_Charges_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-bricked-up",
+    "gameId": "gta-vi",
+    "slug": "mission-bricked-up",
+    "category": "walkthrough",
+    "title": "Bricked Up",
+    "summary": "Boobie wants to talk. Wait for him at your apartment.",
+    "steps": [
+      "Find Raymond, get out of Venture Apartments, and head to the Jack of Hearts."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "26 of 27"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Bricked Up Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Bricked_Up_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:mission-the-cartel-heist",
+    "gameId": "gta-vi",
+    "slug": "mission-the-cartel-heist",
+    "category": "walkthrough",
+    "title": "The Cartel Heist",
+    "summary": "Meet Raul and the crew in the planning room: it's time to hit Sinfrontera National Bank.",
+    "steps": [
+      "Take out the cell towers, control the lobby and deal with security.",
+      "Crack the vault, grab the money and get out. Keeping the alarm off makes it a \"perfect heist\"."
+    ],
+    "facts": [
+      {
+        "label": "Chapter",
+        "value": "3"
+      },
+      {
+        "label": "Story recap order",
+        "value": "27 of 27"
+      },
+      {
+        "label": "Approach",
+        "value": "Alarm on or off"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Mission name, chapter, story-recap order and starting objective"
+      },
+      {
+        "publisher": "IGN",
+        "title": "The Cartel Heist Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/The_Cartel_Heist_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full step-by-step walkthrough; the steps above summarise it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:ch1-money-before-chapter-2",
+    "gameId": "gta-vi",
+    "slug": "ch1-money-before-chapter-2",
+    "category": "tips",
+    "title": "Chapter 1: spend your spare cash before the chapter ends",
+    "summary": "Not all of your money carries over into Chapter 2. Open the details for exactly what you lose (mild spoiler).",
+    "steps": [
+      "Weapons and clothes you buy do carry over, so they're the safe way to spend."
+    ],
+    "facts": [
+      {
+        "label": "When",
+        "value": "Before the last Chapter 1 story mission"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "minor",
+    "details": {
+      "summary": "At the end of Chapter 1 you lose everything in BuckMe except Family Savings, plus Jason's stash and the cash you're carrying.",
+      "steps": []
+    },
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Chapter 1 Missables",
+        "url": "https://www.ign.com/wikis/gta-6/All_Chapter_1_Missables",
+        "checkedAt": "2026-11-24",
+        "supports": "What is missable and where to get it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:ch1-missable-macizo-cigars",
+    "gameId": "gta-vi",
+    "slug": "ch1-missable-macizo-cigars",
+    "category": "collectibles",
+    "title": "Macizo Cigars (missable)",
+    "summary": "A free box of cigars. Smoking one boosts Focus but costs some health.",
+    "steps": [
+      "During the Pipework story mission, pick up the box Mandy throws on the ground when she storms out."
+    ],
+    "facts": [
+      {
+        "label": "Missable",
+        "value": "Yes: Chapter 1 only"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Chapter 1 Missables",
+        "url": "https://www.ign.com/wikis/gta-6/All_Chapter_1_Missables",
+        "checkedAt": "2026-11-24",
+        "supports": "What is missable and where to get it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:ch1-missable-tomas-necklace",
+    "gameId": "gta-vi",
+    "slug": "ch1-missable-tomas-necklace",
+    "category": "collectibles",
+    "title": "Tomas necklace for Lucia (missable)",
+    "summary": "A custom necklace for Lucia from The Siren's Chest, in south-west Key Lento.",
+    "steps": [
+      "After Feng Shui, take the optional \"Buy Lucia a Necklace\" objective.",
+      "At the store, accept the custom Tomas necklace ($475)."
+    ],
+    "facts": [
+      {
+        "label": "Missable",
+        "value": "Yes: Chapter 1 only"
+      },
+      {
+        "label": "Cost",
+        "value": "$475"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Chapter 1 Missables",
+        "url": "https://www.ign.com/wikis/gta-6/All_Chapter_1_Missables",
+        "checkedAt": "2026-11-24",
+        "supports": "What is missable and where to get it"
+      },
+      {
+        "publisher": "GTA Series Videos (YouTube)",
+        "title": "GTA 6 - Chapter 1 - All Optional Missions (Missable) [PS5 4K]",
+        "url": "https://www.youtube.com/watch?v=VitS3_-HmBQ",
+        "checkedAt": "2026-11-24",
+        "supports": "The video description lists this among Chapter 1's missable optional missions"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:ch1-missable-lucia-sunglasses",
+    "gameId": "gta-vi",
+    "slug": "ch1-missable-lucia-sunglasses",
+    "category": "collectibles",
+    "title": "Expensive sunglasses for Lucia (missable)",
+    "summary": "A pair of sunglasses you can only get during Day Release.",
+    "steps": [
+      "While Lucia looks for Mattia on the yacht, go to the middle deck and talk to the couple by the railing that leads downstairs."
+    ],
+    "facts": [
+      {
+        "label": "Missable",
+        "value": "Yes: Chapter 1 only"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Chapter 1 Missables",
+        "url": "https://www.ign.com/wikis/gta-6/All_Chapter_1_Missables",
+        "checkedAt": "2026-11-24",
+        "supports": "What is missable and where to get it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:ch1-missable-donnie-aviators",
+    "gameId": "gta-vi",
+    "slug": "ch1-missable-donnie-aviators",
+    "category": "collectibles",
+    "title": "Donnie's aviator sunglasses for Jason (missable)",
+    "summary": "Sunglasses you can only pick up during Don Gone.",
+    "steps": [
+      "Take them from the bathroom shelf in the trailer.",
+      "Visit your wardrobe afterwards to keep them, or you can lose them."
+    ],
+    "facts": [
+      {
+        "label": "Missable",
+        "value": "Yes: Chapter 1 only"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Chapter 1 Missables",
+        "url": "https://www.ign.com/wikis/gta-6/All_Chapter_1_Missables",
+        "checkedAt": "2026-11-24",
+        "supports": "What is missable and where to get it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:ch1-missable-andys-jacket",
+    "gameId": "gta-vi",
+    "slug": "ch1-missable-andys-jacket",
+    "category": "collectibles",
+    "title": "Andy's Jacket for Lucia (missable)",
+    "summary": "A jacket you earn during Home Sweet Home.",
+    "steps": [
+      "Call Lucia to come and get you, then reach her car without being spotted."
+    ],
+    "facts": [
+      {
+        "label": "Missable",
+        "value": "Yes: Chapter 1 only"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Chapter 1 Missables",
+        "url": "https://www.ign.com/wikis/gta-6/All_Chapter_1_Missables",
+        "checkedAt": "2026-11-24",
+        "supports": "What is missable and where to get it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:ch1-missable-rusty-anchor-clothes",
+    "gameId": "gta-vi",
+    "slug": "ch1-missable-rusty-anchor-clothes",
+    "category": "collectibles",
+    "title": "Rusty Anchor T-shirt and cap for Jason (missable)",
+    "summary": "Unlocks two items to buy at the Rusty Anchor bar.",
+    "steps": [
+      "During the Ring the Bell! side mission, choose to give Cal a ride home."
+    ],
+    "facts": [
+      {
+        "label": "Missable",
+        "value": "Yes: Chapter 1 only"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Chapter 1 Missables",
+        "url": "https://www.ign.com/wikis/gta-6/All_Chapter_1_Missables",
+        "checkedAt": "2026-11-24",
+        "supports": "What is missable and where to get it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:ch1-missable-donnies-revolver",
+    "gameId": "gta-vi",
+    "slug": "ch1-missable-donnies-revolver",
+    "category": "weapons",
+    "title": "Donnie's H&L .38 revolver (missable)",
+    "summary": "A unique revolver variant you can only get during Don Gone.",
+    "steps": [
+      "After the fight outside the trailer, open the trunk of Donnie's car."
+    ],
+    "facts": [
+      {
+        "label": "Missable",
+        "value": "Yes: Chapter 1 only"
+      },
+      {
+        "label": "Type",
+        "value": "Unique weapon variant (revolver)"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Chapter 1 Missables",
+        "url": "https://www.ign.com/wikis/gta-6/All_Chapter_1_Missables",
+        "checkedAt": "2026-11-24",
+        "supports": "What is missable and where to get it"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:side-get-shirleys-rum",
+    "gameId": "gta-vi",
+    "slug": "side-get-shirleys-rum",
+    "category": "side-missions",
+    "title": "Get Shirley's Rum (missable)",
+    "summary": "Jason's neighbour Shirley asks him to fetch a bottle of rum.",
+    "steps": [
+      "After driving home from Pipework, stop when Shirley calls out.",
+      "Buy the rum at Three Sheets Liquor, just south-west of Jason's house, and bring it back for a Focus boost.",
+      "Then check behind the liquor store: there's an illegal operation there worth a good chunk of cash."
+    ],
+    "facts": [
+      {
+        "label": "Missable",
+        "value": "Yes: Chapter 1 only"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Chapter 1 Missables",
+        "url": "https://www.ign.com/wikis/gta-6/All_Chapter_1_Missables",
+        "checkedAt": "2026-11-24",
+        "supports": "What is missable and where to get it"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Get Shirley's Rum Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Get_Shirley%27s_Rum_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full walkthrough"
+      },
+      {
+        "publisher": "GTA Series Videos (YouTube)",
+        "title": "GTA 6 - Chapter 1 - All Optional Missions (Missable) [PS5 4K]",
+        "url": "https://www.youtube.com/watch?v=VitS3_-HmBQ",
+        "checkedAt": "2026-11-24",
+        "supports": "The video description lists this among Chapter 1's missable optional missions"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:side-find-the-lost-drugs",
+    "gameId": "gta-vi",
+    "slug": "side-find-the-lost-drugs",
+    "category": "side-missions",
+    "title": "Find the Lost Drugs (missable)",
+    "summary": "Track down four lost packages around Mariana County, then sell them to a fence.",
+    "steps": [
+      "Unlocks automatically after the Buck Me story mission."
+    ],
+    "facts": [
+      {
+        "label": "Missable",
+        "value": "Yes: Chapter 1 only"
+      },
+      {
+        "label": "Packages",
+        "value": "4"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Chapter 1 Missables",
+        "url": "https://www.ign.com/wikis/gta-6/All_Chapter_1_Missables",
+        "checkedAt": "2026-11-24",
+        "supports": "What is missable and where to get it"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Find the Lost Drugs Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Find_the_Lost_Drugs_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Every package location"
+      },
+      {
+        "publisher": "GTA Series Videos (YouTube)",
+        "title": "GTA 6 - Chapter 1 - All Optional Missions (Missable) [PS5 4K]",
+        "url": "https://www.youtube.com/watch?v=VitS3_-HmBQ",
+        "checkedAt": "2026-11-24",
+        "supports": "The video description lists this among Chapter 1's missable optional missions"
+      }
+    ],
+    "platformNote": "GTA Series Videos lists it as \"Donnie's Lost Drugs\".",
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:side-ring-the-bell",
+    "gameId": "gta-vi",
+    "slug": "side-ring-the-bell",
+    "category": "side-missions",
+    "title": "Ring the Bell! (missable)",
+    "summary": "A short side mission at the Rusty Anchor that's only available briefly in Chapter 1.",
+    "steps": [
+      "At the start of Swamped, on the way to Brian's marina, go to the Rusty Anchor after Cal texts you.",
+      "Give Cal a ride home to unlock the Rusty Anchor T-shirt and cap."
+    ],
+    "facts": [
+      {
+        "label": "Missable",
+        "value": "Yes: Chapter 1 only"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Chapter 1 Missables",
+        "url": "https://www.ign.com/wikis/gta-6/All_Chapter_1_Missables",
+        "checkedAt": "2026-11-24",
+        "supports": "What is missable and where to get it"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Ring the Bell! Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Ring_the_Bell!_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Full walkthrough"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:what-counts-for-100-percent",
+    "gameId": "gta-vi",
+    "slug": "what-counts-for-100-percent",
+    "category": "tips",
+    "title": "What counts toward 100% completion",
+    "summary": "You don't have to collect everything. Finishing the story is half of the total, and the rest comes from a spread of crime, exploration and activity targets.",
+    "steps": [
+      "Main story: 50%. All optional missions: 6%.",
+      "Crime work (illegal operations, bank and payday-loan jobs, smash-and-grabs, stick-ups, vaults and fencing goods) makes up most of the rest, a few percent each.",
+      "Exploration, activities and discoveries are 1% each, e.g. 15 of the 18 card sets, 90 basketball hoops, 300 stunts, 200 vehicles found.",
+      "You can only see your 100% tracker in-game after the story: Map → Progress → Stats."
+    ],
+    "facts": [
+      {
+        "label": "Trophy",
+        "value": "The Long Road (100%) is needed for the Platinum"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 100 Percent Guide",
+        "url": "https://www.ign.com/wikis/gta-6/GTA_6_100_Percent_Guide",
+        "checkedAt": "2026-11-24",
+        "supports": "What counts toward 100% and how much each part weighs"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:collectible-cards-overview",
+    "gameId": "gta-vi",
+    "slug": "collectible-cards-overview",
+    "category": "collectibles",
+    "title": "Collectible cards: 481 cards in 18 sets",
+    "summary": "Cards are hidden all over Leonida in sports, novelty and dancer sets. Keep them at your safehouse, or sell single cards and finished sets at pawn shops.",
+    "steps": [
+      "Rarer colours are worth more when you sell.",
+      "For 100% you need 15 of the 18 sets, not all of them."
+    ],
+    "facts": [
+      {
+        "label": "Sets",
+        "value": "18"
+      },
+      {
+        "label": "Cards",
+        "value": "481"
+      },
+      {
+        "label": "Sell at",
+        "value": "Pawn shops"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Collectible Cards in GTA 6",
+        "url": "https://www.ign.com/wikis/gta-6/Collectible_Cards",
+        "checkedAt": "2026-11-24",
+        "supports": "Number of sets and cards"
+      },
+      {
+        "publisher": "GTA Series Videos (YouTube)",
+        "title": "GTA 6 - All 36 NINE1NINE Dancers Card Locations (Collectibles Guide)",
+        "url": "https://www.youtube.com/watch?v=OVaGLUysMXk",
+        "checkedAt": "2026-11-24",
+        "supports": "Video description: 481 cards in 18 sets; keep them at your safehouse or sell them at pawn shops"
+      },
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 100 Percent Guide",
+        "url": "https://www.ign.com/wikis/gta-6/GTA_6_100_Percent_Guide",
+        "checkedAt": "2026-11-24",
+        "supports": "What counts toward 100% and how much each part weighs"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:tip-hit-marker-colours",
+    "gameId": "gta-vi",
+    "slug": "tip-hit-marker-colours",
+    "category": "tips",
+    "title": "Read the hit-marker colours",
+    "summary": "White means you hit but they're still fighting. Yellow means they're down but alive. Red means they're dead or dying.",
+    "steps": [],
+    "facts": [],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Beginner's Guide - 67 Tips and Tricks",
+        "url": "https://www.ign.com/wikis/gta-6/Beginner%27s_Guide_-_67_Tips_and_Tricks",
+        "checkedAt": "2026-11-24",
+        "supports": "Gameplay tip"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:tip-criminal-profile",
+    "gameId": "gta-vi",
+    "slug": "tip-criminal-profile",
+    "category": "tips",
+    "title": "How you fight shapes your criminal profile",
+    "summary": "Non-lethal and stealthy takedowns push you toward a \"Professional\" profile. Killing pushes you toward \"Violent\" or \"Psycho\".",
+    "steps": [],
+    "facts": [],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Beginner's Guide - 67 Tips and Tricks",
+        "url": "https://www.ign.com/wikis/gta-6/Beginner%27s_Guide_-_67_Tips_and_Tricks",
+        "checkedAt": "2026-11-24",
+        "supports": "Gameplay tip"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:tip-owned-vs-unowned-weapons",
+    "gameId": "gta-vi",
+    "slug": "tip-owned-vs-unowned-weapons",
+    "category": "tips",
+    "title": "Owned vs unowned weapons",
+    "summary": "Guns you take from enemies are \"unowned\": you lose them if you drop them, quit without storing them or get busted. Store them in your car's trunk to keep them. Guns bought at Ammu-Nation are yours for good.",
+    "steps": [
+      "You can't use an Ammu-Nation weapon locker while carrying unowned weapons."
+    ],
+    "facts": [],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Beginner's Guide - 67 Tips and Tricks",
+        "url": "https://www.ign.com/wikis/gta-6/Beginner%27s_Guide_-_67_Tips_and_Tricks",
+        "checkedAt": "2026-11-24",
+        "supports": "Gameplay tip"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:tip-yellow-unique-weapons",
+    "gameId": "gta-vi",
+    "slug": "tip-yellow-unique-weapons",
+    "category": "weapons",
+    "title": "Yellow weapons are unique variants: grab them",
+    "summary": "Weapons shown in yellow, in the world or at Ammu-Nation, are unique variants. They unlock permanently the moment you pick them up.",
+    "steps": [],
+    "facts": [],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Beginner's Guide - 67 Tips and Tricks",
+        "url": "https://www.ign.com/wikis/gta-6/Beginner%27s_Guide_-_67_Tips_and_Tricks",
+        "checkedAt": "2026-11-24",
+        "supports": "Gameplay tip"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Gear Up Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Gear_Up_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Carry limits and stat boosts"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:tip-carry-limit",
+    "gameId": "gta-vi",
+    "slug": "tip-carry-limit",
+    "category": "tips",
+    "title": "You carry two sidearms and two longarms",
+    "summary": "Each character carries two sidearms and two longarms. Everything else lives in your car's trunk or an Ammu-Nation gun locker. A longarm on your back makes people nervous, so stow it in the trunk when you don't need it.",
+    "steps": [],
+    "facts": [],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Gear Up Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Gear_Up_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Carry limits and stat boosts"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:tip-quick-stat-boosts",
+    "gameId": "gta-vi",
+    "slug": "tip-quick-stat-boosts",
+    "category": "tips",
+    "title": "Quick stat boosts at home",
+    "summary": "A shower boosts Focus, and a protein bar from Jason's kitchen boosts Health and Stamina. Most food and drink gives a small boost too.",
+    "steps": [
+      "Exercise raises your stats permanently."
+    ],
+    "facts": [],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Gear Up Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Gear_Up_Walkthrough",
+        "checkedAt": "2026-11-24",
+        "supports": "Carry limits and stat boosts"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:tip-car-condition-fuel",
+    "gameId": "gta-vi",
+    "slug": "tip-car-condition-fuel",
+    "category": "vehicles",
+    "title": "Cars have a condition meter and need fuel",
+    "summary": "Press D-pad Down while driving to see the car's body condition and fuel. Refuel at a gas station; electric cars need a charging station.",
+    "steps": [
+      "Repair at a Pay 'n' Spray, a mod shop, or by pulling up to a gas pump and choosing Services → Repair. All of these cost money, so drive carefully early on."
+    ],
+    "facts": [],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Beginner's Guide - 67 Tips and Tricks",
+        "url": "https://www.ign.com/wikis/gta-6/Beginner%27s_Guide_-_67_Tips_and_Tricks",
+        "checkedAt": "2026-11-24",
+        "supports": "Gameplay tip"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:tip-call-joey-for-your-car",
+    "gameId": "gta-vi",
+    "slug": "tip-call-joey-for-your-car",
+    "category": "vehicles",
+    "title": "Call Joey to bring your car",
+    "summary": "After the Just a Scratch mission you can phone Joey and he'll deliver your car to you.",
+    "steps": [],
+    "facts": [],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Beginner's Guide - 67 Tips and Tricks",
+        "url": "https://www.ign.com/wikis/gta-6/Beginner%27s_Guide_-_67_Tips_and_Tricks",
+        "checkedAt": "2026-11-24",
+        "supports": "Gameplay tip"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:tip-vehicle-storage-chapter-2",
+    "gameId": "gta-vi",
+    "slug": "tip-vehicle-storage-chapter-2",
+    "category": "vehicles",
+    "title": "Don't bother keeping stolen cars in Chapter 1",
+    "summary": "Jason's place in Key Lento has no space to store extra cars, and there are no vehicle fences yet. More storage opens up in Chapter 2 after you meet Moses.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Storage from",
+        "value": "Chapter 2"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Beginner's Guide - 67 Tips and Tricks",
+        "url": "https://www.ign.com/wikis/gta-6/Beginner%27s_Guide_-_67_Tips_and_Tricks",
+        "checkedAt": "2026-11-24",
+        "supports": "Gameplay tip"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:secret-malibu-club-1986",
+    "gameId": "gta-vi",
+    "slug": "secret-malibu-club-1986",
+    "category": "secrets",
+    "title": "The Malibu Club easter egg (Tommy Vercetti's shirt)",
+    "summary": "A timed power-station puzzle that ends with a trip to a recreated 1986 Malibu Club. It rewards Tommy Vercetti's Hawaiian shirt for Jason and Lucia, the Malibu Zombie Bobber motorcycle and its \"American Glory\" livery.",
+    "steps": [
+      "Start by pressing the button at the Badger R&D Tower.",
+      "Visit all 12 LPL power substations in order, flipping the correct switch at each, then go to the T.H. Power Station, all within 24 in-game hours.",
+      "Don't fast travel, sleep or wait: they skip time. A RydeMe ride is fine as long as you don't fast travel.",
+      "A wrong switch or an out-of-order station resets the puzzle; go back to the tower. Don't press the tower button or its lever again once you've started.",
+      "Reach the reactor at the end to travel to the Malibu Club."
+    ],
+    "facts": [
+      {
+        "label": "Time limit",
+        "value": "24 in-game hours"
+      },
+      {
+        "label": "Stations",
+        "value": "12 + T.H. Power Station"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "unconfirmed",
+    "sources": [
+      {
+        "publisher": "GTA Series Videos (YouTube)",
+        "title": "GTA 6 - Tommy Vercetti Shirt Unlock & Full Malibu Club Easter Egg Guide (All Kent Paul Calls)",
+        "url": "https://www.youtube.com/watch?v=PIfk0s6Qe8Y",
+        "checkedAt": "2026-11-24",
+        "supports": "Steps, timer rules and rewards, from the video description"
+      }
+    ],
+    "platformNote": "Single source so far: the switch for each station is shown in the video. Not yet checked against a second source.",
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
   }
 ]

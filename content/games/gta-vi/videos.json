@@ -9,7 +9,7 @@
     "status": "review",
     "availability": "unknown",
     "checkedAt": null,
-    "notes": "Link and timestamps supplied by the site owner (2026-11-24), who reports the creator's chapter list puts the silver Pricilla Pace card at 0:49 and the gold MonaLi$a card at 1:29. Not yet opened by us: YouTube is blocked in the build environment. Map match is by card name and variant only (Open GTA 6 Map: collectible-card-086, collectible-card-087); confirm the locations match on screen before approving.",
+    "notes": "Link and timestamps supplied by the site owner (2026-11-24), who reports the creator's chapter list puts the silver Pricilla Pace card at 0:49 and the gold MonaLi$a card at 1:29. Chapter list checked against the YouTube description on 2026-11-24 (0:49 Pricilla Pace - Silver, 1:29 MonaLi$a - Gold); the video itself has not been watched. Map match is by card name and variant only (Open GTA 6 Map: collectible-card-086, collectible-card-087); confirm the locations match on screen before approving.",
     "moments": [
       {
         "target": "gta-vi:map:collectible-card-086",
@@ -63,5 +63,203 @@
     "checkedAt": null,
     "notes": "Found via a secondary index (per the site owner's brief). Playback and the location claim are unverified. Check the original post and the in-game location before linking it.",
     "moments": []
+  },
+  {
+    "id": "gtaseriesvideos-k24culxkr5c",
+    "url": "https://www.youtube.com/watch?v=K24cuLXKr5c",
+    "title": "Tourist Trap: full mission (GTA Series Videos)",
+    "creator": "GTA Series Videos",
+    "channelUrl": "https://www.youtube.com/@GTASeriesVideos",
+    "spoilerLevel": "major",
+    "status": "review",
+    "availability": "unknown",
+    "checkedAt": null,
+    "notes": "Found by the daily creator check (2026-11-24). Title and chapters read from the YouTube description; not yet watched.",
+    "moments": [
+      {
+        "target": "gta-vi:entry:mission-tourist-trap",
+        "start": 0,
+        "label": "Tourist Trap, full mission",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "id": "gtaseriesvideos-fmrmm9trphe",
+    "url": "https://www.youtube.com/watch?v=fmRmM9TRphE",
+    "title": "Home Sweet Home: full mission (GTA Series Videos)",
+    "creator": "GTA Series Videos",
+    "channelUrl": "https://www.youtube.com/@GTASeriesVideos",
+    "spoilerLevel": "major",
+    "status": "review",
+    "availability": "unknown",
+    "checkedAt": null,
+    "notes": "Found by the daily creator check (2026-11-24). Title and chapters read from the YouTube description; not yet watched.",
+    "moments": [
+      {
+        "target": "gta-vi:entry:mission-home-sweet-home",
+        "start": 0,
+        "label": "Home Sweet Home, full mission",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "id": "gtaseriesvideos-dckq56ro5-0",
+    "url": "https://www.youtube.com/watch?v=dckQ56Ro5_0",
+    "title": "Discharge Time: full mission (GTA Series Videos)",
+    "creator": "GTA Series Videos",
+    "channelUrl": "https://www.youtube.com/@GTASeriesVideos",
+    "spoilerLevel": "major",
+    "status": "review",
+    "availability": "unknown",
+    "checkedAt": null,
+    "notes": "Found by the daily creator check (2026-11-24). Title and chapters read from the YouTube description; not yet watched.",
+    "moments": [
+      {
+        "target": "gta-vi:entry:mission-discharge-time",
+        "start": 0,
+        "label": "Discharge Time, full mission",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "id": "gtaseriesvideos-yus9eunfmrs",
+    "url": "https://www.youtube.com/watch?v=YuS9EunFmrs",
+    "title": "What's In the Bag?: full mission (GTA Series Videos)",
+    "creator": "GTA Series Videos",
+    "channelUrl": "https://www.youtube.com/@GTASeriesVideos",
+    "spoilerLevel": "major",
+    "status": "review",
+    "availability": "unknown",
+    "checkedAt": null,
+    "notes": "Found by the daily creator check (2026-11-24). Title and chapters read from the YouTube description; not yet watched.",
+    "moments": [
+      {
+        "target": "gta-vi:entry:mission-whats-in-the-bag",
+        "start": 0,
+        "label": "What's In the Bag?, full mission",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "id": "gtaseriesvideos-rt7meeulagu",
+    "url": "https://www.youtube.com/watch?v=rT7mEeUlagU",
+    "title": "Ambulance Chaser: full mission (GTA Series Videos)",
+    "creator": "GTA Series Videos",
+    "channelUrl": "https://www.youtube.com/@GTASeriesVideos",
+    "spoilerLevel": "major",
+    "status": "review",
+    "availability": "unknown",
+    "checkedAt": null,
+    "notes": "Found by the daily creator check (2026-11-24). Title and chapters read from the YouTube description; not yet watched.",
+    "moments": [
+      {
+        "target": "gta-vi:entry:mission-ambulance-chaser",
+        "start": 0,
+        "label": "Ambulance Chaser, full mission",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "id": "gtaseriesvideos-uukire7ujee",
+    "url": "https://www.youtube.com/watch?v=UUKIre7ujEE",
+    "title": "Just Moved In: full mission (GTA Series Videos)",
+    "creator": "GTA Series Videos",
+    "channelUrl": "https://www.youtube.com/@GTASeriesVideos",
+    "spoilerLevel": "major",
+    "status": "review",
+    "availability": "unknown",
+    "checkedAt": null,
+    "notes": "Found by the daily creator check (2026-11-24). Title and chapters read from the YouTube description; not yet watched.",
+    "moments": [
+      {
+        "target": "gta-vi:entry:mission-just-moved-in",
+        "start": 0,
+        "label": "Just Moved In, full mission",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "id": "gtaseriesvideos-vits3-hmbq",
+    "url": "https://www.youtube.com/watch?v=VitS3_-HmBQ",
+    "title": "Chapter 1 optional missions (GTA Series Videos)",
+    "creator": "GTA Series Videos",
+    "channelUrl": "https://www.youtube.com/@GTASeriesVideos",
+    "spoilerLevel": "minor",
+    "status": "review",
+    "availability": "unknown",
+    "checkedAt": null,
+    "notes": "Found by the daily creator check (2026-11-24). Title and chapters read from the YouTube description; not yet watched.",
+    "moments": [
+      {
+        "target": "gta-vi:entry:side-get-shirleys-rum",
+        "start": 0,
+        "label": "Get Shirley's Rum",
+        "verified": false
+      },
+      {
+        "target": "gta-vi:entry:ch1-missable-tomas-necklace",
+        "start": 910,
+        "label": "Buy Lucia a Necklace",
+        "verified": false
+      },
+      {
+        "target": "gta-vi:entry:mission-building-a-life",
+        "start": 1378,
+        "label": "Building a Life",
+        "verified": false
+      },
+      {
+        "target": "gta-vi:entry:side-find-the-lost-drugs",
+        "start": 1815,
+        "label": "Donnie's Lost Drugs",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "id": "gtaseriesvideos-pifk0s6qe8y",
+    "url": "https://www.youtube.com/watch?v=PIfk0s6Qe8Y",
+    "title": "Malibu Club easter egg guide (GTA Series Videos)",
+    "creator": "GTA Series Videos",
+    "channelUrl": "https://www.youtube.com/@GTASeriesVideos",
+    "spoilerLevel": "minor",
+    "status": "review",
+    "availability": "unknown",
+    "checkedAt": null,
+    "notes": "Found by the daily creator check (2026-11-24). Title and chapters read from the YouTube description; not yet watched.",
+    "moments": [
+      {
+        "target": "gta-vi:entry:secret-malibu-club-1986",
+        "start": 81,
+        "label": "Starting point: Badger R&D Tower",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "id": "gtaseriesvideos-ovagluysmxk",
+    "url": "https://www.youtube.com/watch?v=OVaGLUysMXk",
+    "title": "All 36 NINE1NINE dancer card locations (GTA Series Videos)",
+    "creator": "GTA Series Videos",
+    "channelUrl": "https://www.youtube.com/@GTASeriesVideos",
+    "spoilerLevel": "none",
+    "status": "review",
+    "availability": "unknown",
+    "checkedAt": null,
+    "notes": "Found by the daily creator check (2026-11-24). Title and chapters read from the YouTube description; not yet watched.",
+    "moments": [
+      {
+        "target": "gta-vi:entry:collectible-cards-overview",
+        "start": 0,
+        "label": "NINE1NINE dancer cards, all 36",
+        "verified": false
+      }
+    ]
   }
 ]

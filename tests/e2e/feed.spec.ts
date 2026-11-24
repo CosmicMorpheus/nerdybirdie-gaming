@@ -1,6 +1,8 @@
 import { test, expect, type Page, type Route } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import fixture from '../fixtures/progress-phase0-elegy.json' with { type: 'json' };
+import allEntries from '../../content/games/gta-vi/entries.json' with { type: 'json' };
+const PUBLISHED = (allEntries as { status: string }[]).filter((e) => e.status === 'published').length;
 
 // What's New creator feed on the real build. The test server has no functions, so the feed is stubbed per test.
 const R = 'http://localhost:4321';
@@ -73,10 +75,10 @@ test('vehicles guide: same source, filtered by section, saved progress untouched
   const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('nbg:progress')!));
   expect(Object.keys(saved.contexts['gta-vi|guides'].completed)).toEqual(['gta-vi:entry:gta-plus-elegy']);
   expect(JSON.stringify(saved)).not.toContain(item.id);
-  // Home HUD guide total is still 1 of 6.
+  // Home HUD guide total still counts just the one tick.
   await page.goto(R + '/');
   await hydrated(page);
-  await expect(page.locator('.hud-meter', { hasText: /guide/i }).first()).toContainText('1/6');
+  await expect(page.locator('.hud-meter', { hasText: /guide/i }).first()).toContainText(`1/${PUBLISHED}`);
 });
 
 test('revealed videos credit the creator and play only on request, from youtube-nocookie', async ({ page }) => {

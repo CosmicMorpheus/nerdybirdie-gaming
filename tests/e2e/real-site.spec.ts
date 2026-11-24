@@ -71,18 +71,31 @@ test('@phone mobile menu has both community links', async ({ page }) => {
   await expect(sheet.getByRole('link', { name: /Explore COZMC.US/ })).toHaveAttribute('href', 'https://cozmc.us/');
 });
 
-test('real guide entries: every entry cites Rockstar with a check date; walkthrough is honestly empty', async ({ page }) => {
+test('real guide entries: every entry cites a source with a check date', async ({ page }) => {
   await page.goto(REAL + '/games/gta-vi/guides/tips/');
   const entries = page.locator('li.entry');
   await expect(entries.first()).toBeVisible();
   for (const e of await entries.all()) {
     await e.getByRole('button', { name: /More details/ }).click();
     await e.locator('summary', { hasText: 'Sources and last checked' }).click();
-    await expect(e.locator('.sources-box a').first()).toHaveAttribute('href', /^https:\/\/www\.rockstargames\.com\//);
+    await expect(e.locator('.sources-box a').first()).toHaveAttribute('href', /^https:\/\/(www\.rockstargames\.com|www\.ign\.com|www\.youtube\.com)\//);
     await expect(e.locator('.sources-box')).toContainText(/checked \d{4}-\d{2}-\d{2}/);
   }
+});
+
+test('walkthrough: story missions in order, sourced, with plot details kept out of the page until revealed', async ({ page }) => {
   await page.goto(REAL + '/games/gta-vi/guides/walkthrough/');
-  await expect(page.getByText(/Nothing verified for Walkthrough yet/)).toBeVisible();
+  const titles = page.locator('li.entry .entry-head');
+  await expect(titles.first()).toContainText('Prologue');
+  expect(await page.locator('li.entry').count()).toBeGreaterThanOrEqual(68);
+  // Spoiler text lives only in protected.json until the player reveals it.
+  await expect(page.locator('body')).not.toContainText('packed up and left town');
+  const e = page.locator('li.entry', { hasText: 'Don Gone' });
+  await e.getByRole('button', { name: /More details/ }).click();
+  await e.locator('summary', { hasText: 'Sources and last checked' }).click();
+  await expect(e.locator('.sources-box a').first()).toHaveAttribute('href', 'https://www.ign.com/wikis/gta-6/Walkthrough');
+  await e.getByRole('button', { name: /Reveal mild spoiler/ }).click();
+  await expect(e).toContainText('packed up and left town');
 });
 
 test('character bios are behind a deliberate reveal', async ({ page }) => {

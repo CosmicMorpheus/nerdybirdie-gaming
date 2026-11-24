@@ -34,10 +34,11 @@ describe('phase 0 progress fixture', () => {
     expect(r.progress.prefs.platformByGame['gta-vi']).toBe('ps5');
   });
 
-  it('guide total counts published entries only (1 of 6 → 16%), and unknown ids never count', () => {
+  it('guide total counts published entries only (1 of N), and unknown ids never count', () => {
     const ids = list(entries).filter((x) => x.status === 'published').map((x) => x.id);
     const done = { ...fixture.contexts['gta-vi|guides'].completed, 'gta-vi:source:not-a-guide-entry': 'x' };
     expect(tally(ids, done)).toEqual({ done: 1, total: ids.length, percent: Math.floor(100 / ids.length) });
-    expect(ids.length).toBe(6);
+    // Was 1 of 6 at Phase 0; content passes add entries, the tick itself must still count exactly once.
+    expect(ids.length).toBeGreaterThanOrEqual(6);
   });
 });
