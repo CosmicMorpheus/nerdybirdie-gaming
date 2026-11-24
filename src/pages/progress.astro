@@ -22,9 +22,8 @@ const sections = game.guideCategories.map((c) => ({ label: c.label, href: `/game
     <h1>My progress</h1>
     <aside class="notice account" aria-labelledby="acct-h">
       <h2 id="acct-h" class="hud-label">Where your progress is saved</h2>
-      <p>Unless you're signed in, progress is saved <strong>in this browser on this device only</strong>. It won't follow you to another
-        phone, browser or computer, and clearing your browser's site data erases it. Use <strong>Download backup</strong> below to keep a copy
-        or move it to another device. See <a href="/account/">Account</a> for signing in to sync across devices, where available.</p>
+      <p>Saved <strong>in this browser on this device</strong>, with no account. To keep playing somewhere else, use
+        <a href="#move">Continue in another browser</a> below, or download a backup file. Clearing your browser's site data erases progress that isn't backed up.</p>
     </aside>
     <ProgressManager client:load contexts={contexts} guideKey={contextKey(game.id, GUIDES_CONTEXT)} sections={sections} />
   </div>
