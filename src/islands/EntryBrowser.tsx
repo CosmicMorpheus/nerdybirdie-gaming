@@ -154,7 +154,7 @@ export default function EntryBrowser({ gameId, categories, entries, videos, prot
             {visible.map((e) => {
               const done = e.id in ctx.completed;
               const isOpen = open.has(e.id);
-              const showSpoiler = e.hasDetails && (revealed.has(e.id) || modeAllows(e.spoilerLevel, mode)) && details?.[e.id];
+              const showSpoiler = e.hasDetails && (revealed.has(`d:${e.id}`) || modeAllows(e.spoilerLevel, mode)) && details?.[e.id];
               const inputId = `e-${e.slug}`;
               const v = VERIFY[e.verification];
               const vids = videos.flatMap((x) => x.moments.filter((m) => m.target === e.id).map((m) => ({ x, m })));
@@ -181,9 +181,9 @@ export default function EntryBrowser({ gameId, categories, entries, videos, prot
                   </div>
                   {isOpen && (
                     <div class="entry-more" id={`${inputId}-more`}>
-                      {e.steps.length > 0 && <ol class="howto">{e.steps.map((s) => <li>{s}</li>)}</ol>}
+                      {e.steps.length > 0 && <ol class="howto">{e.steps.map((s, i) => <li key={i}>{s}</li>)}</ol>}
                       {e.facts.length > 0 && (
-                        <dl class="facts">{e.facts.map((f) => <div><dt>{f.label}</dt><dd>{f.value}</dd></div>)}</dl>
+                        <dl class="facts">{e.facts.map((f, i) => <div key={i}><dt>{f.label}</dt><dd>{f.value}</dd></div>)}</dl>
                       )}
                       {e.mapPinIds.length > 0
                         ? <p><a class="btn btn-quiet" href={`/games/${gameId}/map/?pin=${e.mapPinIds[0]!.split(':').pop()}`}>Show on map →</a></p>
@@ -199,17 +199,17 @@ export default function EntryBrowser({ gameId, categories, entries, videos, prot
                       ) : (
                         <div class="spoiler-box locked">
                           <p class="small">This entry has <strong>{SPOILER_LABEL[e.spoilerLevel].toLowerCase()}</strong> details. They stay hidden until you choose to see them.</p>
-                          <button type="button" class="act reveal" onClick={async () => { if (await loadDetails()) setRevealed((r) => new Set(r).add(e.id)); }}>
+                          <button type="button" class="act reveal" onClick={async () => { if (await loadDetails()) setRevealed((r) => new Set(r).add(`d:${e.id}`)); }}>
                             Reveal {SPOILER_LABEL[e.spoilerLevel].toLowerCase()}<span class="sr-only"> for {e.title}</span>
                           </button>
                         </div>
                       ))}
-                      {vids.map(({ x, m }) => (modeAllows(x.spoilerLevel, mode) || revealed.has(e.id))
+                      {vids.map(({ x, m }) => (modeAllows(x.spoilerLevel, mode) || revealed.has(`v:${e.id}`))
                         ? <VideoEmbed video={x} start={m.start} label={m.label} />
                         : (
                           <div class="spoiler-box locked">
                             <p class="small">A video for this entry has <strong>{SPOILER_LABEL[x.spoilerLevel].toLowerCase()}s</strong>. Its title and preview stay hidden until you choose to see it.</p>
-                            <button type="button" class="act reveal" onClick={() => setRevealed((r) => new Set(r).add(e.id))}>Show video<span class="sr-only"> for {e.title}</span></button>
+                            <button type="button" class="act reveal" onClick={() => setRevealed((r) => new Set(r).add(`v:${e.id}`))}>Show video<span class="sr-only"> for {e.title}</span></button>
                           </div>
                         ))}
                       <details class="sources-box">

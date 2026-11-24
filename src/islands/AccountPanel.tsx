@@ -59,8 +59,8 @@ export default function AccountPanel() {
           </form>
         </section>
       )}
-      {state.account && guest && (
-        <div class="confirm" role="alertdialog" aria-label="Add this device's progress to your account">
+      {state.account && guest && state.sync === 'synced' && (
+        <div class="confirm" role="group" aria-label="Add this device's progress to your account">
           <p><strong>Add this device's progress to your account?</strong> This device has {guestTicks(guest)} ticks from before you signed in.
             They'll be added to your account. Nothing on your account is unticked or replaced, including anything you deliberately unticked there.</p>
           <button type="button" class="btn btn-primary" onClick={() => {

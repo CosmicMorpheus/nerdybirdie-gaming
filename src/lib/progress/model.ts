@@ -90,12 +90,13 @@ export function migrate(raw: unknown): MigrateResult {
       for (const [g, p] of Object.entries(raw.prefs.platformByGame))
         if (typeof p === 'string' && /^[a-z0-9-]+$/.test(g) && /^[a-z0-9-]+$/.test(p)) out.prefs.platformByGame[g] = p;
     const r = raw.prefs.resume;
-    if (isObj(r) && typeof r.href === 'string' && r.href.startsWith('/') && !r.href.startsWith('//') && typeof r.label === 'string' && typeof r.at === 'string')
+    // Same-site paths only: blocks //host, /\\host and control characters browsers would normalise into another site.
+    if (isObj(r) && typeof r.href === 'string' && /^\/(?![\/\\])[\w\-./?=&,%#~]*$/.test(r.href) && typeof r.label === 'string' && typeof r.at === 'string')
       out.prefs.resume = { href: r.href.slice(0, 300), label: r.label.slice(0, 120), at: r.at };
     const m = raw.prefs.map;
     if (isObj(m)) {
       const str = (v: unknown, re: RegExp) => (typeof v === 'string' && re.test(v) ? v : null);
-      out.prefs.map = { view: str(m.view, /^\d{1,2}\/[\d.]+\/[\d.]+$/), filters: str(m.filters, /^[a-z0-9=&,.%-]{0,400}$/i), pin: str(m.pin, /^[a-z0-9-]{1,80}$/) };
+      out.prefs.map = { view: str(m.view, /^\d{1,2}(\.\d+)?\/[\d.]+\/[\d.]+$/), filters: str(m.filters, /^[a-z0-9=&,.%-]{0,400}$/i), pin: str(m.pin, /^[a-z0-9-]{1,80}$/) };
     }
   }
   if (typeof raw.updatedAt === 'string' && !Number.isNaN(Date.parse(raw.updatedAt))) out.updatedAt = raw.updatedAt;

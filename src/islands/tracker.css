@@ -95,12 +95,12 @@
 .hud-lv .pixel { font-size: 20px; color: var(--vc-sunset); }
 .hud-xp p { margin: 8px 0 0; }
 .hud-cps { list-style: none; padding: 0; margin: 0; display: flex; gap: 8px; flex-wrap: wrap; }
-.hud-meters { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
-.hud-meter { display: grid; grid-template-columns: 1fr auto; gap: 6px 10px; text-decoration: none; padding: 12px; border: 2px solid var(--vc-line); border-radius: 6px; background: #151a28; }
+.hud-meters { display: flex; flex-direction: column; gap: 8px; }
+.hud-meter { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 6px 12px; text-decoration: none; padding: 10px 12px; border: 2px solid var(--vc-line); border-radius: 6px; background: #151a28; }
 .hud-meter:hover { border-color: var(--vc-pink); }
 .hud-meter .bar { grid-column: 1 / -1; height: 10px; }
 .hud-val { font-size: 14px; color: var(--vc-pearl); font-weight: 600; }
-@media (max-width: 480px) { .hud-meters { grid-template-columns: 1fr; } }
+
 
 /* ---- Video ---- */
 .video { margin: 14px 0 0; }

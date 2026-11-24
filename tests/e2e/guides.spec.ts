@@ -139,3 +139,22 @@ test('videos still in review are labelled on the preview, and the original link 
   await expect(e.locator('.video-flag')).toContainText('Not yet checked');
   await expect(e.getByRole('link', { name: /Watch on TikTok/ })).toHaveAttribute('href', 'https://www.tiktok.com/@fixture/video/1234567890123456789');
 });
+
+test('one shared store: ticking an entry updates the quest board on the same page without reloading', async ({ page }) => {
+  await page.goto(G);
+  await ready(page);
+  const board = page.locator('.quest', { hasText: 'Beginner tips' });
+  await expect(board).toContainText('0/3');
+  await box(page, 'fx-tip-1').check();
+  await expect(board).toContainText('1/3');
+});
+
+test('revealing a video does not reveal the written spoiler details (and vice versa)', async ({ page }) => {
+  await page.goto(G + 'walkthrough/');
+  const e = entry(page, 'fx-walk-1');
+  await e.getByRole('button', { name: /More details/ }).click();
+  await e.getByRole('button', { name: /Show video/ }).click();
+  const w2 = entry(page, 'fx-walk-2');
+  await w2.getByRole('button', { name: /More details/ }).click();
+  await expect(w2).not.toContainText('FIXTURE-SECRET');
+});

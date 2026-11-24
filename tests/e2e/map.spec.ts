@@ -121,3 +121,24 @@ test('@phone map uses a bottom sheet and stays usable', async ({ page }) => {
   await expect(page.locator('.pin-detail h2')).toHaveText('Fixture card one');
   expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBeLessThanOrEqual(0);
 });
+
+test('panning and zooming are remembered in the link and for Continue', async ({ page }) => {
+  await page.goto(M);
+  await mapReady(page);
+  await expect.poll(() => page.url()).toContain('v=');
+  const before = new URL(page.url()).searchParams.get('v');
+  await page.getByRole('button', { name: 'Zoom in' }).click();
+  await expect.poll(() => new URL(page.url()).searchParams.get('v')).not.toBe(before);
+});
+
+test('Escape closes the pin panel and returns focus to the list', async ({ page }) => {
+  await page.goto(M);
+  await mapReady(page);
+  const b = page.locator('.pin-list button', { hasText: 'Fixture card one' }).first();
+  await b.focus();
+  await page.keyboard.press('Enter');
+  await expect(page.locator('.pin-detail')).toBeFocused();
+  await page.keyboard.press('Escape');
+  await expect(page.locator('.pin-detail')).toHaveCount(0);
+  await expect(page.locator('.pin-list button', { hasText: 'Fixture card one' }).first()).toBeFocused();
+});

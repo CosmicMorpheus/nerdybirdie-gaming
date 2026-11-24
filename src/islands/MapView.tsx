@@ -17,9 +17,8 @@ interface Category { id: string; label: string; colour: string; group: string; t
 interface MapJson { provenance: { source: string; repo: string; revision: string; license: string; licenseUrl: string; credit: string; checkedAt: string }; categories: Category[]; pins: MapPin[] }
 interface Geometry { land: [number, number][][][]; roads: { k: 'h' | 'm'; c: [number, number][] }[]; labels: { name: string; x: number; y: number }[] }
 type Moment = { target: string; start: number | null; label: string };
-interface Props { gameId: string; dataUrl: string; geometryUrl: string; videos: (VideoLike & { spoilerLevel: 'none' | 'minor' | 'major'; moments: Moment[] })[]; base: string }
+interface Props { gameId: string; dataUrl: string; geometryUrl: string; protectedUrl: string; videos: (VideoLike & { spoilerLevel: 'none' | 'minor' | 'major'; moments: Moment[] })[]; base: string }
 
-export { MAP_CONTEXT } from '../lib/progress/contexts';
 import { MAP_CONTEXT } from '../lib/progress/contexts';
 const DEFAULT_GROUPS = ['Collectibles'];
 const REGION_LABEL = (r: string) => r.replace(/(^|-)([a-z])/g, (_, a, b) => (a ? ' ' : '') + b.toUpperCase());
@@ -32,7 +31,7 @@ function readUrl() {
   return { cats: q.get('c'), region: q.get('r'), hideFound: q.get('hf') === '1', pin: q.get('pin'), view: q.get('v') };
 }
 
-export default function MapView({ gameId, dataUrl, geometryUrl, videos, base }: Props) {
+export default function MapView({ gameId, dataUrl, geometryUrl, protectedUrl, videos, base }: Props) {
   const state = useProgress();
   const { progress, update, remember, ready } = state;
   const key = contextKey(gameId, MAP_CONTEXT);
@@ -49,9 +48,23 @@ export default function MapView({ gameId, dataUrl, geometryUrl, videos, base }: 
   const [sheet, setSheet] = useState(false);
   const [inView, setInView] = useState<MapPin[]>([]);
   const [copied, setCopied] = useState(false);
+  const [hidden, setHidden] = useState<Record<string, { summary: string }> | null>(null);
+  const [revealFailed, setRevealFailed] = useState(false);
+  const revealNote = async (id: string) => {
+    const d = hidden ?? await fetch(protectedUrl).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+    setRevealFailed(!d);
+    if (d) { setHidden(d); setRevealed((r) => new Set(r).add(id)); }
+  };
+  // In Minor/All spoiler mode, spoiler notes load straight away for the selected pin.
+  useEffect(() => {
+    const p = selected ? pinBySrc.get(selected) : null;
+    if (p && p.spoiler !== 'none' && modeAllows(p.spoiler, progress.prefs.spoilerMode) && !revealed.has(p.id)) void revealNote(p.id);
+  }, [selected, progress.prefs.spoilerMode]);
   const mapEl = useRef<HTMLDivElement>(null);
   const map = useRef<L.Map | null>(null);
   const layer = useRef<L.LayerGroup | null>(null);
+  const pinRenderer = useRef<L.Canvas | null>(null);
+  const lastFocus = useRef<HTMLElement | null>(null);
   const detailRef = useRef<HTMLDivElement>(null);
   const restored = useRef(false);
   const [mapReady, setMapReady] = useState(false);
@@ -94,13 +107,19 @@ export default function MapView({ gameId, dataUrl, geometryUrl, videos, base }: 
     m.setMaxBounds([ll(100, 100), ll(700, 880)]);
     for (const poly of geo.land) L.polygon(poly.map((ring) => ring.map(([x, y]) => ll(x, y))), { renderer, stroke: true, color: '#3a4560', weight: 1, fillColor: '#1d2436', fillOpacity: 1, interactive: false }).addTo(m);
     for (const r of geo.roads) L.polyline(r.c.map(([x, y]) => ll(x, y)), { renderer, color: r.k === 'h' ? '#c9846a' : '#5d6680', weight: r.k === 'h' ? 1.6 : 1, opacity: 0.8, interactive: false }).addTo(m);
-    for (const lb of geo.labels) L.marker(ll(lb.x, lb.y), { interactive: false, keyboard: false, icon: L.divIcon({ className: 'map-label', html: lb.name, iconSize: undefined }) }).addTo(m);
+    for (const lb of geo.labels) {
+      // Imported text is set as textContent, never as HTML.
+      const el = document.createElement('span');
+      el.textContent = lb.name;
+      L.marker(ll(lb.x, lb.y), { interactive: false, keyboard: false, icon: L.divIcon({ className: 'map-label', html: el, iconSize: undefined }) }).addTo(m);
+    }
     m.attributionControl.setPrefix(false);
     layer.current = L.layerGroup().addTo(m);
+    pinRenderer.current = L.canvas({ padding: 0.3 });
     const sync = () => {
       const b = m.getBounds(); const c = m.getCenter();
       setInView((visibleRef.current ?? []).filter((p) => b.contains(ll(p.x, p.y))).sort((a, z) => Math.hypot(a.x - c.lng, -a.y - c.lat) - Math.hypot(z.x - c.lng, -z.y - c.lat)).slice(0, 40));
-      writeUrl();
+      writeUrlRef.current();
     };
     m.on('moveend zoomend', sync);
     map.current = m;
@@ -108,6 +127,7 @@ export default function MapView({ gameId, dataUrl, geometryUrl, videos, base }: 
     return () => { m.remove(); map.current = null; setMapReady(false); };
   }, [geo]);
 
+  const writeUrlRef = useRef(() => {});
   const visibleRef = useRef<MapPin[]>([]);
   visibleRef.current = visible;
 
@@ -116,7 +136,7 @@ export default function MapView({ gameId, dataUrl, geometryUrl, videos, base }: 
     const m = map.current; const g = layer.current;
     if (!m || !g || !data) return;
     g.clearLayers();
-    const renderer = L.canvas({ padding: 0.3 });
+    const renderer = pinRenderer.current!;
     for (const p of visible) {
       const c = catById.get(p.kind)!;
       const found = p.id in done;
@@ -129,8 +149,11 @@ export default function MapView({ gameId, dataUrl, geometryUrl, videos, base }: 
     m.fire('moveend');
   }, [visible, selected, done, data, map.current]);
 
+  const live = useRef({ cats, region, hideFound, selected });
+  live.current = { cats, region, hideFound, selected };
   function writeUrl() {
-    const m = map.current; if (!m || !cats) return;
+    const { cats, region, hideFound, selected } = live.current;
+    const m = map.current; if (!m || !cats || !restored.current) return;
     const c = m.getCenter();
     const q = new URLSearchParams();
     q.set('c', [...cats].join(','));
@@ -145,6 +168,7 @@ export default function MapView({ gameId, dataUrl, geometryUrl, videos, base }: 
     const sel = selected ? pinBySrc.get(selected) : null;
     remember((s) => setResume(setPrefs(s, { map: { view, filters, pin: selected } }), { href: `${base}?${qs}`, label: sel ? `Map: ${sel.name}` : 'Leonida map', at: new Date().toISOString() }));
   }
+  writeUrlRef.current = writeUrl;
   useEffect(() => { if (restored.current) writeUrl(); }, [cats, region, hideFound, selected]);
 
   function select(src: string, fly = true) {
@@ -152,11 +176,19 @@ export default function MapView({ gameId, dataUrl, geometryUrl, videos, base }: 
     // Make sure the chosen pin is visible under the current filters.
     setCats((c) => (c && !c.has(p.kind) ? new Set(c).add(p.kind) : c));
     if (region !== 'all' && p.region !== region) setRegion('all');
+    if (document.activeElement instanceof HTMLElement && !document.activeElement.closest('.pin-detail')) lastFocus.current = document.activeElement;
     setSelected(src);
     setSheet(false);
     if (fly && map.current) map.current.setView(ll(p.x, p.y), Math.max(map.current.getZoom(), 4));
     setTimeout(() => detailRef.current?.focus(), 50);
   }
+
+  const closeDetail = () => { setSelected(null); setTimeout(() => (lastFocus.current ?? mapEl.current)?.focus(), 0); };
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape' && selected) closeDetail(); };
+    addEventListener('keydown', onKey);
+    return () => removeEventListener('keydown', onKey);
+  }, [selected]);
 
   const results = useMemo(() => {
     if (!query.trim() || !data) return null;
@@ -179,7 +211,7 @@ export default function MapView({ gameId, dataUrl, geometryUrl, videos, base }: 
           <button type="button" class={p.src === selected ? 'on' : ''} onClick={() => select(p.src)}>
             <i style={{ background: catById.get(p.kind)?.colour }} aria-hidden="true" />
             <span>{p.name}<small>{catById.get(p.kind)?.label}{p.area ? ` · ${p.area}` : p.region ? ` · ${REGION_LABEL(p.region)}` : ''}</small></span>
-            {p.id in done && <b class="found" aria-label="found">✓</b>}
+            {p.id in done && <b class="found"><span aria-hidden="true">✓</span><span class="sr-only">found</span></b>}
           </button>
         </li>
       ))}
@@ -225,7 +257,7 @@ export default function MapView({ gameId, dataUrl, geometryUrl, videos, base }: 
                     {data!.categories.filter((c) => c.group === g).map((c) => {
                       const pins = (data!.pins).filter((p) => p.kind === c.id);
                       if (!pins.length) return null;
-                      const t = tally(pins.map((p) => p.id), done);
+                      const t = tally(pins.filter((p) => p.trackable).map((p) => p.id), done);
                       return (
                         <label key={c.id} class="cat-row">
                           <input type="checkbox" checked={cats?.has(c.id) ?? false} onChange={(e) => {
@@ -249,17 +281,19 @@ export default function MapView({ gameId, dataUrl, geometryUrl, videos, base }: 
       </div>
 
       <div class="map-stage">
-        <div ref={mapEl} class="leaflet-host" role="application" aria-label="Map of Leonida. Use the list of pins for keyboard access." />
+        <div ref={mapEl} tabIndex={-1} class="leaflet-host" role="application" aria-label="Map of Leonida. Use the list of pins for keyboard access." />
         {sel && selCat && (
           <div class="pin-detail" ref={detailRef} tabIndex={-1} role="dialog" aria-label={sel.name}>
-            <button type="button" class="close" onClick={() => setSelected(null)} aria-label="Close">✕</button>
+            <button type="button" class="close" onClick={closeDetail} aria-label="Close (Esc)">✕</button>
             <p class="hud-label"><i style={{ background: selCat.colour }} aria-hidden="true" /> {selCat.label}</p>
             <h2>{sel.name}</h2>
             <p class="small muted">{sel.type}{sel.area ? ` · ${sel.area}` : ''}{sel.region ? ` · ${REGION_LABEL(sel.region)}` : ''}</p>
             <p><span class="tag v-warn" title="From one community-maintained dataset; not yet independently confirmed">? Unconfirmed · community map data</span></p>
-            {sel.note && (sel.spoiler === 'none' || modeAllows(sel.spoiler, progress.prefs.spoilerMode) || revealed.has(sel.id)
-              ? <p class="note">{sel.note}</p>
-              : <button type="button" class="act reveal" onClick={() => setRevealed((r) => new Set(r).add(sel.id))}>Reveal mild spoiler</button>)}
+            {sel.spoiler === 'none' ? (sel.note && <p class="note">{sel.note}</p>)
+              : (revealed.has(sel.id) && hidden?.[sel.id]) ? <p class="note">{hidden[sel.id]!.summary}</p>
+              : (revealed.has(sel.id) && hidden && !hidden[sel.id]) ? null
+              : <button type="button" class="act reveal" onClick={() => void revealNote(sel.id)}>Reveal mild spoiler details</button>}
+            {revealFailed && <p class="small notice error">Couldn't load the hidden details. Check your connection.</p>}
             {sel.trackable && selCat.trackable ? (
               <label class="found-toggle">
                 <input type="checkbox" class="check" checked={sel.id in done} disabled={!ready}

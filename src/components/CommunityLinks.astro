@@ -1,18 +1,43 @@
 ---
-/** The two COZMC links, always separate. If a link isn't configured it says so instead of linking nowhere. */
+/**
+ * The two COZMC links, always separate, each with a flashing electric-blue arrow pointing at it (static when the
+ * viewer prefers reduced motion). If a link isn't configured it says so instead of linking nowhere.
+ */
 import { COZMC } from '../config';
 interface Props { size?: 'full' | 'compact'; discordLabel?: string; siteLabel?: string }
 const { size = 'full', discordLabel = 'Join the COZMC Discord', siteLabel = 'Explore COZMC.US' } = Astro.props;
+const arrow = `<svg viewBox="0 0 32 20" width="32" height="20" aria-hidden="true" focusable="false"><path d="M2 10h22M17 3l8 7-8 7" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="square" stroke-linejoin="miter"/></svg>`;
 ---
-{COZMC.discord ? (
-  <a class="cz-btn cz-discord" href={COZMC.discord} target="_blank" rel="noopener" data-cozmc="discord">
-    {discordLabel} {size === 'full' && <small aria-hidden="true">discord.gg ↗</small>}
-    <span class="sr-only">(opens Discord in a new tab)</span>
+<div class={`cz-link-row ${size}`}>
+  <span class="cz-arrow" set:html={arrow} />
+  {COZMC.discord ? (
+    <a class="cz-btn cz-discord" href={COZMC.discord} target="_blank" rel="noopener" data-cozmc="discord">
+      {discordLabel} {size === 'full' && <small aria-hidden="true">discord.gg ↗</small>}
+      <span class="sr-only">(opens Discord in a new tab)</span>
+    </a>
+  ) : (
+    <span class="cz-btn cz-unavailable" data-cozmc="discord-unavailable">Discord invite coming soon</span>
+  )}
+</div>
+<div class={`cz-link-row ${size}`}>
+  <span class="cz-arrow delay" set:html={arrow} />
+  <a class="cz-btn cz-site" href={COZMC.site} target="_blank" rel="noopener" data-cozmc="site">
+    {siteLabel} {size === 'full' && <small aria-hidden="true">cozmc.us ↗</small>}
+    <span class="sr-only">(opens in a new tab)</span>
   </a>
-) : (
-  <span class="cz-btn cz-unavailable" data-cozmc="discord-unavailable">Discord invite coming soon</span>
-)}
-<a class="cz-btn cz-site" href={COZMC.site} target="_blank" rel="noopener" data-cozmc="site">
-  {siteLabel} {size === 'full' && <small aria-hidden="true">cozmc.us ↗</small>}
-  <span class="sr-only">(opens in a new tab)</span>
-</a>
+</div>
+
+<style>
+  .cz-link-row { display: flex; align-items: center; gap: 10px; }
+  .cz-link-row > :global(.cz-btn) { flex: 1; }
+  .cz-link-row.compact > :global(.cz-btn) { flex: none; }
+  .cz-arrow { flex: none; display: inline-flex; color: #2ee6ff; filter: drop-shadow(0 0 4px rgba(46, 230, 255, 0.85)); }
+  .compact .cz-arrow :global(svg) { width: 24px; height: 15px; }
+  @media (prefers-reduced-motion: no-preference) {
+    /* ~1 flash per second, well under the WCAG limit of 3 per second */
+    .cz-arrow { animation: cz-flash 1.1s steps(1, end) infinite, cz-nudge 1.1s ease-in-out infinite; }
+    .cz-arrow.delay { animation-delay: 0.55s; }
+    @keyframes cz-flash { 0% { opacity: 1; } 50% { opacity: 0.25; } }
+    @keyframes cz-nudge { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(4px); } }
+  }
+</style>

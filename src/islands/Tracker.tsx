@@ -51,9 +51,11 @@ export default function Tracker({ gameId, gameShortTitle, platforms, categories,
   const catLabel = (id: string) => categories.find((c) => c.id === id)?.label ?? id;
 
   // Celebrate a checkpoint when it's crossed by ticking (not on page load or platform switch).
+  const lastPlatform = useRef(platform.id);
   useEffect(() => {
     const pct = totals.overall.percent;
-    const prev = lastPct.current;
+    const prev = lastPlatform.current === platform.id ? lastPct.current : undefined;
+    lastPlatform.current = platform.id;
     lastPct.current = pct;
     if (!ready || prev === undefined) return;
     const hit = crossedCheckpoint(prev, pct);
@@ -64,8 +66,8 @@ export default function Tracker({ gameId, gameShortTitle, platforms, categories,
       const t = setTimeout(() => setToast(null), 3500);
       return () => clearTimeout(t);
     }
-  }, [totals.overall.percent, ready]);
-  useEffect(() => { lastPct.current = undefined; }, [platform.id]);
+  }, [totals.overall.percent, ready, platform.id]);
+
 
   function loadProtected(): Promise<Protected | null> {
     if (prot) return Promise.resolve(prot);
@@ -176,13 +178,13 @@ export default function Tracker({ gameId, gameShortTitle, platforms, categories,
             </section>
           )}
 
-          <nav class="cats" aria-label="Categories">
+          <div class="cats" role="group" aria-label="Categories">
             {tabs.map((t) => (
               <button key={t.id} type="button" class="cat" aria-pressed={category === t.id} onClick={() => setCategory(t.id)}>
                 <span>{t.label}</span><span class="count">{t.count}</span>{'cleared' in t && t.cleared && <span class="stamp">Cleared</span>}
               </button>
             ))}
-          </nav>
+          </div>
 
           <div class="toolbar">
             <label class="search-field">
@@ -264,12 +266,12 @@ export default function Tracker({ gameId, gameShortTitle, platforms, categories,
 
       <div class="local">
         <p class="muted small">
-          Progress is saved in this browser only and isn't synced with your console. <a href="/progress/">Back up or restore</a>.
+          Progress saves automatically and isn't synced with your console. <a href="/progress/">Back up or restore</a>.
         </p>
         {Object.keys(ctx.completed).length > 0 && (confirmReset ? (
-          <div class="confirm" role="alertdialog" aria-label="Confirm reset">
+          <div class="confirm" role="group" aria-label="Confirm reset">
             <p>Clear all {Object.keys(ctx.completed).length} ticks, notes and saved items for {gameShortTitle} on {platform.shortLabel}? This can't be undone unless you have a backup.</p>
-            <button type="button" class="btn btn-danger" onClick={() => { update((s) => resetContext(s, key)); setConfirmReset(false); setAnnounce('Progress cleared'); }}>Yes, clear it</button>
+            <button type="button" class="btn btn-danger" autoFocus onClick={() => { update((s) => resetContext(s, key)); setConfirmReset(false); setAnnounce('Progress cleared'); }}>Yes, clear it</button>
             <button type="button" class="btn btn-quiet" onClick={() => setConfirmReset(false)}>Cancel</button>
           </div>
         ) : (

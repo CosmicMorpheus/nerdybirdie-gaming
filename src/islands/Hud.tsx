@@ -1,6 +1,7 @@
 import { contextKey } from '../lib/progress/model';
 import { CHECKPOINTS, nextRank, rankFor } from '../lib/progress/ranks';
 import { tally } from '../lib/progress/totals';
+import { useEffect, useState } from 'preact/hooks';
 import { useProgress } from './useProgress';
 import './tracker.css';
 
@@ -14,7 +15,6 @@ interface Props {
   trackerHref: string;
   guidesHref: string;
 }
-export { GUIDES_CONTEXT } from '../lib/progress/contexts';
 import { GUIDES_CONTEXT, MAP_CONTEXT } from '../lib/progress/contexts';
 
 /** "Player 1" status: rank, level, XP bar and checkpoints for one game. Everything counted is verified content only. */
@@ -27,8 +27,13 @@ export default function Hud({ gameId, platforms, guideEntryIds, trackerHref, gui
     ...(progress.contexts[contextKey(gameId, platform.id)]?.completed ?? {}),
     ...(progress.contexts[contextKey(gameId, GUIDES_CONTEXT)]?.completed ?? {}),
   });
-  const mapDone = Object.keys(progress.contexts[contextKey(gameId, MAP_CONTEXT)]?.completed ?? {}).length;
-  const mp = { done: Math.min(mapDone, mapTotal), total: mapTotal, percent: mapTotal ? Math.floor((Math.min(mapDone, mapTotal) / mapTotal) * 100) : null };
+  const mapDoneMap = progress.contexts[contextKey(gameId, MAP_CONTEXT)]?.completed ?? {};
+  const hasMapFinds = Object.keys(mapDoneMap).length > 0;
+  const [mapIds, setMapIds] = useState<string[] | null>(null);
+  useEffect(() => {
+    if (hasMapFinds && !mapIds) fetch(`/data/${gameId}/map-checklist.json`).then((r) => (r.ok ? r.json() : null)).then((c: { ids: string[] }[] | null) => c && setMapIds(c.flatMap((x) => x.ids))).catch(() => {});
+  }, [hasMapFinds]);
+  const mp = mapIds ? tally(mapIds, mapDoneMap) : { done: 0, total: mapTotal, percent: mapTotal ? 0 : null };
   const rank = rankFor(all.percent);
   const next = nextRank(all.percent);
   const meter = (label: string, t: typeof ach, href: string) => (
@@ -45,8 +50,9 @@ export default function Hud({ gameId, platforms, guideEntryIds, trackerHref, gui
           <p class="hud-label">Player 1 · {platform.shortLabel}</p>
           <p class="hud-rank">{rank ? rank.title : 'Ready to start'}</p>
         </div>
-        <div class="hud-lv" aria-label={rank ? `Level ${rank.level}` : 'No level yet'}>
-          <span class="hud-label">LV</span><span class="pixel">{rank ? rank.level : '–'}</span>
+        <div class="hud-lv">
+          <span class="sr-only">{rank ? `Level ${rank.level}` : 'No level yet'}</span>
+          <span class="hud-label" aria-hidden="true">LV</span><span class="pixel" aria-hidden="true">{rank ? rank.level : '–'}</span>
         </div>
       </div>
       <div class="hud-xp">

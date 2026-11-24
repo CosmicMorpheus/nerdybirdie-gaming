@@ -42,7 +42,14 @@ export default function ProgressManager({ contexts, guideKey, sections }: Props)
 
   function restore() {
     if (!pending) return;
-    const res = replace({ ...pending.incoming, updatedAt: new Date().toISOString() });
+    // Ticks the backup doesn't have become deliberate unticks, so account sync can't bring them back.
+    const now = new Date().toISOString();
+    const incoming = structuredClone(pending.incoming);
+    for (const [k, c] of Object.entries(progress.contexts)) {
+      const target = (incoming.contexts[k] ??= { completed: {}, bookmarks: [], notes: {}, unchecked: {} });
+      for (const id of Object.keys(c.completed)) if (!(id in target.completed)) target.unchecked[id] = now;
+    }
+    const res = replace({ ...incoming, updatedAt: now });
     setPending(null);
     setMessage(res.ok ? { kind: 'ok', text: 'Backup restored.' } : { kind: 'error', text: "Restored for this visit, but it couldn't be saved. See the note above." });
   }
@@ -101,7 +108,7 @@ export default function ProgressManager({ contexts, guideKey, sections }: Props)
         </div>
         {message && <p class={message.kind === 'error' ? 'notice error' : 'notice'} role="status">{message.text}</p>}
         {pending && (
-          <div class="confirm" role="alertdialog" aria-label="Confirm restore">
+          <div class="confirm" role="group" aria-label="Confirm restore">
             <p><strong>Restore this backup?</strong> It replaces everything saved on this device:</p>
             <ul>
               {pending.diff.length === 0 && <li>The backup is empty.</li>}
@@ -109,7 +116,7 @@ export default function ProgressManager({ contexts, guideKey, sections }: Props)
                 <li key={d.key}>{labelFor(d.key)}: {d.incoming} ticked in the backup ({d.added} new{d.removed ? `, ${d.removed} would be unticked` : ''})</li>
               ))}
             </ul>
-            <button type="button" class="btn btn-danger" onClick={restore}>Restore backup</button>
+            <button type="button" class="btn btn-danger" autoFocus onClick={restore}>Restore backup</button>
             <button type="button" class="btn btn-quiet" onClick={() => { setPending(null); setMessage({ kind: 'ok', text: 'Restore cancelled. Nothing was changed.' }); }}>Cancel</button>
           </div>
         )}

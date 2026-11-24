@@ -11,6 +11,7 @@ import { BRAND, COZMC, PARENT_SITE_URL } from '../config';
       </div>
       <nav aria-label="Site">
         <h2 class="h">Site</h2>
+        <a href="/games/gta-vi/guides/">Guides</a><a href="/games/gta-vi/map/">Map</a><a href="/games/gta-vi/achievements/">Achievements</a><a href="/progress/">My progress</a>
         <a href="/about/">About</a><a href="/updates/">Updates</a><a href="/corrections/">Corrections</a><a href="/privacy/">Privacy</a>
         {PARENT_SITE_URL && <a href={PARENT_SITE_URL}>Nerdy Birdie</a>}
       </nav>
@@ -31,7 +32,7 @@ import { BRAND, COZMC, PARENT_SITE_URL } from '../config';
   .ftr { border-top: 1px solid var(--vc-line); margin-top: 72px; padding: 40px 0 56px; background: var(--nb-black); }
   .cols { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 32px; }
   .brand img { width: 96px; height: 96px; }
-  .brand .bbb { width: min(320px, 100%); height: auto; margin-top: 12px; opacity: 0.9; }
+  .brand .bbb { display: block; width: min(320px, 100%); height: auto; margin-top: 14px; }
   .brand p { max-width: 36ch; }
   nav { display: flex; flex-direction: column; gap: 2px; }
   nav a { color: var(--vc-muted); text-decoration: none; padding: 6px 0; font-size: 15px; }

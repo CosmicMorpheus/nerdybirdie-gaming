@@ -21,29 +21,33 @@ const DRY = args.includes('--dry-run');
 const fromIdx = args.indexOf('--from');
 const FROM = fromIdx >= 0 ? args[fromIdx + 1] : null;
 const src = JSON.parse(readFileSync(join(DIR, 'source.json'), 'utf8'));
+if (!/^[0-9a-f]{40}$/.test(src.revision)) { console.error('source.json revision must be a full 40-character commit hash'); process.exit(1); }
 
 /* ---------- upstream schemas (only the fields we use; extra fields are ignored) ---------- */
 const coord = z.number().finite();
+const text = (max) => z.string().max(max).regex(/^[^<>]*$/, 'no angle brackets');
 const Location = z.object({
-  id: z.string().regex(/^[a-z0-9-]+$/), kind: z.string(), x: coord, y: coord, name: z.string().min(1),
-  type: z.string().optional(), description: z.string().optional().nullable(), area: z.string().optional().nullable(),
-  region: z.string().optional().nullable(), confidence: z.string().optional().nullable(), source_urls: z.array(z.string()).optional(),
+  id: z.string().regex(/^[a-z0-9-]{1,80}$/), kind: z.string().regex(/^[a-z0-9-]{1,40}$/), x: coord, y: coord, name: text(160).min(1),
+  type: text(80).optional(), description: z.string().max(4000).optional().nullable(), area: text(80).optional().nullable(),
+  region: z.string().regex(/^[a-z0-9-]{1,40}$/).optional().nullable(), confidence: z.string().optional().nullable(), source_urls: z.array(z.string()).optional(),
 });
 const Categories = z.object({
   groups: z.array(z.string()),
-  kinds: z.array(z.object({ key: z.string(), name: z.string(), colour: z.string(), group: z.string(), pinnable: z.boolean() })),
+  kinds: z.array(z.object({ key: z.string().regex(/^[a-z0-9-]{1,40}$/), name: text(80).min(1), colour: z.string().regex(/^#[0-9a-f]{6}$/i), group: text(40).min(1), pinnable: z.boolean() })),
 });
 const Land = z.array(z.array(z.array(z.tuple([coord, coord]))));
 const Roads = z.object({ features: z.array(z.object({ properties: z.object({ kind: z.string() }), geometry: z.object({ type: z.literal('LineString'), coordinates: z.array(z.tuple([coord, coord])) }) })) });
-const Labels = z.array(z.object({ name: z.string(), x: coord, y: coord }));
+const Labels = z.array(z.object({ name: text(60).min(1), x: coord, y: coord }));
 const Removed = z.array(z.object({ id: z.string(), reason: z.string() }));
 
 async function get(file) {
   if (FROM) return JSON.parse(readFileSync(join(FROM, file), 'utf8'));
   const url = `${src.rawBase}/${src.revision}/public/data/${file}`;
-  const r = await fetch(url);
+  const r = await fetch(url, { signal: AbortSignal.timeout(60000) });
   if (!r.ok) throw new Error(`${url} → HTTP ${r.status}`);
-  return r.json();
+  const body = await r.text();
+  if (body.length > 25_000_000) throw new Error(`${url} is unexpectedly large (${body.length} bytes)`);
+  return JSON.parse(body);
 }
 function parse(name, schema, data) {
   const r = schema.safeParse(data);
@@ -93,7 +97,7 @@ async function main() {
     pins.push({
       id: `gta-vi:map:${l.id}`, src: l.id, kind: l.kind, name: l.name, type: l.type || k.name,
       x: Math.round(l.x * 10) / 10, y: Math.round(l.y * 10) / 10,
-      area: l.area || null, region: l.region || null, note: short(l.description),
+      area: l.area || null, region: l.region || null, note: short((l.description || '').replace(/[<>]/g, '')),
       // Evidence: every record here comes from one community-maintained dataset.
       evidence: 'community',
       trackable: k.pinnable,

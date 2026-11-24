@@ -158,7 +158,7 @@ test('backup: export, bad import rejected without data loss, good import restore
   const good = join(dir, 'good.json');
   writeFileSync(good, backup);
   await page.locator('input[type=file]').setInputFiles(good);
-  await expect(page.getByRole('alertdialog')).toContainText('1 new');
+  await expect(page.getByRole('group', { name: 'Confirm restore' })).toContainText('1 new');
   await page.getByRole('button', { name: 'Restore backup' }).click();
   await open(page);
   await expect(checkbox(page, 'Fixture objective 01')).toBeChecked();

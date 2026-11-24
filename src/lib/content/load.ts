@@ -82,6 +82,7 @@ export function protectedText(gameId: string): Record<string, { title: string; s
   const out: Record<string, { title: string; summary: string; steps?: string[] }> = {};
   for (const o of b?.objectives ?? []) if (o.protected && visible(o)) out[o.id] = o.protected;
   for (const e of b?.entries ?? []) if (e.details && entryVisible(e)) out[e.id] = { title: e.title, summary: e.details.summary, steps: e.details.steps };
+  for (const p of b?.map?.pins ?? []) if (p.exact && p.spoiler !== 'none' && p.note) out[p.id] = { title: p.name, summary: p.note };
   return out;
 }
 
@@ -120,9 +121,28 @@ export function reviewQueue(gameId: string) {
 export function mapData(gameId: string) {
   const m = bundles.find((x) => x.game.id === gameId)?.map;
   if (!m) return null;
-  return { provenance: m.provenance, categories: m.categories, pins: m.pins.filter((p) => p.exact) };
+  // Spoiler notes are stripped here and served only from protected.json, after a deliberate reveal.
+  return { provenance: m.provenance, categories: m.categories, pins: m.pins.filter((p) => p.exact).map((p) => (p.spoiler === 'none' ? p : { ...p, note: '' })) };
 }
 
 export function sourcesFor(game: Game, ids: string[]) {
   return game.sources.filter((s) => ids.includes(s.id));
+}
+
+/** The map's completion denominator: trackable pins in trackable categories with an exact location. Filters never change it. */
+export function trackablePinIds(gameId: string): string[] {
+  const m = mapData(gameId);
+  if (!m) return [];
+  const cats = new Set(m.categories.filter((c) => c.trackable).map((c) => c.id));
+  return m.pins.filter((p) => p.trackable && cats.has(p.kind)).map((p) => p.id);
+}
+
+/** Small per-category summary for checklists (ids only), instead of shipping the whole map. */
+export function mapChecklist(gameId: string) {
+  const m = mapData(gameId);
+  if (!m) return null;
+  const ids = new Set(trackablePinIds(gameId));
+  return m.categories.filter((c) => c.trackable)
+    .map((c) => ({ id: c.id, label: c.label, colour: c.colour, group: c.group, ids: m.pins.filter((p) => p.kind === c.id && ids.has(p.id)).map((p) => p.id) }))
+    .filter((c) => c.ids.length);
 }

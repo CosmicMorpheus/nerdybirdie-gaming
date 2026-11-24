@@ -89,7 +89,7 @@ describe('entries', () => {
 
 describe('map snapshot and videos', () => {
   it('every real video moment points at a real entry or map pin, and nothing unreviewed is approved', () => {
-    const pinIds = new Set((realMap as any).pins.map((p: any) => p.id));
+    const pinIds = new Set<string>((realMap as any).pins.map((p: any) => p.id as string));
     const b = validateGameBundle(realGame, realObjectives, P, realEntries, realVideos, pinIds);
     for (const v of b.videos) if (v.status === 'approved') expect(v.moments.every((m) => m.verified)).toBe(true);
     expect(pinIds.has('gta-vi:map:collectible-card-086')).toBe(true);

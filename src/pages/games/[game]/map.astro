@@ -13,7 +13,7 @@ const videos = videosFor(game.id).filter((v) => v.moments.some((m) => m.target.i
     <p class="muted">Tap a pin to see what it is and mark it found. Your finds are shared with the guide checklists. Every pin is community map data we haven't independently confirmed yet; each one says so.</p>
   </div>
   <div class="wrap-wide">
-    <MapView client:only="preact" gameId={game.id} dataUrl={`/data/${game.id}/map.json`} geometryUrl={`/data/${game.id}/geometry.json`} videos={videos} base={`/games/${game.id}/map/`} />
+    <MapView client:only="preact" gameId={game.id} dataUrl={`/data/${game.id}/map.json`} geometryUrl={`/data/${game.id}/geometry.json`} protectedUrl={`/data/${game.id}/protected.json`} videos={videos} base={`/games/${game.id}/map/`} />
   </div>
 </Base>
 <style>
@@ -21,6 +21,7 @@ const videos = videosFor(game.id).filter((v) => v.moments.some((m) => m.target.i
   .crumbs { font-size: 14px; color: var(--vc-muted); padding-top: 22px; }
   h1 { font-size: clamp(30px, 4vw, 44px); margin: 6px 0; }
   .head p { margin: 0; max-width: 75ch; }
+  @media (max-width: 860px) { .head p { display: none; } h1 { font-size: 26px; } .head { padding-bottom: 10px; } }
   .wrap-wide { max-width: 1600px; margin: 0 auto; padding: 0 var(--gutter); }
   @media (max-width: 860px) { .wrap-wide { padding: 0; } }
 </style>

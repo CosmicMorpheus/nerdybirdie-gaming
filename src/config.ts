@@ -38,8 +38,8 @@ export const BRAND = {
   /** COZMC mascots (128px masters), shown at 64px. */
   cozmcMascotWave: '/brand/cozmc/cozmc-mascot-wave.webp',
   cozmcMascotFist: '/brand/cozmc/cozmc-mascot-fist.webp',
-  /** "Brick by Brick, WE Build." banner, cropped to the lettering. */
-  brickByBrick: { src: '/brand/brick-by-brick.webp', width: 1280, height: 155 },
+  /** "Brick by Brick, WE Build." banner: cropped to the lettering, black background made transparent. */
+  brickByBrick: { src: '/brand/brick-by-brick.webp', width: 1274, height: 149 },
 } as const;
 
 /** Videos still in the review queue are shown (clearly labelled) on preview builds only, never once the site is indexable. */

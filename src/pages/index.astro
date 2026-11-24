@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import CozmcPanel from '../components/CozmcPanel.astro';
 import Hud from '../islands/Hud';
 import ContinueButton from '../islands/ContinueButton';
-import { getGame, getPlatform, mapData, publicEntries, publicObjectives } from '../lib/content/load';
+import { getGame, getPlatform, publicEntries, publicObjectives, trackablePinIds } from '../lib/content/load';
 import { SITE_NAME, TAGLINE } from '../config';
 
 const game = getGame('gta-vi');
@@ -28,8 +28,8 @@ const quests = game.guideCategories.map((c) => ({ ...c, count: entries.filter((e
         {game.platforms.map((p) => <li class="chip">{getPlatform(p.platformId).shortLabel}</li>)}
       </ul>
       <div class="cta">
-        <a class="btn btn-primary" href={trackerHref}>▶ Press start</a>
-        <a class="btn btn-ghost" href={guidesHref}>Quest board</a>
+        <a class="btn btn-primary" href={trackerHref}>▶ Start tracking</a>
+        <a class="btn btn-ghost" href={guidesHref}>Guides</a>
         <a class="btn btn-ghost" href={`/games/${game.id}/map/`}>Map</a>
       </div>
       <div class="resume-row"><ContinueButton client:load /></div>
@@ -40,7 +40,7 @@ const quests = game.guideCategories.map((c) => ({ ...c, count: entries.filter((e
     <div class="panel">
       <h2 class="sr-only">Your progress</h2>
       <Hud client:load gameId={game.id} platforms={platforms} guideEntryIds={entries.map((e) => e.id)} trackerHref={trackerHref} guidesHref={guidesHref}
-        mapTotal={(mapData(game.id)?.pins ?? []).filter((p) => p.trackable && mapData(game.id)!.categories.find((c) => c.id === p.kind)?.trackable).length} mapHref={`/games/${game.id}/map/`} />
+        mapTotal={trackablePinIds(game.id).length} mapHref={`/games/${game.id}/map/`} />
     </div>
     <div class="how panel">
       <h2>How to 100% it</h2>
@@ -119,6 +119,7 @@ const quests = game.guideCategories.map((c) => ({ ...c, count: entries.filter((e
     .cta .btn { flex: 1; }
     .quests { grid-template-columns: 1fr 1fr; }
   }
+  @media (max-width: 400px) { .quests { grid-template-columns: 1fr; } }
   @media (prefers-reduced-motion: no-preference) {
     .grid { animation: drive 3s linear infinite; }
     @keyframes drive { to { background-position: 0 48px; } }

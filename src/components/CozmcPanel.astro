@@ -5,13 +5,15 @@ import { BRAND } from '../config';
 ---
 <section class="cozmc cz-panel" aria-labelledby="cozmc-heading">
   <div class="cz-copy">
+    <div class="brandrow">
     <img class="wm" src={BRAND.cozmcWordmark.src} srcset={`${BRAND.cozmcWordmark.src} 1x, ${BRAND.cozmcWordmark.src2x} 2x`} alt="COZMC" width={Math.round(36 * BRAND.cozmcWordmark.ratio)} height="36" loading="lazy" decoding="async" />
+    <img class="mascot" src={BRAND.cozmcMascotWave} alt="" width="56" height="56" loading="lazy" decoding="async" />
+    </div>
     <p class="cz-k">We Are All COZMC</p>
     <h2 id="cozmc-heading">Play together. Build together.</h2>
     <p class="cz-p">Connect with fellow gamers, share discoveries and grow with our community.</p>
   </div>
   <div class="cz-ctas">
-    <img class="mascot" src={BRAND.cozmcMascotWave} alt="" width="64" height="64" loading="lazy" decoding="async" />
     <CommunityLinks />
   </div>
 </section>
@@ -32,8 +34,9 @@ import { BRAND } from '../config';
       radial-gradient(1.5px 1.5px at 42% 82%, #fff, transparent), radial-gradient(1px 1px at 90% 18%, #fff, transparent),
       radial-gradient(1px 1px at 8% 76%, #fff, transparent);
   }
-  .cz-copy .wm { display: block; height: 36px; width: auto; margin-bottom: 16px; }
-  .mascot { width: 64px; height: 64px; image-rendering: auto; align-self: flex-end; margin-bottom: -6px; }
+  .brandrow { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .cz-copy .wm { display: block; height: 36px; width: auto; }
+  .mascot { width: 56px; height: 56px; }
   .cz-k { margin: 0; font: 700 12px var(--body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--cz-coral); }
   h2 { font-size: clamp(24px, 3vw, 30px); margin: 8px 0; }
   .cz-p { color: var(--cz-soft); margin: 0; max-width: 46ch; }

@@ -21,7 +21,7 @@ const entries = publicEntries(game.id).filter((e) => e.category === section.id);
     <h1>{section.label}</h1>
     <p class="lead muted">{section.blurb}</p>
     {section.id === 'collectibles' && mapData(game.id) && (
-      <MapChecklist client:visible gameId={game.id} dataUrl={`/data/${game.id}/map.json`} mapHref={`/games/${game.id}/map/`} />
+      <MapChecklist client:visible gameId={game.id} dataUrl={`/data/${game.id}/map-checklist.json`} mapHref={`/games/${game.id}/map/`} />
     )}
     <EntryBrowser client:load gameId={game.id} categories={game.guideCategories} entries={entries} videos={videosFor(game.id)}
       protectedUrl={`/data/${game.id}/protected.json`} fixedCategory={section.id} />
