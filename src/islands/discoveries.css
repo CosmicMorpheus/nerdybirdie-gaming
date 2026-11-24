@@ -1,0 +1,12 @@
+/* What's New creator feed (Discoveries.tsx). Uses the shared .tag/.btn styles from tracker.css and global.css. */
+.disc { margin: 28px 0; padding: 16px 18px; border: 2px solid var(--vc-line); border-radius: 6px; background: var(--vc-slate); box-shadow: var(--shadow-px); }
+.disc-head { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; justify-content: space-between; }
+.disc-head h2 { margin: 0; font-size: 22px; }
+.disc-head .btn { white-space: normal; text-align: left; }
+.disc-status { margin: 8px 0 0; color: var(--vc-pearl); }
+.disc-list { list-style: none; padding: 0; margin: 14px 0 0; display: flex; flex-direction: column; gap: 10px; }
+.disc-list li { padding: 10px 12px; border: 1px solid var(--vc-line); border-radius: 6px; background: var(--vc-raised); }
+.disc-title { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+.disc-title a { color: var(--vc-pearl); }
+.disc-meta { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; margin: 6px 0 0; }
+.disc-meta a { color: var(--vc-sunset); }

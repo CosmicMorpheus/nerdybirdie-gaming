@@ -1,7 +1,19 @@
 ---
 import Prose from '../layouts/Prose.astro';
+import Discoveries from '../islands/Discoveries';
+import { getGame } from '../lib/content/load';
+import { DISCOVERY_FEED } from '../config';
+const game = getGame('gta-vi');
 ---
 <Prose title="Updates" current="updates" description="What's new on Nerdy Birdie Gaming.">
+  {DISCOVERY_FEED && (
+    <Discoveries client:load heading="What's New from creators" sections={game.guideCategories.map((c) => ({ id: c.id, label: c.label }))}
+      guidesHref={`/games/${game.id}/guides/`} />
+  )}
+  <h2>24 November 2026 · Preview 6</h2>
+  <ul>
+    <li>What's New from creators: a daily check for new GTA VI videos from approved creators, shown here and in the Rare vehicles guide. Titles stay hidden until you choose to see them, and nothing counts toward your progress. It starts once the first creator is approved.</li>
+  </ul>
   <h2>24 November 2026 · Preview 5</h2>
   <ul>
     <li>ASK "COZMC": ask a question in your own words and get a short answer from our guide, with a link to the map or checklist.</li>

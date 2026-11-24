@@ -20,6 +20,12 @@ import { ASK_SERVER, CONTACT_EMAIL, COZMC } from '../config';
   <h2>Videos and outside links</h2>
   <p>Creator videos (YouTube, Twitch or TikTok) only load after you press play. At that point that service receives your request under its own privacy policy.
   Links to Discord, cozmc.us, Rockstar Games and other sites open those sites, which have their own policies.</p>
+  <h2>What's New from creators (YouTube API Services)</h2>
+  <p>Our server checks a short list of approved creators' public YouTube uploads once a day using the YouTube API Services.
+  It keeps only each video's id, title, channel name and upload date, for at most 7 days unless it's checked again, and
+  never any information about you. Your browser asks only our site for this list; nothing is sent to YouTube until you open a video.
+  By using this feature you agree to the <a href="https://www.youtube.com/t/terms" rel="noopener">YouTube Terms of Service</a>;
+  Google's handling of data is covered by the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.</p>
   <h2>Hosting</h2>
   <p>Our host (Netlify) processes basic request logs, such as IP addresses, to deliver and protect the site.</p>
   <h2>Contact</h2>

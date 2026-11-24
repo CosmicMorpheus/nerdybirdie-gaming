@@ -20,6 +20,7 @@ Separate from the cozmc.us site and repo.
 | `/review/` | Editor review queue (preview builds only) |
 | `/admin/guide-updates/` | Private Guide Updates queue for ASK "COZMC" (editor token) |
 | ASK "COZMC" | Guide assistant on every page; see docs/ASK_COZMC.md |
+| What's New from creators | Daily check of approved YouTube creators, shown on Updates and Rare vehicles, spoiler-safe; idle until set up. See docs/DAILY_FEED.md |
 | `/search/` | Spoiler-safe site search |
 | `/about/`, `/privacy/`, `/corrections/`, `/updates/` | Required pages, including the unofficial disclaimer |
 

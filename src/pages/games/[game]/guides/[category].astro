@@ -3,6 +3,8 @@ import Base from '../../../../layouts/Base.astro';
 import CozmcInline from '../../../../components/CozmcInline.astro';
 import EntryBrowser from '../../../../islands/EntryBrowser';
 import MapChecklist from '../../../../islands/MapChecklist';
+import Discoveries from '../../../../islands/Discoveries';
+import { DISCOVERY_FEED, DISCOVERY_SECTIONS } from '../../../../config';
 import { games, mapData, publicEntries, videosFor } from '../../../../lib/content/load';
 
 export function getStaticPaths() {
@@ -31,6 +33,10 @@ const entries = publicEntries(game.id).filter((e) => e.category === section.id);
     )}
     <EntryBrowser client:load gameId={game.id} categories={game.guideCategories} entries={entries} videos={videosFor(game.id)}
       protectedUrl={`/data/${game.id}/protected.json`} fixedCategory={section.id} />
+    {DISCOVERY_FEED && DISCOVERY_SECTIONS.includes(section.id) && (
+      <Discoveries client:visible heading="New creator videos for this section" category={section.id} hideWhenOff
+        sections={game.guideCategories.map((c) => ({ id: c.id, label: c.label }))} guidesHref={`/games/${game.id}/guides/`} />
+    )}
     <nav class="after" aria-label="More sections">
       <a class="btn btn-quiet" href={`/games/${game.id}/guides/`}>← Quest board</a>
       {next && <a class="btn btn-primary" href={`/games/${game.id}/guides/${next.id}/`}>Next: {next.label} →</a>}

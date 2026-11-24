@@ -56,3 +56,13 @@ export const TWITCH_PARENTS = ['localhost', 'nerdybirdie-gaming-preview.netlify.
  * Turning it on also needs ASK_SERVER_ENABLED=on in Netlify, a privacy page update and founder approval.
  */
 export const ASK_SERVER = import.meta.env.PUBLIC_ASK_SERVER === 'true';
+
+/**
+ * Daily guide updates (What's New creator feed, docs/DAILY_FEED.md). The panel only reads the nb-feed function; the
+ * daily check itself is switched by Netlify env vars on the staging project. On by default for the private preview,
+ * OFF for an indexable (public) build unless PUBLIC_DISCOVERY_FEED=true. PUBLIC_DISCOVERY_FEED=false hides it anywhere.
+ */
+const FEED_FLAG = import.meta.env.PUBLIC_DISCOVERY_FEED;
+export const DISCOVERY_FEED = FEED_FLAG === 'true' || (FEED_FLAG !== 'false' && !INDEXABLE);
+/** Guide sections that show their discoveries. Pilot: one busy section (founder-approved plan). */
+export const DISCOVERY_SECTIONS: readonly string[] = ['vehicles'];

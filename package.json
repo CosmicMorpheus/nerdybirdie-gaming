@@ -11,13 +11,15 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
-    "test": "vitest run",
+    "test": "vitest run && node --test tests/feed/*.test.mjs",
     "e2e": "npm run build && npm run build:test && playwright test --trace off",
     "verify": "npm run check && npm test && npm run e2e",
     "build:test": "NBG_FIXTURES=1 astro build",
     "import:map": "node scripts/import-map.mjs",
     "demo:ask": "vitest run tests/demo/ask-demo.test.ts",
-    "pull:approved": "node scripts/pull-approved.mjs"
+    "pull:approved": "node scripts/pull-approved.mjs",
+    "test:feed": "node --test tests/feed/*.test.mjs",
+    "feed:recover": "node scripts/feed-recover.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "1.7.0",
