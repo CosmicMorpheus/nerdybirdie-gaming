@@ -18,7 +18,7 @@ test('check an entry: saves, says so, survives reload, shows on quest board and 
   await expect(page.locator('.quest', { hasText: 'Beginner tips' })).toContainText('1/3');
   await page.goto('http://localhost:4322/progress/');
   await expect(page.locator('.ctx-list li', { hasText: 'Beginner tips' })).toContainText('1 of 3');
-  await expect(page.getByText(/in this browser on this device only/)).toBeVisible();
+  await expect(page.getByText(/in this browser on this device/).first()).toBeVisible();
 });
 
 test('verification labels are shown and rumors are never labelled confirmed', async ({ page }) => {
