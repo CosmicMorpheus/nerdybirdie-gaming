@@ -31,8 +31,8 @@
     ],
     "platformNote": null,
     "gameVersion": null,
-    "videoIds": [
-      "fixture-video-1"
+    "mapPinIds": [
+      "gta-vi:map:fx-card-1"
     ],
     "objectiveIds": [],
     "status": "published"
@@ -69,7 +69,7 @@
     ],
     "platformNote": null,
     "gameVersion": null,
-    "videoIds": [],
+    "mapPinIds": [],
     "objectiveIds": [],
     "status": "published"
   },
@@ -105,7 +105,7 @@
     ],
     "platformNote": null,
     "gameVersion": null,
-    "videoIds": [],
+    "mapPinIds": [],
     "objectiveIds": [],
     "status": "published"
   },
@@ -141,7 +141,7 @@
     ],
     "platformNote": null,
     "gameVersion": null,
-    "videoIds": [],
+    "mapPinIds": [],
     "objectiveIds": [],
     "status": "published"
   },
@@ -179,7 +179,7 @@
     ],
     "platformNote": null,
     "gameVersion": null,
-    "videoIds": [],
+    "mapPinIds": [],
     "objectiveIds": [],
     "status": "published"
   },
@@ -217,7 +217,7 @@
     ],
     "platformNote": null,
     "gameVersion": null,
-    "videoIds": [],
+    "mapPinIds": [],
     "objectiveIds": [],
     "status": "published"
   },
@@ -253,7 +253,7 @@
     ],
     "platformNote": null,
     "gameVersion": null,
-    "videoIds": [],
+    "mapPinIds": [],
     "objectiveIds": [],
     "status": "draft"
   }

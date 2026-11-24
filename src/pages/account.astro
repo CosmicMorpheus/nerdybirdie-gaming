@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import AccountPanel from '../islands/AccountPanel';
+---
+<Base title="Account" description="Sign in to sync your guide progress across devices. Optional." noindex>
+  <div class="wrap narrow">
+    <h1>Account</h1>
+    <AccountPanel client:load />
+  </div>
+</Base>
+<style> h1 { padding-top: 28px; } .narrow { max-width: 760px; } </style>

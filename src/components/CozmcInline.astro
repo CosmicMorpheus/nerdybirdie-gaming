@@ -1,10 +1,11 @@
 ---
 import CommunityLinks from './CommunityLinks.astro';
+import { BRAND } from '../config';
 interface Props { text?: string }
 const { text = 'Stuck on one? Ask the community.' } = Astro.props;
 ---
 <aside class="cozmc cz-inline" aria-label="COZMC community">
-  <p><strong>COZMC</strong> · {text}</p>
+  <p class="lead-in"><img src={BRAND.cozmcMascotFist} alt="" width="40" height="40" loading="lazy" decoding="async" /><span><strong>COZMC</strong> · {text}</span></p>
   <div class="links"><CommunityLinks size="compact" discordLabel="Join the Discord" siteLabel="cozmc.us" /></div>
 </aside>
 
@@ -12,6 +13,8 @@ const { text = 'Stuck on one? Ask the community.' } = Astro.props;
   .cz-inline { display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap;
     background: var(--cz-space); border: 1px solid var(--cz-line); border-radius: 14px; padding: 16px 20px; }
   p { margin: 0; color: var(--cz-soft); }
+  .lead-in { display: flex; align-items: center; gap: 12px; }
+  .lead-in img { width: 40px; height: 40px; flex: none; }
   strong { color: var(--cz-coral); }
   .links { display: flex; gap: 10px; flex-wrap: wrap; }
   .links :global(.cz-btn) { min-height: 44px; padding: 0 16px; font-size: 15px; }

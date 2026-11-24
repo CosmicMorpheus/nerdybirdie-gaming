@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import ProgressManager from '../islands/ProgressManager';
-import { GUIDES_CONTEXT } from '../islands/Hud';
+import { GUIDES_CONTEXT } from '../lib/progress/contexts';
 import { games, getPlatform, publicEntries, publicObjectives } from '../lib/content/load';
 import { contextKey } from '../lib/progress/model';
 const game = games[0]!;

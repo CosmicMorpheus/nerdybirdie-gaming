@@ -1,1 +1,67 @@
-[]
+[
+  {
+    "id": "gtaseriesvideos-cards-ltbw8b0dqha",
+    "url": "https://www.youtube.com/watch?v=LTbw8B0DQHA",
+    "title": "Collectible card locations (GTA Series Videos)",
+    "creator": "GTA Series Videos",
+    "channelUrl": "https://www.youtube.com/@GTASeriesVideos",
+    "spoilerLevel": "none",
+    "status": "review",
+    "availability": "unknown",
+    "checkedAt": null,
+    "notes": "Link and timestamps supplied by the site owner (2026-11-24), who reports the creator's chapter list puts the silver Pricilla Pace card at 0:49 and the gold MonaLi$a card at 1:29. Not yet opened by us: YouTube is blocked in the build environment. Map match is by card name and variant only (Open GTA 6 Map: collectible-card-086, collectible-card-087); confirm the locations match on screen before approving.",
+    "moments": [
+      {
+        "target": "gta-vi:map:collectible-card-086",
+        "start": 49,
+        "label": "Jack of Hearts card: Pricilla Pace (Silver)",
+        "verified": false
+      },
+      {
+        "target": "gta-vi:map:collectible-card-087",
+        "start": 89,
+        "label": "Jack of Hearts card: MonaLi$a (Gold)",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "id": "jaydunna-weapons-dtxd4m4qomy",
+    "url": "https://www.youtube.com/watch?v=dTXD4m4qomY",
+    "title": "Weapons and chapter tips (Jay Dunna)",
+    "creator": "Jay Dunna",
+    "channelUrl": "https://www.youtube.com/watch?v=dTXD4m4qomY",
+    "spoilerLevel": "minor",
+    "status": "review",
+    "availability": "unknown",
+    "checkedAt": null,
+    "notes": "Supplied by the site owner: the description indexes a weapon segment at 14:10. Not yet watched. Surrounding chapter material may spoil the story; check the segment, record which weapon(s) it shows and link them to map pins or entries. channelUrl is a placeholder (the video URL) until the channel link is confirmed.",
+    "moments": []
+  },
+  {
+    "id": "darkviperau-day4-2936019533",
+    "url": "https://www.twitch.tv/videos/2936019533",
+    "title": "GTA VI stream archive, day 4 (DarkViperAU)",
+    "creator": "DarkViperAU",
+    "channelUrl": "https://www.twitch.tv/darkviperau",
+    "spoilerLevel": "major",
+    "status": "review",
+    "availability": "unknown",
+    "checkedAt": null,
+    "notes": "Supplied by the site owner. A full broadcast: find a specific moment, confirm playback and the time, and link it to one objective before approving. Twitch VODs can expire; prefer a highlight or a YouTube upload if one exists.",
+    "moments": []
+  },
+  {
+    "id": "nahvwz-early-weapon-7711078016968822046",
+    "url": "https://www.tiktok.com/@nahvwz/video/7711078016968822046",
+    "title": "Early-game weapon location (TikTok, @nahvwz)",
+    "creator": "@nahvwz",
+    "channelUrl": "https://www.tiktok.com/@nahvwz",
+    "spoilerLevel": "none",
+    "status": "review",
+    "availability": "unknown",
+    "checkedAt": null,
+    "notes": "Found via a secondary index (per the site owner's brief). Playback and the location claim are unverified. Check the original post and the in-game location before linking it.",
+    "moments": []
+  }
+]

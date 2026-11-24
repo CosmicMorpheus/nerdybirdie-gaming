@@ -4,6 +4,11 @@ Newest first. "Proposed" means waiting for the founder; only "Approved" decision
 
 | Date | Decision | Status | Notes |
 |---|---|---|---|
+| 2026-11-24 | Map data: Open GTA 6 Map @ d8609016 (CC BY 4.0), location records + traced geometry only; our own drawing; no tiles, pins, screenshots or game art | Done | License read at that revision; credit shown on the map |
+| 2026-11-24 | All imported pins labelled "Unconfirmed · community map data" (single source). Chance spawns/pickups (vehicle, weapon, random event) kept in the review queue, not pinned or counted | Done | Founder's evidence rule: exact spawns need gameplay evidence or independent corroboration |
+| 2026-11-24 | Supplied videos (GTA Series Videos, Jay Dunna, DarkViperAU, @nahvwz) held in review; shown labelled on the preview only | Done | YouTube/Twitch/TikTok blocked in the build environment, so none could be watched |
+| 2026-11-24 | Account sync built on Supabase (magic-link sign-in, RLS), off until configured | Proposed | Needs founder to create the project (docs/ACCOUNTS.md) |
+| 2026-11-24 | New brand assets: round Nerdy Birdie logo (header, footer, favicon), COZMC wordmark and mascots, "Brick by Brick" banner | Done | Masters kept unedited in assets/brand/supplied-2026-11-24/ |
 | 2026-11-24 | Guide content is one entry list (`entries.json`) with per-entry sources, check dates and Confirmed/Unconfirmed/Rumor; replaces the guide-with-steps model, which only ever held test data | Done | Founder spec for content types and fields |
 | 2026-11-24 | First content pass uses Rockstar's official pages only (6 entries) | Done | IGN pages couldn't be reached from this environment by any route (network proxy and fetch tool both refuse ign.com); nothing was written from memory or search snippets |
 | 2026-11-24 | Progress stays browser-only; account saving documented, not faked | Proposed | No login or database exists to reuse; needs a founder decision on a provider (docs/ACCOUNTS.md). Merge rule built and tested. |

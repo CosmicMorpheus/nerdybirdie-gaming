@@ -8,13 +8,17 @@ interface Props {
   gameId: string;
   platforms: { id: string; shortLabel: string; objectiveNoun: string; objectiveIds: string[] }[];
   guideEntryIds: string[];
+  /** Number of trackable map pins (the map's own denominator). */
+  mapTotal: number;
+  mapHref: string;
   trackerHref: string;
   guidesHref: string;
 }
-export const GUIDES_CONTEXT = 'guides';
+export { GUIDES_CONTEXT } from '../lib/progress/contexts';
+import { GUIDES_CONTEXT, MAP_CONTEXT } from '../lib/progress/contexts';
 
 /** "Player 1" status: rank, level, XP bar and checkpoints for one game. Everything counted is verified content only. */
-export default function Hud({ gameId, platforms, guideEntryIds, trackerHref, guidesHref }: Props) {
+export default function Hud({ gameId, platforms, guideEntryIds, trackerHref, guidesHref, mapTotal, mapHref }: Props) {
   const { progress, ready } = useProgress();
   const platform = platforms.find((p) => p.id === progress.prefs.platformByGame[gameId]) ?? platforms[0]!;
   const ach = tally(platform.objectiveIds, progress.contexts[contextKey(gameId, platform.id)]?.completed ?? {});
@@ -23,6 +27,8 @@ export default function Hud({ gameId, platforms, guideEntryIds, trackerHref, gui
     ...(progress.contexts[contextKey(gameId, platform.id)]?.completed ?? {}),
     ...(progress.contexts[contextKey(gameId, GUIDES_CONTEXT)]?.completed ?? {}),
   });
+  const mapDone = Object.keys(progress.contexts[contextKey(gameId, MAP_CONTEXT)]?.completed ?? {}).length;
+  const mp = { done: Math.min(mapDone, mapTotal), total: mapTotal, percent: mapTotal ? Math.floor((Math.min(mapDone, mapTotal) / mapTotal) * 100) : null };
   const rank = rankFor(all.percent);
   const next = nextRank(all.percent);
   const meter = (label: string, t: typeof ach, href: string) => (
@@ -62,6 +68,7 @@ export default function Hud({ gameId, platforms, guideEntryIds, trackerHref, gui
       <div class="hud-meters">
         {meter(`${platform.objectiveNoun}`, ach, trackerHref)}
         {meter('Guide entries', gd, guidesHref)}
+        {meter('Map finds', mp, mapHref)}
       </div>
     </div>
   );

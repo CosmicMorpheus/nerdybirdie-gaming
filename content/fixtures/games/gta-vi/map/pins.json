@@ -1,0 +1,120 @@
+{
+ "provenance": {
+  "source": "Test fixture",
+  "author": "test",
+  "repo": "https://example.com/fixture-map",
+  "revision": "fixture",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "credit": "Test fixture map data",
+  "importedAt": "2026-11-24T00:00:00Z",
+  "checkedAt": "2026-11-24",
+  "changes": "test"
+ },
+ "categories": [
+  {
+   "id": "card",
+   "label": "Collectible cards",
+   "colour": "#ffd166",
+   "group": "Collectibles",
+   "trackable": true
+  },
+  {
+   "id": "weapon",
+   "label": "Weapon pickups",
+   "colour": "#e63946",
+   "group": "Crime",
+   "trackable": true
+  },
+  {
+   "id": "shop",
+   "label": "Shops",
+   "colour": "#90e0ef",
+   "group": "Places",
+   "trackable": false
+  }
+ ],
+ "pins": [
+  {
+   "id": "gta-vi:map:fx-card-1",
+   "src": "fx-card-1",
+   "kind": "card",
+   "name": "Fixture card one",
+   "type": "card",
+   "x": 500,
+   "y": 480,
+   "area": null,
+   "region": "vice",
+   "note": "Test data only.",
+   "evidence": "community",
+   "trackable": true,
+   "exact": true,
+   "spoiler": "none"
+  },
+  {
+   "id": "gta-vi:map:fx-card-2",
+   "src": "fx-card-2",
+   "kind": "card",
+   "name": "Fixture card two",
+   "type": "card",
+   "x": 520,
+   "y": 500,
+   "area": null,
+   "region": "vice",
+   "note": "",
+   "evidence": "community",
+   "trackable": true,
+   "exact": true,
+   "spoiler": "none"
+  },
+  {
+   "id": "gta-vi:map:fx-card-3",
+   "src": "fx-card-3",
+   "kind": "card",
+   "name": "Fixture card three",
+   "type": "card",
+   "x": 300,
+   "y": 600,
+   "area": null,
+   "region": "keys",
+   "note": "",
+   "evidence": "community",
+   "trackable": true,
+   "exact": true,
+   "spoiler": "none"
+  },
+  {
+   "id": "gta-vi:map:fx-weapon-1",
+   "src": "fx-weapon-1",
+   "kind": "weapon",
+   "name": "Fixture weapon spawn",
+   "type": "weapon",
+   "x": 510,
+   "y": 470,
+   "area": null,
+   "region": "vice",
+   "note": "",
+   "evidence": "community",
+   "trackable": true,
+   "exact": false,
+   "spoiler": "none"
+  },
+  {
+   "id": "gta-vi:map:fx-shop-1",
+   "src": "fx-shop-1",
+   "kind": "shop",
+   "name": "Fixture shop",
+   "type": "shop",
+   "x": 490,
+   "y": 490,
+   "area": null,
+   "region": "vice",
+   "note": "",
+   "evidence": "community",
+   "trackable": false,
+   "exact": true,
+   "spoiler": "none"
+  }
+ ],
+ "retired": []
+}

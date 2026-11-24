@@ -1,0 +1,14 @@
+{
+  "name": "Open GTA 6 Map",
+  "author": "fbritoferreira and contributors",
+  "repo": "https://github.com/fbritoferreira/gta6",
+  "revision": "d8609016b8a883988d7abac4b6b1b1d98708ca70",
+  "rawBase": "https://raw.githubusercontent.com/fbritoferreira/gta6",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "credit": "Map data from Open GTA 6 Map (fbritoferreira), CC BY 4.0",
+  "rightsNotes": "Data and traced geometry are CC BY 4.0. Rockstar's map art, game screenshots, and the project's tiles and pins are NOT imported.",
+  "checkedAt": "2026-11-24",
+  "variableKinds": ["event", "vehicle", "weapon"],
+  "spoilerKinds": ["gang", "payday", "bank"]
+}

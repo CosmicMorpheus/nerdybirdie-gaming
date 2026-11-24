@@ -46,7 +46,8 @@ describe('progress updates', () => {
     p = setPrefs(p, { spoilerMode: 'minor' });
     expect(Object.keys(p.contexts[X]!.completed)).toEqual(['gta-vi:a']);
     p = resetContext(p, X);
-    expect(p.contexts[X]).toBeUndefined();
+    expect(p.contexts[X]!.completed).toEqual({});
+    expect(Object.keys(p.contexts[X]!.unchecked)).toEqual(['gta-vi:a']); // remembered as a deliberate untick
     expect(p.contexts[P]!.completed['gta-vi:b']).toBeTruthy();
     expect(p.prefs.spoilerMode).toBe('minor');
   });
@@ -75,6 +76,17 @@ describe('migrate', () => {
     expect(migrate({})).toMatchObject({ ok: false, reason: 'malformed' });
     expect(migrate({ schemaVersion: 99 })).toMatchObject({ ok: false, reason: 'newer' });
   });
+  it('migrates a v1 save to v2 without losing anything', () => {
+    const v1 = { schemaVersion: 1, contexts: { [X]: { completed: { 'gta-vi:a': '2026-11-20T00:00:00Z' }, bookmarks: [], notes: {} } }, prefs: { spoilerMode: 'minor', platformByGame: {} }, updatedAt: '2026-11-20T00:00:00Z' };
+    const m = migrate(v1);
+    expect(m.ok && m.progress.schemaVersion).toBe(2);
+    expect(m.ok && m.progress.contexts[X]!.completed).toEqual(v1.contexts[X].completed);
+    expect(m.ok && m.progress.prefs.spoilerMode).toBe('minor');
+  });
+  it('rejects unsafe resume links', () => {
+    const m = migrate({ schemaVersion: 2, prefs: { resume: { href: '//evil.example', label: 'x', at: '2026-11-20T00:00:00Z' } } });
+    expect(m.ok && m.progress.prefs.resume).toBeNull();
+  });
   it('drops bad entries one by one and keeps the good ones', () => {
     const m = migrate({
       schemaVersion: 1,
@@ -89,8 +101,8 @@ describe('migrate', () => {
     expect(m.ok).toBe(true);
     if (!m.ok) return;
     expect(Object.keys(m.progress.contexts)).toEqual([X]);
-    expect(m.progress.contexts[X]).toEqual({ completed: { 'gta-vi:a': '2026-11-20T00:00:00Z' }, bookmarks: ['gta-vi:a'], notes: { 'gta-vi:a': 'hi' } });
-    expect(m.progress.prefs).toEqual({ spoilerMode: 'safe', platformByGame: { 'gta-vi': 'ps5' } });
+    expect(m.progress.contexts[X]).toEqual({ completed: { 'gta-vi:a': '2026-11-20T00:00:00Z' }, bookmarks: ['gta-vi:a'], notes: { 'gta-vi:a': 'hi' }, unchecked: {} });
+    expect(m.progress.prefs).toMatchObject({ spoilerMode: 'safe', platformByGame: { 'gta-vi': 'ps5' }, resume: null });
   });
 });
 
@@ -121,11 +133,11 @@ describe('store', () => {
     expect(s.data[RECOVERY_KEY]).toBe('{not json');
   });
   it('data from a newer version is never overwritten', () => {
-    const s = memory({ [STORAGE_KEY]: JSON.stringify({ schemaVersion: 2 }) });
+    const s = memory({ [STORAGE_KEY]: JSON.stringify({ schemaVersion: 3 }) });
     const r = loadProgress(s);
     expect(r).toMatchObject({ status: 'newer', canSave: false });
     expect(saveProgress(s, emptyProgress(), r.canSave)).toEqual({ ok: false, reason: 'blocked' });
-    expect(s.data[STORAGE_KEY]).toBe(JSON.stringify({ schemaVersion: 2 }));
+    expect(s.data[STORAGE_KEY]).toBe(JSON.stringify({ schemaVersion: 3 }));
   });
 });
 

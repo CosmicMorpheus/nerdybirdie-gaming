@@ -14,7 +14,8 @@
     "test": "vitest run",
     "e2e": "npm run build && npm run build:test && playwright test --trace off",
     "verify": "npm run check && npm test && npm run e2e",
-    "build:test": "NBG_FIXTURES=1 astro build"
+    "build:test": "NBG_FIXTURES=1 astro build",
+    "import:map": "node scripts/import-map.mjs"
   },
   "dependencies": {
     "@astrojs/preact": "6.1.6",
@@ -23,7 +24,9 @@
     "@fontsource/pixelify-sans": "5.3.0",
     "@fontsource/press-start-2p": "5.3.0",
     "@fontsource/space-grotesk": "5.3.0",
+    "@supabase/supabase-js": "2.119.0",
     "astro": "7.4.13",
+    "leaflet": "1.9.4",
     "preact": "11.2.0",
     "zod": "4.6.7"
   },
@@ -31,6 +34,7 @@
     "@astrojs/check": "0.9.12",
     "@axe-core/playwright": "4.14.0",
     "@playwright/test": "1.63.0",
+    "@types/leaflet": "1.9.20",
     "@types/node": "22.20.5",
     "playwright-core": "1.63.0",
     "typescript": "6.0.3",

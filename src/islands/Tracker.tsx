@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
 import type { PublicObjective } from '../lib/content/schema';
-import { contextKey, emptyContext, resetContext, setBookmark, setCompleted, setNote, setPrefs } from '../lib/progress/model';
+import { contextKey, emptyContext, resetContext, setBookmark, setCompleted, setNote, setPrefs, setResume } from '../lib/progress/model';
 import { formatTally, progressFor } from '../lib/progress/totals';
 import { CHECKPOINTS, crossedCheckpoint, nextRank, nextUp, rankFor } from '../lib/progress/ranks';
 import { search } from '../lib/search';
@@ -24,7 +24,8 @@ type Protected = Record<string, { title: string; summary: string }>;
 
 export default function Tracker({ gameId, gameShortTitle, platforms, categories, objectives, protectedUrl }: Props) {
   const state = useProgress();
-  const { progress, update, ready } = state;
+  const { progress, update, remember, ready } = state;
+  useEffect(() => { if (ready) remember((s) => setResume(s, { href: location.pathname, label: `${gameShortTitle} achievements & trophies`, at: new Date().toISOString() })); }, [ready]);
 
   const savedPlatform = progress.prefs.platformByGame[gameId];
   const platform = platforms.find((p) => p.id === savedPlatform) ?? platforms[0]!;

@@ -1,6 +1,6 @@
 import { contextKey } from '../lib/progress/model';
 import { tally } from '../lib/progress/totals';
-import { GUIDES_CONTEXT } from './Hud';
+import { GUIDES_CONTEXT } from '../lib/progress/contexts';
 import { useProgress } from './useProgress';
 
 interface Props { gameId: string; base: string; categories: { id: string; label: string; blurb: string; entryIds: string[] }[] }

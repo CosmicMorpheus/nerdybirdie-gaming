@@ -36,11 +36,11 @@ export function getStorage(): KV | null {
   }
 }
 
-export function loadProgress(storage: KV | null): LoadResult {
+export function loadProgress(storage: KV | null, key: string = STORAGE_KEY): LoadResult {
   if (!storage) return { progress: emptyProgress(), status: 'unavailable', canSave: false };
   let raw: string | null;
   try {
-    raw = storage.getItem(STORAGE_KEY);
+    raw = storage.getItem(key);
   } catch {
     return { progress: emptyProgress(), status: 'unavailable', canSave: false };
   }
@@ -55,7 +55,7 @@ export function loadProgress(storage: KV | null): LoadResult {
   if (m.ok) return { progress: m.progress, status: 'ok', canSave: true };
   if (m.reason === 'newer') return { progress: emptyProgress(), status: 'newer', canSave: false };
   try {
-    storage.setItem(RECOVERY_KEY, raw);
+    storage.setItem(key === STORAGE_KEY ? RECOVERY_KEY : `${key}:unreadable`, raw);
   } catch {
     // Couldn't keep a copy, so don't overwrite the original either.
     return { progress: emptyProgress(), status: 'recovered', canSave: false };
@@ -65,11 +65,11 @@ export function loadProgress(storage: KV | null): LoadResult {
 
 export type SaveResult = { ok: true } | { ok: false; reason: 'unavailable' | 'quota' | 'blocked' };
 
-export function saveProgress(storage: KV | null, p: Progress, canSave = true): SaveResult {
+export function saveProgress(storage: KV | null, p: Progress, canSave = true, key: string = STORAGE_KEY): SaveResult {
   if (!canSave) return { ok: false, reason: 'blocked' };
   if (!storage) return { ok: false, reason: 'unavailable' };
   try {
-    storage.setItem(STORAGE_KEY, JSON.stringify(p));
+    storage.setItem(key, JSON.stringify(p));
     return { ok: true };
   } catch (e) {
     const name = (e as { name?: string })?.name ?? '';
@@ -86,3 +86,7 @@ export const SAVE_MESSAGES: Record<Exclude<SaveResult, { ok: true }>['reason'] |
   recovered:
     "We couldn't read your saved progress, so we started fresh. A copy of the old data was kept in this browser; ask in Discord if you need it back.",
 };
+
+/** Per-account copy on this device, so two people sharing a browser never see each other's progress. */
+export const accountKey = (userId: string) => `${STORAGE_KEY}:u:${userId}`;
+export const MERGE_DONE_KEY = (userId: string) => `${STORAGE_KEY}:merged:${userId}`;

@@ -1,34 +1,39 @@
-# Account-based progress: what's needed
+# Account-based progress
 
-**Status (24 Nov 2026): not available.** The project has no login, user accounts or database, so progress is saved in each
-visitor's browser only. The site says so on My Progress and in the "Saved on this device" status shown after each change.
-Nothing claims progress is saved to an account.
+**Status (24 Nov 2026): built, switched off.** The integration is in the code and tested against an in-memory stand-in for the
+database. It turns on when two public settings are present at build time. Until then the site runs guest-only and says
+progress is saved on this device only (My Progress, Account page, and the save status after each change).
 
-The cozmc.us site's only sign-in is an Algorand wallet. Guide progress must not depend on wallets, Discord, tokens or purchases,
-so that can't be reused. There's no existing login to build on.
+## What you need to do to switch it on
 
-## What account saving needs
+1. Create a free project at supabase.com (a new vendor account, your decision). In **Authentication → URL configuration**, add
+   the site URLs (`https://nerdybirdie-gaming-preview.netlify.app` now, the production domain later) as redirect URLs.
+2. In the project's SQL editor, run `supabase/migrations/20261124000000_progress.sql`. It creates the `progress` table and the
+   row-level security rules that make each player's progress private.
+3. In Netlify → Site configuration → Environment variables, set `PUBLIC_SUPABASE_URL` and `PUBLIC_SUPABASE_ANON_KEY` (both
+   public by design; see `.env.example`). Redeploy.
+4. Update the Privacy page to say an email address and a progress document are stored, and how to delete an account.
 
-1. **A sign-in provider.** It needs to verify who a user is, for example email magic links or Google/Apple/Discord sign-in, with Discord optional and never required.
-2. **A database table** holding one progress document per user:
-   `progress(user_id uuid primary key, data jsonb, schema_version int, updated_at timestamptz)`.
-3. **Access rules enforced by the server**, so one user can never read or change another's row (for example Postgres row-level
-   security: `using (auth.uid() = user_id) with check (auth.uid() = user_id)`). This is what makes progress private.
-   Hiding things in the browser is not enough.
-4. **A privacy page update** saying what's stored (an email address, plus the progress document) and how to delete the account.
+Sign-in is by emailed magic link (no password, no Discord, no wallet). Supabase's built-in email sender has low rate limits;
+for real traffic, set up custom SMTP in Supabase.
 
-A hosted service such as Supabase provides 1–3 together, with a free tier, and works with a static Netlify site. Firebase or Clerk
-plus a database are alternatives. Choosing one is a founder decision: it involves a new vendor account, possible costs and storing personal data.
+## How it works
 
-## What's already built for it
+- **Storage:** one JSON document per player (`progress.data`) with a `version` number.
+- **Privacy:** row-level security (`auth.uid() = user_id`) on every operation. Signed-out visitors have no access. Isolation is enforced by the database, not the browser.
+- **Saving:** every change is saved on the device at once, then synced to the account after 0.7 s. The status reads "Saving to your account…",
+  then "✓ Saved to your account", or "Couldn't sync yet: saved on this device, retrying". Retries back off 2 s, 5 s, 15 s, 60 s, and run again when the browser comes back online.
+- **Two devices at once:** each write checks the version it read. If another device wrote in between, it pulls again, merges and retries.
+  The merge is per item, and the newest action wins, so unrelated changes on two devices are both kept, and an untick sticks (`src/lib/progress/merge.ts → syncMerge`).
+- **Guest progress:** after signing in on a device that has guest progress, the Account page offers a one-time merge. Account data
+  is preserved: guest ticks are added only for items the account has never ticked or unticked (`mergeGuestIntoAccount`).
+- **Shared devices:** each account's copy is kept under its own key in the browser, separate from guest progress.
+- **Resume:** the last guide section, tracker or map view (filters, zoom, selected pin) is part of the document, so "Continue where you left off" follows the player.
 
-- Progress is one versioned JSON document (`src/lib/progress/model.ts`), so it can go into a database as one row.
-- `src/lib/progress/merge.ts` holds the tested guest-to-account merge rule. It never unticks anything, keeps the earliest
-  completion time, combines saved items, and lets the account's notes and settings win on conflicts.
-- Save feedback ("Saved on this device" / "Couldn't save") is in place and would gain "Synced to your account".
+## What has and hasn't been verified
 
-## Acceptance criteria once accounts exist
-
-- A signed-in user checks an item, signs out, signs back in on another device, and the item is still checked.
-- One user cannot see or change another user's progress (tested against the server rules, not just the UI).
-- Guest progress on a device is offered as a merge after sign-in, using the rule above. Nothing is overwritten silently.
+| Check | Status |
+|---|---|
+| Merge and sync rules: newest action wins, unticks stick, simultaneous devices, guest merge preserves the account | Unit tests (`tests/unit/merge.test.ts`, `sync.test.ts`) against an in-memory server with version checks |
+| Guest-only mode and honest labelling | Browser tests |
+| Real sign-in, a real second browser resuming, and RLS blocking another user | **Not verified.** Needs the Supabase project above. Once it exists: sign in as user A and tick an item; sign in as A in another browser and confirm the tick; sign in as B and confirm A's tick is absent; with B's session, try reading A's row through the API and confirm it's refused. |

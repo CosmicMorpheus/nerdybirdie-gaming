@@ -1,0 +1,33 @@
+---
+/** Editor review queue: preview builds only (never built once the site is indexable). */
+import Base from '../layouts/Base.astro';
+import { INDEXABLE } from '../config';
+import { games, reviewQueue } from '../lib/content/load';
+import { fmtTime } from '../lib/video';
+const game = games[0]!;
+const q = reviewQueue(game.id);
+const byKind = Object.entries(q.chancePins.reduce((m, p) => ({ ...m, [p.kind]: (m[p.kind] ?? 0) + 1 }), {} as Record<string, number>));
+if (INDEXABLE) return Astro.redirect('/404/');
+---
+<Base title="Review queue" description="Editor review queue." noindex>
+  <div class="wrap prose">
+    <h1>Review queue</h1>
+    <p class="muted">Editors only, preview builds only. Items here aren't shown as verified. Videos marked "review" appear on the preview with a "Not yet checked" label and are hidden on the live site.</p>
+    <h2>Videos to check ({q.videos.length})</h2>
+    <ol>
+      {q.videos.map((v) => (
+        <li>
+          <p><strong>{v.title}</strong> · {v.creator} · <a href={v.url} target="_blank" rel="noopener">{v.url}</a></p>
+          <p class="small muted">{v.notes}</p>
+          {v.moments.length ? <ul>{v.moments.map((m) => <li class="small">{m.start !== null ? fmtTime(m.start) : 'no time'}: {m.label} → <code>{m.target}</code> {m.verified ? '✓' : '(unverified)'}</li>)}</ul> : <p class="small">No moments linked yet.</p>}
+          <p class="small">To approve: watch it, set each moment's <code>verified</code> to true, set <code>availability</code> to "available", <code>checkedAt</code> to today and <code>status</code> to "approved" in <code>content/games/gta-vi/videos.json</code>.</p>
+        </li>
+      ))}
+    </ol>
+    <h2>Chance spawns and pickups without an exact pin ({q.chancePins.length})</h2>
+    <p class="small muted">These come from community map data. Exact spawns need gameplay evidence or a second independent source before they get a pin, so they aren't drawn on the map or counted.</p>
+    <ul>{byKind.map(([k, n]) => <li>{k}: {n}</li>)}</ul>
+    <h2>Draft guide entries ({q.draftEntries.length})</h2>
+    <ul>{q.draftEntries.map((e) => <li>{e.title} <code>{e.id}</code></li>)}</ul>
+  </div>
+</Base>

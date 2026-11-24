@@ -1,14 +1,68 @@
 [
   {
     "id": "fixture-video-1",
-    "provider": "youtube",
-    "youtubeId": "FIXTURE0001",
-    "safeTitle": "Fixture video (test data)",
+    "url": "https://www.youtube.com/watch?v=FIXTURE0001",
+    "title": "Fixture video (test data)",
     "creator": "Fixture Creator",
     "channelUrl": "https://example.com/fixture-channel",
-    "startSeconds": 42,
     "spoilerLevel": "none",
-    "embedAllowed": true,
-    "checkedAt": "2026-11-24"
+    "status": "approved",
+    "availability": "available",
+    "checkedAt": "2026-11-24",
+    "notes": "test",
+    "moments": [
+      {
+        "target": "gta-vi:entry:fx-tip-1",
+        "start": 42,
+        "label": "Fixture moment",
+        "verified": true
+      },
+      {
+        "target": "gta-vi:map:fx-card-1",
+        "start": 7,
+        "label": "Fixture card moment",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "fixture-video-twitch",
+    "url": "https://www.twitch.tv/videos/1234567890",
+    "title": "Fixture Twitch VOD",
+    "creator": "Fixture Streamer",
+    "channelUrl": "https://example.com/fixture-streamer",
+    "spoilerLevel": "major",
+    "status": "approved",
+    "availability": "available",
+    "checkedAt": "2026-11-24",
+    "notes": "test",
+    "moments": [
+      {
+        "target": "gta-vi:entry:fx-walk-1",
+        "start": 3723,
+        "label": "Fixture spoiler moment",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "fixture-video-review",
+    "url": "https://www.tiktok.com/@fixture/video/1234567890123456789",
+    "title": "Fixture TikTok awaiting review",
+    "creator": "Fixture TikToker",
+    "channelUrl": "https://example.com/fixture-tiktok",
+    "spoilerLevel": "none",
+    "status": "review",
+    "availability": "unknown",
+    "checkedAt": null,
+    "notes": "test",
+    "moments": [
+      {
+        "target": "gta-vi:entry:fx-tip-2",
+        "start": null,
+        "label": "Fixture unreviewed moment",
+        "verified": false
+      }
+    ]
   }
 ]

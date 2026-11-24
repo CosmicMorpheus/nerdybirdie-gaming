@@ -25,15 +25,25 @@ export const CONTACT_EMAIL = '';
 export const INDEXABLE = import.meta.env.PUBLIC_INDEXABLE === 'true';
 
 /**
- * Logo files. To swap in final logos, replace the files at these paths in public/ (same names),
- * or point these at new files. Keep the original master in assets/brand/ untouched.
+ * Brand images. Masters supplied by the founder on 2026-11-24 live in assets/brand/supplied-2026-11-24/ (never edited);
+ * these are web-sized copies. To swap one, replace the file at the same path or point the setting at a new file.
  */
 export const BRAND = {
-  /** Small square mark in the header (shown at 40px; supply at least 128×128). */
-  headerMark: '/brand/nerdy-birdie-128.webp',
-  /** Larger logo for the footer and About page (shown up to 240px; supply at least 512×512). */
-  fullLogo: '/brand/nerdy-birdie-512.webp',
-  footerLogo: '/brand/nerdy-birdie-256.webp',
-  /** COZMC wordmark in the community panel (shown 28px tall; supply about 272×72). */
-  cozmcLogo: '/brand/cozmc/cozmc-logo-272.png',
+  /** Round Nerdy Birdie logo: header (40px) and footer (96px). */
+  mark: { src: '/brand/nerdy-birdie-round-96.webp', src2x: '/brand/nerdy-birdie-round-192.webp' },
+  /** Large round logo for the About page. */
+  fullLogo: '/brand/nerdy-birdie-round-512.webp',
+  /** COZMC wordmark (912×241 master), shown 28–36px tall. */
+  cozmcWordmark: { src: '/brand/cozmc/cozmc-wordmark-36.webp', src2x: '/brand/cozmc/cozmc-wordmark-72.webp', ratio: 912 / 241 },
+  /** COZMC mascots (128px masters), shown at 64px. */
+  cozmcMascotWave: '/brand/cozmc/cozmc-mascot-wave.webp',
+  cozmcMascotFist: '/brand/cozmc/cozmc-mascot-fist.webp',
+  /** "Brick by Brick, WE Build." banner, cropped to the lettering. */
+  brickByBrick: { src: '/brand/brick-by-brick.webp', width: 1280, height: 155 },
 } as const;
+
+/** Videos still in the review queue are shown (clearly labelled) on preview builds only, never once the site is indexable. */
+export const SHOW_UNREVIEWED_MEDIA = !INDEXABLE;
+
+/** Hosts allowed to embed Twitch players (Twitch requires every host to be listed). Add the production domain at launch. */
+export const TWITCH_PARENTS = ['localhost', 'nerdybirdie-gaming-preview.netlify.app'] as const;

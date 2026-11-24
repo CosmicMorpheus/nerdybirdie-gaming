@@ -7,6 +7,7 @@ import fxEntries from '../../content/fixtures/games/gta-vi/entries.json';
 import fxVideos from '../../content/fixtures/games/gta-vi/videos.json';
 import realEntries from '../../content/games/gta-vi/entries.json';
 import realVideos from '../../content/games/gta-vi/videos.json';
+import realMap from '../../content/games/gta-vi/map/pins.json';
 import platforms from '../../content/platforms.json';
 import { validateGameBundle, isPublishable } from '../../src/lib/content/validate';
 import type { Platform } from '../../src/lib/content/schema';
@@ -83,5 +84,23 @@ describe('entries', () => {
     const vs = clone(fxVideos) as any[];
     vs[0].youtubeId = 'https://youtu.be/x';
     expect(() => validateGameBundle(fxGame, fxObjectives, P, fxEntries, vs)).toThrow();
+  });
+});
+
+describe('map snapshot and videos', () => {
+  it('every real video moment points at a real entry or map pin, and nothing unreviewed is approved', () => {
+    const pinIds = new Set((realMap as any).pins.map((p: any) => p.id));
+    const b = validateGameBundle(realGame, realObjectives, P, realEntries, realVideos, pinIds);
+    for (const v of b.videos) if (v.status === 'approved') expect(v.moments.every((m) => m.verified)).toBe(true);
+    expect(pinIds.has('gta-vi:map:collectible-card-086')).toBe(true);
+  });
+  it('snapshot records its source, revision and license; ids are unique and namespaced', () => {
+    const m = realMap as any;
+    expect(m.provenance.license).toBe('CC BY 4.0');
+    expect(m.provenance.revision).toMatch(/^[0-9a-f]{40}$/);
+    const ids = m.pins.map((p: any) => p.id);
+    expect(new Set(ids).size).toBe(ids.length);
+    expect(ids.every((id: string) => id.startsWith('gta-vi:map:'))).toBe(true);
+    expect(m.pins.every((p: any) => p.x >= 0 && p.x <= 1024 && p.y >= 0 && p.y <= 1024)).toBe(true);
   });
 });

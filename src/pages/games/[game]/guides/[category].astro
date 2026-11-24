@@ -2,7 +2,8 @@
 import Base from '../../../../layouts/Base.astro';
 import CozmcInline from '../../../../components/CozmcInline.astro';
 import EntryBrowser from '../../../../islands/EntryBrowser';
-import { games, publicEntries, videosFor } from '../../../../lib/content/load';
+import MapChecklist from '../../../../islands/MapChecklist';
+import { games, mapData, publicEntries, videosFor } from '../../../../lib/content/load';
 
 export function getStaticPaths() {
   return games.flatMap((game) => game.guideCategories.map((section, i) => ({
@@ -19,6 +20,9 @@ const entries = publicEntries(game.id).filter((e) => e.category === section.id);
     <p class="eyebrow">{game.shortTitle} guide</p>
     <h1>{section.label}</h1>
     <p class="lead muted">{section.blurb}</p>
+    {section.id === 'collectibles' && mapData(game.id) && (
+      <MapChecklist client:visible gameId={game.id} dataUrl={`/data/${game.id}/map.json`} mapHref={`/games/${game.id}/map/`} />
+    )}
     <EntryBrowser client:load gameId={game.id} categories={game.guideCategories} entries={entries} videos={videosFor(game.id)}
       protectedUrl={`/data/${game.id}/protected.json`} fixedCategory={section.id} />
     <nav class="after" aria-label="More sections">

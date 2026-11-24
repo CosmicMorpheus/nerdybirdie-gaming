@@ -91,7 +91,8 @@ test('video: nothing loads from YouTube until play is pressed; creator credited'
   await expect(page.locator('iframe')).toHaveCount(0);
   expect(yt).toEqual([]);
   await page.route(/youtube-nocookie/, (r) => r.fulfill({ body: '<html></html>', contentType: 'text/html' }));
-  await page.getByRole('button', { name: /Play video/ }).click();
+  await expect(page.getByRole('button', { name: /Play from 0:42/ })).toBeVisible();
+  await page.getByRole('button', { name: /Play from 0:42/ }).click();
   await expect(page.locator('iframe')).toHaveAttribute('src', /^https:\/\/www\.youtube-nocookie\.com\/embed\/FIXTURE0001\?autoplay=1&rel=0&start=42$/);
 });
 
@@ -117,4 +118,24 @@ test('home HUD counts achievements and guide entries', async ({ page }) => {
   await expect(hud.locator('.hud-meter', { hasText: 'Achievements' })).toContainText('1/7');
   await expect(hud.locator('.hud-meter', { hasText: 'Guide entries' })).toContainText('1/7'); // 7 entries in the test build
   await expect(hud).toContainText('14% complete'); // 2 of 14
+});
+
+test('spoiler videos hide their title until shown; Twitch embeds list this host as parent', async ({ page }) => {
+  await page.goto(G + 'walkthrough/');
+  const e = entry(page, 'fx-walk-1');
+  await e.getByRole('button', { name: /More details/ }).click();
+  await expect(e).not.toContainText('Fixture spoiler moment');
+  await e.getByRole('button', { name: /Show video/ }).click();
+  await expect(e).toContainText('Fixture spoiler moment');
+  await page.route(/player\.twitch\.tv/, (r) => r.fulfill({ body: '<html></html>', contentType: 'text/html' }));
+  await e.getByRole('button', { name: /Play from 1:02:03/ }).click();
+  await expect(e.locator('iframe')).toHaveAttribute('src', /^https:\/\/player\.twitch\.tv\/\?video=v1234567890&parent=localhost&parent=nerdybirdie-gaming-preview\.netlify\.app&autoplay=true&time=1h2m3s$/);
+});
+
+test('videos still in review are labelled on the preview, and the original link is always offered', async ({ page }) => {
+  await page.goto(G + 'tips/');
+  const e = entry(page, 'fx-tip-2');
+  await e.getByRole('button', { name: /More details/ }).click();
+  await expect(e.locator('.video-flag')).toContainText('Not yet checked');
+  await expect(e.getByRole('link', { name: /Watch on TikTok/ })).toHaveAttribute('href', 'https://www.tiktok.com/@fixture/video/1234567890123456789');
 });

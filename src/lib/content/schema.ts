@@ -142,7 +142,8 @@ export const Entry = z.strictObject({
   sources: z.array(EntrySource).min(1),
   platformNote: z.string().nullable(),
   gameVersion: z.string().nullable(),
-  videoIds: z.array(slug),
+  /** Map pins for this entry (gta-vi:map:...). Empty = no verified location yet, so "Show on map" is unavailable. */
+  mapPinIds: z.array(z.string().regex(/^[a-z0-9-]+:map:[a-z0-9-]+$/)),
   /** Related achievement/trophy ids in the tracker. */
   objectiveIds: z.array(z.string()),
   /** draft = hidden from the public site. */
@@ -150,19 +151,34 @@ export const Entry = z.strictObject({
 });
 export type Entry = z.infer<typeof Entry>;
 
-/** A YouTube video. Loaded only when the viewer presses play; always credited. */
+/**
+ * A creator video (YouTube, Twitch or TikTok). One record per video, with a separate start time ("moment")
+ * for each guide entry or map pin it shows. Nothing loads from the provider until the viewer presses play.
+ */
 export const Video = z.strictObject({
   id: slug,
-  provider: z.literal('youtube'),
-  youtubeId: z.string().regex(/^[A-Za-z0-9_-]{11}$/),
-  /** Spoiler-safe title we write; the creator's own title can be a spoiler. */
-  safeTitle: z.string().min(1),
+  /** Canonical link to the original (a single video, clip or post; never a channel or live stream). */
+  url: httpsUrl,
+  /** Our spoiler-safe title. The creator's own title can be a spoiler, so it isn't shown by default. */
+  title: z.string().min(1),
   creator: z.string().min(1),
   channelUrl: httpsUrl,
-  startSeconds: z.number().int().nonnegative().nullable(),
   spoilerLevel: SpoilerLevel,
-  embedAllowed: z.boolean(),
-  checkedAt: isoDate,
+  /** review = queued until someone opens it and checks it; approved = shown; rejected = never shown. */
+  status: z.enum(['review', 'approved', 'rejected']),
+  availability: z.enum(['available', 'unavailable', 'unknown']),
+  /** Date someone last watched it and confirmed the moments. null until reviewed. */
+  checkedAt: isoDate.nullable(),
+  /** Editor notes: where the link came from, what still needs checking. Not shown publicly. */
+  notes: z.string(),
+  moments: z.array(z.strictObject({
+    /** A guide entry id (gta-vi:entry:...) or map pin id (gta-vi:map:...). */
+    target: z.string().regex(/^[a-z0-9-]+:(entry|map):[a-z0-9-]+$/),
+    start: z.number().int().nonnegative().nullable(),
+    label: z.string().min(1),
+    /** True once someone has watched this moment and confirmed it shows the target. */
+    verified: z.boolean(),
+  })),
 });
 export type Video = z.infer<typeof Video>;
 

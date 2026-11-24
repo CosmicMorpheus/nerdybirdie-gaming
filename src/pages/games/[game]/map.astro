@@ -1,0 +1,26 @@
+---
+import Base from '../../../layouts/Base.astro';
+import MapView from '../../../islands/MapView';
+import { games, mapData, videosFor } from '../../../lib/content/load';
+export function getStaticPaths() { return games.filter((g) => mapData(g.id)).map((g) => ({ params: { game: g.id } })); }
+const game = games.find((g) => g.id === Astro.params.game)!;
+const videos = videosFor(game.id).filter((v) => v.moments.some((m) => m.target.includes(':map:')));
+---
+<Base title={`${game.shortTitle} map of Leonida`} current="map" description={`Interactive ${game.title} map: collectibles and activities you can mark as found, with search and filters. Spoiler-safe.`}>
+  <div class="wrap head">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/games/">Games</a> / <a href={`/games/${game.id}/`}>{game.shortTitle}</a> / <span aria-current="page">Map</span></nav>
+    <h1>Leonida map</h1>
+    <p class="muted">Tap a pin to see what it is and mark it found. Your finds are shared with the guide checklists. Every pin is community map data we haven't independently confirmed yet; each one says so.</p>
+  </div>
+  <div class="wrap-wide">
+    <MapView client:only="preact" gameId={game.id} dataUrl={`/data/${game.id}/map.json`} geometryUrl={`/data/${game.id}/geometry.json`} videos={videos} base={`/games/${game.id}/map/`} />
+  </div>
+</Base>
+<style>
+  .head { padding-bottom: 16px; }
+  .crumbs { font-size: 14px; color: var(--vc-muted); padding-top: 22px; }
+  h1 { font-size: clamp(30px, 4vw, 44px); margin: 6px 0; }
+  .head p { margin: 0; max-width: 75ch; }
+  .wrap-wide { max-width: 1600px; margin: 0 auto; padding: 0 var(--gutter); }
+  @media (max-width: 860px) { .wrap-wide { padding: 0; } }
+</style>

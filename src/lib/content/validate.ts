@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { parseVideoUrl } from '../video';
 import { Entry, Game, Objective, Platform, Video, type Entry as EntryT, type Objective as Obj, type Video as VideoT } from './schema';
 
 export interface GameBundle {
@@ -20,7 +21,7 @@ export function isPublishable(o: Pick<Obj, 'publicationStatus' | 'verificationSt
  * file fails the build instead of reaching the site.
  */
 export function validateGameBundle(
-  rawGame: unknown, rawObjectives: unknown, platforms: Platform[], rawEntries: unknown = [], rawVideos: unknown = [],
+  rawGame: unknown, rawObjectives: unknown, platforms: Platform[], rawEntries: unknown = [], rawVideos: unknown = [], mapPinIds: ReadonlySet<string> = new Set(),
 ): GameBundle {
   const problems: string[] = [];
   const g = Game.safeParse(rawGame);
@@ -77,6 +78,9 @@ export function validateGameBundle(
   for (const v of videos) {
     if (videoIds.has(v.id)) problems.push(`video ${v.id}: duplicate id`);
     videoIds.add(v.id);
+    if (!parseVideoUrl(v.url)) problems.push(`video ${v.id}: url isn't a supported single video (YouTube video, Twitch VOD/clip or TikTok post)`);
+    if (v.status === 'approved' && (!v.checkedAt || v.availability !== 'available')) problems.push(`video ${v.id}: approved videos need checkedAt and availability "available"`);
+    if (v.status === 'approved' && v.moments.some((m) => !m.verified)) problems.push(`video ${v.id}: approve only after every moment is verified (or remove unverified moments)`);
   }
   const guideCats = new Set(game.guideCategories.map((c) => c.id));
   const slugs = new Set<string>();
@@ -89,8 +93,8 @@ export function validateGameBundle(
     if (slugs.has(e.slug)) problems.push(`${at}: duplicate slug`);
     slugs.add(e.slug);
     if (!guideCats.has(e.category)) problems.push(`${at}: unknown guide section ${e.category}`);
-    for (const v of e.videoIds) if (!videoIds.has(v)) problems.push(`${at}: unknown video ${v}`);
     for (const o of e.objectiveIds) if (!objectives.some((x) => x.id === o)) problems.push(`${at}: unknown objective ${o}`);
+    for (const m of e.mapPinIds) if (mapPinIds.size && !mapPinIds.has(m)) problems.push(`${at}: unknown map pin ${m}`);
     if (e.spoilerLevel !== 'none' && !e.details)
       problems.push(`${at}: spoilerLevel ${e.spoilerLevel} needs "details" (keep title/summary/steps spoiler-free)`);
     if (e.spoilerLevel === 'none' && e.details)
@@ -102,6 +106,12 @@ export function validateGameBundle(
     }
     if (e.verification === 'rumor' && /\bconfirmed\b/i.test(`${e.title} ${e.summary}`))
       problems.push(`${at}: a rumor can't call itself confirmed`);
+  }
+
+  const entryIds = new Set(entries.map((e) => e.id));
+  for (const v of videos) for (const m of v.moments) {
+    const ok = m.target.includes(':entry:') ? entryIds.has(m.target) : mapPinIds.size === 0 || mapPinIds.has(m.target);
+    if (!ok) problems.push(`video ${v.id}: moment target ${m.target} doesn't exist`);
   }
 
   if (problems.length) throw new Error(`Content problems in ${game.id}:\n` + problems.join('\n'));

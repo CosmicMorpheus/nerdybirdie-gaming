@@ -37,7 +37,7 @@
     ],
     "platformNote": null,
     "gameVersion": null,
-    "videoIds": [],
+    "mapPinIds": [],
     "objectiveIds": [],
     "status": "published"
   },
@@ -78,7 +78,7 @@
     ],
     "platformNote": null,
     "gameVersion": null,
-    "videoIds": [],
+    "mapPinIds": [],
     "objectiveIds": [],
     "status": "published"
   },
@@ -118,7 +118,7 @@
     ],
     "platformNote": null,
     "gameVersion": null,
-    "videoIds": [],
+    "mapPinIds": [],
     "objectiveIds": [],
     "status": "published"
   },
@@ -156,7 +156,7 @@
     ],
     "platformNote": null,
     "gameVersion": null,
-    "videoIds": [],
+    "mapPinIds": [],
     "objectiveIds": [],
     "status": "published"
   },
@@ -203,7 +203,7 @@
     ],
     "platformNote": "Console only (PS5, Xbox Series X|S). Needs an active GTA+ membership and an internet connection; fees and benefits can change.",
     "gameVersion": null,
-    "videoIds": [],
+    "mapPinIds": [],
     "objectiveIds": [],
     "status": "published"
   },
@@ -253,7 +253,7 @@
     ],
     "platformNote": "Console only, GTA+ members.",
     "gameVersion": null,
-    "videoIds": [],
+    "mapPinIds": [],
     "objectiveIds": [],
     "status": "published"
   }

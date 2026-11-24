@@ -14,7 +14,10 @@ Separate from the cozmc.us site and repo.
 | `/games/gta-vi/achievements/` | Tracker: separate Xbox and PS5 lists, ranks, checkpoints, "Next up", spoiler modes, search, filters, saved items, notes, reset |
 | `/games/gta-vi/guides/` | Quest board (progress per section) plus every entry, searchable and filterable by section, spoiler level and verification |
 | `/games/gta-vi/guides/<section>/` | One section: check entries off, "More details", spoiler reveals, sources and last-checked dates |
-| `/progress/` | Your progress, backup download and restore |
+| `/games/gta-vi/map/` | Leonida map: search, filters, mark found, shareable pin links, creator videos at the right moment |
+| `/progress/` | Your progress by section, backup download and restore |
+| `/account/` | Optional sign-in to sync progress (switched off until set up; see docs/ACCOUNTS.md) |
+| `/review/` | Editor review queue (preview builds only) |
 | `/search/` | Spoiler-safe site search |
 | `/about/`, `/privacy/`, `/corrections/`, `/updates/` | Required pages, including the unofficial disclaimer |
 
@@ -66,9 +69,13 @@ PNG or WebP both work; if you change the file type, update the path in `BRAND`. 
 Tips, walkthrough missions, money methods, vehicles, weapons, collectibles and videos all go in `content/games/gta-vi/entries.json`.
 See **`docs/CONTENT_GUIDE.md`** for the rules, a copy-paste template and examples.
 
+## Map data
+
+`npm run import:map -- --dry-run`, then `npm run import:map`. Pinned source and license in `content/games/gta-vi/map/source.json`; see docs/CONTENT_GUIDE.md.
+
 ## Saved progress
 
-Progress is saved in the visitor's browser only; there are no accounts yet. `docs/ACCOUNTS.md` explains what account saving needs and what's already built for it.
+Guests: saved in the browser. Account sync is built but switched off until a Supabase project is set up. See `docs/ACCOUNTS.md`.
 
 ## Links and settings
 

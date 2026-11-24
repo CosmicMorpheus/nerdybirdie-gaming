@@ -4,7 +4,7 @@ import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
 const REAL = 'http://localhost:4321';
-const PAGES = ['/', '/games/', '/games/gta-vi/', '/games/gta-vi/achievements/', '/games/gta-vi/guides/', '/games/gta-vi/guides/tips/', '/games/gta-vi/guides/walkthrough/', '/progress/', '/search/', '/about/', '/privacy/', '/corrections/', '/updates/'];
+const PAGES = ['/', '/games/', '/games/gta-vi/', '/games/gta-vi/achievements/', '/games/gta-vi/guides/', '/games/gta-vi/guides/tips/', '/games/gta-vi/guides/walkthrough/', '/games/gta-vi/guides/collectibles/', '/games/gta-vi/map/', '/account/', '/progress/', '/search/', '/about/', '/privacy/', '/corrections/', '/updates/'];
 
 test('COZMC links are exact, separate, and open safely', async ({ page }) => {
   await page.goto(REAL + '/');
@@ -93,4 +93,18 @@ test('character bios are behind a deliberate reveal', async ({ page }) => {
   await e.getByRole('button', { name: /More details/ }).click();
   await e.getByRole('button', { name: /Reveal mild spoiler/ }).click();
   await expect(e).toContainText('Leonida Penitentiary');
+});
+
+test('accounts: the site says plainly that progress is device-only until accounts are switched on', async ({ page }) => {
+  await page.goto(REAL + '/account/');
+  await expect(page.getByText("Accounts aren't switched on yet")).toBeVisible();
+  await expect(page.getByText(/in this browser on this device only/)).toBeVisible();
+});
+
+test('real map: loads the imported snapshot and finds the pilot card', async ({ page }) => {
+  await page.goto(REAL + '/games/gta-vi/map/?pin=collectible-card-086');
+  await expect(page.locator('.pin-detail h2')).toHaveText('Jack of Hearts card: Pricilla Pace (Silver)');
+  await expect(page.locator('.pin-detail')).toContainText('Unconfirmed');
+  await expect(page.locator('.pin-detail .video-flag')).toContainText('Not yet checked');
+  await expect(page.locator('.pin-detail').getByRole('button', { name: /Play from 0:49/ })).toBeVisible();
 });
