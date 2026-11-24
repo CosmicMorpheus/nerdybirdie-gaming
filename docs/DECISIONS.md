@@ -4,6 +4,7 @@ Newest first. "Proposed" means waiting for the founder; only "Approved" decision
 
 | Date | Decision | Status | Notes |
 |---|---|---|---|
+| 2026-11-24 | Private preview on a new Netlify site `nerdybirdie-gaming-preview` (team DOOR), password-protected, deployed from `phase-1` by upload | Approved | Founder asked for a private Netlify link. Separate from cozmc.us. Password shared with the founder in chat only, not stored in the repo. |
 | 2026-11-24 | Achievement/trophy lists left unpublished; tracker ships with honest empty state | Done | All third-party achievement sites block automated access; not circumvented. Next source needs founder input. |
 | 2026-11-24 | GTA VI platforms = PS5 + Xbox Series X\|S, released 2026-11-19 | Verified | Rockstar launch post, read 2026-11-24 |
 | 2026-11-24 | Discord invite `https://discord.gg/VBeBE7MSSq` | Approved | Supplied by founder; Discord API: server "C0ZMC", never expires. Old `UUyC6aw9W` is expired. |
