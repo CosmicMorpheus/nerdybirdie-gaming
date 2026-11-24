@@ -1,0 +1,12 @@
+# Milestone report
+- Phase / milestone:
+- Approved scope:
+- Completed changes and files:
+- Decisions and rationale:
+- Test commands and actual results:
+- Visual checks / screenshots / viewport sizes:
+- Source and rights review:
+- Unverified or unavailable checks:
+- Known issues and limitations:
+- Next scoped milestone:
+- Founder approvals or inputs required:

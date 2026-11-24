@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "fixtureOnly": true,
+  "id": "example-game:guide:sample-001",
+  "gameId": "example-game",
+  "slug": "sample-001",
+  "category": "vehicles",
+  "safeTitle": "Example record — not gameplay information",
+  "safeSummary": "Test fixture only; never publish.",
+  "platformIds": [],
+  "spoilerLevel": "none",
+  "verificationStatus": "unverified",
+  "publicationStatus": "draft",
+  "checkedAt": null,
+  "gameVersion": null,
+  "sourceIds": [],
+  "mediaIds": [],
+  "videoIds": [],
+  "relatedObjectiveIds": [],
+  "founderVerifiedAt": null,
+  "revision": 1
+}
