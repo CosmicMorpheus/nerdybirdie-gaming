@@ -170,7 +170,7 @@
 .entry-more { margin: 12px 0 4px 56px; display: flex; flex-direction: column; gap: 12px; }
 .howto { margin: 0; padding-left: 22px; color: #e2e0e8; }
 .howto li { padding: 3px 0; }
-.facts { margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; }
+.facts { margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(150px, 100%), 1fr)); gap: 8px; }
 .facts div { border: 2px solid var(--vc-line); border-radius: 6px; padding: 8px 10px; background: #121726; }
 .facts dt { font: 400 9px/1.6 var(--pixel); text-transform: uppercase; color: var(--vc-muted); }
 .facts dd { margin: 4px 0 0; font-size: 14px; }
@@ -214,3 +214,13 @@
 .soon-line a { color: var(--vc-sunset); }
 .move { border-color: #3a5a8a; }
 .code { width: 100%; font: 12px/1.4 ui-monospace, monospace; background: #0e1322; color: var(--vc-pearl); border: 1px solid var(--vc-line); border-radius: 8px; padding: 8px; word-break: break-all; }
+
+/* Chapter grouping in long guide sections (EntryBrowser). */
+.chapter-jump { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 8px; }
+.chapter-jump a { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 12px; border: 2px solid var(--vc-line); border-radius: 6px;
+  background: var(--vc-slate); color: var(--vc-pearl); font-weight: 600; text-decoration: none; }
+.chapter-jump a:hover { border-color: var(--vc-pink); }
+.chapter-group + .chapter-group { margin-top: 18px; }
+.chapter-h { font: 700 22px/1.2 'Space Grotesk', var(--body); margin: 18px 0 4px; padding-bottom: 6px; border-bottom: 2px solid var(--vc-line); scroll-margin-top: 90px;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+.browse-hint { margin: 10px 0; padding: 14px 16px; border: 2px dashed var(--vc-line); border-radius: 6px; color: var(--vc-muted); }

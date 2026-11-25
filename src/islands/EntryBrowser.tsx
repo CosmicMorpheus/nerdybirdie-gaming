@@ -33,6 +33,9 @@ const VERIFY: Record<PublicEntry['verification'], { label: string; cls: string; 
 };
 
 /** Searchable, filterable guide entries with checkboxes, "More details" and spoiler reveals. */
+/** Above this many entries, the all-sections view waits for a search or a section instead of listing everything. */
+const COLLAPSE_AT = 40;
+
 export default function EntryBrowser({ gameId, categories, entries: builtEntries, videos, protectedUrl, fixedCategory }: Props) {
   const state = useProgress();
   const { progress, update, remember, ready } = state;
@@ -100,73 +103,8 @@ export default function EntryBrowser({ gameId, categories, entries: builtEntries
   const t = tally(inSection.map((e) => e.id), ctx.completed);
   const toggle = (set: Set<string>, id: string) => { const n = new Set(set); n.has(id) ? n.delete(id) : n.add(id); return n; };
 
-  return (
-    <div class="tracker entries">
-      <div class="summary panel">
-        <div class="ranks">
-          <p class="hud-label">{fixedCategory ? catLabel(fixedCategory) : 'All sections'}</p>
-          <p class="big">{t.percent === null ? '—' : `${t.done}/${t.total}`}</p>
-          <p class="muted small">{t.percent === null ? 'Nothing verified here yet' : `${t.percent}% checked off`}</p>
-        </div>
-        <div class="xp">
-          {t.percent === 100 && <p><span class="stamp">Section cleared</span></p>}
-          <div class="bar" role="progressbar" aria-label="Entries checked off" aria-valuemin={0} aria-valuemax={t.total} aria-valuenow={t.done}>
-            <i style={{ width: `${t.percent ?? 0}%` }} />
-          </div>
-          <SaveStatus state={state} />
-        </div>
-        <label class="field-label">
-          Spoilers
-          <select value={mode} onChange={(e) => {
-            const v = (e.target as HTMLSelectElement).value;
-            if (isSpoilerMode(v)) { update((s) => setPrefs(s, { spoilerMode: v })); setRevealed(new Set()); }
-          }}>
-            {SPOILER_MODES.map((m) => <option key={m.id} value={m.id}>{m.label}</option>)}
-          </select>
-        </label>
-      </div>
-      <StorageNotice state={state} />
-
-      {inSection.length === 0 ? (
-        <div class="empty" role="status">
-          <strong>Nothing verified for {fixedCategory ? catLabel(fixedCategory) : 'this guide'} yet.</strong> We only add entries we can check against
-          a reliable source, so this stays empty rather than guessing. New entries appear here as they're verified.
-        </div>
-      ) : (
-        <>
-          <div class="toolbar filters">
-            <label class="search-field">
-              <span class="sr-only">Search guide entries</span>
-              <input type="search" placeholder="Search tips, missions, vehicles…" value={query} onInput={(e) => setQuery((e.target as HTMLInputElement).value)} />
-            </label>
-            {!fixedCategory && (
-              <label class="field-label compact">Section
-                <select value={category} onChange={(e) => setCategory((e.target as HTMLSelectElement).value)}>
-                  <option value="all">All sections</option>
-                  {categories.filter((c) => entries.some((e) => e.category === c.id)).map((c) => <option key={c.id} value={c.id}>{c.label}</option>)}
-                </select>
-              </label>
-            )}
-            <label class="field-label compact">Spoiler level
-              <select value={spoiler} onChange={(e) => setSpoiler((e.target as HTMLSelectElement).value as typeof spoiler)}>
-                <option value="all">Any</option><option value="none">None</option><option value="minor">Mild</option><option value="major">Major</option>
-              </select>
-            </label>
-            <label class="field-label compact">Verification
-              <select value={verify} onChange={(e) => setVerify((e.target as HTMLSelectElement).value as typeof verify)}>
-                <option value="all">Any</option><option value="confirmed">Confirmed</option><option value="unconfirmed">Unconfirmed</option><option value="rumor">Rumor</option>
-              </select>
-            </label>
-            <div class="seg status" role="group" aria-label="Show">
-              {(['all', 'todo', 'done'] as Status[]).map((s) => (
-                <button key={s} type="button" aria-pressed={status === s} onClick={() => setStatus(s)}>{s === 'all' ? 'All' : s === 'todo' ? 'To do' : 'Done'}</button>
-              ))}
-            </div>
-          </div>
-          {detailsError && <p class="notice error" role="status">Couldn't load spoiler details. Check your connection and try again.</p>}
-
-          <ul class="list entry-list">
-            {visible.map((e) => {
+  // One entry row (checkbox, tags, details, spoilers, videos, sources).
+  const renderEntry = (e: PublicEntry) => {
               const done = e.id in ctx.completed;
               const isOpen = open.has(e.id);
               const showSpoiler = e.hasDetails && (revealed.has(`d:${e.id}`) || modeAllows(e.spoilerLevel, mode)) && details?.[e.id];
@@ -240,9 +178,105 @@ export default function EntryBrowser({ gameId, categories, entries: builtEntries
                   )}
                 </li>
               );
-            })}
-          </ul>
-          {visible.length === 0 && <p class="empty">No entries match these filters.</p>}
+  };
+  // Browsing every section at once: group by section. One section: split by chapter ("Any chapter" first).
+  const allSections = !fixedCategory && category === 'all';
+  // On a big site the all-sections list starts empty: the quest board above is the way in, and this is for searching.
+  const idle = allSections && inSection.length > COLLAPSE_AT && !query.trim() && spoiler === 'all' && verify === 'all' && status === 'all';
+  const groups = (() => {
+    const done = (items: PublicEntry[]) => items.filter((e) => e.id in ctx.completed).length;
+    if (allSections) {
+      return categories.map((c) => ({ c, items: visible.filter((e) => e.category === c.id) })).filter((g) => g.items.length)
+        .map(({ c, items }) => ({ anchor: `sec-${c.id}`, label: c.label, items, done: done(items) }));
+    }
+    const keys = [...new Set(visible.map((e) => e.chapter ?? 0))].sort((x, y) => x - y);
+    return keys.map((k) => {
+      const items = visible.filter((e) => (e.chapter ?? 0) === k);
+      return { anchor: k ? `ch-${k}` : 'ch-any', label: k ? `Chapter ${k}` : 'Any chapter', items, done: done(items) };
+    });
+  })();
+
+  return (
+    <div class="tracker entries">
+      <div class="summary panel">
+        <div class="ranks">
+          <p class="hud-label">{fixedCategory ? catLabel(fixedCategory) : 'All sections'}</p>
+          <p class="big">{t.percent === null ? '—' : `${t.done}/${t.total}`}</p>
+          <p class="muted small">{t.percent === null ? 'Nothing verified here yet' : `${t.percent}% checked off`}</p>
+        </div>
+        <div class="xp">
+          {t.percent === 100 && <p><span class="stamp">Section cleared</span></p>}
+          <div class="bar" role="progressbar" aria-label="Entries checked off" aria-valuemin={0} aria-valuemax={t.total} aria-valuenow={t.done}>
+            <i style={{ width: `${t.percent ?? 0}%` }} />
+          </div>
+          <SaveStatus state={state} />
+        </div>
+        <label class="field-label">
+          Spoilers
+          <select value={mode} onChange={(e) => {
+            const v = (e.target as HTMLSelectElement).value;
+            if (isSpoilerMode(v)) { update((s) => setPrefs(s, { spoilerMode: v })); setRevealed(new Set()); }
+          }}>
+            {SPOILER_MODES.map((m) => <option key={m.id} value={m.id}>{m.label}</option>)}
+          </select>
+        </label>
+      </div>
+      <StorageNotice state={state} />
+
+      {inSection.length === 0 ? (
+        <div class="empty" role="status">
+          <strong>Nothing verified for {fixedCategory ? catLabel(fixedCategory) : 'this guide'} yet.</strong> We only add entries we can check against
+          a reliable source, so this stays empty rather than guessing. New entries appear here as they're verified.
+        </div>
+      ) : (
+        <>
+          <div class="toolbar filters">
+            <label class="search-field">
+              <span class="sr-only">Search guide entries</span>
+              <input type="search" placeholder="Search tips, missions, vehicles…" value={query} onInput={(e) => setQuery((e.target as HTMLInputElement).value)} />
+            </label>
+            {!fixedCategory && (
+              <label class="field-label compact">Section
+                <select value={category} onChange={(e) => setCategory((e.target as HTMLSelectElement).value)}>
+                  <option value="all">All sections</option>
+                  {categories.filter((c) => entries.some((e) => e.category === c.id)).map((c) => <option key={c.id} value={c.id}>{c.label}</option>)}
+                </select>
+              </label>
+            )}
+            <label class="field-label compact">Spoiler level
+              <select value={spoiler} onChange={(e) => setSpoiler((e.target as HTMLSelectElement).value as typeof spoiler)}>
+                <option value="all">Any</option><option value="none">None</option><option value="minor">Mild</option><option value="major">Major</option>
+              </select>
+            </label>
+            <label class="field-label compact">Verification
+              <select value={verify} onChange={(e) => setVerify((e.target as HTMLSelectElement).value as typeof verify)}>
+                <option value="all">Any</option><option value="confirmed">Confirmed</option><option value="unconfirmed">Unconfirmed</option><option value="rumor">Rumor</option>
+              </select>
+            </label>
+            <div class="seg status" role="group" aria-label="Show">
+              {(['all', 'todo', 'done'] as Status[]).map((s) => (
+                <button key={s} type="button" aria-pressed={status === s} onClick={() => setStatus(s)}>{s === 'all' ? 'All' : s === 'todo' ? 'To do' : 'Done'}</button>
+              ))}
+            </div>
+          </div>
+          {detailsError && <p class="notice error" role="status">Couldn't load spoiler details. Check your connection and try again.</p>}
+
+          {idle ? (
+            <p class="browse-hint" role="status">Search all {inSection.length} entries above, or pick a section from the board or the Section menu.</p>
+          ) : (<>
+          {groups.length > 1 && (
+            <nav class="chapter-jump" aria-label={allSections ? 'Jump to section' : 'Jump to chapter'}>
+              {groups.map((g) => <a key={g.anchor} href={`#${g.anchor}`}>{g.label} <span class="muted">{g.done}/{g.items.length}</span></a>)}
+            </nav>
+          )}
+          {groups.map((g) => (
+            <section key={g.anchor} class="chapter-group" aria-labelledby={groups.length > 1 ? g.anchor : undefined}>
+              {groups.length > 1 && <h2 id={g.anchor} class="chapter-h">{g.label} <span class="small muted">{g.done} of {g.items.length} done</span></h2>}
+              <ul class="list entry-list">{g.items.map(renderEntry)}</ul>
+            </section>
+          ))}
+          </>)}
+          {!idle && visible.length === 0 && <p class="empty">No entries match these filters.</p>}
         </>
       )}
     </div>

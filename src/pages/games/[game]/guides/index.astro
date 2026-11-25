@@ -23,7 +23,7 @@ const categories = game.guideCategories.map((c) => ({ ...c, entryIds: entries.fi
       <span><span class="tag paid">Paid / optional</span> needs a purchase or subscription</span>
     </p>
     <GuideBoard client:load gameId={game.id} base={`/games/${game.id}/guides/`} categories={categories} />
-    <h2 class="browse-h">All entries</h2>
+    <h2 class="browse-h">Search all guides</h2>
     <EntryBrowser client:load gameId={game.id} categories={game.guideCategories} entries={entries} videos={videosFor(game.id)} protectedUrl={`/data/${game.id}/protected.json`} />
     <div style="margin-top:32px"><CozmcInline text="Found something? Share it in the community." /></div>
   </div>

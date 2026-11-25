@@ -43,7 +43,7 @@ and tells you what's wrong.
 }
 ```
 
-**Sections** (`category`): `tips`, `walkthrough`, `money`, `vehicles`, `weapons`, `collectibles`, `side-missions`, `secrets`,
+**Sections** (`category`): `tips`, `walkthrough`, `robberies`, `money`, `vehicles`, `weapons`, `collectibles`, `side-missions`, `secrets`,
 `settings`, `videos`. They're set in `game.json` → `guideCategories`.
 
 - **A walkthrough mission:** `"category": "walkthrough"` and `"chapter": 1`. Mission outcomes go in `details` with `spoilerLevel` `major`.

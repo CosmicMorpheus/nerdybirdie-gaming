@@ -63,6 +63,11 @@
       "blurb": "Chapter-by-chapter mission help, spoiler-safe."
     },
     {
+      "id": "robberies",
+      "label": "Robberies & heists",
+      "blurb": "Every robbery spot with its key valuables, safes and sticky bombs, plus the big jobs."
+    },
+    {
       "id": "money",
       "label": "Money",
       "blurb": "Legit in-game ways to earn and save."

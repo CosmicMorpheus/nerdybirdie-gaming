@@ -4407,100 +4407,6 @@
     "status": "published"
   },
   {
-    "id": "gta-vi:entry:money-kingfishers-fishing-shacks",
-    "gameId": "gta-vi",
-    "slug": "money-kingfishers-fishing-shacks",
-    "category": "money",
-    "title": "Rob the Fishing Shacks camp early (about $2,000)",
-    "summary": "The first optional illegal operation, on Wetman Bay north-west of Key Lento. Loot it thoroughly and it pays close to $2,000, a big head start in Chapter 1.",
-    "steps": [
-      "Search every enemy you take down and bag every bit of product in the camp.",
-      "Check the house on the dock on the camp's west side: there's a gold weapon icon there.",
-      "Then sell the product to a fence (see \"Sell your product quickly\")."
-    ],
-    "facts": [
-      {
-        "label": "Where",
-        "value": "Wetman Bay, north-west of Key Lento"
-      },
-      {
-        "label": "Payout",
-        "value": "Close to $2,000 if fully looted"
-      }
-    ],
-    "chapter": 1,
-    "mode": "story",
-    "spoilerLevel": "none",
-    "details": null,
-    "verification": "confirmed",
-    "sources": [
-      {
-        "publisher": "IGN",
-        "title": "Best Ways to Make Money Early",
-        "url": "https://www.ign.com/wikis/gta-6/Best_Ways_to_Make_Money_Early",
-        "checkedAt": "2026-11-24",
-        "supports": "Facts in this entry"
-      },
-      {
-        "publisher": "IGN",
-        "title": "Illegal Operations",
-        "url": "https://www.ign.com/wikis/gta-6/Illegal_Operations",
-        "checkedAt": "2026-11-24",
-        "supports": "Operation names, starting hints and locations"
-      }
-    ],
-    "platformNote": null,
-    "gameVersion": null,
-    "mapPinIds": [],
-    "objectiveIds": [],
-    "status": "published"
-  },
-  {
-    "id": "gta-vi:entry:money-strange-noises",
-    "gameId": "gta-vi",
-    "slug": "money-strange-noises",
-    "category": "money",
-    "title": "Strange Noises behind the liquor store: hidden cash",
-    "summary": "After Shirley's rum errand, the noises behind Three Sheets Liquor lead to a gang guarding a talking parrot, and a stash of cash.",
-    "steps": [
-      "Buy the rum and give it to Shirley first. Investigating the noises before that starts a gunfight that gets in the way of her errand.",
-      "Go behind the store and deal with the armed guards.",
-      "Talk to the parrot, then open the small vent at the base of the store, left of where the parrot sits."
-    ],
-    "facts": [
-      {
-        "label": "Where",
-        "value": "Behind Three Sheets Liquor, Key Lento"
-      }
-    ],
-    "chapter": 1,
-    "mode": "story",
-    "spoilerLevel": "none",
-    "details": null,
-    "verification": "confirmed",
-    "sources": [
-      {
-        "publisher": "IGN",
-        "title": "Best Ways to Make Money Early",
-        "url": "https://www.ign.com/wikis/gta-6/Best_Ways_to_Make_Money_Early",
-        "checkedAt": "2026-11-24",
-        "supports": "Facts in this entry"
-      },
-      {
-        "publisher": "IGN",
-        "title": "Illegal Operations",
-        "url": "https://www.ign.com/wikis/gta-6/Illegal_Operations",
-        "checkedAt": "2026-11-24",
-        "supports": "Operation names, starting hints and locations"
-      }
-    ],
-    "platformNote": null,
-    "gameVersion": null,
-    "mapPinIds": [],
-    "objectiveIds": [],
-    "status": "published"
-  },
-  {
     "id": "gta-vi:entry:money-sell-product-fast",
     "gameId": "gta-vi",
     "slug": "money-sell-product-fast",
@@ -5389,6 +5295,994 @@
         "url": "https://www.ign.com/wikis/gta-6/Chapter_3_Optional_Missions",
         "checkedAt": "2026-11-24",
         "supports": "How each optional mission starts"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:robberies-how-illegal-operations-work",
+    "gameId": "gta-vi",
+    "slug": "robberies-how-illegal-operations-work",
+    "category": "robberies",
+    "title": "How robbery spots (illegal operations) work",
+    "summary": "Illegal operations are optional robbery spots run by gangs around Leonida. Each one has a few \"key valuables\" (cash in a safe, a unique weapon, a standout car or a luxury item) plus loose cash and drugs worth grabbing.",
+    "steps": [
+      "A hint from someone, or a note you find, marks the spot on your map. Key valuables show as gold icons once you're inside.",
+      "Use Focus mode to spot enemies, alarms, explosives and loot (purple = drugs, green = cash).",
+      "Search every enemy you take down. Bag the drugs and sell them to a fence afterwards.",
+      "Most spots can be done whenever you can reach them; they're only grouped by chapter because of where the story is."
+    ],
+    "facts": [
+      {
+        "label": "Count for 100%",
+        "value": "39 illegal operations (3% of the total)"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Illegal Operations",
+        "url": "https://www.ign.com/wikis/gta-6/Illegal_Operations",
+        "checkedAt": "2026-11-25",
+        "supports": "Operation list, starting hints, areas; most can be done any time"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Fishing Shacks",
+        "url": "https://www.ign.com/wikis/gta-6/Fishing_Shacks",
+        "checkedAt": "2026-11-25",
+        "supports": "How a robbery plays out"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:robberies-safes-and-sticky-bombs",
+    "gameId": "gta-vi",
+    "slug": "robberies-safes-and-sticky-bombs",
+    "category": "robberies",
+    "title": "Opening safes: codes, prying and sticky bombs",
+    "summary": "Small safes often need no code: press Triangle/Y, then find the sweet spot with the right stick to pry them open. Bigger safes need a code you find nearby, or a sticky bomb.",
+    "steps": [
+      "Sticky bombs open safes and locked doors without a code. Buy them at Ammu-Nation ($185 each) once you've finished the Chapter 3 mission Credit Check.",
+      "In Chapter 3 there's also a free crate of sticky bombs in the garage behind Yasmani's office.",
+      "You can carry four each, so eight when Jason and Lucia are together.",
+      "Before Chapter 3 you may find some at robbery spots, for example Kingpin Bowling."
+    ],
+    "facts": [
+      {
+        "label": "Sticky bomb price",
+        "value": "$185"
+      },
+      {
+        "label": "Carry limit",
+        "value": "4 per character"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "How to Open Safes and Doors with Sticky Bombs",
+        "url": "https://www.ign.com/wikis/gta-6/How_to_Open_Safes_and_Doors_with_Sticky_Bombs",
+        "checkedAt": "2026-11-25",
+        "supports": "Where to get sticky bombs, price, carry limit"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:robberies-100-percent-targets",
+    "gameId": "gta-vi",
+    "slug": "robberies-100-percent-targets",
+    "category": "robberies",
+    "title": "Robbery targets for 100% completion",
+    "summary": "Crime work makes up a big slice of 100%. You don't have to do it all at once; the tracker appears after the story.",
+    "steps": [
+      "Illegal operations: 39 (3%).",
+      "Bank robberies: 22. Payday loan jobs: 7. Smash 'n' grabs: 34. Stick-ups: 100. Vaults hit: 8. (2% each.)",
+      "Fencing: $100,000 each of narcotics, jewelry and marked bills, and $200,000 of vehicles. (2% each.)"
+    ],
+    "facts": [],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 100 Percent Guide",
+        "url": "https://www.ign.com/wikis/gta-6/GTA_6_100_Percent_Guide",
+        "checkedAt": "2026-11-24",
+        "supports": "Robbery and fencing targets and weights"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:money-kingfishers-fishing-shacks",
+    "gameId": "gta-vi",
+    "slug": "money-kingfishers-fishing-shacks",
+    "category": "robberies",
+    "title": "Fishing Shacks (illegal operation, about $2,000)",
+    "summary": "The first optional illegal operation, on Wetman Bay north-west of Key Lento. Loot it thoroughly and it pays close to $2,000, a big head start in Chapter 1.",
+    "steps": [
+      "Come in from the south-west and stay outside the yellow circle to avoid being spotted. Watch for alligators on the shore.",
+      "Expect four or five Kingfishers around the bar area. There's an explosive behind the bar.",
+      "Key valuable: the Kingfishers W-22 small game rifle (with a silencer), in a gun case on the kitchen counter of the big house.",
+      "Search every enemy and bag all the product, then leave by boat or seaplane from the dock north of the house."
+    ],
+    "facts": [
+      {
+        "label": "Area",
+        "value": "Wetman Bay, north-west of Key Lento"
+      },
+      {
+        "label": "Gang",
+        "value": "Kingfishers"
+      },
+      {
+        "label": "Security",
+        "value": "High"
+      },
+      {
+        "label": "Key valuables",
+        "value": "1 (unique rifle)"
+      },
+      {
+        "label": "Payout",
+        "value": "Close to $2,000 if fully looted"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Fishing Shacks",
+        "url": "https://www.ign.com/wikis/gta-6/Fishing_Shacks",
+        "checkedAt": "2026-11-25",
+        "supports": "Approach, key valuable, escape"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Best Ways to Make Money Early",
+        "url": "https://www.ign.com/wikis/gta-6/Best_Ways_to_Make_Money_Early",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Illegal Operations",
+        "url": "https://www.ign.com/wikis/gta-6/Illegal_Operations",
+        "checkedAt": "2026-11-24",
+        "supports": "Operation names, starting hints and locations"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:money-strange-noises",
+    "gameId": "gta-vi",
+    "slug": "money-strange-noises",
+    "category": "robberies",
+    "title": "Exotic Animals Front: Strange Noises (illegal operation)",
+    "summary": "After Shirley's rum errand, the noises behind Three Sheets Liquor lead to a gang guarding a talking parrot, and a stash of cash.",
+    "steps": [
+      "Buy the rum and give it to Shirley first. Investigating the noises before that starts a gunfight that gets in the way of her errand.",
+      "Go behind the store and deal with the armed guards.",
+      "Talk to the parrot, then open the small vent at the base of the store, left of where the parrot sits."
+    ],
+    "facts": [
+      {
+        "label": "Where",
+        "value": "Behind Three Sheets Liquor, Key Lento"
+      },
+      {
+        "label": "Key valuables",
+        "value": "1 (hidden cash)"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Exotic Animals Front Key Valuable and Guide",
+        "url": "https://www.ign.com/wikis/gta-6/Exotic_Animals_Front_Key_Valuable_and_Guide",
+        "checkedAt": "2026-11-25",
+        "supports": "How to start it and where the cash is"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Best Ways to Make Money Early",
+        "url": "https://www.ign.com/wikis/gta-6/Best_Ways_to_Make_Money_Early",
+        "checkedAt": "2026-11-24",
+        "supports": "Facts in this entry"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Illegal Operations",
+        "url": "https://www.ign.com/wikis/gta-6/Illegal_Operations",
+        "checkedAt": "2026-11-24",
+        "supports": "Operation names, starting hints and locations"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:robbery-backroom-weed-front",
+    "gameId": "gta-vi",
+    "slug": "robbery-backroom-weed-front",
+    "category": "robberies",
+    "title": "Backroom Weed Front (illegal operation)",
+    "summary": "A small, low-security job at the back of the Pearl House Hair Salon. Easy cash.",
+    "steps": [
+      "Get into the back room, through the back or by blowing the door from the salon.",
+      "The safe is on the left side of the room. No code needed: pry it open.",
+      "Grab the cash and five bags of weed from the table next to it, and search the two guards."
+    ],
+    "facts": [
+      {
+        "label": "Area",
+        "value": "Pearl House Hair Salon, Port Gellhorn"
+      },
+      {
+        "label": "Security",
+        "value": "Low"
+      },
+      {
+        "label": "Key valuables",
+        "value": "1 (safe with cash)"
+      },
+      {
+        "label": "Safe code",
+        "value": "Not needed"
+      },
+      {
+        "label": "Can do",
+        "value": "Any time you can reach the area (IGN lists it under this chapter by area)"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Backroom Weed Front",
+        "url": "https://www.ign.com/wikis/gta-6/Backroom_Weed_Front",
+        "checkedAt": "2026-11-25",
+        "supports": "Locations, key valuables and tips"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Illegal Operations",
+        "url": "https://www.ign.com/wikis/gta-6/Illegal_Operations",
+        "checkedAt": "2026-11-25",
+        "supports": "Operation list, starting hints, areas; most can be done any time"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:robbery-industrial-weed-grow",
+    "gameId": "gta-vi",
+    "slug": "robbery-industrial-weed-grow",
+    "category": "robberies",
+    "title": "Industrial Weed Grow (illegal operation)",
+    "summary": "A heavily guarded factory with a standout truck, a safe and a unique SMG.",
+    "steps": [
+      "Vapid Cultivator Sandking: in the middle of the warehouse, unlocked and alarm-free. The north side has a direct opening to drive it out. Worth $16,170 to sell in top condition, or $6,300 to register.",
+      "Safe: upstairs in the office at the west (far left) end, past the plants. No code needed: pry it open.",
+      "Chronic Vatra SMG: in the caged armory on the east side. There's a crate of sticky bombs and grenades there too."
+    ],
+    "facts": [
+      {
+        "label": "Area",
+        "value": "North Mariana County"
+      },
+      {
+        "label": "Security",
+        "value": "High"
+      },
+      {
+        "label": "Key valuables",
+        "value": "3 (truck, safe, unique SMG)"
+      },
+      {
+        "label": "Safe code",
+        "value": "Not needed"
+      },
+      {
+        "label": "Can do",
+        "value": "Any time you can reach the area (IGN lists it under this chapter by area)"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Industrial Weed Grow",
+        "url": "https://www.ign.com/wikis/gta-6/Industrial_Weed_Grow",
+        "checkedAt": "2026-11-25",
+        "supports": "Locations, key valuables and tips"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Illegal Operations",
+        "url": "https://www.ign.com/wikis/gta-6/Illegal_Operations",
+        "checkedAt": "2026-11-25",
+        "supports": "Operation list, starting hints, areas; most can be done any time"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:robbery-manatee-motel",
+    "gameId": "gta-vi",
+    "slug": "robbery-manatee-motel",
+    "category": "robberies",
+    "title": "Manatee Motel (illegal operation)",
+    "summary": "A Kingfishers motel used for exotic animal smuggling. Watch out for the animals.",
+    "steps": [
+      "Find the brown \"SPEED LIVE\" graffiti in the middle of the main building.",
+      "Room to its right: a safe on a shelf at the back (no code, pry it open). A tiger may be inside. There are two Adrenalines by the cages and cash on the table.",
+      "Room to its left: the Kingfishers Laird 350 Sniper in the back corner."
+    ],
+    "facts": [
+      {
+        "label": "Area",
+        "value": "North-east of Cottonmouth Lake, Mariana County"
+      },
+      {
+        "label": "Gang",
+        "value": "Kingfishers"
+      },
+      {
+        "label": "Security",
+        "value": "High"
+      },
+      {
+        "label": "Key valuables",
+        "value": "2 (safe, unique sniper rifle)"
+      },
+      {
+        "label": "Safe code",
+        "value": "Not needed"
+      },
+      {
+        "label": "Can do",
+        "value": "Any time you can reach the area (IGN lists it under this chapter by area)"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Manatee Motel",
+        "url": "https://www.ign.com/wikis/gta-6/Manatee_Motel",
+        "checkedAt": "2026-11-25",
+        "supports": "Locations, key valuables and tips"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Illegal Operations",
+        "url": "https://www.ign.com/wikis/gta-6/Illegal_Operations",
+        "checkedAt": "2026-11-25",
+        "supports": "Operation list, starting hints, areas; most can be done any time"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:robbery-sunrise-rv-park",
+    "gameId": "gta-vi",
+    "slug": "robbery-sunrise-rv-park",
+    "category": "robberies",
+    "title": "Sunrise RV Park (illegal operation)",
+    "summary": "A Kingfishers camp used for cocaine shipments and animal breeding, with two safes and a unique revolver.",
+    "steps": [
+      "Safe 1: behind the front desk of the office, the first building on your left from the main gate.",
+      "Read the notepad on the table right next to it: it has the code for safe 2.",
+      "Safe 2: in the dock building at the south end, next to the yellow \"LIVE BAIT & TACKLE\" sign. The first-aid box by the door has an Adrenaline and Zombix.",
+      "Kingfishers Akulus Revolver: on the bed in the orange-and-white RV just north of the dock."
+    ],
+    "facts": [
+      {
+        "label": "Area",
+        "value": "Cottonmouth Bay, north-west of Key Lento"
+      },
+      {
+        "label": "Gang",
+        "value": "Kingfishers"
+      },
+      {
+        "label": "Security",
+        "value": "High"
+      },
+      {
+        "label": "Key valuables",
+        "value": "3 (two safes, unique revolver)"
+      },
+      {
+        "label": "Safe code",
+        "value": "On the notepad beside the first safe"
+      },
+      {
+        "label": "Can do",
+        "value": "Any time you can reach the area (IGN lists it under this chapter by area)"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Sunrise RV Park",
+        "url": "https://www.ign.com/wikis/gta-6/Sunrise_RV_Park",
+        "checkedAt": "2026-11-25",
+        "supports": "Locations, key valuables and tips"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Illegal Operations",
+        "url": "https://www.ign.com/wikis/gta-6/Illegal_Operations",
+        "checkedAt": "2026-11-25",
+        "supports": "Operation list, starting hints, areas; most can be done any time"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:robbery-brooks-boatworks",
+    "gameId": "gta-vi",
+    "slug": "robbery-brooks-boatworks",
+    "category": "robberies",
+    "title": "Brooks Boatworks (illegal operation)",
+    "summary": "A Kolt & Associates dock that moves prescription pills. Four key valuables, and the safe codes for two other spots.",
+    "steps": [
+      "Go to the building east of the main warehouse first: inspect the map above the weapon case to note three safe codes (this one, La Cascara Motel and Kingpin Bowling). The Clunker 556 Assault Rifle is on the table there.",
+      "Main warehouse: stop the gang driving the boat away, then check the trunk on its deck for pills. The safe is upstairs in the long room.",
+      "Green wooden building to the left of the main warehouse: up the outside stairs, through the white door; a safe sits on a filing cabinet in the back office.",
+      "Vapid Smuggler Caracara: the bright orange truck parked outside the green building. Unlocked; sells for $6,325, or $5,550 to register."
+    ],
+    "facts": [
+      {
+        "label": "Area",
+        "value": "Port Gellhorn"
+      },
+      {
+        "label": "Gang",
+        "value": "Kolt & Associates"
+      },
+      {
+        "label": "Security",
+        "value": "High"
+      },
+      {
+        "label": "Key valuables",
+        "value": "4 (two safes, truck, unique rifle)"
+      },
+      {
+        "label": "Safe code",
+        "value": "On the map in the east building"
+      },
+      {
+        "label": "Can do",
+        "value": "Any time you can reach the area (IGN lists it under this chapter by area)"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Brooks Boatworks",
+        "url": "https://www.ign.com/wikis/gta-6/Brooks_Boatworks",
+        "checkedAt": "2026-11-25",
+        "supports": "Locations, key valuables and tips"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Illegal Operations",
+        "url": "https://www.ign.com/wikis/gta-6/Illegal_Operations",
+        "checkedAt": "2026-11-25",
+        "supports": "Operation list, starting hints, areas; most can be done any time"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:robbery-june-warehouse",
+    "gameId": "gta-vi",
+    "slug": "robbery-june-warehouse",
+    "category": "robberies",
+    "title": "June Warehouse (illegal operation)",
+    "summary": "A Kolt & Associates garage moving pills: a unique SMG, a safe and a standout truck.",
+    "steps": [
+      "Main garage, back wall: a weapon case with the Kolt & Associates Vatra SMG, and the safe just to its right (no code, pry it open).",
+      "Vapid Truth & Justice Caracara: parked just east of the garage. Unlocked; sells for $6,445, or $5,550 to register."
+    ],
+    "facts": [
+      {
+        "label": "Area",
+        "value": "Port Gellhorn"
+      },
+      {
+        "label": "Gang",
+        "value": "Kolt & Associates"
+      },
+      {
+        "label": "Security",
+        "value": "High"
+      },
+      {
+        "label": "Key valuables",
+        "value": "3 (unique SMG, safe, truck)"
+      },
+      {
+        "label": "Safe code",
+        "value": "Not needed"
+      },
+      {
+        "label": "Can do",
+        "value": "Any time you can reach the area (IGN lists it under this chapter by area)"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "June Warehouse",
+        "url": "https://www.ign.com/wikis/gta-6/June_Warehouse",
+        "checkedAt": "2026-11-25",
+        "supports": "Locations, key valuables and tips"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Illegal Operations",
+        "url": "https://www.ign.com/wikis/gta-6/Illegal_Operations",
+        "checkedAt": "2026-11-25",
+        "supports": "Operation list, starting hints, areas; most can be done any time"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:robbery-kingpin-bowling",
+    "gameId": "gta-vi",
+    "slug": "robbery-kingpin-bowling",
+    "category": "robberies",
+    "title": "Kingpin Bowling (illegal operation)",
+    "summary": "An abandoned bowling alley turned Kolt & Associates pill operation, heavily defended.",
+    "steps": [
+      "Safe: in the office at the back of the main building. Get its code from the map at Brooks Boatworks, or use a sticky bomb.",
+      "Gutterball Moreland 850 Shotgun: on the pool table just left of the office.",
+      "Crowex Octane \"Orca\" luxury watch: on a small table in the room left of the lanes.",
+      "This is one of the places you might find sticky bombs early."
+    ],
+    "facts": [
+      {
+        "label": "Area",
+        "value": "Port Gellhorn"
+      },
+      {
+        "label": "Gang",
+        "value": "Kolt & Associates"
+      },
+      {
+        "label": "Security",
+        "value": "High"
+      },
+      {
+        "label": "Key valuables",
+        "value": "3 (safe, unique shotgun, luxury watch)"
+      },
+      {
+        "label": "Safe code",
+        "value": "On the map at Brooks Boatworks"
+      },
+      {
+        "label": "Can do",
+        "value": "Any time you can reach the area (IGN lists it under this chapter by area)"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Kingpin Bowling",
+        "url": "https://www.ign.com/wikis/gta-6/Kingpin_Bowling",
+        "checkedAt": "2026-11-25",
+        "supports": "Locations, key valuables and tips"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Illegal Operations",
+        "url": "https://www.ign.com/wikis/gta-6/Illegal_Operations",
+        "checkedAt": "2026-11-25",
+        "supports": "Operation list, starting hints, areas; most can be done any time"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:robbery-la-cascara-motel",
+    "gameId": "gta-vi",
+    "slug": "robbery-la-cascara-motel",
+    "category": "robberies",
+    "title": "La Cascara Motel (illegal operation)",
+    "summary": "An abandoned hotel where Kolt & Associates keep a delivery, plus a standout car out front.",
+    "steps": [
+      "Vapid Firebug Dominator: the bright red car on the east side out front. It's locked: break the window or use a Slim Jim. Clear the guards first.",
+      "Safe: in a room on the top floor. The code isn't here: it's on the map at Brooks Boatworks.",
+      "Scrapper VF5C SMG: in a weapon case just past the safe room."
+    ],
+    "facts": [
+      {
+        "label": "Area",
+        "value": "Port Gellhorn"
+      },
+      {
+        "label": "Gang",
+        "value": "Kolt & Associates"
+      },
+      {
+        "label": "Security",
+        "value": "High"
+      },
+      {
+        "label": "Key valuables",
+        "value": "3 (car, safe, unique SMG)"
+      },
+      {
+        "label": "Safe code",
+        "value": "On the map at Brooks Boatworks"
+      },
+      {
+        "label": "Can do",
+        "value": "Any time you can reach the area (IGN lists it under this chapter by area)"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "La Cascara Motel",
+        "url": "https://www.ign.com/wikis/gta-6/La_Cascara_Motel",
+        "checkedAt": "2026-11-25",
+        "supports": "Locations, key valuables and tips"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Illegal Operations",
+        "url": "https://www.ign.com/wikis/gta-6/Illegal_Operations",
+        "checkedAt": "2026-11-25",
+        "supports": "Operation list, starting hints, areas; most can be done any time"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:robbery-stash-house",
+    "gameId": "gta-vi",
+    "slug": "robbery-stash-house",
+    "category": "robberies",
+    "title": "Stash House (illegal operation)",
+    "summary": "A small Kolt & Associates drug house. Vicki tells you about it.",
+    "steps": [
+      "Kitchen counter: the Kolt & Associates 556 Assault Rifle, with a Zombix and a crate of Molotovs nearby.",
+      "Next room, left of the doorway as you face the kitchen: a safe (no code, pry it open)."
+    ],
+    "facts": [
+      {
+        "label": "Area",
+        "value": "Port Gellhorn"
+      },
+      {
+        "label": "Gang",
+        "value": "Kolt & Associates"
+      },
+      {
+        "label": "Security",
+        "value": "Medium"
+      },
+      {
+        "label": "Key valuables",
+        "value": "2 (unique rifle, safe)"
+      },
+      {
+        "label": "Safe code",
+        "value": "Not needed"
+      },
+      {
+        "label": "Can do",
+        "value": "Any time you can reach the area (IGN lists it under this chapter by area)"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Stash House",
+        "url": "https://www.ign.com/wikis/gta-6/Stash_House",
+        "checkedAt": "2026-11-25",
+        "supports": "Locations, key valuables and tips"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Illegal Operations",
+        "url": "https://www.ign.com/wikis/gta-6/Illegal_Operations",
+        "checkedAt": "2026-11-25",
+        "supports": "Operation list, starting hints, areas; most can be done any time"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:robbery-nova-auto-junkyard",
+    "gameId": "gta-vi",
+    "slug": "robbery-nova-auto-junkyard",
+    "category": "robberies",
+    "title": "Nova Auto Junkyard (illegal operation)",
+    "summary": "An M7 gang junkyard where bikers dropped off a bag. A unique rifle, a safe and a muscle car.",
+    "steps": [
+      "Marabunta Grande KZ-59 Assault Rifle: on a workbench by the big blue container, under the metal awning in the north. An explosive barrel there helps with the guards.",
+      "Safe: in the south-east office with a white shutter, next to the yellow school bus. Expect an ambush at the door. The code is written on the wall right behind the safe.",
+      "Albany Teniente Manana: the muscle car in the garage next to the safe.",
+      "Randy's Wish List car, the Bravado Gauntlet Hellfire, is also in this junkyard (Chapter 3)."
+    ],
+    "facts": [
+      {
+        "label": "Area",
+        "value": "Hamlet, Mariana County"
+      },
+      {
+        "label": "Gang",
+        "value": "M7"
+      },
+      {
+        "label": "Security",
+        "value": "High"
+      },
+      {
+        "label": "Key valuables",
+        "value": "3 (unique rifle, safe, muscle car)"
+      },
+      {
+        "label": "Safe code",
+        "value": "Written on the wall behind the safe"
+      },
+      {
+        "label": "Can do",
+        "value": "Any time you can reach the area (IGN lists it under this chapter by area)"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Nova Auto Junkyard",
+        "url": "https://www.ign.com/wikis/gta-6/Nova_Auto_Junkyard",
+        "checkedAt": "2026-11-25",
+        "supports": "Locations, key valuables and tips"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Illegal Operations",
+        "url": "https://www.ign.com/wikis/gta-6/Illegal_Operations",
+        "checkedAt": "2026-11-25",
+        "supports": "Operation list, starting hints, areas; most can be done any time"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:robberies-yasmani-contact",
+    "gameId": "gta-vi",
+    "slug": "robberies-yasmani-contact",
+    "category": "robberies",
+    "title": "Yasmani: your robbery contact (Chapter 3)",
+    "summary": "In Chapter 3 you start working for Yasmani, who specialises in bank robbery. He offers repeatable money-making jobs and buys the jewelry, marked bills and drugs you bring him.",
+    "steps": [
+      "His first job is the story mission Yasmani's Jewelry Jobs (three stores).",
+      "The garage behind his office has a crate of sticky bombs you can refill from."
+    ],
+    "facts": [
+      {
+        "label": "From",
+        "value": "Chapter 3"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "How to Open Safes and Doors with Sticky Bombs",
+        "url": "https://www.ign.com/wikis/gta-6/How_to_Open_Safes_and_Doors_with_Sticky_Bombs",
+        "checkedAt": "2026-11-25",
+        "supports": "Yasmani's role and back room"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Yasmani's Jewelry Jobs Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Yasmani%27s_Jewelry_Jobs_Walkthrough",
+        "checkedAt": "2026-11-25",
+        "supports": "The three jewelry stores"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:robberies-story-heists",
+    "gameId": "gta-vi",
+    "slug": "robberies-story-heists",
+    "category": "robberies",
+    "title": "The story robberies and heists (Chapter 3)",
+    "summary": "The big jobs are part of the story; their full guides are in the Walkthrough. Quick list:",
+    "steps": [
+      "Yasmani's Jewelry Jobs: three jewelry stores (Richardson Jewelry, Donovan Banks & Co, Casa de Empeño).",
+      "Credit Check: three Fleeca banks, one in Washington Beach and two in Ocean Beach. You need your partner.",
+      "Building up to the Cartel Heist: Sinfrontera National Bank (scout it), Security Expert, The Missing Link, Safe Word and Hidden Charges.",
+      "The Cartel Heist: keep the alarm off for a \"perfect heist\"."
+    ],
+    "facts": [
+      {
+        "label": "Where",
+        "value": "Walkthrough → Chapter 3"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Walkthrough (mission list by chapter)",
+        "url": "https://www.ign.com/wikis/gta-6/Walkthrough",
+        "checkedAt": "2026-11-25",
+        "supports": "Which story missions are robberies and heists"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Credit Check Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Credit_Check_Walkthrough",
+        "checkedAt": "2026-11-25",
+        "supports": "The three banks"
+      },
+      {
+        "publisher": "IGN",
+        "title": "The Cartel Heist Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/The_Cartel_Heist_Walkthrough",
+        "checkedAt": "2026-11-25",
+        "supports": "Alarm off = perfect heist"
       }
     ],
     "platformNote": null,

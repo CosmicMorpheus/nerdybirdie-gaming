@@ -62,9 +62,9 @@ test('search and filters: section, spoiler level, verification, done', async ({ 
   await page.getByRole('searchbox', { name: 'Search guide entries' }).fill('fx-walk');
   await expect(rows).toHaveCount(2);
   await page.getByRole('searchbox', { name: 'Search guide entries' }).fill('');
-  await page.getByLabel('Section').selectOption('money');
+  await page.getByRole('combobox', { name: /^Section/ }).selectOption('money');
   await expect(rows).toHaveCount(2);
-  await page.getByLabel('Section').selectOption('all');
+  await page.getByRole('combobox', { name: /^Section/ }).selectOption('all');
   await page.getByLabel('Spoiler level').selectOption('major');
   await expect(rows).toHaveCount(1);
   await page.getByLabel('Spoiler level').selectOption('all');

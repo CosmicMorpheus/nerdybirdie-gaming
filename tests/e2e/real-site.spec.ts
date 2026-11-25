@@ -121,3 +121,27 @@ test('real map: loads the imported snapshot and finds the pilot card', async ({ 
   await expect(page.locator('.pin-detail .video-flag')).toContainText('Not yet checked');
   await expect(page.locator('.pin-detail').getByRole('button', { name: /Play from 0:49/ })).toBeVisible();
 });
+
+test('robberies: own section on the board, every robbery spot listed, grouped by chapter', async ({ page }) => {
+  await page.goto(REAL + '/games/gta-vi/guides/');
+  await expect(page.locator('.quest', { hasText: 'Robberies & heists' })).toBeVisible();
+  await page.goto(REAL + '/games/gta-vi/guides/robberies/');
+  await page.waitForFunction(() => !document.querySelector('astro-island[ssr]'));
+  for (const name of ['Fishing Shacks', 'Exotic Animals Front', 'Backroom Weed Front', 'Industrial Weed Grow', 'Manatee Motel', 'Sunrise RV Park',
+    'Brooks Boatworks', 'June Warehouse', 'Kingpin Bowling', 'La Cascara Motel', 'Stash House', 'Nova Auto Junkyard'])
+    await expect(page.locator('li.entry', { hasText: name }).first()).toBeVisible();
+  await expect(page.getByRole('navigation', { name: 'Jump to chapter' })).toContainText('Chapter 2');
+  await expect(page.getByRole('heading', { name: /Chapter 2/ })).toBeVisible();
+  // Moved from Money: same id, so an existing tick still counts.
+  await expect(page.locator('#entry-money-kingfishers-fishing-shacks')).toBeVisible();
+});
+
+test('guides overview: the long list waits for a search, and results are grouped by section', async ({ page }) => {
+  await page.goto(REAL + '/games/gta-vi/guides/');
+  await page.waitForFunction(() => !document.querySelector('astro-island[ssr]'));
+  await expect(page.getByText(/Search all \d+ entries above/)).toBeVisible();
+  await expect(page.locator('li.entry')).toHaveCount(0);
+  await page.getByRole('searchbox', { name: 'Search guide entries' }).fill('safe');
+  await expect(page.getByRole('navigation', { name: 'Jump to section' })).toContainText('Robberies & heists');
+  expect(await page.locator('li.entry').count()).toBeGreaterThan(3);
+});

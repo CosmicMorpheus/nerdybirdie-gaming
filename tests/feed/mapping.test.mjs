@@ -21,6 +21,10 @@ test('every feed category is a real guide section or general', () => {
 test('approved mapping: title words land in our sections', () => {
   assert.equal(cat('GTA VI mission walkthrough part 1'), 'walkthrough');
   assert.equal(cat('GTA 6 all side missions'), 'side-missions');
+  assert.equal(cat('GTA VI The Cartel Heist perfect run'), 'robberies');
+  assert.equal(cat('GTA 6 every illegal operation location'), 'robberies');
+  assert.equal(cat('GTA VI best bank robbery tips'), 'robberies');
+  assert.equal(cat("GTA 6 smash 'n' grab guide"), 'robberies');
   assert.equal(cat('GTA VI side activities guide'), 'side-missions');
   assert.equal(cat('GTA 6 rare cars you can keep'), 'vehicles');
   assert.equal(cat('GTA VI best weapons'), 'weapons');

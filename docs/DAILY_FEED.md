@@ -40,6 +40,7 @@ Then deploy. The limit is 10 creators. Set `"paused"` to stop following one and 
 | Title words | Section |
 |---|---|
 | side mission, side activity, side hustle, side job | side-missions |
+| robbery, heist, bank job, stick-up, smash 'n' grab, illegal operation | robberies |
 | mission, walkthrough | walkthrough |
 | achievement, trophy | general |
 | collectible | collectibles |
