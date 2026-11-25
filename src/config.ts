@@ -48,7 +48,7 @@ export const BRAND = {
 export const SHOW_UNREVIEWED_MEDIA = !INDEXABLE;
 
 /** Hosts allowed to embed Twitch players (Twitch requires every host to be listed). Add the production domain at launch. */
-export const TWITCH_PARENTS = ['localhost', 'guides.nerdy-birdie.com', 'nerdybirdiegameguides.netlify.app'] as const;
+export const TWITCH_PARENTS = ['localhost', 'gameguides-nerdy-birdie.live', 'www.gameguides-nerdy-birdie.live', 'nerdybirdiegameguides.netlify.app'] as const;
 
 /**
  * ASK "COZMC" server features (question queue, live AI research, approved overrides). OFF by default: ASK then runs

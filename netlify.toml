@@ -1,5 +1,5 @@
 # Netlify settings for the Nerdy Birdie Gaming site (a separate Netlify site from cozmc.us).
-# Address: https://guides.nerdy-birdie.com (custom domain, DNS at Squarespace); also nerdybirdiegameguides.netlify.app. Password-protected for now.
+# Address: https://gameguides-nerdy-birdie.live (custom domain, founder bought 2026-11-25); also nerdybirdiegameguides.netlify.app. Password-protected for now.
 [build]
   command = "npm run build"
   publish = "dist"
@@ -12,7 +12,7 @@
   NODE_VERSION = "22"
   ASTRO_TELEMETRY_DISABLED = "1"
   # Public build: canonical URLs + sitemap, search engines allowed, preview-only content hidden.
-  SITE_URL = "https://guides.nerdy-birdie.com"
+  SITE_URL = "https://gameguides-nerdy-birdie.live"
   PUBLIC_INDEXABLE = "true"
   # Keep the What's New creator feed on in the public build (founder, 24 Nov 2026).
   PUBLIC_DISCOVERY_FEED = "true"
