@@ -22,12 +22,22 @@ test('preview build is not indexable', async ({ page, request }) => {
   expect(await (await request.get(REAL + '/robots.txt')).text()).toContain('Disallow: /');
 });
 
-test('tracker shows an honest empty state, not fake data', async ({ page }) => {
+test('achievements: real Xbox and PS5 lists, spoiler-safe, ticks saved per platform', async ({ page }) => {
   await page.goto(REAL + '/games/gta-vi/achievements/');
-  await expect(page.getByText(/Xbox Series X\|S achievements list isn't verified yet/)).toBeVisible();
-  await expect(page.getByText('—', { exact: true })).toBeVisible();
+  await page.waitForFunction(() => !document.querySelector('astro-island[ssr]'));
+  const rows = page.locator('li.row');
+  await expect(rows).toHaveCount(54);
+  await expect(page.locator('li.row', { hasText: 'A Long Road' })).toContainText('100G');
+  // Story trophies stay hidden until revealed; their text isn't in the page.
+  await expect(page.locator('body')).not.toContainText('Operation Savage Glory');
+  await expect(page.locator('li.row', { hasText: 'Positive Mental Attitude' })).toContainText('Missable');
+  await page.locator('li.row', { hasText: 'Cunning Stunts' }).getByRole('checkbox').check();
   await page.getByRole('radio', { name: 'PS5' }).check();
-  await expect(page.getByText(/PlayStation 5 trophies list isn't verified yet/)).toBeVisible();
+  await expect(rows).toHaveCount(55);
+  await expect(page.locator('li.row', { hasText: 'Vice Got a Price!' })).toContainText('Platinum');
+  await expect(page.locator('li.row', { hasText: 'Cunning Stunts' }).getByRole('checkbox')).not.toBeChecked();
+  const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('nbg:progress')!));
+  expect(Object.keys(saved.contexts['gta-vi|xbox-series'].completed)).toContain('gta-vi:xbox:cunning-stunts');
 });
 
 test('the public build contains no fixture data', () => {

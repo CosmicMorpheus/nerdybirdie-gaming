@@ -229,6 +229,7 @@ export default function Tracker({ gameId, gameShortTitle, platforms, categories,
                       {o.missable === true && <span class="tag miss">Missable</span>}
                       {o.hidden && <span class="tag">Hidden</span>}
                       {o.points !== null && platform.family === 'xbox' && <span class="tag">{o.points}G</span>}
+                      {o.grade && platform.family === 'playstation' && <span class={`tag grade-${o.grade}`}>{o.grade[0]!.toUpperCase() + o.grade.slice(1)}</span>}
                       {o.draft && <span class="tag draft">Draft · unverified</span>}
                       {note && openNote !== o.id && <span class="tag">Note</span>}
                     </div>

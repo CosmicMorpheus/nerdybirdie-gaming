@@ -122,6 +122,24 @@
       "checkedAt": "2026-11-24",
       "supportedClaim": "Released worldwide on 19 November 2026 for PlayStation 5 and Xbox Series X|S (\"now available worldwide for PlayStation 5 and XBOX Series X|S\").",
       "official": true
+    },
+    {
+      "id": "gamesradar-trophy-list",
+      "url": "https://www.gamesradar.com/games/grand-theft-auto/gta-6-trophy-achievement-list/",
+      "publisher": "GamesRadar+",
+      "title": "Complete GTA 6 Trophy and Achievement list",
+      "checkedAt": "2026-11-25",
+      "supportedClaim": "All 55 trophies and achievements: name, PlayStation grade, Xbox Gamerscore (1,000 total), unlock description, which are hidden, and that Positive Mental Attitude is potentially missable.",
+      "official": false
+    },
+    {
+      "id": "ign-100-percent",
+      "url": "https://www.ign.com/wikis/gta-6/GTA_6_100_Percent_Guide",
+      "publisher": "IGN",
+      "title": "GTA 6 100 Percent Guide",
+      "checkedAt": "2026-11-25",
+      "supportedClaim": "A Long Road is the gold trophy for 100% completion (needed for the platinum); Cunning Stunts needs 250 stunts; Master of None needs one of each activity.",
+      "official": false
     }
   ]
 }

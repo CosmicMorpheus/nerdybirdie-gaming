@@ -224,3 +224,8 @@
 .chapter-h { font: 700 22px/1.2 'Space Grotesk', var(--body); margin: 18px 0 4px; padding-bottom: 6px; border-bottom: 2px solid var(--vc-line); scroll-margin-top: 90px;
   display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
 .browse-hint { margin: 10px 0; padding: 14px 16px; border: 2px dashed var(--vc-line); border-radius: 6px; color: var(--vc-muted); }
+/* PlayStation trophy grades. */
+.tag.grade-platinum { background: #2b3550; color: #cfe3ff; }
+.tag.grade-gold { background: #3a3110; color: #ffd98a; }
+.tag.grade-silver { background: #2a2f3a; color: #dfe4ee; }
+.tag.grade-bronze { background: #3a2616; color: #f0b98a; }

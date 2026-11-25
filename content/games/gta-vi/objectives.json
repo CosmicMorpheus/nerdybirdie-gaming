@@ -1,1 +1,2901 @@
-[]
+[
+  {
+    "id": "gta-vi:xbox:just-like-paradise",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "story",
+    "safeTitle": "Hidden story achievement",
+    "safeSummary": "Story progress, right at the start (Chapter 1).",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 5,
+    "grade": null,
+    "protected": {
+      "title": "Just Like Paradise",
+      "summary": "Complete Gone Fishing."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:just-like-paradise",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "story",
+    "safeTitle": "Hidden story achievement",
+    "safeSummary": "Story progress, right at the start (Chapter 1).",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "Just Like Paradise",
+      "summary": "Complete Gone Fishing."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:paradise-lost",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "story",
+    "safeTitle": "Hidden story achievement",
+    "safeSummary": "Story progress (end of Chapter 1).",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 20,
+    "grade": null,
+    "protected": {
+      "title": "Paradise Lost",
+      "summary": "Complete Chapter 1."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:paradise-lost",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "story",
+    "safeTitle": "Hidden story achievement",
+    "safeSummary": "Story progress (end of Chapter 1).",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "Paradise Lost",
+      "summary": "Complete Chapter 1."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:ts-ass-drug-money",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "story",
+    "safeTitle": "Hidden story achievement",
+    "safeSummary": "Story progress (end of Chapter 2).",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 20,
+    "grade": null,
+    "protected": {
+      "title": "T**s Ass Drug Money",
+      "summary": "Complete Chapter 2."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:ts-ass-drug-money",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "story",
+    "safeTitle": "Hidden story achievement",
+    "safeSummary": "Story progress (end of Chapter 2).",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "T**s Ass Drug Money",
+      "summary": "Complete Chapter 2."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:vice-city-baby",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "story",
+    "safeTitle": "Hidden story achievement",
+    "safeSummary": "Story progress (end of Chapter 3).",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 20,
+    "grade": null,
+    "protected": {
+      "title": "Vice City, Baby!",
+      "summary": "Complete Chapter 3."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:vice-city-baby",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "story",
+    "safeTitle": "Hidden story achievement",
+    "safeSummary": "Story progress (end of Chapter 3).",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "Vice City, Baby!",
+      "summary": "Complete Chapter 3."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:top-of-the-world-ma",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "story",
+    "safeTitle": "Hidden story achievement",
+    "safeSummary": "Story progress (later in the game).",
+    "spoilerLevel": "major",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 20,
+    "grade": null,
+    "protected": {
+      "title": "Top Of The World, Ma",
+      "summary": "Complete Chapter 4."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:top-of-the-world-ma",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "story",
+    "safeTitle": "Hidden story achievement",
+    "safeSummary": "Story progress (later in the game).",
+    "spoilerLevel": "major",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "Top Of The World, Ma",
+      "summary": "Complete Chapter 4."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:you-gotta-know-when-to-get-off",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "story",
+    "safeTitle": "Hidden story achievement",
+    "safeSummary": "Story progress (later in the game).",
+    "spoilerLevel": "major",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 50,
+    "grade": null,
+    "protected": {
+      "title": "You Gotta Know When to Get Off",
+      "summary": "Complete the final mission."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:you-gotta-know-when-to-get-off",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "story",
+    "safeTitle": "Hidden story achievement",
+    "safeSummary": "Story progress (later in the game).",
+    "spoilerLevel": "major",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "gold",
+    "protected": {
+      "title": "You Gotta Know When to Get Off",
+      "summary": "Complete the final mission."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:trust",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "story",
+    "safeTitle": "Hidden story achievement",
+    "safeSummary": "Story progress (Chapter 2).",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 10,
+    "grade": null,
+    "protected": {
+      "title": "Trust",
+      "summary": "Complete Breakfast Run."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:trust",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "story",
+    "safeTitle": "Hidden story achievement",
+    "safeSummary": "Story progress (Chapter 2).",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "Trust",
+      "summary": "Complete Breakfast Run."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:break-the-bank",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "story",
+    "safeTitle": "Hidden story achievement",
+    "safeSummary": "Story progress (Chapter 3).",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 25,
+    "grade": null,
+    "protected": {
+      "title": "Break the Bank",
+      "summary": "Complete The Cartel Heist."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:break-the-bank",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "story",
+    "safeTitle": "Hidden story achievement",
+    "safeSummary": "Story progress (Chapter 3).",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "Break the Bank",
+      "summary": "Complete The Cartel Heist."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:family-matters",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "story",
+    "safeTitle": "Hidden story achievement",
+    "safeSummary": "Story progress (later in the game).",
+    "spoilerLevel": "major",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 15,
+    "grade": null,
+    "protected": {
+      "title": "Family Matters",
+      "summary": "Complete Child's Play."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:family-matters",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "story",
+    "safeTitle": "Hidden story achievement",
+    "safeSummary": "Story progress (later in the game).",
+    "spoilerLevel": "major",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "Family Matters",
+      "summary": "Complete Child's Play."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:dwnfall",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "story",
+    "safeTitle": "Hidden story achievement",
+    "safeSummary": "Story progress (later in the game).",
+    "spoilerLevel": "major",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 15,
+    "grade": null,
+    "protected": {
+      "title": "DWNFALL",
+      "summary": "Complete Headliners."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:dwnfall",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "story",
+    "safeTitle": "Hidden story achievement",
+    "safeSummary": "Story progress (later in the game).",
+    "spoilerLevel": "major",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "DWNFALL",
+      "summary": "Complete Headliners."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:hi-jacked",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "story",
+    "safeTitle": "Hidden story achievement",
+    "safeSummary": "Story progress (later in the game).",
+    "spoilerLevel": "major",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 25,
+    "grade": null,
+    "protected": {
+      "title": "Hi-Jacked",
+      "summary": "Complete VCIA Takedown."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:hi-jacked",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "story",
+    "safeTitle": "Hidden story achievement",
+    "safeSummary": "Story progress (later in the game).",
+    "spoilerLevel": "major",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "Hi-Jacked",
+      "summary": "Complete VCIA Takedown."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:snow-storm",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "story",
+    "safeTitle": "Hidden story achievement",
+    "safeSummary": "Story progress (later in the game).",
+    "spoilerLevel": "major",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 25,
+    "grade": null,
+    "protected": {
+      "title": "Snow Storm",
+      "summary": "Complete Operation Savage Glory."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:snow-storm",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "story",
+    "safeTitle": "Hidden story achievement",
+    "safeSummary": "Story progress (later in the game).",
+    "spoilerLevel": "major",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "Snow Storm",
+      "summary": "Complete Operation Savage Glory."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:a-long-road",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "other",
+    "safeTitle": "A Long Road",
+    "safeSummary": "Attain 100% Completion.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": 100,
+    "grade": null,
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list",
+      "ign-100-percent"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:a-long-road",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "other",
+    "safeTitle": "A Long Road",
+    "safeSummary": "Attain 100% Completion.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": null,
+    "grade": "gold",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list",
+      "ign-100-percent"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:cunning-stunts",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "activities",
+    "safeTitle": "Cunning Stunts",
+    "safeSummary": "Complete 250 Stunts.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": 40,
+    "grade": null,
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list",
+      "ign-100-percent"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:cunning-stunts",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "activities",
+    "safeTitle": "Cunning Stunts",
+    "safeSummary": "Complete 250 Stunts.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": null,
+    "grade": "silver",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list",
+      "ign-100-percent"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:master-of-none",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "activities",
+    "safeTitle": "Master of None",
+    "safeSummary": "Try each type of activity once. (9 in total)",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": 20,
+    "grade": null,
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list",
+      "ign-100-percent"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:master-of-none",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "activities",
+    "safeTitle": "Master of None",
+    "safeSummary": "Try each type of activity once. (9 in total)",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list",
+      "ign-100-percent"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:the-shootist",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "activities",
+    "safeTitle": "The Shootist",
+    "safeSummary": "Earn a gold medal in all Shooting Range challenges. (42 in total)",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": 40,
+    "grade": null,
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:the-shootist",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "activities",
+    "safeTitle": "The Shootist",
+    "safeSummary": "Earn a gold medal in all Shooting Range challenges. (42 in total)",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": null,
+    "grade": "silver",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:top-fun",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "activities",
+    "safeTitle": "Top Fun",
+    "safeSummary": "Win a Top Fun Drone Race at every location. (14 in total)",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": 15,
+    "grade": null,
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:top-fun",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "activities",
+    "safeTitle": "Top Fun",
+    "safeSummary": "Win a Top Fun Drone Race at every location. (14 in total)",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:earn-cash-not-kudos",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "activities",
+    "safeTitle": "Earn Cash, Not Kudos",
+    "safeSummary": "Win 20 different races.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": 20,
+    "grade": null,
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:earn-cash-not-kudos",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "activities",
+    "safeTitle": "Earn Cash, Not Kudos",
+    "safeSummary": "Win 20 different races.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:baited-my-tackle",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "activities",
+    "safeTitle": "Baited My Tackle",
+    "safeSummary": "Beat Cal in a fishing challenge.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": 10,
+    "grade": null,
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:baited-my-tackle",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "activities",
+    "safeTitle": "Baited My Tackle",
+    "safeSummary": "Beat Cal in a fishing challenge.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:stick-fiddler",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "activities",
+    "safeTitle": "Stick Fiddler",
+    "safeSummary": "Complete an arcade game.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": 10,
+    "grade": null,
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:stick-fiddler",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "activities",
+    "safeTitle": "Stick Fiddler",
+    "safeSummary": "Complete an arcade game.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:road-to-rehabilitation",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "story",
+    "safeTitle": "Hidden side-story achievement",
+    "safeSummary": "Finish one side character's mission strand.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 15,
+    "grade": null,
+    "protected": {
+      "title": "Road to Rehabilitation",
+      "summary": "Complete the final mission for Andy."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:road-to-rehabilitation",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "story",
+    "safeTitle": "Hidden side-story achievement",
+    "safeSummary": "Finish one side character's mission strand.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "Road to Rehabilitation",
+      "summary": "Complete the final mission for Andy."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:this-was-no-boat-accident",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "story",
+    "safeTitle": "Hidden side-story achievement",
+    "safeSummary": "Finish one side character's mission strand.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 15,
+    "grade": null,
+    "protected": {
+      "title": "This Was No Boat Accident",
+      "summary": "Complete the final mission for Kenton."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:this-was-no-boat-accident",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "story",
+    "safeTitle": "Hidden side-story achievement",
+    "safeSummary": "Finish one side character's mission strand.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "This Was No Boat Accident",
+      "summary": "Complete the final mission for Kenton."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:the-lone-rider",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "story",
+    "safeTitle": "Hidden side-story achievement",
+    "safeSummary": "Finish one side character's mission strand.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 15,
+    "grade": null,
+    "protected": {
+      "title": "The Lone Rider",
+      "summary": "Complete the final mission for Billy."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:the-lone-rider",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "story",
+    "safeTitle": "Hidden side-story achievement",
+    "safeSummary": "Finish one side character's mission strand.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "The Lone Rider",
+      "summary": "Complete the final mission for Billy."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:strangers-freaks",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "story",
+    "safeTitle": "Strangers & Freaks",
+    "safeSummary": "Complete 8 mission strands for strangers across the state of Leonida.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": 30,
+    "grade": null,
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:strangers-freaks",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "story",
+    "safeTitle": "Strangers & Freaks",
+    "safeSummary": "Complete 8 mission strands for strangers across the state of Leonida.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": null,
+    "grade": "silver",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:supply-demand",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "story",
+    "safeTitle": "Hidden side-story achievement",
+    "safeSummary": "Finish one side character's mission strand.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 20,
+    "grade": null,
+    "protected": {
+      "title": "Supply & Demand",
+      "summary": "Complete the final mission for Randy."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:supply-demand",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "story",
+    "safeTitle": "Hidden side-story achievement",
+    "safeSummary": "Finish one side character's mission strand.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "Supply & Demand",
+      "summary": "Complete the final mission for Randy."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:spin-on-this",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "story",
+    "safeTitle": "Hidden side-story achievement",
+    "safeSummary": "Finish one side character's mission strand.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 15,
+    "grade": null,
+    "protected": {
+      "title": "Spin On This!",
+      "summary": "Complete the final mission for Tyrone."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:spin-on-this",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "story",
+    "safeTitle": "Hidden side-story achievement",
+    "safeSummary": "Finish one side character's mission strand.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "Spin On This!",
+      "summary": "Complete the final mission for Tyrone."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:positive-mental-attitude",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "exploration",
+    "safeTitle": "Positive Mental Attitude",
+    "safeSummary": "Meditate at every meditation spot in Leonida (18 in total). Missable: the spot at Jason's house is only available in Chapter 1.",
+    "spoilerLevel": "none",
+    "hidden": true,
+    "missable": true,
+    "points": 10,
+    "grade": null,
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:positive-mental-attitude",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "exploration",
+    "safeTitle": "Positive Mental Attitude",
+    "safeSummary": "Meditate at every meditation spot in Leonida (18 in total). Missable: the spot at Jason's house is only available in Chapter 1.",
+    "spoilerLevel": "none",
+    "hidden": true,
+    "missable": true,
+    "points": null,
+    "grade": "bronze",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:fair-game",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "activities",
+    "safeTitle": "Hidden hunting achievement",
+    "safeSummary": "A hunting challenge. Reveal for the hint.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 15,
+    "grade": null,
+    "protected": {
+      "title": "Fair Game",
+      "summary": "Hunt a unique GTA 6 animal for Bret."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:fair-game",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "activities",
+    "safeTitle": "Hidden hunting achievement",
+    "safeSummary": "A hunting challenge. Reveal for the hint.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "Fair Game",
+      "summary": "Hunt a unique GTA 6 animal for Bret."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:dont-touch-my-deck",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "collectibles",
+    "safeTitle": "Don't Touch My Deck",
+    "safeSummary": "Complete 3 Collectible Card sets.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": 30,
+    "grade": null,
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:dont-touch-my-deck",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "collectibles",
+    "safeTitle": "Don't Touch My Deck",
+    "safeSummary": "Complete 3 Collectible Card sets.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": null,
+    "grade": "silver",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:you-wainker",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "exploration",
+    "safeTitle": "You WAiNKer!",
+    "safeSummary": "WAiNK It at 100 locations.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": 30,
+    "grade": null,
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:you-wainker",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "exploration",
+    "safeTitle": "You WAiNKer!",
+    "safeSummary": "WAiNK It at 100 locations.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": null,
+    "grade": "silver",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:one-last-thing",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "activities",
+    "safeTitle": "One Last Thing",
+    "safeSummary": "Complete 50 Challenges.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": 5,
+    "grade": null,
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:one-last-thing",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "activities",
+    "safeTitle": "One Last Thing",
+    "safeSummary": "Complete 50 Challenges.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:hot-together",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "other",
+    "safeTitle": "Hot Together",
+    "safeSummary": "Lose a 4 star GTA 6 Wanted Level with your partner and escape the heat.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": 20,
+    "grade": null,
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:hot-together",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "other",
+    "safeTitle": "Hot Together",
+    "safeSummary": "Lose a 4 star GTA 6 Wanted Level with your partner and escape the heat.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:retail-therapy",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "other",
+    "safeTitle": "Retail Therapy",
+    "safeSummary": "Rob 3 shops back-to-back with your partner without losing your Wanted Level.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": 20,
+    "grade": null,
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:retail-therapy",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "other",
+    "safeTitle": "Retail Therapy",
+    "safeSummary": "Rob 3 shops back-to-back with your partner without losing your Wanted Level.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:whip-it-good",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "collectibles",
+    "safeTitle": "Whip It Good",
+    "safeSummary": "Discover 100 vehicles.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": 20,
+    "grade": null,
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:whip-it-good",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "collectibles",
+    "safeTitle": "Whip It Good",
+    "safeSummary": "Discover 100 vehicles.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:gunslinger",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "other",
+    "safeTitle": "Gunslinger",
+    "safeSummary": "Take down 5 enemies in a single use of Combat Focus.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": 10,
+    "grade": null,
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:gunslinger",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "other",
+    "safeTitle": "Gunslinger",
+    "safeSummary": "Take down 5 enemies in a single use of Combat Focus.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:catch-me-if-you-can",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "other",
+    "safeTitle": "Hidden achievement",
+    "safeSummary": "A one-off secret moment. Reveal for the hint.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 10,
+    "grade": null,
+    "protected": {
+      "title": "Catch Me If You Can",
+      "summary": "Make an unscheduled departure at VCIA."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:catch-me-if-you-can",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "other",
+    "safeTitle": "Hidden achievement",
+    "safeSummary": "A one-off secret moment. Reveal for the hint.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "Catch Me If You Can",
+      "summary": "Make an unscheduled departure at VCIA."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:challenging-tank",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "other",
+    "safeTitle": "Hidden achievement",
+    "safeSummary": "A one-off secret moment. Reveal for the hint.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 10,
+    "grade": null,
+    "protected": {
+      "title": "Challenging Tank",
+      "summary": "Kinda hot in these Rhinos."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:challenging-tank",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "other",
+    "safeTitle": "Hidden achievement",
+    "safeSummary": "A one-off secret moment. Reveal for the hint.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "Challenging Tank",
+      "summary": "Kinda hot in these Rhinos."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:sneakthief",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "other",
+    "safeTitle": "Sneakthief",
+    "safeSummary": "Rob a jewelry store without being detected.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": 10,
+    "grade": null,
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:sneakthief",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "other",
+    "safeTitle": "Sneakthief",
+    "safeSummary": "Rob a jewelry store without being detected.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:maximum-withdrawal",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "other",
+    "safeTitle": "Maximum Withdrawal",
+    "safeSummary": "Rob 5 Bank Vaults and escape.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": 40,
+    "grade": null,
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:maximum-withdrawal",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "other",
+    "safeTitle": "Maximum Withdrawal",
+    "safeSummary": "Rob 5 Bank Vaults and escape.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": null,
+    "grade": "silver",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:a-classic-blitz-play",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "other",
+    "safeTitle": "A Classic Blitz Play",
+    "safeSummary": "Rob an Armored Truck and escape.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": 10,
+    "grade": null,
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:a-classic-blitz-play",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "other",
+    "safeTitle": "A Classic Blitz Play",
+    "safeSummary": "Rob an Armored Truck and escape.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:the-goodtime-state",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "exploration",
+    "safeTitle": "The Goodtime State",
+    "safeSummary": "Explore all of Leonida.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": 20,
+    "grade": null,
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:the-goodtime-state",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "exploration",
+    "safeTitle": "The Goodtime State",
+    "safeSummary": "Explore all of Leonida.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:pest-control",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "other",
+    "safeTitle": "Pest Control",
+    "safeSummary": "Rob an Illegal Operation belonging to each gang. (9 in total)",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": 20,
+    "grade": null,
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:pest-control",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "other",
+    "safeTitle": "Pest Control",
+    "safeSummary": "Rob an Illegal Operation belonging to each gang. (9 in total)",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:in-the-beginning",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "other",
+    "safeTitle": "Hidden achievement",
+    "safeSummary": "A one-off secret moment. Reveal for the hint.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 5,
+    "grade": null,
+    "protected": {
+      "title": "In The Beginning…",
+      "summary": "Enjoy a cocktail with a view on Ocean Beach."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:in-the-beginning",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "other",
+    "safeTitle": "Hidden achievement",
+    "safeSummary": "A one-off secret moment. Reveal for the hint.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "In The Beginning…",
+      "summary": "Enjoy a cocktail with a view on Ocean Beach."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:capital-offense",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "other",
+    "safeTitle": "Hidden achievement",
+    "safeSummary": "A one-off secret moment. Reveal for the hint.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 5,
+    "grade": null,
+    "protected": {
+      "title": "Capital Offense",
+      "summary": "Smash your way out of a vehicle showroom in classic style."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:capital-offense",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "other",
+    "safeTitle": "Hidden achievement",
+    "safeSummary": "A one-off secret moment. Reveal for the hint.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "Capital Offense",
+      "summary": "Smash your way out of a vehicle showroom in classic style."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:lets-go-bowling",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "other",
+    "safeTitle": "Hidden achievement",
+    "safeSummary": "A one-off secret moment. Reveal for the hint.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 5,
+    "grade": null,
+    "protected": {
+      "title": "Let’s Go Bowling",
+      "summary": "Follow-through at the Kolt & Associates' bowling alley."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:lets-go-bowling",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "other",
+    "safeTitle": "Hidden achievement",
+    "safeSummary": "A one-off secret moment. Reveal for the hint.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "Let’s Go Bowling",
+      "summary": "Follow-through at the Kolt & Associates' bowling alley."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:personal-best",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "other",
+    "safeTitle": "Hidden achievement",
+    "safeSummary": "A one-off secret moment. Reveal for the hint.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 5,
+    "grade": null,
+    "protected": {
+      "title": "Personal Best",
+      "summary": "A partnership with mass appeal."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:personal-best",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "other",
+    "safeTitle": "Hidden achievement",
+    "safeSummary": "A one-off secret moment. Reveal for the hint.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "Personal Best",
+      "summary": "A partnership with mass appeal."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:actions-speak-louder",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "other",
+    "safeTitle": "Hidden achievement",
+    "safeSummary": "A one-off secret moment. Reveal for the hint.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 5,
+    "grade": null,
+    "protected": {
+      "title": "Actions Speak Louder",
+      "summary": "Choices made (for better or worse). (500 in total)"
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:actions-speak-louder",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "other",
+    "safeTitle": "Hidden achievement",
+    "safeSummary": "A one-off secret moment. Reveal for the hint.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "Actions Speak Louder",
+      "summary": "Choices made (for better or worse). (500 in total)"
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:bad-luck-i-guess",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "other",
+    "safeTitle": "Hidden achievement",
+    "safeSummary": "A one-off secret moment. Reveal for the hint.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 5,
+    "grade": null,
+    "protected": {
+      "title": "Bad Luck, I Guess",
+      "summary": "Second time's the charm."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:bad-luck-i-guess",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "other",
+    "safeTitle": "Hidden achievement",
+    "safeSummary": "A one-off secret moment. Reveal for the hint.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "Bad Luck, I Guess",
+      "summary": "Second time's the charm."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:the-truth-is-out-there",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "other",
+    "safeTitle": "Hidden achievement",
+    "safeSummary": "A one-off secret moment. Reveal for the hint.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 5,
+    "grade": null,
+    "protected": {
+      "title": "The Truth Is Out There",
+      "summary": "What the hell just happened?"
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:the-truth-is-out-there",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "other",
+    "safeTitle": "Hidden achievement",
+    "safeSummary": "A one-off secret moment. Reveal for the hint.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "The Truth Is Out There",
+      "summary": "What the hell just happened?"
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:ten-pin",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "other",
+    "safeTitle": "Hidden achievement",
+    "safeSummary": "A one-off secret moment. Reveal for the hint.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": 5,
+    "grade": null,
+    "protected": {
+      "title": "Ten Pin",
+      "summary": "Bowl 'em over with a melee drive-by."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:ten-pin",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "other",
+    "safeTitle": "Hidden achievement",
+    "safeSummary": "A one-off secret moment. Reveal for the hint.",
+    "spoilerLevel": "minor",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": {
+      "title": "Ten Pin",
+      "summary": "Bowl 'em over with a melee drive-by."
+    },
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:dime-on-the-dollar",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "other",
+    "safeTitle": "Dime on the Dollar",
+    "safeSummary": "Earn $250,000 laundering Marked Bills through your contacts.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": 20,
+    "grade": null,
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:dime-on-the-dollar",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "other",
+    "safeTitle": "Dime on the Dollar",
+    "safeSummary": "Earn $250,000 laundering Marked Bills through your contacts.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:treat-yo-self",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "other",
+    "safeTitle": "Treat Yo Self",
+    "safeSummary": "Spend $100,000 across all shops.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": 15,
+    "grade": null,
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:treat-yo-self",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "other",
+    "safeTitle": "Treat Yo Self",
+    "safeSummary": "Spend $100,000 across all shops.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:little-boxes",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "other",
+    "safeTitle": "Little Boxes",
+    "safeSummary": "Purchase all garage properties. (8 in total)",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": 15,
+    "grade": null,
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:little-boxes",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "other",
+    "safeTitle": "Little Boxes",
+    "safeSummary": "Purchase all garage properties. (8 in total)",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:xbox:on-the-spot",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "xbox-series"
+    ],
+    "kind": "achievement",
+    "category": "other",
+    "safeTitle": "On the Spot",
+    "safeSummary": "Register 10 vehicles to the Scooter Bros app.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": 15,
+    "grade": null,
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:on-the-spot",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "other",
+    "safeTitle": "On the Spot",
+    "safeSummary": "Register 10 vehicles to the Scooter Bros app.",
+    "spoilerLevel": "none",
+    "hidden": false,
+    "missable": "unknown",
+    "points": null,
+    "grade": "bronze",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  },
+  {
+    "id": "gta-vi:ps5:vice-got-a-price",
+    "gameId": "gta-vi",
+    "platformIds": [
+      "ps5"
+    ],
+    "kind": "trophy",
+    "category": "other",
+    "safeTitle": "Vice Got a Price!",
+    "safeSummary": "Congratulations! You're a Leonida Legend.",
+    "spoilerLevel": "none",
+    "hidden": true,
+    "missable": "unknown",
+    "points": null,
+    "grade": "platinum",
+    "protected": null,
+    "sourceIds": [
+      "gamesradar-trophy-list"
+    ],
+    "verificationStatus": "independently_verified",
+    "publicationStatus": "approved",
+    "checkedAt": "2026-11-25",
+    "founderVerifiedAt": null,
+    "revision": 1
+  }
+]

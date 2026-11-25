@@ -86,6 +86,8 @@ export const Objective = z.strictObject({
   hidden: z.boolean(),
   missable: z.union([z.boolean(), z.literal('unknown')]),
   points: z.number().int().nonnegative().nullable(),
+  /** PlayStation trophy grade. */
+  grade: z.enum(['platinum', 'gold', 'silver', 'bronze']).nullable().optional(),
   /** Spoiler text. Never rendered into pages; served separately and fetched on reveal. */
   protected: z.strictObject({ title: z.string().min(1), summary: z.string() }).nullable(),
   sourceIds: z.array(slug),

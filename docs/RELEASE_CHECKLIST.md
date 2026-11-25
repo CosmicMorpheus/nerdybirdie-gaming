@@ -10,7 +10,7 @@ Every box needs a name and a date. The founder signs off last. Until then the si
 - [ ] GTA help channel invite (optional) → `COZMC.gtaHelpChannel`
 
 ## Content bar
-- [ ] Verified achievement and trophy lists per platform, **or** the tracker kept out of navigation (current: kept out)
+- [x] Verified achievement and trophy lists per platform (2026-11-25: 54 Xbox, 55 PS5; GamesRadar, IGN cross-check)
 - [x] 10–15 actionable, sourced guide entries (2026-11-24: 97 entries incl. 68 story missions)
 - [ ] Paid items marked "Paid / optional", with free alternatives where verified
 - [x] Videos: only approved ones show on the public build (checked in a local public build, 2026-11-24: none shown)
