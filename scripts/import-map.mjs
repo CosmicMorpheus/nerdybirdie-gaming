@@ -111,7 +111,9 @@ async function main() {
   const byName = new Map();
   for (const p of pins) { const a = byName.get(p.name) || []; for (const q of a) if (Math.hypot(p.x - q.x, p.y - q.y) < 1) near.push(`${q.src} ~ ${p.src}`); a.push(p); byName.set(p.name, a); }
 
-  const ourCats = categories.kinds.map((k) => ({ id: k.key, label: k.name, colour: k.colour, group: k.group, trackable: k.pinnable }));
+  // Our overrides: crime colours match the in-game map legend (founder, 25 Nov 2026) and labels use the game's terms.
+  const OVERRIDES = { gang: { label: 'Illegal operations', colour: '#ffd000' }, smash: { colour: '#2dc653' }, store: { label: 'Stick-ups', colour: '#7dd3fc' }, bank: { colour: '#b07aa1' } };
+  const ourCats = categories.kinds.map((k) => ({ id: k.key, label: k.name, colour: k.colour, group: k.group, trackable: k.pinnable, ...(OVERRIDES[k.key] ?? {}) }));
   const geometry = {
     land: land.map((poly) => poly.map((ring) => simplify(ring, 0.25)).filter((r) => r.length >= 3)).filter((p) => p.length),
     roads: roads.features.filter((f) => f.properties.kind === 'highway' || f.properties.kind === 'main')

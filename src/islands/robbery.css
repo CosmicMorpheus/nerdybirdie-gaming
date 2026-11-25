@@ -1,0 +1,20 @@
+/* Robbery checklist (RobberyChecklist.tsx). */
+.robbery-list { margin: 0 0 24px; }
+.rob-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.rob-head h2 { margin: 0; font-size: 22px; }
+.rob-cat { border: 2px solid var(--vc-line); border-radius: 6px; margin-top: 10px; background: var(--vc-raised); }
+.rob-cat > summary { display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 8px 14px; cursor: pointer; list-style: none; }
+.rob-cat > summary::-webkit-details-marker { display: none; }
+.rob-cat > summary::after { content: '▾'; color: var(--vc-muted); }
+.rob-cat[open] > summary::after { content: '▴'; }
+.rob-cat > summary i { width: 16px; height: 16px; border-radius: 50%; border: 2px solid #000; flex: none; }
+.rob-name { flex: 1; font-weight: 700; display: flex; flex-direction: column; }
+.rob-name small { font-weight: 400; color: var(--vc-muted); font-size: 13px; }
+.rob-open { margin: 0; padding: 0 14px 6px; }
+.rob-open a { color: var(--vc-sunset); font-weight: 600; }
+.rob-pins { list-style: none; margin: 0; padding: 0 14px 12px; display: flex; flex-direction: column; gap: 6px; }
+.rob-pins li { display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: start; padding: 8px 0; border-top: 1px solid var(--vc-line); }
+.rob-pins li.done label { text-decoration: line-through; color: var(--vc-muted); }
+.rob-pins label { font-weight: 600; margin-right: 8px; }
+.rob-pins p { margin: 2px 0 0; }
+.rob-map { color: var(--vc-sunset); font-weight: 600; white-space: nowrap; min-height: 32px; display: inline-flex; align-items: center; }

@@ -1,0 +1,183 @@
+{
+ "note": "Map pins (Open GTA 6 Map) that IGN also lists, matched by name; only unambiguous matches. A second, independent source for the location existing. Refresh when either source changes.",
+ "source": {
+  "publisher": "IGN",
+  "title": "GTA 6 100 Percent Guide",
+  "url": "https://www.ign.com/wikis/gta-6/GTA_6_100_Percent_Guide",
+  "checkedAt": "2026-11-25"
+ },
+ "matches": {
+  "bank-001": {
+   "kind": "bank",
+   "ignName": "Washington Beach Fleeca Bank"
+  },
+  "bank-006": {
+   "kind": "bank",
+   "ignName": "Key Lento Fleeca Bank"
+  },
+  "bank-009": {
+   "kind": "bank",
+   "ignName": "Peacock Bay Lombank"
+  },
+  "bank-010": {
+   "kind": "bank",
+   "ignName": "Peacock Bay Fleeca Bank"
+  },
+  "bank-011": {
+   "kind": "bank",
+   "ignName": "Downtown Shorefront Bank"
+  },
+  "bank-012": {
+   "kind": "bank",
+   "ignName": "Rockridge Shorefront Bank"
+  },
+  "bank-013": {
+   "kind": "bank",
+   "ignName": "Bayside Lombank"
+  },
+  "payday-loan-001": {
+   "kind": "payday",
+   "ignName": "Hamlet Quick Buck"
+  },
+  "payday-loan-002": {
+   "kind": "payday",
+   "ignName": "Payline Loans 247"
+  },
+  "payday-loan-003": {
+   "kind": "payday",
+   "ignName": "Southside Payday Loans Store"
+  },
+  "payday-loan-004": {
+   "kind": "payday",
+   "ignName": "Little Cuba Payday Loans Store"
+  },
+  "payday-loan-005": {
+   "kind": "payday",
+   "ignName": "Rockridge Payday Loans Store"
+  },
+  "payday-loan-006": {
+   "kind": "payday",
+   "ignName": "La Perle Quick Buck"
+  },
+  "payday-loan-007": {
+   "kind": "payday",
+   "ignName": "Cash Flow"
+  },
+  "smash-n-grab-001": {
+   "kind": "smash",
+   "ignName": "The Siren's Chest"
+  },
+  "smash-n-grab-004": {
+   "kind": "smash",
+   "ignName": "Hamlet Pawn"
+  },
+  "smash-n-grab-005": {
+   "kind": "smash",
+   "ignName": "Joyeria Empeños"
+  },
+  "smash-n-grab-006": {
+   "kind": "smash",
+   "ignName": "Ernesto's Pawn"
+  },
+  "smash-n-grab-007": {
+   "kind": "smash",
+   "ignName": "Donovan Banks & Co"
+  },
+  "smash-n-grab-008": {
+   "kind": "smash",
+   "ignName": "Plush"
+  },
+  "smash-n-grab-009": {
+   "kind": "smash",
+   "ignName": "Pawn City"
+  },
+  "smash-n-grab-010": {
+   "kind": "smash",
+   "ignName": "Icegem Diamonds & Watches"
+  },
+  "smash-n-grab-011": {
+   "kind": "smash",
+   "ignName": "Richardson Jewelry & Diamonds"
+  },
+  "smash-n-grab-012": {
+   "kind": "smash",
+   "ignName": "All That Glitters"
+  },
+  "smash-n-grab-013": {
+   "kind": "smash",
+   "ignName": "Peacock"
+  },
+  "smash-n-grab-014": {
+   "kind": "smash",
+   "ignName": "Fast Cash"
+  },
+  "smash-n-grab-015": {
+   "kind": "smash",
+   "ignName": "The Jewelry Place"
+  },
+  "smash-n-grab-016": {
+   "kind": "smash",
+   "ignName": "Crown Jewels"
+  },
+  "smash-n-grab-017": {
+   "kind": "smash",
+   "ignName": "Dorado Pawn Shop"
+  },
+  "smash-n-grab-018": {
+   "kind": "smash",
+   "ignName": "White Sand Jewelry Pawn"
+  },
+  "smash-n-grab-019": {
+   "kind": "smash",
+   "ignName": "Down Town Pawn"
+  },
+  "smash-n-grab-020": {
+   "kind": "smash",
+   "ignName": "Vice City Pawn"
+  },
+  "smash-n-grab-021": {
+   "kind": "smash",
+   "ignName": "Pawn Stash"
+  },
+  "smash-n-grab-022": {
+   "kind": "smash",
+   "ignName": "Blanc & Giroux"
+  },
+  "smash-n-grab-023": {
+   "kind": "smash",
+   "ignName": "Roval Jewelry"
+  },
+  "smash-n-grab-024": {
+   "kind": "smash",
+   "ignName": "Covgari"
+  },
+  "smash-n-grab-025": {
+   "kind": "smash",
+   "ignName": "Ayoka Jewelers"
+  },
+  "smash-n-grab-026": {
+   "kind": "smash",
+   "ignName": "Marshal's"
+  },
+  "smash-n-grab-027": {
+   "kind": "smash",
+   "ignName": "Casa de Empeño"
+  },
+  "smash-n-grab-028": {
+   "kind": "smash",
+   "ignName": "Rococo Rich"
+  },
+  "smash-n-grab-029": {
+   "kind": "smash",
+   "ignName": "Legendary Custom Jewelry"
+  },
+  "smash-n-grab-033": {
+   "kind": "smash",
+   "ignName": "Buck's Jewelry & Pawn"
+  },
+  "smash-n-grab-034": {
+   "kind": "smash",
+   "ignName": "Avery Pawn"
+  }
+ }
+}

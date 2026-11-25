@@ -6187,7 +6187,7 @@
     "gameId": "gta-vi",
     "slug": "robberies-how-illegal-operations-work",
     "category": "robberies",
-    "title": "How robbery spots (illegal operations) work",
+    "title": "Illegal operations (yellow on the map): how they work",
     "summary": "Illegal operations are optional robbery spots run by gangs around Leonida. Each one has a few \"key valuables\" (cash in a safe, a unique weapon, a standout car or a luxury item) plus loose cash and drugs worth grabbing.",
     "steps": [
       "A hint from someone, or a note you find, marks the spot on your map. Key valuables show as gold icons once you're inside.",
@@ -6199,6 +6199,10 @@
       {
         "label": "Count for 100%",
         "value": "39 illegal operations (3% of the total)"
+      },
+      {
+        "label": "Map colour",
+        "value": "Yellow"
       }
     ],
     "chapter": null,
@@ -6296,6 +6300,296 @@
         "url": "https://www.ign.com/wikis/gta-6/GTA_6_100_Percent_Guide",
         "checkedAt": "2026-11-24",
         "supports": "Robbery and fencing targets and weights"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:robberies-smash-n-grabs",
+    "gameId": "gta-vi",
+    "slug": "robberies-smash-n-grabs",
+    "category": "robberies",
+    "title": "Smash 'n' grabs (green on the map)",
+    "summary": "Hold up a jewelry store or pawn shop, then smash the display cases for the jewels. The jewels are where the money is, but security is high.",
+    "steps": [
+      "There are 34 for 100%. The best-paying are the high-end jewelers in Vice City and Vice Beach (around $14,000–$25,000); small pawn shops pay far less.",
+      "Sell the jewelry to a fence afterwards. Fences show what they pay for jewelry when you hover over them on the map.",
+      "Every spot is in the Robbery checklist above, with its security level and take value."
+    ],
+    "facts": [
+      {
+        "label": "Count for 100%",
+        "value": "34"
+      },
+      {
+        "label": "Map colour",
+        "value": "Green"
+      },
+      {
+        "label": "Loot",
+        "value": "Jewelry (sell to a fence)"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 100 Percent Guide",
+        "url": "https://www.ign.com/wikis/gta-6/GTA_6_100_Percent_Guide",
+        "checkedAt": "2026-11-25",
+        "supports": "Count, what they are, take values"
+      },
+      {
+        "publisher": "Open GTA 6 Map (fbritoferreira and contributors, CC BY 4.0)",
+        "title": "Map data snapshot used for our map",
+        "url": "https://github.com/fbritoferreira/gta6",
+        "checkedAt": "2026-11-24",
+        "supports": "Locations, security and take value for each spot (shown in the checklist above)"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:robberies-stick-ups",
+    "gameId": "gta-vi",
+    "slug": "robberies-stick-ups",
+    "category": "robberies",
+    "title": "Stick-ups (light blue on the map)",
+    "summary": "Rob the till at gas-station stores, supermarkets, small bars and small restaurants. Usually one or two clerks, sometimes customers too.",
+    "steps": [
+      "You need 100 stick-ups for 100%, and there are dozens to choose from.",
+      "Our map has 86 spots so far; IGN is still finding them all too.",
+      "Use the Robbery checklist above to tick them off as you go."
+    ],
+    "facts": [
+      {
+        "label": "Needed for 100%",
+        "value": "100"
+      },
+      {
+        "label": "Map colour",
+        "value": "Light blue"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 100 Percent Guide",
+        "url": "https://www.ign.com/wikis/gta-6/GTA_6_100_Percent_Guide",
+        "checkedAt": "2026-11-25",
+        "supports": "Count and what counts as a stick-up"
+      },
+      {
+        "publisher": "Open GTA 6 Map (fbritoferreira and contributors, CC BY 4.0)",
+        "title": "Map data snapshot used for our map",
+        "url": "https://github.com/fbritoferreira/gta6",
+        "checkedAt": "2026-11-24",
+        "supports": "Locations, security and take value for each spot (shown in the checklist above)"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:robberies-dye-pack-jammer",
+    "gameId": "gta-vi",
+    "slug": "robberies-dye-pack-jammer",
+    "category": "robberies",
+    "title": "Dye Pack Jammer: needed for banks and payday loans",
+    "summary": "Banks and payday loan stores hold marked bills that burst a dye pack on you. You get the Dye Pack Jammer from Karim during the Chapter 3 mission Credit Check; after that, marked bills are safe to take.",
+    "steps": [
+      "It works automatically: just pick up the marked bills.",
+      "You also get three sticky bombs from the same table.",
+      "Sell marked bills to a fence (or Yasmani)."
+    ],
+    "facts": [
+      {
+        "label": "Unlocked in",
+        "value": "Credit Check (Chapter 3)"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "How to Get the Dye Pack Jammer",
+        "url": "https://www.ign.com/wikis/gta-6/How_to_Get_the_Dye_Pack_Jammer",
+        "checkedAt": "2026-11-25",
+        "supports": "When you get it and what it does"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:robberies-bank-jobs",
+    "gameId": "gta-vi",
+    "slug": "robberies-bank-jobs",
+    "category": "robberies",
+    "title": "Bank jobs",
+    "summary": "Rob regular bank branches around Vice City for a cash drawer and a safe each. What you get depends on the branch.",
+    "steps": [
+      "There are 22 for 100%. You need the Dye Pack Jammer first (Chapter 3).",
+      "Lombank branches in Ocean Beach and Bayside pay the most of those IGN lists so far ($15,000–$45,000)."
+    ],
+    "facts": [
+      {
+        "label": "Count for 100%",
+        "value": "22"
+      },
+      {
+        "label": "Each has",
+        "value": "A cash drawer and a safe"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 100 Percent Guide",
+        "url": "https://www.ign.com/wikis/gta-6/GTA_6_100_Percent_Guide",
+        "checkedAt": "2026-11-25",
+        "supports": "Count, contents, take values"
+      },
+      {
+        "publisher": "IGN",
+        "title": "How to Get the Dye Pack Jammer",
+        "url": "https://www.ign.com/wikis/gta-6/How_to_Get_the_Dye_Pack_Jammer",
+        "checkedAt": "2026-11-25",
+        "supports": "When you get it and what it does"
+      },
+      {
+        "publisher": "Open GTA 6 Map (fbritoferreira and contributors, CC BY 4.0)",
+        "title": "Map data snapshot used for our map",
+        "url": "https://github.com/fbritoferreira/gta6",
+        "checkedAt": "2026-11-24",
+        "supports": "Locations, security and take value for each spot (shown in the checklist above)"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:robberies-payday-loans",
+    "gameId": "gta-vi",
+    "slug": "robberies-payday-loans",
+    "category": "robberies",
+    "title": "Payday loan jobs",
+    "summary": "Small loan stores with tougher security than a normal shop. Each one has an ATM to break into, paying about $2,000–$25,000.",
+    "steps": [
+      "All 7 count toward 100%. You need the Dye Pack Jammer first (Chapter 3).",
+      "Little Cuba's Payday Loans Store pays the most ($15,000–$25,000); Cash Flow in Port Gellhorn the least."
+    ],
+    "facts": [
+      {
+        "label": "Count for 100%",
+        "value": "7"
+      },
+      {
+        "label": "Each has",
+        "value": "One ATM"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 100 Percent Guide",
+        "url": "https://www.ign.com/wikis/gta-6/GTA_6_100_Percent_Guide",
+        "checkedAt": "2026-11-25",
+        "supports": "Count, contents, take values"
+      },
+      {
+        "publisher": "IGN",
+        "title": "How to Get the Dye Pack Jammer",
+        "url": "https://www.ign.com/wikis/gta-6/How_to_Get_the_Dye_Pack_Jammer",
+        "checkedAt": "2026-11-25",
+        "supports": "When you get it and what it does"
+      },
+      {
+        "publisher": "Open GTA 6 Map (fbritoferreira and contributors, CC BY 4.0)",
+        "title": "Map data snapshot used for our map",
+        "url": "https://github.com/fbritoferreira/gta6",
+        "checkedAt": "2026-11-24",
+        "supports": "Locations, security and take value for each spot (shown in the checklist above)"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:robberies-vaults",
+    "gameId": "gta-vi",
+    "slug": "robberies-vaults",
+    "category": "robberies",
+    "title": "Vaults (big banks)",
+    "summary": "Eight \"big banks\" have a vault as well as a cash drawer and a safe, worth roughly $65,000–$205,000 a job. They unlock through a later optional mission.",
+    "steps": [
+      "The biggest IGN lists are Lombank big banks in Ocean Beach and Downtown ($135,000–$205,000)."
+    ],
+    "facts": [
+      {
+        "label": "Count for 100%",
+        "value": "8"
+      },
+      {
+        "label": "Each has",
+        "value": "Cash drawer, safe and vault"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 100 Percent Guide",
+        "url": "https://www.ign.com/wikis/gta-6/GTA_6_100_Percent_Guide",
+        "checkedAt": "2026-11-25",
+        "supports": "Count, contents, take values"
       }
     ],
     "platformNote": null,

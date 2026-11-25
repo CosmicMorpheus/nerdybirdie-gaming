@@ -3,6 +3,7 @@ import Base from '../../../../layouts/Base.astro';
 import CozmcInline from '../../../../components/CozmcInline.astro';
 import EntryBrowser from '../../../../islands/EntryBrowser';
 import MapChecklist from '../../../../islands/MapChecklist';
+import RobberyChecklist from '../../../../islands/RobberyChecklist';
 import Discoveries from '../../../../islands/Discoveries';
 import { DISCOVERY_FEED, DISCOVERY_SECTIONS } from '../../../../config';
 import { games, mapData, publicEntries, videosFor } from '../../../../lib/content/load';
@@ -30,6 +31,10 @@ const entries = publicEntries(game.id).filter((e) => e.category === section.id);
     </p>
     {section.id === 'collectibles' && mapData(game.id) && (
       <MapChecklist client:visible gameId={game.id} dataUrl={`/data/${game.id}/map-checklist.json`} mapHref={`/games/${game.id}/map/`} />
+    )}
+    {section.id === 'robberies' && mapData(game.id) && (
+      <RobberyChecklist client:idle gameId={game.id} dataUrl={`/data/${game.id}/robbery-spots.json`} mapHref={`/games/${game.id}/map/`}
+        targets={{ gang: '39 count toward 100%', smash: '34 count toward 100%', store: '100 needed for 100%', bank: '22 bank jobs + 8 vaults', payday: '7 count toward 100%' }} />
     )}
     <EntryBrowser client:load gameId={game.id} categories={game.guideCategories} entries={entries} videos={videosFor(game.id)}
       protectedUrl={`/data/${game.id}/protected.json`} fixedCategory={section.id} />

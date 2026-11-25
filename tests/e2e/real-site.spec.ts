@@ -145,3 +145,22 @@ test('guides overview: the long list waits for a search, and results are grouped
   await expect(page.getByRole('navigation', { name: 'Jump to section' })).toContainText('Robberies & heists');
   expect(await page.locator('li.entry').count()).toBeGreaterThan(3);
 });
+
+test('robbery checklist: map colours, IGN cross-check, and a tick here is the same tick as on the map', async ({ page }) => {
+  await page.goto(REAL + '/games/gta-vi/guides/robberies/');
+  await page.waitForFunction(() => !document.querySelector('astro-island[ssr]'));
+  const list = page.locator('.robbery-list');
+  for (const label of ['Illegal operations', "Smash 'n' Grabs", 'Stick-ups', 'Banks and vaults', 'Payday loans']) await expect(list.locator('summary', { hasText: label })).toBeVisible();
+  const smash = list.locator('details', { has: page.locator('summary', { hasText: "Smash 'n' Grabs" }) });
+  await smash.locator('summary').click();
+  await expect(smash.locator('li', { hasText: 'Marshal' }).getByText('IGN lists it too')).toBeVisible();
+  await smash.getByRole('checkbox', { name: /Marshal/ }).check();
+  const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('nbg:progress')!));
+  expect(Object.keys(saved.contexts['gta-vi|map'].completed)).toContain('gta-vi:map:smash-n-grab-026');
+  // No plain ATMs in the bank list.
+  await list.locator('summary', { hasText: 'Banks and vaults' }).click();
+  await expect(list.locator('li', { hasText: /^ATM/ })).toHaveCount(0);
+  // Same tick on the map.
+  await page.goto(REAL + '/games/gta-vi/map/?pin=smash-n-grab-026');
+  await expect(page.locator('.pin-detail').getByRole('checkbox')).toBeChecked();
+});
