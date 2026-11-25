@@ -1,5 +1,5 @@
-/* Robbery checklist (RobberyChecklist.tsx). */
-.robbery-list { margin: 0 0 24px; }
+/* Section map checklists (SpotChecklist.tsx): Robberies, Exploration. */
+.spot-list { margin: 0 0 24px; }
 .rob-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 .rob-head h2 { margin: 0; font-size: 22px; }
 .rob-cat { border: 2px solid var(--vc-line); border-radius: 6px; margin-top: 10px; background: var(--vc-raised); }

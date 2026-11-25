@@ -22,6 +22,9 @@ test('approved mapping: title words land in our sections', () => {
   assert.equal(cat('GTA VI mission walkthrough part 1'), 'walkthrough');
   assert.equal(cat('GTA 6 all side missions'), 'side-missions');
   assert.equal(cat('GTA VI The Cartel Heist perfect run'), 'robberies');
+  assert.equal(cat('GTA 6 all WAiNK locations'), 'exploration');
+  assert.equal(cat('GTA VI every Kenton shipwreck treasure'), 'exploration');
+  assert.equal(cat('GTA 6 all meditation spots'), 'exploration');
   assert.equal(cat('GTA 6 every illegal operation location'), 'robberies');
   assert.equal(cat('GTA VI best bank robbery tips'), 'robberies');
   assert.equal(cat("GTA 6 smash 'n' grab guide"), 'robberies');

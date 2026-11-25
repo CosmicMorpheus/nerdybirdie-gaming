@@ -7589,5 +7589,716 @@
     "mapPinIds": [],
     "objectiveIds": [],
     "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:exploration-what-counts",
+    "gameId": "gta-vi",
+    "slug": "exploration-what-counts",
+    "category": "exploration",
+    "title": "What exploration counts toward 100%",
+    "summary": "Exploration is the purple side of the 100% list. Each of these is worth 1%, and you rarely need every single one.",
+    "steps": [
+      "Kenton treasure sets: all 5.",
+      "WAiNK scans: 100 (of 108).",
+      "Underwater discoveries: 33.",
+      "Magazines: 30.",
+      "Meditation spots: 15 (of 18).",
+      "Cocaine flamingos destroyed: 100.",
+      "Unique playlists: 2.",
+      "Discovered styles: 70.",
+      "Use the Exploration checklist above to tick off every spot on our map."
+    ],
+    "facts": [
+      {
+        "label": "Map colour",
+        "value": "Purple"
+      },
+      {
+        "label": "Worth",
+        "value": "1% each"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 100 Percent Guide",
+        "url": "https://www.ign.com/wikis/gta-6/GTA_6_100_Percent_Guide",
+        "checkedAt": "2026-11-25",
+        "supports": "Targets and weights for each exploration category"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:exploration-waink",
+    "gameId": "gta-vi",
+    "slug": "exploration-waink",
+    "category": "exploration",
+    "title": "WAiNK: scan landmarks, sculptures and more",
+    "summary": "WAiNK is a phone app. When you're near something scannable you get a notification: press D-pad Up, open WAiNK and hold R1/RB to scan it.",
+    "steps": [
+      "108 places can be scanned and 100 count toward 100%.",
+      "They come in five types: 31 landmarks, 35 curiosities, 23 sculptures, 4 Pee-Wee billboards and 15 NoFlusher graffiti tags (on the ground, easy to miss).",
+      "Scanning other things in the app doesn't count; only these five types do.",
+      "Our map shows 101 scan spots (it lists more curiosities than IGN has found so far)."
+    ],
+    "facts": [
+      {
+        "label": "Needed for 100%",
+        "value": "100 of 108"
+      },
+      {
+        "label": "Scan",
+        "value": "D-pad Up → WAiNK → hold R1/RB"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "WAiNK Locations",
+        "url": "https://www.ign.com/wikis/gta-6/WAiNK_Locations",
+        "checkedAt": "2026-11-25",
+        "supports": "Total, types and how to scan"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Landmarks",
+        "url": "https://www.ign.com/wikis/gta-6/Landmarks",
+        "checkedAt": "2026-11-25",
+        "supports": "31 landmarks"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Sculptures",
+        "url": "https://www.ign.com/wikis/gta-6/Sculptures",
+        "checkedAt": "2026-11-25",
+        "supports": "23 sculptures"
+      },
+      {
+        "publisher": "IGN",
+        "title": "PeeWee Billboards",
+        "url": "https://www.ign.com/wikis/gta-6/PeeWee_Billboards",
+        "checkedAt": "2026-11-25",
+        "supports": "4 billboards"
+      },
+      {
+        "publisher": "IGN",
+        "title": "NoFlusher Tags",
+        "url": "https://www.ign.com/wikis/gta-6/NoFlusher_Tags",
+        "checkedAt": "2026-11-25",
+        "supports": "15 tags"
+      },
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 100 Percent Guide",
+        "url": "https://www.ign.com/wikis/gta-6/GTA_6_100_Percent_Guide",
+        "checkedAt": "2026-11-25",
+        "supports": "Which scans count"
+      },
+      {
+        "publisher": "Open GTA 6 Map (fbritoferreira and contributors, CC BY 4.0)",
+        "title": "Map data snapshot used for our map",
+        "url": "https://github.com/fbritoferreira/gta6",
+        "checkedAt": "2026-11-24",
+        "supports": "Scan spot locations"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:exploration-diving-and-metal-detector",
+    "gameId": "gta-vi",
+    "slug": "exploration-diving-and-metal-detector",
+    "category": "exploration",
+    "title": "Scuba diving and the metal detector",
+    "summary": "Treasure diving opens up after the Chapter 1 mission Island Dreams. It's low-risk money early on.",
+    "steps": [
+      "A few in-game hours after Island Dreams, Kenton calls with more dives. His shop appears on the map under Exploration.",
+      "Take Kenton's boat or Jason's boat at the safehouse: both always have scuba gear.",
+      "Underwater, hold L1/LB and equip the metal detector, then hold L2/LT to aim it. The faster it beeps, the closer the treasure. Press Triangle/Y to dig it up.",
+      "Sell doubloons to Kenton ($400 each) rather than a pawn shop ($200).",
+      "Finish his first dive sites and he texts you more. Salvaging also annoys his rival, Sir Todd Bancroft, which starts an optional storyline."
+    ],
+    "facts": [
+      {
+        "label": "Unlocks after",
+        "value": "Island Dreams (Chapter 1)"
+      },
+      {
+        "label": "Doubloons",
+        "value": "$400 at Kenton, $200 at pawn shops"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Scuba Diving and Treasure Hunting Guide",
+        "url": "https://www.ign.com/wikis/gta-6/Scuba_Diving_and_Treasure_Hunting_Guide",
+        "checkedAt": "2026-11-25",
+        "supports": "How diving and the metal detector work"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Kenton's Treasures",
+        "url": "https://www.ign.com/wikis/gta-6/Kenton%27s_Treasures",
+        "checkedAt": "2026-11-25",
+        "supports": "Dive sites and treasures"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:kenton-urca-de-cinco-torres",
+    "gameId": "gta-vi",
+    "slug": "kenton-urca-de-cinco-torres",
+    "category": "exploration",
+    "title": "Kenton set: Urca de Cinco Torres shipwreck",
+    "summary": "One of the five Kenton treasure sets. Find every treasure in this shipwreck to complete the set.",
+    "steps": [
+      "Treasures to find: Ancient Ceremonial Mask, Ceremonial Plate, Golden Glove, Jade-Eye Cup, Rusty Doubloon, Sacred Necklace.",
+      "Use the metal detector to find each one, then bring the set to Kenton."
+    ],
+    "facts": [
+      {
+        "label": "Treasures",
+        "value": "6"
+      },
+      {
+        "label": "Where",
+        "value": "West of the second sandbar from the bottom of Key Lento"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 100 Percent Guide",
+        "url": "https://www.ign.com/wikis/gta-6/GTA_6_100_Percent_Guide",
+        "checkedAt": "2026-11-25",
+        "supports": "Treasures and location for this set"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Kenton's Treasures",
+        "url": "https://www.ign.com/wikis/gta-6/Kenton%27s_Treasures",
+        "checkedAt": "2026-11-25",
+        "supports": "Dive sites and treasures"
+      },
+      {
+        "publisher": "Open GTA 6 Map (fbritoferreira and contributors, CC BY 4.0)",
+        "title": "Map data snapshot used for our map",
+        "url": "https://github.com/fbritoferreira/gta6",
+        "checkedAt": "2026-11-24",
+        "supports": "Map pin for this shipwreck"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [
+      "gta-vi:map:treasure-004"
+    ],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:kenton-urca-de-santa-sierra",
+    "gameId": "gta-vi",
+    "slug": "kenton-urca-de-santa-sierra",
+    "category": "exploration",
+    "title": "Kenton set: Urca de Santa Sierra shipwreck",
+    "summary": "One of the five Kenton treasure sets. Find every treasure in this shipwreck to complete the set.",
+    "steps": [
+      "Treasures to find: Brass Spyglass, Dividing Compass, Ornate Pocket Watch, Santa Eulalia Bell, Silver Hip Flask, Worn Doubloon.",
+      "Use the metal detector to find each one, then bring the set to Kenton."
+    ],
+    "facts": [
+      {
+        "label": "Treasures",
+        "value": "6"
+      },
+      {
+        "label": "Where",
+        "value": "In the Leonida Straits, east of Key Lento's southern sandbar"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 100 Percent Guide",
+        "url": "https://www.ign.com/wikis/gta-6/GTA_6_100_Percent_Guide",
+        "checkedAt": "2026-11-25",
+        "supports": "Treasures and location for this set"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Kenton's Treasures",
+        "url": "https://www.ign.com/wikis/gta-6/Kenton%27s_Treasures",
+        "checkedAt": "2026-11-25",
+        "supports": "Dive sites and treasures"
+      },
+      {
+        "publisher": "Open GTA 6 Map (fbritoferreira and contributors, CC BY 4.0)",
+        "title": "Map data snapshot used for our map",
+        "url": "https://github.com/fbritoferreira/gta6",
+        "checkedAt": "2026-11-24",
+        "supports": "Map pin for this shipwreck"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [
+      "gta-vi:map:treasure-003"
+    ],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:kenton-nuestra-senora-lujuriosa",
+    "gameId": "gta-vi",
+    "slug": "kenton-nuestra-senora-lujuriosa",
+    "category": "exploration",
+    "title": "Kenton set: Nuestra Señora Lujuriosa shipwreck",
+    "summary": "One of the five Kenton treasure sets. Find every treasure in this shipwreck to complete the set.",
+    "steps": [
+      "Treasures to find: Ceremonial Bowl, Ceremonial Knife, Golden Llama, Golden Statuette, Jade-Lobe Tankard, Shiny Doubloon.",
+      "Use the metal detector to find each one, then bring the set to Kenton."
+    ],
+    "facts": [
+      {
+        "label": "Treasures",
+        "value": "6"
+      },
+      {
+        "label": "Where",
+        "value": "South-east of Key Lento, between the two sandbars"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 100 Percent Guide",
+        "url": "https://www.ign.com/wikis/gta-6/GTA_6_100_Percent_Guide",
+        "checkedAt": "2026-11-25",
+        "supports": "Treasures and location for this set"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Kenton's Treasures",
+        "url": "https://www.ign.com/wikis/gta-6/Kenton%27s_Treasures",
+        "checkedAt": "2026-11-25",
+        "supports": "Dive sites and treasures"
+      },
+      {
+        "publisher": "Open GTA 6 Map (fbritoferreira and contributors, CC BY 4.0)",
+        "title": "Map data snapshot used for our map",
+        "url": "https://github.com/fbritoferreira/gta6",
+        "checkedAt": "2026-11-24",
+        "supports": "Map pin for this shipwreck"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [
+      "gta-vi:map:treasure-005"
+    ],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:kenton-nuestra-senora-de-la-noche",
+    "gameId": "gta-vi",
+    "slug": "kenton-nuestra-senora-de-la-noche",
+    "category": "exploration",
+    "title": "Kenton set: Nuestra Señora de la Noche shipwreck",
+    "summary": "One of the five Kenton treasure sets. Find every treasure in this shipwreck to complete the set.",
+    "steps": [
+      "IGN doesn't give a written location yet: use Show on map.",
+      "Treasures to find: Antique Candlestick, Dragon Pipe, Ivory Saint, Pewter Gauntlet, Purple Gemstone, Serpentine Statue, Stained Doubloon.",
+      "Use the metal detector to find each one, then bring the set to Kenton."
+    ],
+    "facts": [
+      {
+        "label": "Treasures",
+        "value": "7"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 100 Percent Guide",
+        "url": "https://www.ign.com/wikis/gta-6/GTA_6_100_Percent_Guide",
+        "checkedAt": "2026-11-25",
+        "supports": "Treasures and location for this set"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Kenton's Treasures",
+        "url": "https://www.ign.com/wikis/gta-6/Kenton%27s_Treasures",
+        "checkedAt": "2026-11-25",
+        "supports": "Dive sites and treasures"
+      },
+      {
+        "publisher": "Open GTA 6 Map (fbritoferreira and contributors, CC BY 4.0)",
+        "title": "Map data snapshot used for our map",
+        "url": "https://github.com/fbritoferreira/gta6",
+        "checkedAt": "2026-11-24",
+        "supports": "Map pin for this shipwreck"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [
+      "gta-vi:map:treasure-001"
+    ],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:kenton-nuestra-senora-de-la-etica-laxa",
+    "gameId": "gta-vi",
+    "slug": "kenton-nuestra-senora-de-la-etica-laxa",
+    "category": "exploration",
+    "title": "Kenton set: Nuestra Señora de la Ética Laxa shipwreck",
+    "summary": "One of the five Kenton treasure sets. Find every treasure in this shipwreck to complete the set.",
+    "steps": [
+      "Treasures to find: Ancient Snuff Box, Battered Doubloon, Ceremonial Spoon, Golden Chalice, Golden Pendant.",
+      "Use the metal detector to find each one, then bring the set to Kenton."
+    ],
+    "facts": [
+      {
+        "label": "Treasures",
+        "value": "5"
+      },
+      {
+        "label": "Where",
+        "value": "A sunken ship off the coast of Key Lento"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 100 Percent Guide",
+        "url": "https://www.ign.com/wikis/gta-6/GTA_6_100_Percent_Guide",
+        "checkedAt": "2026-11-25",
+        "supports": "Treasures and location for this set"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Kenton's Treasures",
+        "url": "https://www.ign.com/wikis/gta-6/Kenton%27s_Treasures",
+        "checkedAt": "2026-11-25",
+        "supports": "Dive sites and treasures"
+      },
+      {
+        "publisher": "Open GTA 6 Map (fbritoferreira and contributors, CC BY 4.0)",
+        "title": "Map data snapshot used for our map",
+        "url": "https://github.com/fbritoferreira/gta6",
+        "checkedAt": "2026-11-24",
+        "supports": "Map pin for this shipwreck"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [
+      "gta-vi:map:treasure-002"
+    ],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:exploration-underwater-discoveries",
+    "gameId": "gta-vi",
+    "slug": "exploration-underwater-discoveries",
+    "category": "exploration",
+    "title": "Underwater discoveries (33)",
+    "summary": "Find all 33 underwater discoveries for 100%. Diving opens up with Island Dreams in Chapter 1, and that mission's wreck already counts as one.",
+    "steps": [
+      "See \"Scuba diving and the metal detector\" for how diving works."
+    ],
+    "facts": [
+      {
+        "label": "Needed for 100%",
+        "value": "33"
+      }
+    ],
+    "chapter": 1,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 100 Percent Guide",
+        "url": "https://www.ign.com/wikis/gta-6/GTA_6_100_Percent_Guide",
+        "checkedAt": "2026-11-25",
+        "supports": "Count and when diving starts"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Kenton's Treasures",
+        "url": "https://www.ign.com/wikis/gta-6/Kenton%27s_Treasures",
+        "checkedAt": "2026-11-25",
+        "supports": "Dive sites and treasures"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:exploration-meditation-spots",
+    "gameId": "gta-vi",
+    "slug": "exploration-meditation-spots",
+    "category": "exploration",
+    "title": "Meditation spots",
+    "summary": "There are 18 meditation spots in Leonida; 15 count toward 100%. Some need a second visit.",
+    "steps": [
+      "IGN says some spots need visiting once as a couple and again on your own; the map notes say once as Jason and once as Lucia.",
+      "Jason's House Meditation is Chapter 1 only: after a morning talk in the kitchen, follow Lucia to the balcony. Don't miss it.",
+      "The last one, Ascent Meditation, is in the stone circle at the top of Mount Kalaga.",
+      "Our map has 10 so far; they're in the Exploration checklist above."
+    ],
+    "facts": [
+      {
+        "label": "Needed for 100%",
+        "value": "15 of 18"
+      },
+      {
+        "label": "Missable",
+        "value": "Jason's House Meditation (Chapter 1)"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 100 Percent Guide",
+        "url": "https://www.ign.com/wikis/gta-6/GTA_6_100_Percent_Guide",
+        "checkedAt": "2026-11-25",
+        "supports": "Count and repeat visits"
+      },
+      {
+        "publisher": "Open GTA 6 Map (fbritoferreira and contributors, CC BY 4.0)",
+        "title": "Map data snapshot used for our map",
+        "url": "https://github.com/fbritoferreira/gta6",
+        "checkedAt": "2026-11-24",
+        "supports": "Spot locations and the Chapter 1 note"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:exploration-magazines",
+    "gameId": "gta-vi",
+    "slug": "exploration-magazines",
+    "category": "exploration",
+    "title": "Magazines",
+    "summary": "30 magazines count toward 100%. Our map already shows 92 magazine and comic pickups, so there are plenty to choose from.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Needed for 100%",
+        "value": "30"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 100 Percent Guide",
+        "url": "https://www.ign.com/wikis/gta-6/GTA_6_100_Percent_Guide",
+        "checkedAt": "2026-11-25",
+        "supports": "Count"
+      },
+      {
+        "publisher": "Open GTA 6 Map (fbritoferreira and contributors, CC BY 4.0)",
+        "title": "Map data snapshot used for our map",
+        "url": "https://github.com/fbritoferreira/gta6",
+        "checkedAt": "2026-11-24",
+        "supports": "Pickup locations"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:exploration-cocaine-flamingos",
+    "gameId": "gta-vi",
+    "slug": "exploration-cocaine-flamingos",
+    "category": "exploration",
+    "title": "Cocaine flamingos",
+    "summary": "Pink plastic flamingos are hidden around Vice City. Break one open and you may find cocaine inside, which you can sell to a fence. Destroy 100 for 100%.",
+    "steps": [
+      "Our map doesn't have flamingo locations yet."
+    ],
+    "facts": [
+      {
+        "label": "Needed for 100%",
+        "value": "100"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 100 Percent Guide",
+        "url": "https://www.ign.com/wikis/gta-6/GTA_6_100_Percent_Guide",
+        "checkedAt": "2026-11-25",
+        "supports": "What they are and the count"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:exploration-unique-playlists",
+    "gameId": "gta-vi",
+    "slug": "exploration-unique-playlists",
+    "category": "exploration",
+    "title": "Unique playlists",
+    "summary": "Find at least two unique playlists for 100%. Our map shows two series in Vice City: The Sniper of La Perle (parts 1–4) and The Vault Radio (parts 1–3).",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Needed for 100%",
+        "value": "2"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 100 Percent Guide",
+        "url": "https://www.ign.com/wikis/gta-6/GTA_6_100_Percent_Guide",
+        "checkedAt": "2026-11-25",
+        "supports": "Count"
+      },
+      {
+        "publisher": "Open GTA 6 Map (fbritoferreira and contributors, CC BY 4.0)",
+        "title": "Map data snapshot used for our map",
+        "url": "https://github.com/fbritoferreira/gta6",
+        "checkedAt": "2026-11-24",
+        "supports": "Playlist pickup locations"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:exploration-discovered-styles",
+    "gameId": "gta-vi",
+    "slug": "exploration-discovered-styles",
+    "category": "exploration",
+    "title": "Discovered styles",
+    "summary": "Unlock 70 different styles (clothes, hairstyles, accessories and the like) for 100%. Shopping counts, so it comes naturally.",
+    "steps": [],
+    "facts": [
+      {
+        "label": "Needed for 100%",
+        "value": "70"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 100 Percent Guide",
+        "url": "https://www.ign.com/wikis/gta-6/GTA_6_100_Percent_Guide",
+        "checkedAt": "2026-11-25",
+        "supports": "Count and what counts as a style"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
   }
 ]

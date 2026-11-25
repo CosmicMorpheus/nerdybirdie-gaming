@@ -178,6 +178,26 @@
   "smash-n-grab-034": {
    "kind": "smash",
    "ignName": "Avery Pawn"
+  },
+  "treasure-001": {
+   "kind": "treasure",
+   "ignName": "Nuestra Señora de la Noche Shipwreck"
+  },
+  "treasure-002": {
+   "kind": "treasure",
+   "ignName": "Nuestra Señora de la Ética Laxa Shipwreck"
+  },
+  "treasure-003": {
+   "kind": "treasure",
+   "ignName": "Urca de Santa Sierra Shipwreck"
+  },
+  "treasure-004": {
+   "kind": "treasure",
+   "ignName": "Urca de Cinco Torres Shipwreck"
+  },
+  "treasure-005": {
+   "kind": "treasure",
+   "ignName": "Nuestra Señora Lujuriosa Shipwreck"
   }
  }
 }

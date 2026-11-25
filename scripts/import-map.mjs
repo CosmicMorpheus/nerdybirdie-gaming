@@ -112,7 +112,10 @@ async function main() {
   for (const p of pins) { const a = byName.get(p.name) || []; for (const q of a) if (Math.hypot(p.x - q.x, p.y - q.y) < 1) near.push(`${q.src} ~ ${p.src}`); a.push(p); byName.set(p.name, a); }
 
   // Our overrides: crime colours match the in-game map legend (founder, 25 Nov 2026) and labels use the game's terms.
-  const OVERRIDES = { gang: { label: 'Illegal operations', colour: '#ffd000' }, smash: { colour: '#2dc653' }, store: { label: 'Stick-ups', colour: '#7dd3fc' }, bank: { colour: '#b07aa1' } };
+  // Exploration categories are shades of purple, like the in-game exploration icons (founder, 25 Nov 2026).
+  const OVERRIDES = { gang: { label: 'Illegal operations', colour: '#ffd000' }, smash: { colour: '#2dc653' }, store: { label: 'Stick-ups', colour: '#7dd3fc' }, bank: { colour: '#b07aa1' },
+    waink: { colour: '#a855f7' }, magazine: { colour: '#c084fc' }, meditation: { colour: '#e9d5ff' }, treasure: { colour: '#7e22ce' }, playlist: { colour: '#d8b4fe' },
+    flamingo: { colour: '#9333ea' }, kenton: { colour: '#6b21a8' }, underwater: { colour: '#8b5cf6' }, bookswap: { colour: '#f4a261' } };
   const ourCats = categories.kinds.map((k) => ({ id: k.key, label: k.name, colour: k.colour, group: k.group, trackable: k.pinnable, ...(OVERRIDES[k.key] ?? {}) }));
   const geometry = {
     land: land.map((poly) => poly.map((ring) => simplify(ring, 0.25)).filter((r) => r.length >= 3)).filter((p) => p.length),

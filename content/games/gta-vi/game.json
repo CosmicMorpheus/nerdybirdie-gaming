@@ -68,6 +68,11 @@
       "blurb": "Every robbery spot with its key valuables, safes and sticky bombs, plus the big jobs."
     },
     {
+      "id": "exploration",
+      "label": "Exploration",
+      "blurb": "WAiNK scans, Kenton's shipwreck treasure, meditation spots, magazines and more: the exploration side of 100%."
+    },
+    {
       "id": "money",
       "label": "Money",
       "blurb": "Legit in-game ways to earn and save."

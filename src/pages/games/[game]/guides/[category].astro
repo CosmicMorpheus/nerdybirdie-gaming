@@ -3,7 +3,7 @@ import Base from '../../../../layouts/Base.astro';
 import CozmcInline from '../../../../components/CozmcInline.astro';
 import EntryBrowser from '../../../../islands/EntryBrowser';
 import MapChecklist from '../../../../islands/MapChecklist';
-import RobberyChecklist from '../../../../islands/RobberyChecklist';
+import SpotChecklist from '../../../../islands/SpotChecklist';
 import Discoveries from '../../../../islands/Discoveries';
 import { DISCOVERY_FEED, DISCOVERY_SECTIONS } from '../../../../config';
 import { games, mapData, publicEntries, videosFor } from '../../../../lib/content/load';
@@ -32,8 +32,15 @@ const entries = publicEntries(game.id).filter((e) => e.category === section.id);
     {section.id === 'collectibles' && mapData(game.id) && (
       <MapChecklist client:visible gameId={game.id} dataUrl={`/data/${game.id}/map-checklist.json`} mapHref={`/games/${game.id}/map/`} />
     )}
+    {section.id === 'exploration' && mapData(game.id) && (
+      <SpotChecklist client:idle gameId={game.id} dataUrl={`/data/${game.id}/exploration-spots.json`} mapHref={`/games/${game.id}/map/`}
+        title="Exploration checklist" cls="explore-list" colourNote="in shades of purple like the in-game exploration icons"
+        targets={{ waink: '100 of 108 scans count toward 100%', treasure: '5 Kenton sets count toward 100%', meditation: '15 of 18 count toward 100%',
+          magazine: '30 count toward 100%', playlist: '2 count toward 100%', flamingo: '100 count toward 100%', underwater: '33 count toward 100%' }} />
+    )}
     {section.id === 'robberies' && mapData(game.id) && (
-      <RobberyChecklist client:idle gameId={game.id} dataUrl={`/data/${game.id}/robbery-spots.json`} mapHref={`/games/${game.id}/map/`}
+      <SpotChecklist client:idle gameId={game.id} dataUrl={`/data/${game.id}/robbery-spots.json`} mapHref={`/games/${game.id}/map/`}
+        title="Robbery checklist" cls="robbery-list" colourNote="coloured like the in-game map (illegal operations yellow, smash 'n' grabs green, stick-ups light blue)"
         targets={{ gang: '39 count toward 100%', smash: '34 count toward 100%', store: '100 needed for 100%', bank: '22 bank jobs + 8 vaults', payday: '7 count toward 100%' }} />
     )}
     <EntryBrowser client:load gameId={game.id} categories={game.guideCategories} entries={entries} videos={videosFor(game.id)}

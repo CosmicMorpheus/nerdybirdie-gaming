@@ -164,3 +164,16 @@ test('robbery checklist: map colours, IGN cross-check, and a tick here is the sa
   await page.goto(REAL + '/games/gta-vi/map/?pin=smash-n-grab-026');
   await expect(page.locator('.pin-detail').getByRole('checkbox')).toBeChecked();
 });
+
+test('exploration: own section with a purple map checklist; Kenton sets link to their map pins', async ({ page }) => {
+  await page.goto(REAL + '/games/gta-vi/guides/exploration/');
+  await page.waitForFunction(() => !document.querySelector('astro-island[ssr]'));
+  const list = page.locator('.explore-list');
+  for (const label of ['WAiNK', 'Treasures', 'Meditation']) await expect(list.locator('summary', { hasText: label }).first()).toBeVisible();
+  const wrecks = list.locator('details', { has: page.locator('summary', { hasText: 'Treasures' }) });
+  await wrecks.locator('summary').click();
+  await expect(wrecks.getByText('IGN lists it too')).toHaveCount(5);
+  const e = page.locator('li.entry', { hasText: 'Urca de Cinco Torres' });
+  await e.getByRole('button', { name: /More details/ }).click();
+  await expect(e.getByRole('link', { name: /Show on map/ })).toHaveAttribute('href', /pin=treasure-004/);
+});

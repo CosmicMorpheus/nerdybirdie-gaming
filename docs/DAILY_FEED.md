@@ -43,6 +43,7 @@ Then deploy. The limit is 10 creators. Set `"paused"` to stop following one and 
 | robbery, heist, bank job, stick-up, smash 'n' grab, illegal operation | robberies |
 | mission, walkthrough | walkthrough |
 | achievement, trophy | general |
+| WAiNK, Kenton, treasure, shipwreck, scuba, diving, meditation, flamingo, magazine, playlist | exploration |
 | collectible | collectibles |
 | vehicle, car, boat, plane, motorcycle | vehicles |
 | weapon | weapons |

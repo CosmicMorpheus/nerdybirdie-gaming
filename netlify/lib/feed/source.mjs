@@ -8,13 +8,14 @@ export const CHANNEL = /^UC[A-Za-z0-9_-]{22}$/;
 const VIDEO = /^[A-Za-z0-9_-]{11}$/;
 const PLAYLIST = /^[A-Za-z0-9_-]{10,80}$/;
 // Title words → this site's guide sections (content/games/gta-vi/game.json guideCategories). Founder-approved mapping,
-// docs/PHASE0_DAILY_FEED_AUDIT.md, extended 24 Nov 2026 for side missions, settings and tips, 25 Nov for robberies. First match wins.
+// docs/PHASE0_DAILY_FEED_AUDIT.md, extended 24 Nov 2026 for side missions, settings and tips, 25 Nov for robberies and exploration. First match wins.
 // Achievements stay "general" until our list is verified; locations stay "general" because a video never adds map pins.
 const categories = [
   ['side-missions', /\bside[- ]?(missions?|activit(?:y|ies)|hustles?|jobs?)\b/i],
   ['robberies', /\b(robber(?:y|ies)|heists?|bank jobs?|stick[- ]?ups?|smash (?:'?n'?|and) grabs?|illegal operations?)\b/i],
   ['walkthrough', /\b(missions?|walkthroughs?)\b/i],
   ['general', /\b(achievements?|troph(?:y|ies))\b/i],
+  ['exploration', /\b(wainks?|kenton|treasures?|shipwrecks?|scuba|diving|meditation|flamingos?|magazines?|playlists?)\b/i],
   ['collectibles', /\b(collectibles?|collectables?)\b/i],
   ['vehicles', /\b(vehicles?|cars?|boats?|planes?|motorcycles?)\b/i],
   ['weapons', /\bweapons?\b/i],
