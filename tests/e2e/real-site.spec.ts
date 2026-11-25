@@ -187,3 +187,18 @@ test('exploration: own section with a purple map checklist; Kenton sets link to 
   await e.getByRole('button', { name: /More details/ }).click();
   await expect(e.getByRole('link', { name: /Show on map/ })).toHaveAttribute('href', /pin=treasure-004/);
 });
+
+test('achievements show how-to tips and guide links; hidden tips only after Reveal', async ({ page }) => {
+  await page.goto(REAL + '/games/gta-vi/achievements/');
+  await page.waitForFunction(() => !document.querySelector('astro-island[ssr]'));
+  const wainker = page.locator('li.row', { hasText: 'You WAiNKer!' });
+  await expect(wainker.locator('.ach-tip')).toContainText('WAiNK phone app');
+  await expect(wainker.getByRole('link', { name: /WAiNK guide/ })).toHaveAttribute('href', '/games/gta-vi/guides/exploration/#entry-exploration-waink');
+  await expect(page.locator('body')).not.toContainText('Keep the alarm off for a perfect heist');
+  // Found by its permanent id: the visible text changes once revealed.
+  const heist = page.locator('li.row', { has: page.locator('#o-gta-vi-xbox-break-the-bank') });
+  await expect(heist).toContainText('Story progress (Chapter 3).');
+  await heist.getByRole('button', { name: /Reveal/ }).click();
+  await expect(heist).toContainText('Break the Bank');
+  await expect(heist.locator('.ach-tip')).toContainText('Keep the alarm off');
+});

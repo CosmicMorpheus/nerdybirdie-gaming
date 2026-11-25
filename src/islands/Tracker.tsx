@@ -224,6 +224,10 @@ export default function Tracker({ gameId, gameShortTitle, platforms, categories,
                   <div class="body">
                     <label for={inputId} class={t.concealed ? 'title concealed' : 'title'}>{t.title}</label>
                     {t.summary && <p class="desc">{t.summary}</p>}
+                    {t.tip && <p class="ach-tip"><span class="hud-label">How to</span> {t.tip}</p>}
+                    {o.links && o.links.length > 0 && (
+                      <p class="ach-links">{o.links.map((l) => <a key={l.href} href={l.href}>{l.label} →</a>)}</p>
+                    )}
                     <div class="tags">
                       <span class="tag">{catLabel(o.category)}</span>
                       {o.missable === true && <span class="tag miss">Missable</span>}

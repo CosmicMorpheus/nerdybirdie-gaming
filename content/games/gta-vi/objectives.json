@@ -16,7 +16,8 @@
     "grade": null,
     "protected": {
       "title": "Just Like Paradise",
-      "summary": "Complete Gone Fishing."
+      "summary": "Complete Gone Fishing.",
+      "tip": "Finish the first story mission, Gone Fishing."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -25,7 +26,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Walkthrough",
+        "href": "/games/gta-vi/guides/walkthrough/"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:just-like-paradise",
@@ -44,7 +51,8 @@
     "grade": "bronze",
     "protected": {
       "title": "Just Like Paradise",
-      "summary": "Complete Gone Fishing."
+      "summary": "Complete Gone Fishing.",
+      "tip": "Finish the first story mission, Gone Fishing."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -53,7 +61,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Walkthrough",
+        "href": "/games/gta-vi/guides/walkthrough/"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:paradise-lost",
@@ -72,7 +86,8 @@
     "grade": null,
     "protected": {
       "title": "Paradise Lost",
-      "summary": "Complete Chapter 1."
+      "summary": "Complete Chapter 1.",
+      "tip": "Finish Chapter 1. Spend your spare cash before the last Chapter 1 mission: most of it doesn't carry over."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -81,7 +96,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Walkthrough",
+        "href": "/games/gta-vi/guides/walkthrough/"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:paradise-lost",
@@ -100,7 +121,8 @@
     "grade": "bronze",
     "protected": {
       "title": "Paradise Lost",
-      "summary": "Complete Chapter 1."
+      "summary": "Complete Chapter 1.",
+      "tip": "Finish Chapter 1. Spend your spare cash before the last Chapter 1 mission: most of it doesn't carry over."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -109,7 +131,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Walkthrough",
+        "href": "/games/gta-vi/guides/walkthrough/"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:ts-ass-drug-money",
@@ -128,7 +156,8 @@
     "grade": null,
     "protected": {
       "title": "T**s Ass Drug Money",
-      "summary": "Complete Chapter 2."
+      "summary": "Complete Chapter 2.",
+      "tip": "Finish Chapter 2."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -137,7 +166,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Walkthrough",
+        "href": "/games/gta-vi/guides/walkthrough/"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:ts-ass-drug-money",
@@ -156,7 +191,8 @@
     "grade": "bronze",
     "protected": {
       "title": "T**s Ass Drug Money",
-      "summary": "Complete Chapter 2."
+      "summary": "Complete Chapter 2.",
+      "tip": "Finish Chapter 2."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -165,7 +201,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Walkthrough",
+        "href": "/games/gta-vi/guides/walkthrough/"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:vice-city-baby",
@@ -184,7 +226,8 @@
     "grade": null,
     "protected": {
       "title": "Vice City, Baby!",
-      "summary": "Complete Chapter 3."
+      "summary": "Complete Chapter 3.",
+      "tip": "Finish Chapter 3."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -193,7 +236,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Walkthrough",
+        "href": "/games/gta-vi/guides/walkthrough/"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:vice-city-baby",
@@ -212,7 +261,8 @@
     "grade": "bronze",
     "protected": {
       "title": "Vice City, Baby!",
-      "summary": "Complete Chapter 3."
+      "summary": "Complete Chapter 3.",
+      "tip": "Finish Chapter 3."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -221,7 +271,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Walkthrough",
+        "href": "/games/gta-vi/guides/walkthrough/"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:top-of-the-world-ma",
@@ -240,7 +296,8 @@
     "grade": null,
     "protected": {
       "title": "Top Of The World, Ma",
-      "summary": "Complete Chapter 4."
+      "summary": "Complete Chapter 4.",
+      "tip": "Finish Chapter 4. Our walkthrough doesn't reach Chapter 4 yet."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -249,7 +306,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Walkthrough",
+        "href": "/games/gta-vi/guides/walkthrough/"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:top-of-the-world-ma",
@@ -268,7 +331,8 @@
     "grade": "bronze",
     "protected": {
       "title": "Top Of The World, Ma",
-      "summary": "Complete Chapter 4."
+      "summary": "Complete Chapter 4.",
+      "tip": "Finish Chapter 4. Our walkthrough doesn't reach Chapter 4 yet."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -277,7 +341,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Walkthrough",
+        "href": "/games/gta-vi/guides/walkthrough/"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:you-gotta-know-when-to-get-off",
@@ -296,7 +366,8 @@
     "grade": null,
     "protected": {
       "title": "You Gotta Know When to Get Off",
-      "summary": "Complete the final mission."
+      "summary": "Complete the final mission.",
+      "tip": "Finish the last story mission."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -305,7 +376,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Walkthrough",
+        "href": "/games/gta-vi/guides/walkthrough/"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:you-gotta-know-when-to-get-off",
@@ -324,7 +401,8 @@
     "grade": "gold",
     "protected": {
       "title": "You Gotta Know When to Get Off",
-      "summary": "Complete the final mission."
+      "summary": "Complete the final mission.",
+      "tip": "Finish the last story mission."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -333,7 +411,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Walkthrough",
+        "href": "/games/gta-vi/guides/walkthrough/"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:trust",
@@ -352,7 +436,8 @@
     "grade": null,
     "protected": {
       "title": "Trust",
-      "summary": "Complete Breakfast Run."
+      "summary": "Complete Breakfast Run.",
+      "tip": "Finish Breakfast Run in Chapter 2 (you also get the '72 Tulip in it)."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -361,7 +446,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Walkthrough",
+        "href": "/games/gta-vi/guides/walkthrough/"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:trust",
@@ -380,7 +471,8 @@
     "grade": "bronze",
     "protected": {
       "title": "Trust",
-      "summary": "Complete Breakfast Run."
+      "summary": "Complete Breakfast Run.",
+      "tip": "Finish Breakfast Run in Chapter 2 (you also get the '72 Tulip in it)."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -389,7 +481,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Walkthrough",
+        "href": "/games/gta-vi/guides/walkthrough/"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:break-the-bank",
@@ -408,7 +506,8 @@
     "grade": null,
     "protected": {
       "title": "Break the Bank",
-      "summary": "Complete The Cartel Heist."
+      "summary": "Complete The Cartel Heist.",
+      "tip": "Finish The Cartel Heist in Chapter 3. Keep the alarm off for a perfect heist."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -417,7 +516,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Walkthrough",
+        "href": "/games/gta-vi/guides/walkthrough/"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:break-the-bank",
@@ -436,7 +541,8 @@
     "grade": "bronze",
     "protected": {
       "title": "Break the Bank",
-      "summary": "Complete The Cartel Heist."
+      "summary": "Complete The Cartel Heist.",
+      "tip": "Finish The Cartel Heist in Chapter 3. Keep the alarm off for a perfect heist."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -445,7 +551,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Walkthrough",
+        "href": "/games/gta-vi/guides/walkthrough/"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:family-matters",
@@ -464,7 +576,8 @@
     "grade": null,
     "protected": {
       "title": "Family Matters",
-      "summary": "Complete Child's Play."
+      "summary": "Complete Child's Play.",
+      "tip": "A later story mission our walkthrough doesn't cover yet."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -473,7 +586,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Walkthrough",
+        "href": "/games/gta-vi/guides/walkthrough/"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:family-matters",
@@ -492,7 +611,8 @@
     "grade": "bronze",
     "protected": {
       "title": "Family Matters",
-      "summary": "Complete Child's Play."
+      "summary": "Complete Child's Play.",
+      "tip": "A later story mission our walkthrough doesn't cover yet."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -501,7 +621,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Walkthrough",
+        "href": "/games/gta-vi/guides/walkthrough/"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:dwnfall",
@@ -520,7 +646,8 @@
     "grade": null,
     "protected": {
       "title": "DWNFALL",
-      "summary": "Complete Headliners."
+      "summary": "Complete Headliners.",
+      "tip": "A later story mission our walkthrough doesn't cover yet."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -529,7 +656,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Walkthrough",
+        "href": "/games/gta-vi/guides/walkthrough/"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:dwnfall",
@@ -548,7 +681,8 @@
     "grade": "bronze",
     "protected": {
       "title": "DWNFALL",
-      "summary": "Complete Headliners."
+      "summary": "Complete Headliners.",
+      "tip": "A later story mission our walkthrough doesn't cover yet."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -557,7 +691,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Walkthrough",
+        "href": "/games/gta-vi/guides/walkthrough/"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:hi-jacked",
@@ -576,7 +716,8 @@
     "grade": null,
     "protected": {
       "title": "Hi-Jacked",
-      "summary": "Complete VCIA Takedown."
+      "summary": "Complete VCIA Takedown.",
+      "tip": "A later story mission our walkthrough doesn't cover yet."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -585,7 +726,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Walkthrough",
+        "href": "/games/gta-vi/guides/walkthrough/"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:hi-jacked",
@@ -604,7 +751,8 @@
     "grade": "bronze",
     "protected": {
       "title": "Hi-Jacked",
-      "summary": "Complete VCIA Takedown."
+      "summary": "Complete VCIA Takedown.",
+      "tip": "A later story mission our walkthrough doesn't cover yet."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -613,7 +761,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Walkthrough",
+        "href": "/games/gta-vi/guides/walkthrough/"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:snow-storm",
@@ -632,7 +786,8 @@
     "grade": null,
     "protected": {
       "title": "Snow Storm",
-      "summary": "Complete Operation Savage Glory."
+      "summary": "Complete Operation Savage Glory.",
+      "tip": "A later story mission our walkthrough doesn't cover yet."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -641,7 +796,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Walkthrough",
+        "href": "/games/gta-vi/guides/walkthrough/"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:snow-storm",
@@ -660,7 +821,8 @@
     "grade": "bronze",
     "protected": {
       "title": "Snow Storm",
-      "summary": "Complete Operation Savage Glory."
+      "summary": "Complete Operation Savage Glory.",
+      "tip": "A later story mission our walkthrough doesn't cover yet."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -669,7 +831,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Walkthrough",
+        "href": "/games/gta-vi/guides/walkthrough/"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:a-long-road",
@@ -695,7 +863,14 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Reach 100% completion. Finishing the story is half of it; the rest comes from optional missions, crime targets, exploration and activities. Your 100% tracker appears in Map → Progress → Stats once the story is done.",
+    "links": [
+      {
+        "label": "What counts toward 100%",
+        "href": "/games/gta-vi/guides/tips/#entry-what-counts-for-100-percent"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:a-long-road",
@@ -721,7 +896,14 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Reach 100% completion. Finishing the story is half of it; the rest comes from optional missions, crime targets, exploration and activities. Your 100% tracker appears in Map → Progress → Stats once the story is done.",
+    "links": [
+      {
+        "label": "What counts toward 100%",
+        "href": "/games/gta-vi/guides/tips/#entry-what-counts-for-100-percent"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:cunning-stunts",
@@ -747,7 +929,14 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Stunt jumps, under-the-bridge flights, knife flights and BASE jumps all count toward the 250 (300 are needed for 100%).",
+    "links": [
+      {
+        "label": "Stunt spots on the map",
+        "href": "/games/gta-vi/map/?c=stunt,bridge,knife,basejump"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:cunning-stunts",
@@ -773,7 +962,14 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Stunt jumps, under-the-bridge flights, knife flights and BASE jumps all count toward the 250 (300 are needed for 100%).",
+    "links": [
+      {
+        "label": "Stunt spots on the map",
+        "href": "/games/gta-vi/map/?c=stunt,bridge,knife,basejump"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:master-of-none",
@@ -799,7 +995,14 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Try each of the 9 activity types once. A single Top Fun drone time trial counts for that type.",
+    "links": [
+      {
+        "label": "Drone trials on the map",
+        "href": "/games/gta-vi/map/?c=drone"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:master-of-none",
@@ -825,7 +1028,14 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Try each of the 9 activity types once. A single Top Fun drone time trial counts for that type.",
+    "links": [
+      {
+        "label": "Drone trials on the map",
+        "href": "/games/gta-vi/map/?c=drone"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:the-shootist",
@@ -850,7 +1060,14 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Get a gold medal in all 42 shooting range challenges.",
+    "links": [
+      {
+        "label": "Shooting ranges on the map",
+        "href": "/games/gta-vi/map/?c=range"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:the-shootist",
@@ -875,7 +1092,14 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Get a gold medal in all 42 shooting range challenges.",
+    "links": [
+      {
+        "label": "Shooting ranges on the map",
+        "href": "/games/gta-vi/map/?c=range"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:top-fun",
@@ -900,7 +1124,14 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Win a Top Fun drone race at each of the 14 locations.",
+    "links": [
+      {
+        "label": "Drone trials on the map",
+        "href": "/games/gta-vi/map/?c=drone"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:top-fun",
@@ -925,7 +1156,14 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Win a Top Fun drone race at each of the 14 locations.",
+    "links": [
+      {
+        "label": "Drone trials on the map",
+        "href": "/games/gta-vi/map/?c=drone"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:earn-cash-not-kudos",
@@ -950,7 +1188,18 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Win 20 different races (30 wins count toward 100%). The Street Racer storyline in Chapter 3 introduces Vice City's street races.",
+    "links": [
+      {
+        "label": "Races on the map",
+        "href": "/games/gta-vi/map/?c=race"
+      },
+      {
+        "label": "Street Racer",
+        "href": "/games/gta-vi/guides/side-missions/#entry-side-street-racer"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:earn-cash-not-kudos",
@@ -975,7 +1224,18 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Win 20 different races (30 wins count toward 100%). The Street Racer storyline in Chapter 3 introduces Vice City's street races.",
+    "links": [
+      {
+        "label": "Races on the map",
+        "href": "/games/gta-vi/map/?c=race"
+      },
+      {
+        "label": "Street Racer",
+        "href": "/games/gta-vi/guides/side-missions/#entry-side-street-racer"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:baited-my-tackle",
@@ -1000,7 +1260,14 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Beat Cal in a fishing challenge.",
+    "links": [
+      {
+        "label": "Fishing spots on the map",
+        "href": "/games/gta-vi/map/?c=fishing"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:baited-my-tackle",
@@ -1025,7 +1292,14 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Beat Cal in a fishing challenge.",
+    "links": [
+      {
+        "label": "Fishing spots on the map",
+        "href": "/games/gta-vi/map/?c=fishing"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:stick-fiddler",
@@ -1050,7 +1324,14 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Finish any arcade game.",
+    "links": [
+      {
+        "label": "Arcades on the map",
+        "href": "/games/gta-vi/map/?c=arcade"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:stick-fiddler",
@@ -1075,7 +1356,14 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Finish any arcade game.",
+    "links": [
+      {
+        "label": "Arcades on the map",
+        "href": "/games/gta-vi/map/?c=arcade"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:road-to-rehabilitation",
@@ -1094,7 +1382,8 @@
     "grade": null,
     "protected": {
       "title": "Road to Rehabilitation",
-      "summary": "Complete the final mission for Andy."
+      "summary": "Complete the final mission for Andy.",
+      "tip": "Finish Andy's mission strand. We don't have a guide for it yet."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -1122,7 +1411,8 @@
     "grade": "bronze",
     "protected": {
       "title": "Road to Rehabilitation",
-      "summary": "Complete the final mission for Andy."
+      "summary": "Complete the final mission for Andy.",
+      "tip": "Finish Andy's mission strand. We don't have a guide for it yet."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -1150,7 +1440,8 @@
     "grade": null,
     "protected": {
       "title": "This Was No Boat Accident",
-      "summary": "Complete the final mission for Kenton."
+      "summary": "Complete the final mission for Kenton.",
+      "tip": "Finish Kenton's treasure-hunting storyline, which brings in his rival, Sir Todd Bancroft. Keep diving for him."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -1159,7 +1450,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Diving guide",
+        "href": "/games/gta-vi/guides/exploration/#entry-exploration-diving-and-metal-detector"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:this-was-no-boat-accident",
@@ -1178,7 +1475,8 @@
     "grade": "bronze",
     "protected": {
       "title": "This Was No Boat Accident",
-      "summary": "Complete the final mission for Kenton."
+      "summary": "Complete the final mission for Kenton.",
+      "tip": "Finish Kenton's treasure-hunting storyline, which brings in his rival, Sir Todd Bancroft. Keep diving for him."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -1187,7 +1485,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Diving guide",
+        "href": "/games/gta-vi/guides/exploration/#entry-exploration-diving-and-metal-detector"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:the-lone-rider",
@@ -1206,7 +1510,8 @@
     "grade": null,
     "protected": {
       "title": "The Lone Rider",
-      "summary": "Complete the final mission for Billy."
+      "summary": "Complete the final mission for Billy.",
+      "tip": "Finish Billy's mission strand. We don't have a guide for it yet."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -1234,7 +1539,8 @@
     "grade": "bronze",
     "protected": {
       "title": "The Lone Rider",
-      "summary": "Complete the final mission for Billy."
+      "summary": "Complete the final mission for Billy.",
+      "tip": "Finish Billy's mission strand. We don't have a guide for it yet."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -1268,7 +1574,14 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Finish 8 of the side-character mission strands around Leonida.",
+    "links": [
+      {
+        "label": "Side missions",
+        "href": "/games/gta-vi/guides/side-missions/"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:strangers-freaks",
@@ -1293,7 +1606,14 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Finish 8 of the side-character mission strands around Leonida.",
+    "links": [
+      {
+        "label": "Side missions",
+        "href": "/games/gta-vi/guides/side-missions/"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:supply-demand",
@@ -1312,7 +1632,8 @@
     "grade": null,
     "protected": {
       "title": "Supply & Demand",
-      "summary": "Complete the final mission for Randy."
+      "summary": "Complete the final mission for Randy.",
+      "tip": "Finish Randy's missions. His Wish List of cars to steal starts in Chapter 3."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -1321,7 +1642,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Vehicles",
+        "href": "/games/gta-vi/guides/vehicles/"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:supply-demand",
@@ -1340,7 +1667,8 @@
     "grade": "bronze",
     "protected": {
       "title": "Supply & Demand",
-      "summary": "Complete the final mission for Randy."
+      "summary": "Complete the final mission for Randy.",
+      "tip": "Finish Randy's missions. His Wish List of cars to steal starts in Chapter 3."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -1349,7 +1677,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Vehicles",
+        "href": "/games/gta-vi/guides/vehicles/"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:spin-on-this",
@@ -1368,7 +1702,8 @@
     "grade": null,
     "protected": {
       "title": "Spin On This!",
-      "summary": "Complete the final mission for Tyrone."
+      "summary": "Complete the final mission for Tyrone.",
+      "tip": "Finish Tyrone's missions. You first meet him in Chapter 3."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -1377,7 +1712,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Walkthrough",
+        "href": "/games/gta-vi/guides/walkthrough/"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:spin-on-this",
@@ -1396,7 +1737,8 @@
     "grade": "bronze",
     "protected": {
       "title": "Spin On This!",
-      "summary": "Complete the final mission for Tyrone."
+      "summary": "Complete the final mission for Tyrone.",
+      "tip": "Finish Tyrone's missions. You first meet him in Chapter 3."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -1405,7 +1747,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Walkthrough",
+        "href": "/games/gta-vi/guides/walkthrough/"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:positive-mental-attitude",
@@ -1430,7 +1778,18 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Meditate at all 18 spots; some need a second visit. Do the one at Jason's house in Chapter 1: after a morning talk in the kitchen, follow Lucia to the balcony.",
+    "links": [
+      {
+        "label": "Meditation spots",
+        "href": "/games/gta-vi/guides/exploration/#entry-exploration-meditation-spots"
+      },
+      {
+        "label": "Meditation on the map",
+        "href": "/games/gta-vi/map/?c=meditation"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:positive-mental-attitude",
@@ -1455,7 +1814,18 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Meditate at all 18 spots; some need a second visit. Do the one at Jason's house in Chapter 1: after a morning talk in the kitchen, follow Lucia to the balcony.",
+    "links": [
+      {
+        "label": "Meditation spots",
+        "href": "/games/gta-vi/guides/exploration/#entry-exploration-meditation-spots"
+      },
+      {
+        "label": "Meditation on the map",
+        "href": "/games/gta-vi/map/?c=meditation"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:fair-game",
@@ -1474,7 +1844,8 @@
     "grade": null,
     "protected": {
       "title": "Fair Game",
-      "summary": "Hunt a unique GTA 6 animal for Bret."
+      "summary": "Hunt a unique GTA 6 animal for Bret.",
+      "tip": "Hunt a unique animal for Bret."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -1483,7 +1854,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Hunting spots on the map",
+        "href": "/games/gta-vi/map/?c=hunting"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:fair-game",
@@ -1502,7 +1879,8 @@
     "grade": "bronze",
     "protected": {
       "title": "Fair Game",
-      "summary": "Hunt a unique GTA 6 animal for Bret."
+      "summary": "Hunt a unique GTA 6 animal for Bret.",
+      "tip": "Hunt a unique animal for Bret."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -1511,7 +1889,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Hunting spots on the map",
+        "href": "/games/gta-vi/map/?c=hunting"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:dont-touch-my-deck",
@@ -1536,7 +1920,18 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Finish any 3 card sets. The smallest are B.A.M. Backyard Wrestling (12 cards) and Delights (18).",
+    "links": [
+      {
+        "label": "B.A.M. set",
+        "href": "/games/gta-vi/guides/collectibles/#entry-cards-b-a-m-backyard-wrestling"
+      },
+      {
+        "label": "Delights set",
+        "href": "/games/gta-vi/guides/collectibles/#entry-cards-delights"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:dont-touch-my-deck",
@@ -1561,7 +1956,18 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Finish any 3 card sets. The smallest are B.A.M. Backyard Wrestling (12 cards) and Delights (18).",
+    "links": [
+      {
+        "label": "B.A.M. set",
+        "href": "/games/gta-vi/guides/collectibles/#entry-cards-b-a-m-backyard-wrestling"
+      },
+      {
+        "label": "Delights set",
+        "href": "/games/gta-vi/guides/collectibles/#entry-cards-delights"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:you-wainker",
@@ -1586,7 +1992,18 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Scan 100 places with the WAiNK phone app: when you get a WAiNK notification, press D-pad Up and hold R1/RB.",
+    "links": [
+      {
+        "label": "WAiNK guide",
+        "href": "/games/gta-vi/guides/exploration/#entry-exploration-waink"
+      },
+      {
+        "label": "Exploration checklist",
+        "href": "/games/gta-vi/guides/exploration/"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:you-wainker",
@@ -1611,7 +2028,18 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Scan 100 places with the WAiNK phone app: when you get a WAiNK notification, press D-pad Up and hold R1/RB.",
+    "links": [
+      {
+        "label": "WAiNK guide",
+        "href": "/games/gta-vi/guides/exploration/#entry-exploration-waink"
+      },
+      {
+        "label": "Exploration checklist",
+        "href": "/games/gta-vi/guides/exploration/"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:one-last-thing",
@@ -1636,7 +2064,8 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Complete 50 challenges (70 count toward 100%)."
   },
   {
     "id": "gta-vi:ps5:one-last-thing",
@@ -1661,7 +2090,8 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Complete 50 challenges (70 count toward 100%)."
   },
   {
     "id": "gta-vi:xbox:hot-together",
@@ -1686,7 +2116,18 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "With your partner, escape a 4-star wanted level. Clearing your heat icons (outfit, car, mask, cameras) is how you shake the police.",
+    "links": [
+      {
+        "label": "Clear heat icons",
+        "href": "/games/gta-vi/guides/tips/#entry-tip-clear-heat-icons"
+      },
+      {
+        "label": "Wanted stars",
+        "href": "/games/gta-vi/guides/tips/#entry-tip-wanted-star-colours"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:hot-together",
@@ -1711,7 +2152,18 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "With your partner, escape a 4-star wanted level. Clearing your heat icons (outfit, car, mask, cameras) is how you shake the police.",
+    "links": [
+      {
+        "label": "Clear heat icons",
+        "href": "/games/gta-vi/guides/tips/#entry-tip-clear-heat-icons"
+      },
+      {
+        "label": "Wanted stars",
+        "href": "/games/gta-vi/guides/tips/#entry-tip-wanted-star-colours"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:retail-therapy",
@@ -1736,7 +2188,18 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "With your partner, rob three stores in a row without losing your wanted level in between. Stick-up stores are light blue on the map.",
+    "links": [
+      {
+        "label": "Stick-ups",
+        "href": "/games/gta-vi/guides/robberies/#entry-robberies-stick-ups"
+      },
+      {
+        "label": "Stores on the map",
+        "href": "/games/gta-vi/map/?c=store"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:retail-therapy",
@@ -1761,7 +2224,18 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "With your partner, rob three stores in a row without losing your wanted level in between. Stick-up stores are light blue on the map.",
+    "links": [
+      {
+        "label": "Stick-ups",
+        "href": "/games/gta-vi/guides/robberies/#entry-robberies-stick-ups"
+      },
+      {
+        "label": "Stores on the map",
+        "href": "/games/gta-vi/map/?c=store"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:whip-it-good",
@@ -1786,7 +2260,14 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Discover 100 different vehicles (200 count toward 100%).",
+    "links": [
+      {
+        "label": "Vehicles",
+        "href": "/games/gta-vi/guides/vehicles/"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:whip-it-good",
@@ -1811,7 +2292,14 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Discover 100 different vehicles (200 count toward 100%).",
+    "links": [
+      {
+        "label": "Vehicles",
+        "href": "/games/gta-vi/guides/vehicles/"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:gunslinger",
@@ -1836,7 +2324,14 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Use Focus while aiming (click both sticks) and take down 5 enemies before it runs out.",
+    "links": [
+      {
+        "label": "Focus mode",
+        "href": "/games/gta-vi/guides/tips/#entry-tip-focus-mode"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:gunslinger",
@@ -1861,7 +2356,14 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Use Focus while aiming (click both sticks) and take down 5 enemies before it runs out.",
+    "links": [
+      {
+        "label": "Focus mode",
+        "href": "/games/gta-vi/guides/tips/#entry-tip-focus-mode"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:catch-me-if-you-can",
@@ -1880,7 +2382,8 @@
     "grade": null,
     "protected": {
       "title": "Catch Me If You Can",
-      "summary": "Make an unscheduled departure at VCIA."
+      "summary": "Make an unscheduled departure at VCIA.",
+      "tip": "A secret moment: the description above is the game's own hint. We'll add a tip once one is confirmed."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -1908,7 +2411,8 @@
     "grade": "bronze",
     "protected": {
       "title": "Catch Me If You Can",
-      "summary": "Make an unscheduled departure at VCIA."
+      "summary": "Make an unscheduled departure at VCIA.",
+      "tip": "A secret moment: the description above is the game's own hint. We'll add a tip once one is confirmed."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -1936,7 +2440,8 @@
     "grade": null,
     "protected": {
       "title": "Challenging Tank",
-      "summary": "Kinda hot in these Rhinos."
+      "summary": "Kinda hot in these Rhinos.",
+      "tip": "The description mentions Rhinos: our Vehicles section shows how to steal a Rhino tank early."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -1945,7 +2450,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Vehicles",
+        "href": "/games/gta-vi/guides/vehicles/"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:challenging-tank",
@@ -1964,7 +2475,8 @@
     "grade": "bronze",
     "protected": {
       "title": "Challenging Tank",
-      "summary": "Kinda hot in these Rhinos."
+      "summary": "Kinda hot in these Rhinos.",
+      "tip": "The description mentions Rhinos: our Vehicles section shows how to steal a Rhino tank early."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -1973,7 +2485,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Vehicles",
+        "href": "/games/gta-vi/guides/vehicles/"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:sneakthief",
@@ -1998,7 +2516,18 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Rob a jewelry store without being spotted. Jewelry stores are smash 'n' grab spots (green on the map).",
+    "links": [
+      {
+        "label": "Smash 'n' grabs",
+        "href": "/games/gta-vi/guides/robberies/#entry-robberies-smash-n-grabs"
+      },
+      {
+        "label": "Jewelry stores on the map",
+        "href": "/games/gta-vi/map/?c=smash"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:sneakthief",
@@ -2023,7 +2552,18 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Rob a jewelry store without being spotted. Jewelry stores are smash 'n' grab spots (green on the map).",
+    "links": [
+      {
+        "label": "Smash 'n' grabs",
+        "href": "/games/gta-vi/guides/robberies/#entry-robberies-smash-n-grabs"
+      },
+      {
+        "label": "Jewelry stores on the map",
+        "href": "/games/gta-vi/map/?c=smash"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:maximum-withdrawal",
@@ -2048,7 +2588,18 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Rob 5 of the 8 big-bank vaults and get away. Vaults unlock through a later optional mission, and you need the Dye Pack Jammer to take marked bills.",
+    "links": [
+      {
+        "label": "Vaults",
+        "href": "/games/gta-vi/guides/robberies/#entry-robberies-vaults"
+      },
+      {
+        "label": "Dye Pack Jammer",
+        "href": "/games/gta-vi/guides/robberies/#entry-robberies-dye-pack-jammer"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:maximum-withdrawal",
@@ -2073,7 +2624,18 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Rob 5 of the 8 big-bank vaults and get away. Vaults unlock through a later optional mission, and you need the Dye Pack Jammer to take marked bills.",
+    "links": [
+      {
+        "label": "Vaults",
+        "href": "/games/gta-vi/guides/robberies/#entry-robberies-vaults"
+      },
+      {
+        "label": "Dye Pack Jammer",
+        "href": "/games/gta-vi/guides/robberies/#entry-robberies-dye-pack-jammer"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:a-classic-blitz-play",
@@ -2098,7 +2660,8 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Rob an armoured truck and get away. We don't have confirmed truck locations yet."
   },
   {
     "id": "gta-vi:ps5:a-classic-blitz-play",
@@ -2123,7 +2686,8 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Rob an armoured truck and get away. We don't have confirmed truck locations yet."
   },
   {
     "id": "gta-vi:xbox:the-goodtime-state",
@@ -2148,7 +2712,14 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Explore every part of Leonida.",
+    "links": [
+      {
+        "label": "Leonida map",
+        "href": "/games/gta-vi/map/"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:the-goodtime-state",
@@ -2173,7 +2744,14 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Explore every part of Leonida.",
+    "links": [
+      {
+        "label": "Leonida map",
+        "href": "/games/gta-vi/map/"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:pest-control",
@@ -2198,7 +2776,18 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Rob an illegal operation run by each of the 9 gangs. So far our guide covers spots run by the Kingfishers, Kolt & Associates and M7.",
+    "links": [
+      {
+        "label": "Robbery spots",
+        "href": "/games/gta-vi/guides/robberies/"
+      },
+      {
+        "label": "Illegal operations on the map",
+        "href": "/games/gta-vi/map/?c=gang"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:pest-control",
@@ -2223,7 +2812,18 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Rob an illegal operation run by each of the 9 gangs. So far our guide covers spots run by the Kingfishers, Kolt & Associates and M7.",
+    "links": [
+      {
+        "label": "Robbery spots",
+        "href": "/games/gta-vi/guides/robberies/"
+      },
+      {
+        "label": "Illegal operations on the map",
+        "href": "/games/gta-vi/map/?c=gang"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:in-the-beginning",
@@ -2242,7 +2842,8 @@
     "grade": null,
     "protected": {
       "title": "In The Beginning…",
-      "summary": "Enjoy a cocktail with a view on Ocean Beach."
+      "summary": "Enjoy a cocktail with a view on Ocean Beach.",
+      "tip": "A secret moment: the description above is the game's own hint. We'll add a tip once one is confirmed."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -2270,7 +2871,8 @@
     "grade": "bronze",
     "protected": {
       "title": "In The Beginning…",
-      "summary": "Enjoy a cocktail with a view on Ocean Beach."
+      "summary": "Enjoy a cocktail with a view on Ocean Beach.",
+      "tip": "A secret moment: the description above is the game's own hint. We'll add a tip once one is confirmed."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -2298,7 +2900,8 @@
     "grade": null,
     "protected": {
       "title": "Capital Offense",
-      "summary": "Smash your way out of a vehicle showroom in classic style."
+      "summary": "Smash your way out of a vehicle showroom in classic style.",
+      "tip": "A secret moment: the description above is the game's own hint. We'll add a tip once one is confirmed."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -2326,7 +2929,8 @@
     "grade": "bronze",
     "protected": {
       "title": "Capital Offense",
-      "summary": "Smash your way out of a vehicle showroom in classic style."
+      "summary": "Smash your way out of a vehicle showroom in classic style.",
+      "tip": "A secret moment: the description above is the game's own hint. We'll add a tip once one is confirmed."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -2354,7 +2958,8 @@
     "grade": null,
     "protected": {
       "title": "Let’s Go Bowling",
-      "summary": "Follow-through at the Kolt & Associates' bowling alley."
+      "summary": "Follow-through at the Kolt & Associates' bowling alley.",
+      "tip": "Kolt & Associates' bowling alley is the Kingpin Bowling robbery spot in Port Gellhorn."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -2363,7 +2968,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Robbery spots",
+        "href": "/games/gta-vi/guides/robberies/"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:lets-go-bowling",
@@ -2382,7 +2993,8 @@
     "grade": "bronze",
     "protected": {
       "title": "Let’s Go Bowling",
-      "summary": "Follow-through at the Kolt & Associates' bowling alley."
+      "summary": "Follow-through at the Kolt & Associates' bowling alley.",
+      "tip": "Kolt & Associates' bowling alley is the Kingpin Bowling robbery spot in Port Gellhorn."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -2391,7 +3003,13 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "links": [
+      {
+        "label": "Robbery spots",
+        "href": "/games/gta-vi/guides/robberies/"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:personal-best",
@@ -2410,7 +3028,8 @@
     "grade": null,
     "protected": {
       "title": "Personal Best",
-      "summary": "A partnership with mass appeal."
+      "summary": "A partnership with mass appeal.",
+      "tip": "A secret moment: the description above is the game's own hint. We'll add a tip once one is confirmed."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -2438,7 +3057,8 @@
     "grade": "bronze",
     "protected": {
       "title": "Personal Best",
-      "summary": "A partnership with mass appeal."
+      "summary": "A partnership with mass appeal.",
+      "tip": "A secret moment: the description above is the game's own hint. We'll add a tip once one is confirmed."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -2466,7 +3086,8 @@
     "grade": null,
     "protected": {
       "title": "Actions Speak Louder",
-      "summary": "Choices made (for better or worse). (500 in total)"
+      "summary": "Choices made (for better or worse). (500 in total)",
+      "tip": "A secret moment: the description above is the game's own hint. We'll add a tip once one is confirmed."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -2494,7 +3115,8 @@
     "grade": "bronze",
     "protected": {
       "title": "Actions Speak Louder",
-      "summary": "Choices made (for better or worse). (500 in total)"
+      "summary": "Choices made (for better or worse). (500 in total)",
+      "tip": "A secret moment: the description above is the game's own hint. We'll add a tip once one is confirmed."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -2522,7 +3144,8 @@
     "grade": null,
     "protected": {
       "title": "Bad Luck, I Guess",
-      "summary": "Second time's the charm."
+      "summary": "Second time's the charm.",
+      "tip": "A secret moment: the description above is the game's own hint. We'll add a tip once one is confirmed."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -2550,7 +3173,8 @@
     "grade": "bronze",
     "protected": {
       "title": "Bad Luck, I Guess",
-      "summary": "Second time's the charm."
+      "summary": "Second time's the charm.",
+      "tip": "A secret moment: the description above is the game's own hint. We'll add a tip once one is confirmed."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -2578,7 +3202,8 @@
     "grade": null,
     "protected": {
       "title": "The Truth Is Out There",
-      "summary": "What the hell just happened?"
+      "summary": "What the hell just happened?",
+      "tip": "A secret moment: the description above is the game's own hint. We'll add a tip once one is confirmed."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -2606,7 +3231,8 @@
     "grade": "bronze",
     "protected": {
       "title": "The Truth Is Out There",
-      "summary": "What the hell just happened?"
+      "summary": "What the hell just happened?",
+      "tip": "A secret moment: the description above is the game's own hint. We'll add a tip once one is confirmed."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -2634,7 +3260,8 @@
     "grade": null,
     "protected": {
       "title": "Ten Pin",
-      "summary": "Bowl 'em over with a melee drive-by."
+      "summary": "Bowl 'em over with a melee drive-by.",
+      "tip": "A secret moment: the description above is the game's own hint. We'll add a tip once one is confirmed."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -2662,7 +3289,8 @@
     "grade": "bronze",
     "protected": {
       "title": "Ten Pin",
-      "summary": "Bowl 'em over with a melee drive-by."
+      "summary": "Bowl 'em over with a melee drive-by.",
+      "tip": "A secret moment: the description above is the game's own hint. We'll add a tip once one is confirmed."
     },
     "sourceIds": [
       "gamesradar-trophy-list"
@@ -2696,7 +3324,18 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Launder $250,000 of marked bills through your contacts. Marked bills come from bank and payday loan jobs (you need the Dye Pack Jammer); Yasmani and fences buy them.",
+    "links": [
+      {
+        "label": "Dye Pack Jammer",
+        "href": "/games/gta-vi/guides/robberies/#entry-robberies-dye-pack-jammer"
+      },
+      {
+        "label": "Yasmani",
+        "href": "/games/gta-vi/guides/robberies/#entry-robberies-yasmani-contact"
+      }
+    ]
   },
   {
     "id": "gta-vi:ps5:dime-on-the-dollar",
@@ -2721,7 +3360,18 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Launder $250,000 of marked bills through your contacts. Marked bills come from bank and payday loan jobs (you need the Dye Pack Jammer); Yasmani and fences buy them.",
+    "links": [
+      {
+        "label": "Dye Pack Jammer",
+        "href": "/games/gta-vi/guides/robberies/#entry-robberies-dye-pack-jammer"
+      },
+      {
+        "label": "Yasmani",
+        "href": "/games/gta-vi/guides/robberies/#entry-robberies-yasmani-contact"
+      }
+    ]
   },
   {
     "id": "gta-vi:xbox:treat-yo-self",
@@ -2746,7 +3396,8 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Spend $100,000 in shops, in total."
   },
   {
     "id": "gta-vi:ps5:treat-yo-self",
@@ -2771,7 +3422,8 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Spend $100,000 in shops, in total."
   },
   {
     "id": "gta-vi:xbox:little-boxes",
@@ -2796,7 +3448,8 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Buy all 8 garage properties."
   },
   {
     "id": "gta-vi:ps5:little-boxes",
@@ -2821,7 +3474,8 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Buy all 8 garage properties."
   },
   {
     "id": "gta-vi:xbox:on-the-spot",
@@ -2846,7 +3500,8 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Register 10 vehicles in the Scooter Bros app."
   },
   {
     "id": "gta-vi:ps5:on-the-spot",
@@ -2871,7 +3526,8 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Register 10 vehicles in the Scooter Bros app."
   },
   {
     "id": "gta-vi:ps5:vice-got-a-price",
@@ -2896,6 +3552,7 @@
     "publicationStatus": "approved",
     "checkedAt": "2026-11-25",
     "founderVerifiedAt": null,
-    "revision": 1
+    "revision": 1,
+    "tip": "Earn every other trophy."
   }
 ]

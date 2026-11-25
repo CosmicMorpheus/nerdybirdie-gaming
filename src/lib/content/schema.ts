@@ -89,7 +89,11 @@ export const Objective = z.strictObject({
   /** PlayStation trophy grade. */
   grade: z.enum(['platinum', 'gold', 'silver', 'bronze']).nullable().optional(),
   /** Spoiler text. Never rendered into pages; served separately and fetched on reveal. */
-  protected: z.strictObject({ title: z.string().min(1), summary: z.string() }).nullable(),
+  protected: z.strictObject({ title: z.string().min(1), summary: z.string(), tip: z.string().min(1).optional() }).nullable(),
+  /** How to unlock it, in our own words. Spoiler-free (spoiler tips go in protected.tip). */
+  tip: z.string().min(1).optional(),
+  /** Links to our own guides, checklists or map filters (site paths only). */
+  links: z.array(z.strictObject({ label: z.string().min(1), href: z.string().regex(/^\/[A-Za-z0-9\-_/?=#&.,]*$/) })).optional(),
   sourceIds: z.array(slug),
   verificationStatus: VerificationStatus,
   publicationStatus: PublicationStatus,

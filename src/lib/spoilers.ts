@@ -23,6 +23,8 @@ export function modeAllows(level: SpoilerLevel, mode: SpoilerMode): boolean {
 export interface DisplayText {
   title: string;
   summary: string;
+  /** How-to-unlock tip, when there is one (spoiler tips only after a reveal). */
+  tip?: string;
   /** True when protected text exists but is not being shown. */
   concealed: boolean;
 }
@@ -32,14 +34,15 @@ export interface DisplayText {
  * allows it or the person revealed this one item. Otherwise the safe fields, which never spoil.
  */
 export function displayText(
-  o: { safeTitle: string; safeSummary: string; spoilerLevel: SpoilerLevel; hasProtected: boolean; id: string },
+  o: { safeTitle: string; safeSummary: string; spoilerLevel: SpoilerLevel; hasProtected: boolean; id: string; tip?: string },
   mode: SpoilerMode,
   revealed: ReadonlySet<string>,
-  protectedById: Record<string, { title: string; summary: string }> | null,
+  protectedById: Record<string, { title: string; summary: string; tip?: string }> | null,
 ): DisplayText {
-  if (!o.hasProtected) return { title: o.safeTitle, summary: o.safeSummary, concealed: false };
+  const tip = o.tip;
+  if (!o.hasProtected) return { title: o.safeTitle, summary: o.safeSummary, concealed: false, tip };
   const allowed = modeAllows(o.spoilerLevel, mode) || revealed.has(o.id);
   const p = protectedById?.[o.id];
-  if (allowed && p) return { title: p.title, summary: p.summary, concealed: false };
-  return { title: o.safeTitle, summary: o.safeSummary, concealed: true };
+  if (allowed && p) return { title: p.title, summary: p.summary, concealed: false, tip: p.tip ?? tip };
+  return { title: o.safeTitle, summary: o.safeSummary, concealed: true, tip };
 }

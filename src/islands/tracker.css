@@ -229,3 +229,8 @@
 .tag.grade-gold { background: #3a3110; color: #ffd98a; }
 .tag.grade-silver { background: #2a2f3a; color: #dfe4ee; }
 .tag.grade-bronze { background: #3a2616; color: #f0b98a; }
+/* Achievement how-to tips and guide links. */
+.ach-tip { margin: 6px 0 0; font-size: 14px; color: var(--vc-pearl); }
+.ach-tip .hud-label { margin-right: 6px; color: var(--vc-sunset); }
+.ach-links { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 6px 0 0; font-size: 14px; }
+.ach-links a { color: var(--vc-sunset); font-weight: 600; }
