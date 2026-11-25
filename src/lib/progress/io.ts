@@ -23,7 +23,7 @@ export function parseImport(text: string): ImportResult {
     return { ok: false, error: "That file isn't a valid backup (it isn't JSON)." };
   }
   if (typeof raw !== 'object' || raw === null || (raw as { app?: unknown }).app !== EXPORT_APP)
-    return { ok: false, error: "That file isn't a Nerdy Birdie Gaming backup." };
+    return { ok: false, error: "That file isn't a NerdyBirdie LLC Gaming Guides backup." };
   const m = migrate(raw);
   if (!m.ok)
     return {

@@ -1,4 +1,4 @@
-# Nerdy Birdie Gaming
+# NerdyBirdie LLC Gaming Guides
 
 Free, spoiler-safe game guides and trackers, starting with Grand Theft Auto VI. Part of the COZMC community.
 Separate from the cozmc.us site and repo.

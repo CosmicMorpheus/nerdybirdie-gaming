@@ -28,7 +28,7 @@ export default function VideoEmbed({ video, start, label }: Props) {
   const canEmbed = video.availability !== 'unavailable';
   return (
     <figure class={`video video-${p.provider}`}>
-      {video.unreviewed && <p class="video-flag">Not yet checked by Nerdy Birdie. Shown on the preview only.</p>}
+      {video.unreviewed && <p class="video-flag">Not yet checked by NerdyBirdie LLC. Shown on the preview only.</p>}
       {on && canEmbed ? (
         <iframe src={embedUrl(p, start, parents)} title={`${video.title} by ${video.creator} (${NAME[p.provider]})`}
           allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowFullScreen referrerpolicy="strict-origin-when-cross-origin"

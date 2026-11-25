@@ -3,7 +3,7 @@
  * Never put a link here that hasn't been checked. An empty string means "not configured" and the
  * site shows an honest unavailable state instead of a broken link.
  */
-export const SITE_NAME = 'Nerdy Birdie Gaming';
+export const SITE_NAME = 'NerdyBirdie LLC Gaming Guides';
 
 /** Proposed, not final (docs/DECISIONS.md). */
 export const TAGLINE = 'Play Smarter. Discover More.';

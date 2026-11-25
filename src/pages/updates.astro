@@ -6,7 +6,7 @@ import { DISCOVERY_FEED } from '../config';
 const game = getGame('gta-vi');
 const creators = creatorsFor(game.id);
 ---
-<Prose title="Updates" current="updates" description="What's new on Nerdy Birdie Gaming.">
+<Prose title="Updates" current="updates" description="What's new on NerdyBirdie LLC Gaming Guides.">
   {DISCOVERY_FEED && (
     <Discoveries client:load heading="What's New from creators" sections={game.guideCategories.map((c) => ({ id: c.id, label: c.label }))}
       guidesHref={`/games/${game.id}/guides/`} />
@@ -64,7 +64,7 @@ const creators = creatorsFor(game.id);
   </ul>
   <h2>24 November 2026 · Launch</h2>
   <ul>
-    <li>Nerdy Birdie Game Guides is live at nerdybirdiegameguides.netlify.app. Free, no account needed, spoiler-safe by default.</li>
+    <li>NerdyBirdie LLC Gaming Guides is live at nerdybirdiegameguides.netlify.app. Free, no account needed, spoiler-safe by default.</li>
   </ul>
   <h2>24 November 2026 · Preview 7</h2>
   <ul>
@@ -88,7 +88,7 @@ const creators = creatorsFor(game.id);
     <li>Leonida map with search, filters, shareable pin links and mark-as-found, shared with the guide checklists.</li>
     <li>Creator videos from YouTube, Twitch and TikTok, opening at the right moment. Nothing loads until you press play.</li>
     <li>"Continue where you left off" on the home page.</li>
-    <li>New Nerdy Birdie and COZMC brand artwork.</li>
+    <li>New NerdyBirdie and COZMC brand artwork.</li>
   </ul>
   <h2>24 November 2026 · Preview 3</h2>
   <ul>

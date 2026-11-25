@@ -56,7 +56,7 @@ export default function ProgressManager({ contexts, guideKey, sections }: Props)
 
   async function shareLink() {
     const l = link || (await makeLink());
-    try { await navigator.share({ title: 'My Nerdy Birdie Gaming progress', url: l }); } catch { /* cancelled */ }
+    try { await navigator.share({ title: 'My NerdyBirdie LLC Gaming Guides progress', url: l }); } catch { /* cancelled */ }
   }
 
   function combine() {

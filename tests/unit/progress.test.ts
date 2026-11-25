@@ -151,7 +151,7 @@ describe('export / import', () => {
   });
   it('rejects bad files with a readable reason', () => {
     expect(parseImport('nope')).toMatchObject({ ok: false });
-    expect(parseImport('{"schemaVersion":1}')).toMatchObject({ ok: false, error: expect.stringMatching(/isn't a Nerdy Birdie/) });
+    expect(parseImport('{"schemaVersion":1}')).toMatchObject({ ok: false, error: expect.stringMatching(/isn't a NerdyBirdie LLC Gaming Guides backup/) });
     expect(parseImport(JSON.stringify({ app: 'nerdybirdie-gaming', schemaVersion: 5 }))).toMatchObject({ ok: false, error: expect.stringMatching(/newer/) });
     expect(parseImport(' '.repeat(MAX_IMPORT_BYTES + 1))).toMatchObject({ ok: false });
   });

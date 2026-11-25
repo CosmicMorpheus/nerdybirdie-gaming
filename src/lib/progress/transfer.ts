@@ -36,7 +36,7 @@ export async function decodeTransfer(code: string): Promise<ImportResult> {
   } catch {
     return { ok: false, error: "That transfer code is damaged or incomplete. Copy the whole link and try again." };
   }
-  return { ok: false, error: "That isn't a Nerdy Birdie Gaming transfer code." };
+  return { ok: false, error: "That isn't a NerdyBirdie LLC Gaming Guides transfer code." };
 }
 
 export const transferLink = (origin: string, code: string) => `${origin}/progress/#transfer=${code}`;
