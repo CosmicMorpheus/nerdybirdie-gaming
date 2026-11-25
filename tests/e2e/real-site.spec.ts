@@ -202,3 +202,15 @@ test('achievements show how-to tips and guide links; hidden tips only after Reve
   await expect(heist).toContainText('Break the Bank');
   await expect(heist.locator('.ach-tip')).toContainText('Keep the alarm off');
 });
+
+test('walkthrough Chapter 4: listed with a jump button, plot behind Reveal, choices flagged', async ({ page }) => {
+  await page.goto(REAL + '/games/gta-vi/guides/walkthrough/');
+  await page.waitForFunction(() => !document.querySelector('astro-island[ssr]'));
+  await expect(page.getByRole('navigation', { name: 'Jump to chapter' })).toContainText('Chapter 4');
+  await expect(page.locator('body')).not.toContainText('Gustavo');
+  const e = page.locator('li.entry', { hasText: "Child's Play" });
+  await e.getByRole('button', { name: /More details/ }).click();
+  await expect(e).toContainText('no lasting consequence');
+  await e.getByRole('button', { name: /Reveal major spoiler/ }).click();
+  await expect(e).toContainText('Gustavo');
+});

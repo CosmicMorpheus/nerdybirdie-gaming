@@ -36,7 +36,7 @@ const entries = publicEntries(game.id).filter((e) => e.category === section.id);
       <SpotChecklist client:idle gameId={game.id} dataUrl={`/data/${game.id}/exploration-spots.json`} mapHref={`/games/${game.id}/map/`}
         title="Exploration checklist" cls="explore-list" colourNote="in shades of purple like the in-game exploration icons"
         targets={{ waink: '100 of 108 scans count toward 100%', treasure: '5 Kenton sets count toward 100%', meditation: '15 of 18 count toward 100%',
-          magazine: '30 count toward 100%', playlist: '2 count toward 100%', flamingo: '100 count toward 100%', underwater: '33 count toward 100%' }} />
+          magazine: '30 count toward 100%', playlist: '2 count toward 100%', flamingo: '100 count toward 100%', underwater: '33 count toward 100%', streetart: 'Not needed for 100%' }} />
     )}
     {section.id === 'robberies' && mapData(game.id) && (
       <SpotChecklist client:idle gameId={game.id} dataUrl={`/data/${game.id}/robbery-spots.json`} mapHref={`/games/${game.id}/map/`}

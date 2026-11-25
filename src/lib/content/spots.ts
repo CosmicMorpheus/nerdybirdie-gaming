@@ -19,4 +19,4 @@ export function spotData(gameId: string, kinds: readonly string[]) {
 }
 
 export const ROBBERY_KINDS = ['gang', 'smash', 'store', 'bank', 'payday'] as const;
-export const EXPLORATION_KINDS = ['waink', 'treasure', 'meditation', 'magazine', 'playlist', 'flamingo', 'underwater', 'kenton'] as const;
+export const EXPLORATION_KINDS = ['waink', 'treasure', 'meditation', 'magazine', 'playlist', 'flamingo', 'underwater', 'kenton', 'streetart'] as const;
