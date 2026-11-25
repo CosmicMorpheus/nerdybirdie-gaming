@@ -5,7 +5,7 @@ import { BRAND, COZMC, PARENT_SITE_URL } from '../config';
   <div class="wrap">
     <div class="cols">
       <div class="brand">
-        <img src={BRAND.mark.src} srcset={`${BRAND.mark.src} 1x, ${BRAND.mark.src2x} 2x`} alt="NerdyBirdie LLC" width="96" height="96" loading="lazy" decoding="async" />
+        <img src={BRAND.logo.src} srcset={`${BRAND.logo.src} 1x, ${BRAND.logo.src2x} 2x`} alt="Nerdy Birdie logo" width="96" height="96" loading="lazy" decoding="async" />
         <p class="muted small">Free, spoiler-safe guides and trackers for players. {PARENT_SITE_URL ? <>A <a href={PARENT_SITE_URL}>NerdyBirdie LLC</a> site.</> : null}</p>
         <img class="bbb" src={BRAND.brickByBrick.src} alt="Brick by Brick, WE Build." width={BRAND.brickByBrick.width} height={BRAND.brickByBrick.height} loading="lazy" decoding="async" />
       </div>
@@ -31,7 +31,7 @@ import { BRAND, COZMC, PARENT_SITE_URL } from '../config';
 <style>
   .ftr { border-top: 1px solid var(--vc-line); margin-top: 72px; padding: 40px 0 56px; background: var(--nb-black); }
   .cols { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 32px; }
-  .brand img { width: 96px; height: 96px; }
+  .brand img:first-child { width: 96px; height: 96px; border-radius: 14px; }
   .brand .bbb { display: block; width: min(320px, 100%); height: auto; margin-top: 14px; }
   .brand p { max-width: 36ch; }
   nav { display: flex; flex-direction: column; gap: 2px; }

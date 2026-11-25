@@ -53,19 +53,22 @@ IDs are permanent (`gta-vi:xbox:...`); never rename one, or players lose that ti
 
 `content/fixtures/` holds **fake** test data. It's only used by `npm run build:test` and never reaches the real site; a test checks this.
 
-## Swapping in the final logos
+## Brand kit (logos)
 
-All logo paths are in `src/config.ts` under `BRAND`. The easiest way is to replace the files in place, keeping the same names:
+All logo paths are in `src/config.ts` under `BRAND`. Masters are kept unedited in `assets/brand/supplied-<date>/`; the current Nerdy Birdie logo
+is `assets/brand/supplied-2026-11-25/nerdy-birdie-logo.webp` (1254×1254). Web copies are made from it:
 
-| File | Where it shows | Size to supply |
+| File | Where it shows | Made from |
 |---|---|---|
-| `public/brand/nerdy-birdie-128.webp` | Header mark (shown at 40px) | at least 128×128, square |
-| `public/brand/nerdy-birdie-256.webp` | Footer (96px) | at least 256×256 |
-| `public/brand/nerdy-birdie-512.webp` | About page (200px) | at least 512×512 |
-| `public/brand/cozmc/cozmc-logo-272.png` | COZMC panel (28px tall) | about 272×72, transparent background |
-| `public/favicon-32.png`, `public/apple-touch-icon.png` | Browser tab, phone home screen | 32×32 and 180×180 |
+| `public/brand/nerdy-birdie-mark-96.webp`, `-192.webp` | Header mark (40px) | The bird, cropped above the wordmark so it stays legible small |
+| `public/brand/nerdy-birdie-logo-192.webp`, `-384.webp` | Footer (96px) | Full logo |
+| `public/brand/nerdy-birdie-logo-512.webp`, `-1024.webp` | About page (200px) | Full logo |
+| `public/favicon-32.png` | Browser tab | The bird's head |
+| `public/apple-touch-icon.png`, `public/icon-192.png`, `public/icon-512.png` | Phone home screen, installed app | Full logo |
+| `public/brand/brick-by-brick.webp` | Footer banner | "Brick by Brick, WE Build." (static; animated version pending) |
+| `public/brand/cozmc/…` | COZMC panel and mascots | COZMC brand files |
 
-PNG or WebP both work; if you change the file type, update the path in `BRAND`. Keep the original master in `assets/brand/`.
+To swap one, replace the file at the same path (same size), or point `BRAND` at a new file. Don't recolour or redesign supplied art.
 
 ## Adding guide entries
 

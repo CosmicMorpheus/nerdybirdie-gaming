@@ -27,14 +27,18 @@ export const CONTACT_EMAIL = '';
 export const INDEXABLE = import.meta.env.PUBLIC_INDEXABLE === 'true';
 
 /**
- * Brand images. Masters supplied by the founder on 2026-11-24 live in assets/brand/supplied-2026-11-24/ (never edited);
- * these are web-sized copies. To swap one, replace the file at the same path or point the setting at a new file.
+ * Brand images. Masters supplied by the founder live in assets/brand/supplied-<date>/ (never edited); these are web-sized
+ * copies. Nerdy Birdie logo updated 2026-11-25 (assets/brand/supplied-2026-11-25/nerdy-birdie-logo.webp).
+ * To swap one, replace the file at the same path or point the setting at a new file.
  */
 export const BRAND = {
-  /** Round Nerdy Birdie logo: header (40px) and footer (96px). */
-  mark: { src: '/brand/nerdy-birdie-round-96.webp', src2x: '/brand/nerdy-birdie-round-192.webp' },
-  /** Large round logo for the About page. */
-  fullLogo: '/brand/nerdy-birdie-round-512.webp',
+  /** Header mark (40px): the bird from the logo, cropped above the wordmark so it stays legible this small. */
+  mark: { src: '/brand/nerdy-birdie-mark-96.webp', src2x: '/brand/nerdy-birdie-mark-192.webp' },
+  /** Full Nerdy Birdie logo with wordmark: footer (96px). */
+  logo: { src: '/brand/nerdy-birdie-logo-192.webp', src2x: '/brand/nerdy-birdie-logo-384.webp' },
+  /** Large full logo for the About page. */
+  fullLogo: '/brand/nerdy-birdie-logo-512.webp',
+  fullLogo2x: '/brand/nerdy-birdie-logo-1024.webp',
   /** COZMC wordmark (912×241 master), shown 28–36px tall. */
   cozmcWordmark: { src: '/brand/cozmc/cozmc-wordmark-36.webp', src2x: '/brand/cozmc/cozmc-wordmark-72.webp', ratio: 912 / 241 },
   /** COZMC mascots (128px masters), shown at 64px. */
