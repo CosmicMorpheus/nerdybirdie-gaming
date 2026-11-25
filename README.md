@@ -65,7 +65,7 @@ is `assets/brand/supplied-2026-11-25/nerdy-birdie-logo.webp` (1254×1254). Web c
 | `public/brand/nerdy-birdie-logo-512.webp`, `-1024.webp` | About page (200px) | Full logo |
 | `public/favicon-32.png` | Browser tab | The bird's head |
 | `public/apple-touch-icon.png`, `public/icon-192.png`, `public/icon-512.png` | Phone home screen, installed app | Full logo |
-| `public/brand/brick-by-brick.webp` | Footer banner | "Brick by Brick, WE Build." (static; animated version pending) |
+| `public/brand/brick-by-brick.mp4`, `public/brand/brick-by-brick.webp` | Footer banner | Looping video made from the founder's animated GIF (master in assets/brand/supplied-2026-11-25/); the still image is used with reduced motion |
 | `public/brand/cozmc/…` | COZMC panel and mascots | COZMC brand files |
 
 To swap one, replace the file at the same path (same size), or point `BRAND` at a new file. Don't recolour or redesign supplied art.

@@ -82,22 +82,31 @@ const soon = allQuests.filter((q) => q.count === 0);
 
 <style>
   .hero { position: relative; overflow: hidden; min-height: 540px; display: flex; align-items: flex-end; border-bottom: 2px solid #000; }
-  .sky { position: absolute; inset: 0; background: linear-gradient(180deg, #120c26 0%, #3d1a45 42%, #b04d78 64%, #f39a72 78%, #0b101b 78.2%); }
-  .sun { position: absolute; left: 68%; top: 16%; width: min(380px, 52vw); aspect-ratio: 1; transform: translateX(-50%); border-radius: 50%;
-    background: linear-gradient(180deg, #ffe08a 0%, #ffaa76 45%, #ed6ba6 100%);
-    -webkit-mask: repeating-linear-gradient(180deg, #000 0 14px, transparent 14px 18px), linear-gradient(#000 0 52%, transparent 52%);
-    -webkit-mask-composite: source-over;
-    mask: linear-gradient(#000 0 52%, transparent 52%), repeating-linear-gradient(180deg, #000 0 10px, transparent 10px 15px);
-    mask-composite: add; opacity: 0.92; }
+  /* Cosmic hero to match the Nerdy Birdie logo: starfield, purple nebula, a planet with a neon-green ring. */
+  .sky { position: absolute; inset: 0; background:
+      radial-gradient(ellipse at 72% 28%, rgba(139, 92, 246, 0.45), transparent 55%),
+      radial-gradient(ellipse at 18% 85%, rgba(46, 230, 214, 0.16), transparent 50%),
+      linear-gradient(180deg, #04061a 0%, #0b0f33 62%, #070a1c 100%); }
+  .sky::before { content: ''; position: absolute; inset: 0; opacity: 0.85; background-image:
+      radial-gradient(1.5px 1.5px at 12% 18%, #fff, transparent), radial-gradient(1px 1px at 28% 42%, #cfd8ff, transparent),
+      radial-gradient(1.5px 1.5px at 46% 12%, #fff, transparent), radial-gradient(1px 1px at 63% 58%, #e3dcff, transparent),
+      radial-gradient(1.5px 1.5px at 82% 22%, #fff, transparent), radial-gradient(1px 1px at 91% 64%, #cfd8ff, transparent),
+      radial-gradient(1px 1px at 36% 70%, #fff, transparent), radial-gradient(1.5px 1.5px at 7% 60%, #e3dcff, transparent);
+    background-size: 340px 260px; }
+  .sun { position: absolute; left: 70%; top: 14%; width: min(360px, 50vw); aspect-ratio: 1; transform: translateX(-50%); border-radius: 50%;
+    background: radial-gradient(circle at 34% 30%, #3b4fc4 0%, #18206a 45%, #0a0d2e 72%, #070a1c 100%);
+    box-shadow: 0 0 70px rgba(46, 230, 214, 0.28), inset -24px -34px 70px rgba(0, 0, 0, 0.65); }
+  .sun::after { content: ''; position: absolute; left: -26%; right: -26%; top: 42%; height: 26%; border-radius: 50%;
+    border: 3px solid #7dff5a; transform: rotate(-14deg); box-shadow: 0 0 22px rgba(125, 255, 90, 0.7), inset 0 0 18px rgba(125, 255, 90, 0.35); }
   .grid { position: absolute; left: -50%; right: -50%; bottom: 0; height: 22%; transform-origin: top; transform: perspective(220px) rotateX(58deg);
-    background-image: linear-gradient(90deg, rgba(92, 225, 230, 0.55) 1px, transparent 1px), linear-gradient(0deg, rgba(237, 107, 166, 0.55) 1px, transparent 1px);
+    background-image: linear-gradient(90deg, rgba(46, 230, 214, 0.45) 1px, transparent 1px), linear-gradient(0deg, rgba(125, 255, 90, 0.4) 1px, transparent 1px);
     background-size: 48px 48px; }
   .hero::after { content: ''; position: absolute; inset: 0; pointer-events: none;
-    background: linear-gradient(90deg, rgba(11, 16, 27, 0.92) 0%, rgba(11, 16, 27, 0.55) 45%, transparent 75%),
+    background: linear-gradient(90deg, rgba(7, 10, 28, 0.92) 0%, rgba(7, 10, 28, 0.55) 45%, transparent 75%),
       repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.16) 0 1px, transparent 1px 3px); }
   .hero-inner { position: relative; z-index: 1; width: 100%; padding-top: 72px; padding-bottom: 60px; }
   h1 { max-width: 12ch; font-size: clamp(40px, 7vw, 84px); text-shadow: 4px 4px 0 #000; }
-  .promise { font-size: 19px; color: #ecE9F1; max-width: 52ch; margin: 0 0 18px; text-shadow: 0 1px 2px #000; }
+  .promise { font-size: 19px; color: #eef1ff; max-width: 52ch; margin: 0 0 18px; text-shadow: 0 1px 2px #000; }
   .platforms { list-style: none; display: flex; gap: 8px; flex-wrap: wrap; padding: 0; margin: 0 0 26px; }
   .cta { display: flex; gap: 12px; flex-wrap: wrap; }
   .resume-row { margin-top: 12px; }
@@ -124,7 +133,7 @@ const soon = allQuests.filter((q) => q.count === 0);
     .hero { min-height: 420px; }
     .hero-inner { padding-top: 40px; padding-bottom: 36px; }
     .sun { left: 72%; top: 10%; }
-    .hero::after { background: linear-gradient(180deg, rgba(11, 16, 27, 0.15) 0%, rgba(11, 16, 27, 0.85) 60%), repeating-linear-gradient(0deg, rgba(0,0,0,.16) 0 1px, transparent 1px 3px); }
+    .hero::after { background: linear-gradient(180deg, rgba(7, 10, 28, 0.15) 0%, rgba(7, 10, 28, 0.85) 60%), repeating-linear-gradient(0deg, rgba(0,0,0,.16) 0 1px, transparent 1px 3px); }
     .promise { font-size: 17px; }
     .cta .btn { flex: 1; padding: 0 12px; white-space: nowrap; }
     .quests { grid-template-columns: 1fr 1fr; }

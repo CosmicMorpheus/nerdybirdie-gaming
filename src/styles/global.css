@@ -11,18 +11,20 @@
 /* ---- Tokens: three layers, kept apart (docs/03_DESIGN_SYSTEM.md) ---- */
 :root {
   color-scheme: dark;
-  /* Global Nerdy Birdie: brand mark only */
-  --nb-black: #060a13;
-  --nb-cyan: #08c7db;
-  /* GTA VI: Vice City Premium */
-  --vc-midnight: #0b101b;
-  --vc-slate: #1b2030;
-  --vc-raised: #222839;
-  --vc-line: #2c3349;
-  --vc-pink: #ed6ba6;
-  --vc-sunset: #ffaa76;
-  --vc-pearl: #f5f3f0;
-  --vc-muted: #aeb4c6; /* 8.1:1 on midnight */
+  /* Nerdy Birdie cosmic palette (founder, 2026-11-25): colours taken from the Nerdy Birdie logo.
+     The --vc-* names are kept so every component picks the new colours up; values changed. */
+  --nb-black: #04060f;         /* footer, deepest space */
+  --nb-cyan: #2ee6ff;          /* focus rings, electric arrows */
+  --nb-violet: #8b5cf6;        /* galaxy accents */
+  --nb-holo: linear-gradient(90deg, #ffb35c 0%, #ff6fd8 30%, #a78bfa 55%, #2ee6d6 78%, #7dff5a 100%); /* wordmark shimmer */
+  --vc-midnight: #070a1c;      /* page background: deep-space navy */
+  --vc-slate: #11163a;         /* cards and panels */
+  --vc-raised: #1a2050;
+  --vc-line: #2a3268;
+  --vc-pink: #7dff5a;          /* primary accent: the logo's neon green (was Vice City pink) */
+  --vc-sunset: #ffa53d;        /* links, eyebrows: the cap's orange */
+  --vc-pearl: #f4f6ff;
+  --vc-muted: #b3b9d6;         /* 9:1 on the page background */
   --vc-ok: #7ee0a1;
   --vc-warn: #ffb4a6;
   /* COZMC: only inside .cozmc panels */
@@ -38,7 +40,7 @@
   --head: 'Pixelify Sans', 'Space Grotesk', system-ui, sans-serif;
   --pixel: 'Press Start 2P', ui-monospace, monospace;
   --shadow-px: 4px 4px 0 #000;
-  --vc-cyan: #5ce1e6;
+  --vc-cyan: #2ee6d6;          /* the bird's teal */
   --body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --radius: 12px;
   --gutter: 24px;
@@ -91,8 +93,8 @@ h3 { font-size: 18px; margin: 0 0 4px; }
   font: 600 16px/1 var(--body); text-decoration: none; border: 2px solid transparent; cursor: pointer; background: none; color: inherit;
   box-shadow: var(--shadow-px); transition: transform 80ms, box-shadow 80ms; }
 .btn:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 #000; }
-.btn-primary { background: var(--vc-pink); color: #1a0d16; border-color: #ffb3d4; }
-.btn-primary:hover { background: #f283b5; }
+.btn-primary { background: var(--vc-pink); color: #06130a; border-color: #c6ffb0; }
+.btn-primary:hover { background: #a3ff8a; }
 .btn-ghost { border-color: rgba(255, 255, 255, 0.45); color: var(--vc-pearl); background: rgba(11, 16, 27, 0.4); }
 .btn-ghost:hover { border-color: var(--vc-pearl); }
 .btn-quiet { min-height: 44px; padding: 0 14px; border-color: var(--vc-line); background: var(--vc-slate); font-size: 15px; }
