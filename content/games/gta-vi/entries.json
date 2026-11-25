@@ -4033,7 +4033,8 @@
     "summary": "Cards are hidden all over Leonida in sports, novelty and dancer sets. Keep them at your safehouse, or sell single cards and finished sets at pawn shops.",
     "steps": [
       "Rarer colours are worth more when you sell.",
-      "For 100% you need 15 of the 18 sets, not all of them."
+      "For 100% you need 15 of the 18 sets, not all of them.",
+      "For 100% there's also a card challenge: find three cards in each of the five counties."
     ],
     "facts": [
       {
@@ -4075,6 +4076,884 @@
         "url": "https://www.ign.com/wikis/gta-6/GTA_6_100_Percent_Guide",
         "checkedAt": "2026-11-24",
         "supports": "What counts toward 100% and how much each part weighs"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:cards-los-santos-corkers",
+    "gameId": "gta-vi",
+    "slug": "cards-los-santos-corkers",
+    "category": "collectibles",
+    "title": "Los Santos Corkers card set (25 cards)",
+    "summary": "A baseball card set with 25 cards to find around Leonida. Tick it off when the set is complete.",
+    "steps": [
+      "IGN's page for this set (in Sources) shows where every card is.",
+      "Keep cards in the box at your safehouse, or sell them at a pawn shop. Rarer colours are worth more."
+    ],
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Baseball"
+      },
+      {
+        "label": "Cards",
+        "value": "25"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Los Santos Corkers card locations",
+        "url": "https://www.ign.com/wikis/gta-6/All_Los_Santos_Corkers_Baseball_Card_Locations",
+        "checkedAt": "2026-11-25",
+        "supports": "Every card location in this set (linked, not copied)"
+      },
+      {
+        "publisher": "IGN",
+        "title": "All Collectible Cards in GTA 6",
+        "url": "https://www.ign.com/wikis/gta-6/Collectible_Cards",
+        "checkedAt": "2026-11-25",
+        "supports": "Set name, type and number of cards"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:cards-vice-city-flamingos",
+    "gameId": "gta-vi",
+    "slug": "cards-vice-city-flamingos",
+    "category": "collectibles",
+    "title": "Vice City Flamingos card set (24 cards)",
+    "summary": "A baseball card set with 24 cards to find around Leonida. Tick it off when the set is complete.",
+    "steps": [
+      "IGN's page for this set (in Sources) shows where every card is.",
+      "Keep cards in the box at your safehouse, or sell them at a pawn shop. Rarer colours are worth more."
+    ],
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Baseball"
+      },
+      {
+        "label": "Cards",
+        "value": "24"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Vice City Flamingos card locations",
+        "url": "https://www.ign.com/wikis/gta-6/All_Vice_City_Flamingos_Baseball_Card_Locations",
+        "checkedAt": "2026-11-25",
+        "supports": "Every card location in this set (linked, not copied)"
+      },
+      {
+        "publisher": "IGN",
+        "title": "All Collectible Cards in GTA 6",
+        "url": "https://www.ign.com/wikis/gta-6/Collectible_Cards",
+        "checkedAt": "2026-11-25",
+        "supports": "Set name, type and number of cards"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:cards-liberty-swingers",
+    "gameId": "gta-vi",
+    "slug": "cards-liberty-swingers",
+    "category": "collectibles",
+    "title": "Liberty Swingers card set (24 cards)",
+    "summary": "A baseball card set with 24 cards to find around Leonida. Tick it off when the set is complete.",
+    "steps": [
+      "IGN's page for this set (in Sources) shows where every card is.",
+      "Keep cards in the box at your safehouse, or sell them at a pawn shop. Rarer colours are worth more."
+    ],
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Baseball"
+      },
+      {
+        "label": "Cards",
+        "value": "24"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Liberty Swingers card locations",
+        "url": "https://www.ign.com/wikis/gta-6/All_Liberty_Swingers_Baseball_Card_Locations",
+        "checkedAt": "2026-11-25",
+        "supports": "Every card location in this set (linked, not copied)"
+      },
+      {
+        "publisher": "IGN",
+        "title": "All Collectible Cards in GTA 6",
+        "url": "https://www.ign.com/wikis/gta-6/Collectible_Cards",
+        "checkedAt": "2026-11-25",
+        "supports": "Set name, type and number of cards"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:cards-los-santos-panic",
+    "gameId": "gta-vi",
+    "slug": "cards-los-santos-panic",
+    "category": "collectibles",
+    "title": "Los Santos Panic card set (24 cards)",
+    "summary": "A basketball card set with 24 cards to find around Leonida. Tick it off when the set is complete.",
+    "steps": [
+      "IGN's page for this set (in Sources) shows where every card is.",
+      "Keep cards in the box at your safehouse, or sell them at a pawn shop. Rarer colours are worth more."
+    ],
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Basketball"
+      },
+      {
+        "label": "Cards",
+        "value": "24"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Los Santos Panic card locations",
+        "url": "https://www.ign.com/wikis/gta-6/All_Los_Santos_Panic_Basketball_Card_Locations",
+        "checkedAt": "2026-11-25",
+        "supports": "Every card location in this set (linked, not copied)"
+      },
+      {
+        "publisher": "IGN",
+        "title": "All Collectible Cards in GTA 6",
+        "url": "https://www.ign.com/wikis/gta-6/Collectible_Cards",
+        "checkedAt": "2026-11-25",
+        "supports": "Set name, type and number of cards"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:cards-liberty-city-penetrators",
+    "gameId": "gta-vi",
+    "slug": "cards-liberty-city-penetrators",
+    "category": "collectibles",
+    "title": "Liberty City Penetrators card set (24 cards)",
+    "summary": "A basketball card set with 24 cards to find around Leonida. Tick it off when the set is complete.",
+    "steps": [
+      "IGN's page for this set (in Sources) shows where every card is.",
+      "Keep cards in the box at your safehouse, or sell them at a pawn shop. Rarer colours are worth more."
+    ],
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Basketball"
+      },
+      {
+        "label": "Cards",
+        "value": "24"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Liberty City Penetrators card locations",
+        "url": "https://www.ign.com/wikis/gta-6/All_Liberty_City_Penetrators_Basketball_Card_Locations",
+        "checkedAt": "2026-11-25",
+        "supports": "Every card location in this set (linked, not copied)"
+      },
+      {
+        "publisher": "IGN",
+        "title": "All Collectible Cards in GTA 6",
+        "url": "https://www.ign.com/wikis/gta-6/Collectible_Cards",
+        "checkedAt": "2026-11-25",
+        "supports": "Set name, type and number of cards"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:cards-vice-city-narcos",
+    "gameId": "gta-vi",
+    "slug": "cards-vice-city-narcos",
+    "category": "collectibles",
+    "title": "Vice City Narcos card set (24 cards)",
+    "summary": "A basketball card set with 24 cards to find around Leonida. Tick it off when the set is complete.",
+    "steps": [
+      "IGN's page for this set (in Sources) shows where every card is.",
+      "Keep cards in the box at your safehouse, or sell them at a pawn shop. Rarer colours are worth more."
+    ],
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Basketball"
+      },
+      {
+        "label": "Cards",
+        "value": "24"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Vice City Narcos card locations",
+        "url": "https://www.ign.com/wikis/gta-6/All_Vice_City_Narcos_Basketball_Card_Locations",
+        "checkedAt": "2026-11-25",
+        "supports": "Every card location in this set (linked, not copied)"
+      },
+      {
+        "publisher": "IGN",
+        "title": "All Collectible Cards in GTA 6",
+        "url": "https://www.ign.com/wikis/gta-6/Collectible_Cards",
+        "checkedAt": "2026-11-25",
+        "supports": "Set name, type and number of cards"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:cards-vice-city-manatees",
+    "gameId": "gta-vi",
+    "slug": "cards-vice-city-manatees",
+    "category": "collectibles",
+    "title": "Vice City Manatees card set (24 cards)",
+    "summary": "A football card set with 24 cards to find around Leonida. Tick it off when the set is complete.",
+    "steps": [
+      "IGN's page for this set (in Sources) shows where every card is.",
+      "Keep cards in the box at your safehouse, or sell them at a pawn shop. Rarer colours are worth more."
+    ],
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Football"
+      },
+      {
+        "label": "Cards",
+        "value": "24"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Vice City Manatees card locations",
+        "url": "https://www.ign.com/wikis/gta-6/All_Vice_City_Manatees_Football_Card_Locations",
+        "checkedAt": "2026-11-25",
+        "supports": "Every card location in this set (linked, not copied)"
+      },
+      {
+        "publisher": "IGN",
+        "title": "All Collectible Cards in GTA 6",
+        "url": "https://www.ign.com/wikis/gta-6/Collectible_Cards",
+        "checkedAt": "2026-11-25",
+        "supports": "Set name, type and number of cards"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:cards-los-santos-pounders",
+    "gameId": "gta-vi",
+    "slug": "cards-los-santos-pounders",
+    "category": "collectibles",
+    "title": "Los Santos Pounders card set (24 cards)",
+    "summary": "A football card set with 24 cards to find around Leonida. Tick it off when the set is complete.",
+    "steps": [
+      "IGN's page for this set (in Sources) shows where every card is.",
+      "Keep cards in the box at your safehouse, or sell them at a pawn shop. Rarer colours are worth more."
+    ],
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Football"
+      },
+      {
+        "label": "Cards",
+        "value": "24"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Los Santos Pounders card locations",
+        "url": "https://www.ign.com/wikis/gta-6/All_Los_Santos_Pounders_Football_Card_Locations",
+        "checkedAt": "2026-11-25",
+        "supports": "Every card location in this set (linked, not copied)"
+      },
+      {
+        "publisher": "IGN",
+        "title": "All Collectible Cards in GTA 6",
+        "url": "https://www.ign.com/wikis/gta-6/Collectible_Cards",
+        "checkedAt": "2026-11-25",
+        "supports": "Set name, type and number of cards"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:cards-liberty-city-wrath",
+    "gameId": "gta-vi",
+    "slug": "cards-liberty-city-wrath",
+    "category": "collectibles",
+    "title": "Liberty City Wrath card set (24 cards)",
+    "summary": "A football card set with 24 cards to find around Leonida. Tick it off when the set is complete.",
+    "steps": [
+      "IGN's page for this set (in Sources) shows where every card is.",
+      "Keep cards in the box at your safehouse, or sell them at a pawn shop. Rarer colours are worth more."
+    ],
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Football"
+      },
+      {
+        "label": "Cards",
+        "value": "24"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Liberty City Wrath card locations",
+        "url": "https://www.ign.com/wikis/gta-6/All_Liberty_City_Wrath_Football_Card_Locations",
+        "checkedAt": "2026-11-25",
+        "supports": "Every card location in this set (linked, not copied)"
+      },
+      {
+        "publisher": "IGN",
+        "title": "All Collectible Cards in GTA 6",
+        "url": "https://www.ign.com/wikis/gta-6/Collectible_Cards",
+        "checkedAt": "2026-11-25",
+        "supports": "Set name, type and number of cards"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:cards-vice-city-club-de-futbol",
+    "gameId": "gta-vi",
+    "slug": "cards-vice-city-club-de-futbol",
+    "category": "collectibles",
+    "title": "Vice City Club de Futbol card set (30 cards)",
+    "summary": "A soccer card set with 30 cards to find around Leonida. Tick it off when the set is complete.",
+    "steps": [
+      "IGN's page for this set (in Sources) shows where every card is.",
+      "Keep cards in the box at your safehouse, or sell them at a pawn shop. Rarer colours are worth more."
+    ],
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Soccer"
+      },
+      {
+        "label": "Cards",
+        "value": "30"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Vice City Club de Futbol card locations",
+        "url": "https://www.ign.com/wikis/gta-6/All_Vice_City_Club_de_Futbol_Soccer_Card_Locations",
+        "checkedAt": "2026-11-25",
+        "supports": "Every card location in this set (linked, not copied)"
+      },
+      {
+        "publisher": "IGN",
+        "title": "All Collectible Cards in GTA 6",
+        "url": "https://www.ign.com/wikis/gta-6/Collectible_Cards",
+        "checkedAt": "2026-11-25",
+        "supports": "Set name, type and number of cards"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:cards-jack-of-hearts",
+    "gameId": "gta-vi",
+    "slug": "cards-jack-of-hearts",
+    "category": "collectibles",
+    "title": "Jack of Hearts card set (36 cards)",
+    "summary": "A dancers card set with 36 cards to find around Leonida. Tick it off when the set is complete.",
+    "steps": [
+      "IGN's page for this set (in Sources) shows where every card is.",
+      "Keep cards in the box at your safehouse, or sell them at a pawn shop. Rarer colours are worth more."
+    ],
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Dancers"
+      },
+      {
+        "label": "Cards",
+        "value": "36"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Jack of Hearts card locations",
+        "url": "https://www.ign.com/wikis/gta-6/All_Jack_of_Hearts_Dancers_Card_Locations",
+        "checkedAt": "2026-11-25",
+        "supports": "Every card location in this set (linked, not copied)"
+      },
+      {
+        "publisher": "IGN",
+        "title": "All Collectible Cards in GTA 6",
+        "url": "https://www.ign.com/wikis/gta-6/Collectible_Cards",
+        "checkedAt": "2026-11-25",
+        "supports": "Set name, type and number of cards"
+      },
+      {
+        "publisher": "GTA Series Videos (YouTube)",
+        "title": "GTA 6 - All 36 Jack of Hearts Dancers Card Locations (Collectibles Guide)",
+        "url": "https://www.youtube.com/watch?v=LTbw8B0DQHA",
+        "checkedAt": "2026-11-25",
+        "supports": "Also lists 36 cards in this set (video description)"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:cards-delights",
+    "gameId": "gta-vi",
+    "slug": "cards-delights",
+    "category": "collectibles",
+    "title": "Delights card set (18 cards)",
+    "summary": "A dancers card set with 18 cards to find around Leonida. Tick it off when the set is complete.",
+    "steps": [
+      "IGN's page for this set (in Sources) shows where every card is.",
+      "Keep cards in the box at your safehouse, or sell them at a pawn shop. Rarer colours are worth more."
+    ],
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Dancers"
+      },
+      {
+        "label": "Cards",
+        "value": "18"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Delights card locations",
+        "url": "https://www.ign.com/wikis/gta-6/All_Delights_Dancers_Card_Locations",
+        "checkedAt": "2026-11-25",
+        "supports": "Every card location in this set (linked, not copied)"
+      },
+      {
+        "publisher": "IGN",
+        "title": "All Collectible Cards in GTA 6",
+        "url": "https://www.ign.com/wikis/gta-6/Collectible_Cards",
+        "checkedAt": "2026-11-25",
+        "supports": "Set name, type and number of cards"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:cards-nine1nine",
+    "gameId": "gta-vi",
+    "slug": "cards-nine1nine",
+    "category": "collectibles",
+    "title": "NINE1NINE card set (36 cards)",
+    "summary": "A dancers card set with 36 cards to find around Leonida. Tick it off when the set is complete.",
+    "steps": [
+      "IGN's page for this set (in Sources) shows where every card is.",
+      "Keep cards in the box at your safehouse, or sell them at a pawn shop. Rarer colours are worth more."
+    ],
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Dancers"
+      },
+      {
+        "label": "Cards",
+        "value": "36"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All NINE1NINE card locations",
+        "url": "https://www.ign.com/wikis/gta-6/All_Nine1Nine_Dancers_Card_Locations",
+        "checkedAt": "2026-11-25",
+        "supports": "Every card location in this set (linked, not copied)"
+      },
+      {
+        "publisher": "IGN",
+        "title": "All Collectible Cards in GTA 6",
+        "url": "https://www.ign.com/wikis/gta-6/Collectible_Cards",
+        "checkedAt": "2026-11-25",
+        "supports": "Set name, type and number of cards"
+      },
+      {
+        "publisher": "GTA Series Videos (YouTube)",
+        "title": "GTA 6 - All 36 NINE1NINE Dancers Card Locations (Collectibles Guide)",
+        "url": "https://www.youtube.com/watch?v=OVaGLUysMXk",
+        "checkedAt": "2026-11-25",
+        "supports": "Also lists 36 cards in this set (video description)"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:cards-right-wing-americas-hero",
+    "gameId": "gta-vi",
+    "slug": "cards-right-wing-americas-hero",
+    "category": "collectibles",
+    "title": "Right Wing: America's Hero card set (36 cards)",
+    "summary": "A comic card set with 36 cards to find around Leonida. Tick it off when the set is complete.",
+    "steps": [
+      "IGN's page for this set (in Sources) shows where every card is.",
+      "Keep cards in the box at your safehouse, or sell them at a pawn shop. Rarer colours are worth more."
+    ],
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Comic"
+      },
+      {
+        "label": "Cards",
+        "value": "36"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Right Wing: America's Hero card locations",
+        "url": "https://www.ign.com/wikis/gta-6/All_Right_Wing:_America%27s_Hero_Comic_Card_Locations",
+        "checkedAt": "2026-11-25",
+        "supports": "Every card location in this set (linked, not copied)"
+      },
+      {
+        "publisher": "IGN",
+        "title": "All Collectible Cards in GTA 6",
+        "url": "https://www.ign.com/wikis/gta-6/Collectible_Cards",
+        "checkedAt": "2026-11-25",
+        "supports": "Set name, type and number of cards"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:cards-ed-universe",
+    "gameId": "gta-vi",
+    "slug": "cards-ed-universe",
+    "category": "collectibles",
+    "title": "Ed Universe card set (36 cards)",
+    "summary": "A comic card set with 36 cards to find around Leonida. Tick it off when the set is complete.",
+    "steps": [
+      "IGN's page for this set (in Sources) shows where every card is.",
+      "Keep cards in the box at your safehouse, or sell them at a pawn shop. Rarer colours are worth more."
+    ],
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Comic"
+      },
+      {
+        "label": "Cards",
+        "value": "36"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Ed Universe card locations",
+        "url": "https://www.ign.com/wikis/gta-6/All_Ed_Universe_Comic_Card_Locations",
+        "checkedAt": "2026-11-25",
+        "supports": "Every card location in this set (linked, not copied)"
+      },
+      {
+        "publisher": "IGN",
+        "title": "All Collectible Cards in GTA 6",
+        "url": "https://www.ign.com/wikis/gta-6/Collectible_Cards",
+        "checkedAt": "2026-11-25",
+        "supports": "Set name, type and number of cards"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:cards-legends-of-ratface",
+    "gameId": "gta-vi",
+    "slug": "cards-legends-of-ratface",
+    "category": "collectibles",
+    "title": "Legends of Ratface card set (36 cards)",
+    "summary": "A comic card set with 36 cards to find around Leonida. Tick it off when the set is complete.",
+    "steps": [
+      "IGN's page for this set (in Sources) shows where every card is.",
+      "Keep cards in the box at your safehouse, or sell them at a pawn shop. Rarer colours are worth more."
+    ],
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Comic"
+      },
+      {
+        "label": "Cards",
+        "value": "36"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All Legends of Ratface card locations",
+        "url": "https://www.ign.com/wikis/gta-6/All_Legends_of_Ratface_Comic_Card_Locations",
+        "checkedAt": "2026-11-25",
+        "supports": "Every card location in this set (linked, not copied)"
+      },
+      {
+        "publisher": "IGN",
+        "title": "All Collectible Cards in GTA 6",
+        "url": "https://www.ign.com/wikis/gta-6/Collectible_Cards",
+        "checkedAt": "2026-11-25",
+        "supports": "Set name, type and number of cards"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:cards-b-a-m-backyard-wrestling",
+    "gameId": "gta-vi",
+    "slug": "cards-b-a-m-backyard-wrestling",
+    "category": "collectibles",
+    "title": "B.A.M. Backyard Wrestling card set (12 cards)",
+    "summary": "A novelty card set with 12 cards to find around Leonida. Tick it off when the set is complete.",
+    "steps": [
+      "IGN's page for this set (in Sources) shows where every card is.",
+      "Keep cards in the box at your safehouse, or sell them at a pawn shop. Rarer colours are worth more."
+    ],
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Novelty"
+      },
+      {
+        "label": "Cards",
+        "value": "12"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All B.A.M. Backyard Wrestling card locations",
+        "url": "https://www.ign.com/wikis/gta-6/All_B.A.M._Backyard_Wrestling_Novelty_Card_Locations",
+        "checkedAt": "2026-11-25",
+        "supports": "Every card location in this set (linked, not copied)"
+      },
+      {
+        "publisher": "IGN",
+        "title": "All Collectible Cards in GTA 6",
+        "url": "https://www.ign.com/wikis/gta-6/Collectible_Cards",
+        "checkedAt": "2026-11-25",
+        "supports": "Set name, type and number of cards"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:cards-americas-next-top-hooker",
+    "gameId": "gta-vi",
+    "slug": "cards-americas-next-top-hooker",
+    "category": "collectibles",
+    "title": "America's Next Top Hooker card set (24 cards)",
+    "summary": "A novelty card set with 24 cards to find around Leonida. Tick it off when the set is complete.",
+    "steps": [
+      "IGN's page for this set (in Sources) shows where every card is.",
+      "Keep cards in the box at your safehouse, or sell them at a pawn shop. Rarer colours are worth more."
+    ],
+    "facts": [
+      {
+        "label": "Type",
+        "value": "Novelty"
+      },
+      {
+        "label": "Cards",
+        "value": "24"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "All America's Next Top Hooker card locations",
+        "url": "https://www.ign.com/wikis/gta-6/All_America%27s_Next_Top_Hooker_Novelty_Card_Locations",
+        "checkedAt": "2026-11-25",
+        "supports": "Every card location in this set (linked, not copied)"
+      },
+      {
+        "publisher": "IGN",
+        "title": "All Collectible Cards in GTA 6",
+        "url": "https://www.ign.com/wikis/gta-6/Collectible_Cards",
+        "checkedAt": "2026-11-25",
+        "supports": "Set name, type and number of cards"
       }
     ],
     "platformNote": null,
@@ -6283,6 +7162,132 @@
         "url": "https://www.ign.com/wikis/gta-6/The_Cartel_Heist_Walkthrough",
         "checkedAt": "2026-11-25",
         "supports": "Alarm off = perfect heist"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:side-dodos-bring-out-the-chimp",
+    "gameId": "gta-vi",
+    "slug": "side-dodos-bring-out-the-chimp",
+    "category": "side-missions",
+    "title": "Dodos Rising: Bring Out the Chimp",
+    "summary": "Help the Dodos Rising activists expose a monkey lab. One of two protests that lead to Twin Flames.",
+    "steps": [
+      "Find the protest on the side of a freeway in south VCIA and talk to Noah, the man with the megaphone.",
+      "Wait for his text, then meet him at the boat under the bridge (pink dodo icon, just south of the protest).",
+      "At night, follow Noah through the lab, quietly take out the guards, and photograph the marked cages with your phone."
+    ],
+    "facts": [
+      {
+        "label": "Starts at",
+        "value": "Protest in south VCIA"
+      },
+      {
+        "label": "Chain",
+        "value": "Dodos Rising"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Bring Out the Chimp",
+        "url": "https://www.ign.com/wikis/gta-6/Bring_Out_the_Chimp",
+        "checkedAt": "2026-11-25",
+        "supports": "How the mission starts and plays"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:side-dodos-sisters-of-the-sea",
+    "gameId": "gta-vi",
+    "slug": "side-dodos-sisters-of-the-sea",
+    "category": "side-missions",
+    "title": "Dodos Rising: Sisters of the Sea",
+    "summary": "Help the Dodos Rising activists free an orca from the Vice City Oceanarium. The other protest that leads to Twin Flames.",
+    "steps": [
+      "Drive to Catalan Key (follow the coast from Key Lento's north-east bridge) and talk to Rosebud, the green-haired protester outside the Oceanarium.",
+      "Wait for her text, then meet her in the parking lot just south of the Oceanarium (pink dodo icon).",
+      "The break-in happens at night."
+    ],
+    "facts": [
+      {
+        "label": "Starts at",
+        "value": "Vice City Oceanarium, Catalan Key"
+      },
+      {
+        "label": "Chain",
+        "value": "Dodos Rising"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Sisters of the Sea",
+        "url": "https://www.ign.com/wikis/gta-6/Sisters_of_the_Sea",
+        "checkedAt": "2026-11-25",
+        "supports": "How the mission starts and plays"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:side-dodos-twin-flames",
+    "gameId": "gta-vi",
+    "slug": "side-dodos-twin-flames",
+    "category": "side-missions",
+    "title": "Dodos Rising: Twin Flames (fracking site)",
+    "summary": "The finale of the Dodos Rising chain: sneak into a fracking site and shut it down.",
+    "steps": [
+      "After both protests, Tyler texts you. Meet him in Watson Bay, north of Key Lento and west of Hamlet.",
+      "Drive the truck to the site and tell the guard you're delivering the portable toilets.",
+      "Set off the fire alarm (right of the white door on the red building), then follow Tyler and trace the pipes to the right valves."
+    ],
+    "facts": [
+      {
+        "label": "Unlocks after",
+        "value": "Bring Out the Chimp and Sisters of the Sea"
+      },
+      {
+        "label": "Chain",
+        "value": "Dodos Rising"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Twin Flames",
+        "url": "https://www.ign.com/wikis/gta-6/Twin_Flames",
+        "checkedAt": "2026-11-25",
+        "supports": "How the mission starts and plays"
       }
     ],
     "platformNote": null,

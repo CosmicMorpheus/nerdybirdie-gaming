@@ -22,6 +22,12 @@
         "start": 89,
         "label": "Jack of Hearts card: MonaLi$a (Gold)",
         "verified": false
+      },
+      {
+        "target": "gta-vi:entry:cards-jack-of-hearts",
+        "start": 0,
+        "label": "All 36 Jack of Hearts cards",
+        "verified": false
       }
     ]
   },
@@ -258,6 +264,32 @@
         "target": "gta-vi:entry:collectible-cards-overview",
         "start": 0,
         "label": "NINE1NINE dancer cards, all 36",
+        "verified": false
+      },
+      {
+        "target": "gta-vi:entry:cards-nine1nine",
+        "start": 0,
+        "label": "All 36 NINE1NINE cards",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "id": "gtaseriesvideos-i3lz5ydlcle",
+    "url": "https://www.youtube.com/watch?v=I3LZ5yDLClE",
+    "title": "Girls' Trip: full mission (GTA Series Videos)",
+    "creator": "GTA Series Videos",
+    "channelUrl": "https://www.youtube.com/@GTASeriesVideos",
+    "spoilerLevel": "major",
+    "status": "review",
+    "availability": "unknown",
+    "checkedAt": null,
+    "notes": "Found by the daily creator check (2026-11-25). Title read from the YouTube feed; not yet watched.",
+    "moments": [
+      {
+        "target": "gta-vi:entry:mission-girls-trip",
+        "start": 0,
+        "label": "Girls' Trip, full mission",
         "verified": false
       }
     ]
