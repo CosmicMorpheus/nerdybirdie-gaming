@@ -86,7 +86,7 @@ Saved in the browser; move it to another browser with a transfer link or a backu
 
 ## Deploying
 
-Live at **https://nerdybirdiegameguides.netlify.app** (Netlify project `nerdybirdiegameguides`), built as the public version but **password-protected** (founder, 24 Nov 2026; the password is shared outside the repo). `netlify.toml` sets `SITE_URL`, `PUBLIC_INDEXABLE=true` and `PUBLIC_DISCOVERY_FEED=true` for Netlify builds. Local builds (`npm run build`) stay in preview mode (noindex, "Preview" banner, unreviewed videos shown) so tests and reviews keep working. Every deploy needs the founder's go-ahead.
+Live at **https://guides.nerdy-birdie.com** (custom domain; DNS stays at Squarespace, CNAME `guides` → `nerdybirdiegameguides.netlify.app`) and https://nerdybirdiegameguides.netlify.app (Netlify project `nerdybirdiegameguides`), built as the public version but **password-protected** (founder, 24 Nov 2026; the password is shared outside the repo). `netlify.toml` sets `SITE_URL`, `PUBLIC_INDEXABLE=true` and `PUBLIC_DISCOVERY_FEED=true` for Netlify builds. Local builds (`npm run build`) stay in preview mode (noindex, "Preview" banner, unreviewed videos shown) so tests and reviews keep working. Every deploy needs the founder's go-ahead.
 
 ## Docs
 

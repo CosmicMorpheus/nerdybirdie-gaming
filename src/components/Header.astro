@@ -1,5 +1,5 @@
 ---
-import { BRAND, COZMC, SITE_NAME } from '../config';
+import { BRAND, COZMC, PARENT_SITE_URL, SITE_NAME } from '../config';
 import { publicObjectives } from '../lib/content/load';
 interface Props { current?: string }
 const { current } = Astro.props;
@@ -37,6 +37,7 @@ const nav = [
           <nav aria-label="Mobile">
             {nav.map((n) => <a href={n.href} aria-current={current === n.key ? 'page' : undefined}>{n.label}</a>)}
             <a href="/search/">Search</a>
+            {PARENT_SITE_URL && <a href={PARENT_SITE_URL}>NerdyBirdie LLC home</a>}
           </nav>
           <div class="cozmc m-cz">
             <p>COZMC community</p>

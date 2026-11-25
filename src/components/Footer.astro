@@ -6,14 +6,14 @@ import { BRAND, COZMC, PARENT_SITE_URL } from '../config';
     <div class="cols">
       <div class="brand">
         <img src={BRAND.mark.src} srcset={`${BRAND.mark.src} 1x, ${BRAND.mark.src2x} 2x`} alt="NerdyBirdie LLC" width="96" height="96" loading="lazy" decoding="async" />
-        <p class="muted small">Free, spoiler-safe guides and trackers for players.</p>
+        <p class="muted small">Free, spoiler-safe guides and trackers for players. {PARENT_SITE_URL ? <>A <a href={PARENT_SITE_URL}>NerdyBirdie LLC</a> site.</> : null}</p>
         <img class="bbb" src={BRAND.brickByBrick.src} alt="Brick by Brick, WE Build." width={BRAND.brickByBrick.width} height={BRAND.brickByBrick.height} loading="lazy" decoding="async" />
       </div>
       <nav aria-label="Site">
         <h2 class="h">Site</h2>
         <a href="/games/gta-vi/guides/">Guides</a><a href="/games/gta-vi/map/">Map</a><a href="/games/gta-vi/achievements/">Achievements</a><a href="/progress/">My progress</a>
         <a href="/about/">About</a><a href="/updates/">Updates</a><a href="/corrections/">Corrections</a><a href="/privacy/">Privacy</a>
-        {PARENT_SITE_URL && <a href={PARENT_SITE_URL}>NerdyBirdie LLC</a>}
+        {PARENT_SITE_URL && <a href={PARENT_SITE_URL}>NerdyBirdie LLC home</a>}
       </nav>
       <nav aria-label="Community" class="cozmc">
         <h2 class="h cz">COZMC community</h2>

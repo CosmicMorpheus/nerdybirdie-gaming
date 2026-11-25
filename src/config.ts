@@ -18,7 +18,7 @@ export const COZMC = {
 } as const;
 
 /** The future central Nerdy Birdie site. Hidden everywhere until the founder supplies it. */
-export const PARENT_SITE_URL = '';
+export const PARENT_SITE_URL = 'https://nerdy-birdie.com/';
 
 /** Contact for corrections. Empty until the founder supplies one; the page then points to Discord. */
 export const CONTACT_EMAIL = '';
@@ -48,7 +48,7 @@ export const BRAND = {
 export const SHOW_UNREVIEWED_MEDIA = !INDEXABLE;
 
 /** Hosts allowed to embed Twitch players (Twitch requires every host to be listed). Add the production domain at launch. */
-export const TWITCH_PARENTS = ['localhost', 'nerdybirdiegameguides.netlify.app'] as const;
+export const TWITCH_PARENTS = ['localhost', 'guides.nerdy-birdie.com', 'nerdybirdiegameguides.netlify.app'] as const;
 
 /**
  * ASK "COZMC" server features (question queue, live AI research, approved overrides). OFF by default: ASK then runs

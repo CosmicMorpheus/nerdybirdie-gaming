@@ -1,12 +1,13 @@
 ---
 import Prose from '../layouts/Prose.astro';
 import CozmcPanel from '../components/CozmcPanel.astro';
-import { BRAND } from '../config';
+import { BRAND, PARENT_SITE_URL } from '../config';
 ---
 <Prose title="About" description="Who makes NerdyBirdie LLC Gaming Guides and how we check what we publish.">
   <img src={BRAND.fullLogo} alt="NerdyBirdie LLC logo: a blue bird in an orange cap and sunglasses" width="200" height="200" class="logo" />
   <p>NerdyBirdie LLC Gaming Guides makes free guides and trackers for players, starting with Grand Theft Auto VI. It's built to be checked on a phone
   next to the console: quick answers, no clutter, and no spoilers unless you ask for them.</p>
+  {PARENT_SITE_URL && <p>It's a <a href={PARENT_SITE_URL}>NerdyBirdie LLC</a> project. Visit the main site at <a href={PARENT_SITE_URL}>nerdy-birdie.com</a>.</p>}
   <h2>How we check things</h2>
   <ul>
     <li>Facts come from official sources first (the publisher, Xbox, PlayStation), then established guide sites and credited creators.</li>
