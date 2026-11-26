@@ -293,5 +293,45 @@
         "verified": false
       }
     ]
+  },
+  {
+    "id": "gtaseriesvideos-p-662qx75ts",
+    "url": "https://www.youtube.com/watch?v=p_662qX75Ts",
+    "title": "Coffee Break: full mission (GTA Series Videos)",
+    "creator": "GTA Series Videos",
+    "channelUrl": "https://www.youtube.com/@GTASeriesVideos",
+    "spoilerLevel": "major",
+    "status": "review",
+    "availability": "unknown",
+    "checkedAt": null,
+    "notes": "Found by the daily creator check (2026-11-26). Title read from the YouTube feed; not yet watched.",
+    "moments": [
+      {
+        "target": "gta-vi:entry:mission-coffee-break",
+        "start": 0,
+        "label": "Coffee Break, full mission",
+        "verified": false
+      }
+    ]
+  },
+  {
+    "id": "gtaseriesvideos-py-yro7jodk",
+    "url": "https://www.youtube.com/watch?v=pY-yRo7jodk",
+    "title": "All 5 throwback vehicles: locations and unlocks (GTA Series Videos)",
+    "creator": "GTA Series Videos",
+    "channelUrl": "https://www.youtube.com/@GTASeriesVideos",
+    "spoilerLevel": "none",
+    "status": "review",
+    "availability": "unknown",
+    "checkedAt": null,
+    "notes": "Found by the daily creator check (2026-11-26). Title read from the YouTube feed; not yet watched.",
+    "moments": [
+      {
+        "target": "gta-vi:entry:vehicles-throwback-vehicles",
+        "start": 0,
+        "label": "All five throwback vehicles",
+        "verified": false
+      }
+    ]
   }
 ]

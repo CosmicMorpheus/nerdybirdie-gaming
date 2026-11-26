@@ -8743,7 +8743,8 @@
     "summary": "In Chapter 3 you start working for Yasmani, who specialises in bank robbery. He offers repeatable money-making jobs and buys the jewelry, marked bills and drugs you bring him.",
     "steps": [
       "His first job is the story mission Yasmani's Jewelry Jobs (three stores).",
-      "The garage behind his office has a crate of sticky bombs you can refill from."
+      "The garage behind his office has a crate of sticky bombs you can refill from.",
+      "Finish one of his jewelry jobs and he gives you the Snap Gun, for opening doors without tripping alarms."
     ],
     "facts": [
       {
@@ -10072,6 +10073,653 @@
         "url": "https://www.ign.com/wikis/gta-6/Geographies_of_Trash_-_Tires",
         "checkedAt": "2026-11-25",
         "supports": "Collection, categories, not needed for 100%, how to scan"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:vehicles-standout-vehicles",
+    "gameId": "gta-vi",
+    "slug": "vehicles-standout-vehicles",
+    "category": "vehicles",
+    "title": "Standout vehicles: how they work (281 to find)",
+    "summary": "Standout vehicles are one-of-a-kind cars, bikes, boats and aircraft parked at fixed spots around Leonida. They have custom looks you can't copy at a Pay 'N' Spray, and finding them counts toward 100% and the platinum.",
+    "steps": [
+      "Each one is always in the same place, so you can plan a route. Our location lists below are grouped by type.",
+      "Check the access before you go: some are unlocked, some are locked (break a window or use a Slim Jim) and the most valuable need the Key Cloner, which Randy gives you in the Chapter 3 mission Clonin' Keys, Makin' Gs.",
+      "Some are key valuables inside illegal operations, so you'll have to clear the gang first.",
+      "Keep the ones you like (register them in a garage) and sell the rest. Prices are IGN's sell values in good condition; a damaged car fetches less."
+    ],
+    "facts": [
+      {
+        "label": "Total",
+        "value": "281"
+      },
+      {
+        "label": "Counts toward",
+        "value": "100% and the platinum"
+      },
+      {
+        "label": "Listed here",
+        "value": "84 so far (IGN is still adding)"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Standout Vehicles",
+        "url": "https://www.ign.com/wikis/gta-6/Standout_Vehicles",
+        "checkedAt": "2026-11-26",
+        "supports": "Vehicle, location, access, type and sell value"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:vehicles-standout-fast-cars",
+    "gameId": "gta-vi",
+    "slug": "vehicles-standout-fast-cars",
+    "category": "vehicles",
+    "title": "Standout supercars, sports cars and coupes: locations",
+    "summary": "Where to find the 9 fastest standout vehicles IGN has located so far, most valuable first. Several need the Key Cloner.",
+    "steps": [
+      "Truffade Andrew Node's Thrax (super): Garage of a big mansion off Sabal Cir, south side of Starfish Island. Unlocked, sells for $23,375.",
+      "Granforma Tsunami Zorrusso (super): Mansion garage toward the south of Peacock Estates. Needs the Key Cloner, sells for $23,375.",
+      "Pegassi Gold Rope Infernus (super): Under the porch overhang of a small waterside house on Reservoir St, Ambrosia. Needs the Key Cloner, sells for $17,160.",
+      "Pegassi Valiant Tempesta (super): Courtyard outside the Vice Museum of Art, southern Washington Beach. Needs the Key Cloner.",
+      "Pfister Class Act Comet (sports car): Corner of a mansion driveway by two garage doors, southwest Starfish Island. Needs the Key Cloner, sells for $11,050.",
+      "Invetero Enforcer Coquette (sports car): On a display stand outside Capri Police Station, central Capri (alarmed, advanced tracker). Needs the Key Cloner.",
+      "Vapid Red Hot Hustler (coupe): Corner of the La Costa Hotel car park on the Capri coast. Locked, sells for $6,545.",
+      "Declasse Cousin Carlo's Akane (coupe): Outside Cousin Carlo's Pizza on the Sunbelt Hwy, southern Key Lento. Unlocked, sells for $1,595.",
+      "Nagasaki Hung Carbos RS (superbike): Hanging in a tree by the railroad, northwest Belville. Unlocked, sells for $2,640."
+    ],
+    "facts": [
+      {
+        "label": "Vehicles",
+        "value": "9"
+      },
+      {
+        "label": "Key Cloner needed",
+        "value": "5"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Standout Vehicles",
+        "url": "https://www.ign.com/wikis/gta-6/Standout_Vehicles",
+        "checkedAt": "2026-11-26",
+        "supports": "Vehicle, location, access, type and sell value"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:vehicles-standout-muscle-sedans",
+    "gameId": "gta-vi",
+    "slug": "vehicles-standout-muscle-sedans",
+    "category": "vehicles",
+    "title": "Standout muscle cars and sedans: locations",
+    "summary": "12 standout muscle cars and sedans parked around Leonida, most valuable first.",
+    "steps": [
+      "Bravado Copperheads Gauntlet (muscle): Garage of a small riverside house on Reservoir St, northeast Ambrosia. Locked, sells for $10,120.",
+      "Declasse Caliente Picador (muscle): Inside a yellow shipping container in the construction yard, southern corner of Breakwater Quarry, North Mariana County. Unlocked, sells for $7,520.",
+      "Ocelot Bloodless Jugular (sedan): Detached garage beside a white villa on Chastity Ave, northern Belville. Needs the Key Cloner, sells for $10,615.",
+      "Albany Driveshaft Devanity (muscle): Small barn beside an excavator at a farmhouse, North Leonard County. Locked, sells for $6,490.",
+      "Vapid Grady's Slamvan (muscle): Under the awning of the abandoned Grady's Family Store, Rockledge Rd, Moreau. Locked, sells for $5,225.",
+      "Sirius Holdout Sungrazer (sedan): Detached garage at the \"Anti Sugar\" house, just southwest of Ambrosia. Unlocked, sells for $4,620.",
+      "Sirius '61 Sungrazer (sedan): Garage under a waterside house, north side of Watson Bay. Locked, sells for $4,620.",
+      "Classique Emancipator Stallion (muscle): Detached garage behind a run-down house just west of Ambrosia. Locked, sells for $3,190.",
+      "Declasse Ghosts Exposed Parkland (sedan): Driveway of the Halloween house at Fortuna St and Viola St, Capri. Unlocked, sells for $3,135.",
+      "Declasse Mountain Yosemite (muscle): Under a covered driveway by a shack on Pelican River, east Watson Bay. Locked, sells for $2,200.",
+      "Vapid Smush! Ganado (muscle): By the juice sign at the abandoned Smush! Fresh Juice stand, central South Kelly County. Unlocked, sells for $1,730.",
+      "Declasse Martha's Vamos (muscle): Abandoned shed at the end of a road off Rockledge Rd, Bonanza, beside a house on a ledge. Unlocked, sells for $1,510."
+    ],
+    "facts": [
+      {
+        "label": "Vehicles",
+        "value": "12"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Standout Vehicles",
+        "url": "https://www.ign.com/wikis/gta-6/Standout_Vehicles",
+        "checkedAt": "2026-11-26",
+        "supports": "Vehicle, location, access, type and sell value"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:vehicles-standout-trucks-vans",
+    "gameId": "gta-vi",
+    "slug": "vehicles-standout-trucks-vans",
+    "category": "vehicles",
+    "title": "Standout vans, pickups, SUVs and off-roaders: locations",
+    "summary": "25 standout work vehicles: themed vans, farm pickups, off-roaders and a military truck. Most are cheap to sell, but they count toward 100%.",
+    "steps": [
+      "Declasse Bugstars Burrito (van): Outside a house tented for pest control, southeast Capri. Locked, sells for $2,260.",
+      "Declasse Truther Burrito (van): Covered in \"Sera Is Real\" slogans outside a green house off Chestnut Dr, southern Millport. Locked, sells for $2,365.",
+      "Brute Cherry Popper Boxville (van): Outside the Cherry Popper ice cream building, Sweetbay Rd at Seabell Ave, Grassrivers. Locked.",
+      "Brute Boxville (van): Outside Harper Crematorium & Funeral Homes, central Vinewood Beach. Locked.",
+      "Vapid Shrimp and Save Shifter (van): Outside Shrimp and Save on the Sunbelt Hwy, southern Key Lento. Locked, sells for $2,145.",
+      "Vapid Rumpo (van): At the Apollo Aggregates warehouse off Emory Ave, central South Vice-Dale County. Unlocked, sells for $770.",
+      "Bravado Third Eye Youga (van): Roadside on SR-45 by a mobile home, central Grayson. Locked, sells for $1,595.",
+      "Bravado Tropic Dawn Youga (van): Against a wall inside New Wave Customs, Dolphin Dr, northern Key Lento. Unlocked, sells for $3,190.",
+      "Bravado Circles of Hell Youga (van): Outside the Circles of Hell house on Gellhorn Ave, northern Port Gellhorn. Unlocked, sells for $3,190.",
+      "Bravado Elven Queen Youga (van): By a fence on a side road next to \"Fort Acid\", west South Kelly County (just north of Capri). Unlocked, sells for $3,190.",
+      "Bravado Bison 1800 (pickup): Outside the Leonida Highway Patrol building on US-628, eastern Moreau (alarmed, tracker). Locked.",
+      "Declasse Beach Candy Bobcat (pickup): Roadside car park on Loggerhead Rd, northern Bobcat Key. Needs the Key Cloner, sells for $2,145.",
+      "Vapid Finns Reclaimer (pickup): By the Finns Diner and Bait sign, Tallaloko Lake Rd, southeast East Lummox County. Locked, sells for $2,165.",
+      "Karin Busted Cheater Rebel (pickup): Front yard of a mobile home off Ignatius Rd, western Port Gellhorn. It appears after a few visits, once you've learned the cheating husband's story. Locked, sells for $2,035.",
+      "Declasse Red Apple Orchard Rancher (pickup): On the drive up to Farmer Scrumpy's Red Apple Orchard, SR-73, Manifest Canyon. Unlocked, sells for $1,430.",
+      "Declasse Flower Powered Rancher (pickup): Inside the big Land of Plenty barn off Forest Mill Rd, eastern Mount Kalaga National Park. Unlocked, sells for $1,430.",
+      "Declasse Fruit Outlet Walton (pickup): Driveway of the Leonida Fruit Outlet by the big Fruit sign, US-9, Port Gellhorn. Unlocked, sells for $970.",
+      "Canis Nancy's Crawler (SUV): Detached garage by a mobile home on the west coast of Moreau. Unlocked, sells for $2,365.",
+      "Annis '95 Hellion (SUV): Outside the Bountiful Hunt restaurant on Lake Tallaloko. Locked, sells for $1,215.",
+      "Hauners Ridgway (military): Just inside the secret bunker in the northwest Grassrivers swamp. Unlocked.",
+      "Vapid Brimstone Golfer (utility): Mansion garage on Delamore Dr, southeast Leaf Links. Unlocked.",
+      "BF Sludge Wraith Injection (off-road): Riverbank opposite the Thrillbilly Mud Club, between Frogswater and North Kelly County. Unlocked, sells for $1,650.",
+      "BF Blood Moon Bandito (off-road): Under a tent of off-roaders outside Boone Speedway, southwest Hamlet. Unlocked, sells for $1,650.",
+      "Mer-Can Blast (off-road): Under an awning in the corn maze, eastern Capri. Unlocked, sells for $1,430.",
+      "Vapid Beer Monster Marshall (off-road): On the roof of the Thrillbilly Mud Club bar by the tracks, northeast Frogswater. Unlocked."
+    ],
+    "facts": [
+      {
+        "label": "Vehicles",
+        "value": "25"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Standout Vehicles",
+        "url": "https://www.ign.com/wikis/gta-6/Standout_Vehicles",
+        "checkedAt": "2026-11-26",
+        "supports": "Vehicle, location, access, type and sell value"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:vehicles-standout-bikes",
+    "gameId": "gta-vi",
+    "slug": "vehicles-standout-bikes",
+    "category": "vehicles",
+    "title": "Standout motorbikes, scooters and bicycles: locations",
+    "summary": "10 standout two-wheelers (and one quad bike), from choppers to a BMX.",
+    "steps": [
+      "LCC Midnight Sun Avarus (chopper): Detached garage behind a white-and-brick house on Grisette Ave, central Hamlet. Locked, sells for $2,475.",
+      "Western Magma Cliffhanger (dirt bike): Against the southern of two abandoned waterside cabins off Sweetbay Rd, Watson Bay. Locked, sells for $2,805.",
+      "Maibatsu MyWays Manchez (dirt bike): Edge of the railroad bridge over the water between Moreau and South West Lummox County. Unlocked, sells for $935.",
+      "Dinka Verus (quad bike): Inside the fenced park ranger outpost, southwest Mount Kalaga National Park. Locked, sells for $1,045.",
+      "Maibatsu Speedy Boomazoom (scooter): Small garage of a red house at NW 3rd Ave and NW 3rd St, Little Cuba. Unlocked.",
+      "Taci Ragno (scooter): In the bushes beside the beach path from the Sands of Time care home, Vinewood Beach. Locked, sells for $660.",
+      "Tuff Immortal BMX (BMX): On the ground by the Hamlet BMX Stunt Run, central Hamlet. Unlocked.",
+      "Walter Ghost Cruiser (bicycle): Leaning on the Connie Hamilton memorial beside I-404, southern Port Gellhorn. Unlocked.",
+      "Del Perro Midsummer Erode (bicycle): In the hand of the Bonanza Giant, on a forested hill in southern Bonanza. Unlocked.",
+      "Del Perro Scorcher (bicycle): On a dirt trail down the mountain south of the US-628 bridge, East Lummox County. Unlocked."
+    ],
+    "facts": [
+      {
+        "label": "Vehicles",
+        "value": "10"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Standout Vehicles",
+        "url": "https://www.ign.com/wikis/gta-6/Standout_Vehicles",
+        "checkedAt": "2026-11-26",
+        "supports": "Vehicle, location, access, type and sell value"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:vehicles-standout-boats-aircraft",
+    "gameId": "gta-vi",
+    "slug": "vehicles-standout-boats-aircraft",
+    "category": "vehicles",
+    "title": "Standout boats, jet skis and aircraft: locations",
+    "summary": "8 standout boats, airboats, jet skis, a plane and a helicopter. Most of the boats are in the swamps.",
+    "steps": [
+      "Buckingham Volatus (helicopter): Helipad by the Tallaloko Clubhouse, Lake Tallaloko. Locked.",
+      "Lapwing Stolen Valor 300-H (plane): On the grass outside the hangar at Henry J Edwards Airport, Bobcat Key. Unlocked.",
+      "Airgator Dr Sheehan's Airboat (airboat): End of the dock at the abandoned research outpost, Pelican Valley. Locked.",
+      "Airgator Naughty Boy Airboat (airboat): End of a dock by a small campsite, central Buckskin Swamp. Locked.",
+      "Lure Predator Rainbow Ripple L20S (boat): Shore of the northernmost island chain in southwest Gambit Bay. Locked.",
+      "Nagasaki Rudolph Tao (powerboat): On a trailer outside the Holiday House, Sunset Dr, west coast of Key Lento. Locked.",
+      "Seashark Hydroblast (jet ski): In the floating boathouse, central Pelican Valley swamp. Locked.",
+      "Seashark Westbound Azure (jet ski): Out in the swamp, western Pelican Valley (look for the body hung in a tree). Unlocked."
+    ],
+    "facts": [
+      {
+        "label": "Vehicles",
+        "value": "8"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Standout Vehicles",
+        "url": "https://www.ign.com/wikis/gta-6/Standout_Vehicles",
+        "checkedAt": "2026-11-26",
+        "supports": "Vehicle, location, access, type and sell value"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:robberies-standout-vehicles-in-operations",
+    "gameId": "gta-vi",
+    "slug": "robberies-standout-vehicles-in-operations",
+    "category": "robberies",
+    "title": "Standout vehicles inside illegal operations",
+    "summary": "20 standout vehicles are key valuables in illegal operations, and they include the most valuable ones IGN has listed. Clear (or sneak past) the gang, then drive off.",
+    "steps": [
+      "Progen Royal Ruby Emerus (Vespucci Mansion): Small garage at the mansion entrance off Neptune Circle, Vespucci Island (Rialto Islands). Sells for $33,000.",
+      "Progen Purple Drank Emerus (Chatfield Storage & Logistics): In (or beside) a shipping container by the water, Waxman Island. Sells for $33,000.",
+      "Buckingham Bourbon Windsor (Sound4Sound Studio, San4San): Photo studio in the northwest of the building, Stockyard. The west double doors are a good way in. Sells for $24,000.",
+      "Pegassi Charred Toros (La Perle Trap House, San4San): Front yard, off NW 10th Ave. Sells for $22,835.",
+      "Bravado Devil's Rope Gauntlet (Hog Stars Garage, Final Chapter): Just inside, Acacia St, Ambrosia. Quieter: ladder on the southwest side to an open skylight. Watch for dogs. Sells for $21,890.",
+      "Canis Black Moth Kamacho (Watson Bay Safehouse, La Polilla Negra): Garage under the house, Watson Bay. Sells for about $16,000–17,000.",
+      "Canis Gunrunner Kamacho (Leonida Carrier Warehouse): Garage in the southeast of the warehouse, Balsero; go in by the west garage entrance. Sells for $16,140.",
+      "Vapid Cultivator Sandking (Industrial Weed Grow): Just inside the open northwest entrance, North Mariana County by Tola Bay. Sells for $16,095.",
+      "Dundreary Cherry Bomb Chino (Saber Shipping Yard, Guardia Brothers): Just inside the front gate, off Northbrook Dr, Little Cuba. Sells for $13,695.",
+      "Western Searing Zombie Bobber (Farm Fix Meth Lab, Final Chapter): Ground floor, southeast part, off Chastity Ave, northern Belville. Sells for $9,625.",
+      "Benefactor Nightlight Schafer (Casa Guardia, Guardia Brothers): Back corner of the backyard, from NW 3rd Ave, Little Cuba: hop into the side yard, then use the dumpster to clear the fence. Sells for $9,350.",
+      "Imponte Bloodbath Phoenix (Slator Towing Inc): Under a metal awning between SW 7th and SW 8th Ave, Salton; hop the low wall left of the SW 8th Ave entrance. Sells for $9,185.",
+      "Vapid Firebug Dominator (La Cascara Motel, Kolt & Associates): Out front, Port Gellhorn beach (locked). Sells for $7,205.",
+      "Albany Verdant Buccaneer (M7 Weed Grow): Outside the largest warehouse, Tallaloko. Sells for $7,085.",
+      "Vapid Truth & Justice Caracara (June Warehouse, Kolt & Associates): Outside on the east side, off US-9 and Glenwood Ave, Port Gellhorn. Sells for $6,490.",
+      "Declasse Pink Gin Tulip (Janjak's Garage, San4San): Just through the north garage entrance, La Perle; or climb the west ladder and drop in from the roof. Sells for $6,325.",
+      "Vapid Smuggler Caracara (Brooks Boatworks, Kolt & Associates): Out front, east side of the fishery building, north Port Gellhorn. Sells for $5,855.",
+      "LCC Monarch Avarus (The Thirsty Wolf biker hideout, Final Chapter): Open shed at the back (northwest), SR-27, north Belville. Sells for $5,390.",
+      "Maibatsu Tropical Manchez (Illegal Goods Store, PTTYoungin$): Back of Krystal Inc. Electronics off SW 13th St, Southside: climb the containers to the roof and drop through the southern opening. Sells for $2,090.",
+      "Albany Teniente Manana (Nova Auto Junkyard, M7): Big indoor garage, Hamlet."
+    ],
+    "facts": [
+      {
+        "label": "Vehicles",
+        "value": "20"
+      },
+      {
+        "label": "Top value",
+        "value": "$33,000 (Progen Emerus, two versions)"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Standout Vehicles",
+        "url": "https://www.ign.com/wikis/gta-6/Standout_Vehicles",
+        "checkedAt": "2026-11-26",
+        "supports": "Vehicle, location, access, type and sell value"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Illegal Operations",
+        "url": "https://www.ign.com/wikis/gta-6/Illegal_Operations",
+        "checkedAt": "2026-11-26",
+        "supports": "Operation list, starting hints, areas; most can be done any time"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:robbery-watson-bay-safehouse",
+    "gameId": "gta-vi",
+    "slug": "robbery-watson-bay-safehouse",
+    "category": "robberies",
+    "title": "Watson Bay Safehouse (illegal operation)",
+    "summary": "A heavily guarded La Polilla Negra house west of Hamlet, north of Watson Bay. Four key valuables, including a standout truck.",
+    "steps": [
+      "No hint needed: walk up to it and it shows on your map as a robbery opportunity. Go in the guarded front, the back gate, or anywhere else.",
+      "It's tight inside, so a shotgun helps if you can bring one.",
+      "La Polilla Negra VF-G1 Assault Rifle (unique): upstairs, southeast corner. Take the east stairs, go through the door and turn right. A box of sticky bombs is behind you.",
+      "Safe: in the kitchen on the east side. The code is in an email on the PC just left of it (aim to zoom in), or use a sticky bomb. Check behind the safe for more cash and the counter for three cocaine bricks.",
+      "B&G Ark Royal Quantum watch: on the computer desk at the back of the house, just north of the safe. Cash on the dresser in the southwest bedroom.",
+      "Canis Black Moth Kamacho (standout truck): downstairs in the west garage. Unlocked with the alarm off. A locked box behind it has cash."
+    ],
+    "facts": [
+      {
+        "label": "Area",
+        "value": "Grassrivers, Mariana County"
+      },
+      {
+        "label": "Gang",
+        "value": "La Polilla Negra"
+      },
+      {
+        "label": "Security",
+        "value": "High"
+      },
+      {
+        "label": "Key valuables",
+        "value": "4 (rifle, safe, watch, truck)"
+      },
+      {
+        "label": "Safe code",
+        "value": "On the PC next to the safe"
+      },
+      {
+        "label": "Truck",
+        "value": "Register $6,700; sells for about $17,105 in top condition"
+      },
+      {
+        "label": "Can do",
+        "value": "Any time (IGN lists it under Chapter 3 by area)"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Watson Bay Safehouse",
+        "url": "https://www.ign.com/wikis/gta-6/Watson_Bay_Safehouse",
+        "checkedAt": "2026-11-26",
+        "supports": "Location, key valuables and tips"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Chapter 3 Illegal Operations",
+        "url": "https://www.ign.com/wikis/gta-6/Chapter_3_Illegal_Operations",
+        "checkedAt": "2026-11-26",
+        "supports": "Operation list, areas, any time"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [
+      "gta-vi:map:gang-operation-042"
+    ],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:robbery-palmer-fishing-warehouse",
+    "gameId": "gta-vi",
+    "slug": "robbery-palmer-fishing-warehouse",
+    "category": "robberies",
+    "title": "Palmer Fishing Warehouse (illegal operation)",
+    "summary": "A La Polilla Negra compound in southeast Bobcat Key. All three key valuables are in one upstairs office, and a truck tries to leave with cocaine when you're spotted.",
+    "steps": [
+      "Go in any way you like.",
+      "If you're spotted, a white Saber Shipping truck drives off between the two big buildings: stop it and open the back for cocaine bricks. Stay hidden and it's parked by the big east building instead.",
+      "Big rusted building in the middle: up the stairs to the office. La Polilla Negra KZ-59 Assault Rifle (unique) on the north table, Crowex Octaine \"Elite\" watch on the middle table, safe in the south corner.",
+      "Safe code: in an email on the PC at the desk under the stairs, one floor down. Or use a sticky bomb.",
+      "Before you leave, the big east building has six cocaine bricks on a table."
+    ],
+    "facts": [
+      {
+        "label": "Area",
+        "value": "Bobcat Key, Mariana County"
+      },
+      {
+        "label": "Gang",
+        "value": "La Polilla Negra"
+      },
+      {
+        "label": "Security",
+        "value": "High"
+      },
+      {
+        "label": "Key valuables",
+        "value": "3 (rifle, watch, safe)"
+      },
+      {
+        "label": "Safe code",
+        "value": "On the PC under the stairs"
+      },
+      {
+        "label": "Can do",
+        "value": "Any time (IGN lists it under Chapter 3 by area)"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Palmer Fishing Warehouse",
+        "url": "https://www.ign.com/wikis/gta-6/Palmer_Fishing_Warehouse",
+        "checkedAt": "2026-11-26",
+        "supports": "Location, key valuables and tips"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Chapter 3 Illegal Operations",
+        "url": "https://www.ign.com/wikis/gta-6/Chapter_3_Illegal_Operations",
+        "checkedAt": "2026-11-26",
+        "supports": "Operation list, areas, any time"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [
+      "gta-vi:map:gang-operation-011"
+    ],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:robberies-snap-gun",
+    "gameId": "gta-vi",
+    "slug": "robberies-snap-gun",
+    "category": "robberies",
+    "title": "Snap Gun: open doors without setting off alarms (Chapter 3)",
+    "summary": "The Snap Gun opens doors on robbery targets without tripping their security, which makes quiet break-ins possible. Yasmani gives it to you after your first job for him.",
+    "steps": [
+      "In Chapter 3, after the mission Boobie Time, Yasmani calls with three jewelry stores to hit (Yasmani's Jewelry Jobs).",
+      "Finish any one of them and take the haul to Yasmani: he hands you the Snap Gun.",
+      "Go to Yasmani straight after each robbery (once you've lost the cops). Loot in your trunk is lost if you die or get arrested."
+    ],
+    "facts": [
+      {
+        "label": "Unlocks",
+        "value": "Chapter 3, after your first jewelry job"
+      },
+      {
+        "label": "From",
+        "value": "Yasmani"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "How to Get the Snap Gun (Disable Security)",
+        "url": "https://www.ign.com/wikis/gta-6/How_to_Get_the_Snap_Gun_(Disable_Security)",
+        "checkedAt": "2026-11-26",
+        "supports": "How it unlocks and what it does"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:secret-vanessas-laptop-pink-growler",
+    "gameId": "gta-vi",
+    "slug": "secret-vanessas-laptop-pink-growler",
+    "category": "secrets",
+    "title": "Vanessa's pink Pfister Growler: the laptop password (Muffins, Queen, 15)",
+    "summary": "The laptop in your Chapter 3 safehouse belonged to the last tenant, Vanessa. Crack its password and it leads you to a hidden garage in La Perle with a free pink Pfister Growler sports car and the garage itself.",
+    "steps": [
+      "In the apartment, look at the photo on the hallway side table: that gives you the word \"Muffins\".",
+      "Look at the notepad on the bedroom vanity, then flip it over: the drawing gives \"Queen\" and the back gives \"15\".",
+      "On the laptop, choose Muffins, Queen, 15. Open Vanessa's WhatUp messages: one from \"Unknown\" mentions a gift in La Perle next to Auntie's Place, with the code 92665. (Triangle/Y translates her messages with her mom.)",
+      "Auntie's Place isn't on the map. Go to Aline's Thrift Store in La Perle, cross the run-down motel car park next to it, and find the closed Auntie's Place. The garage just past it has a bow drawn by the door.",
+      "Enter 92665 on the keypad. It only works after you've read the message on the laptop.",
+      "Drive the Growler out to register it for free. You also get the Del Rio Boulevard Garage."
+    ],
+    "facts": [
+      {
+        "label": "Missable",
+        "value": "Yes: the laptop only works in Chapter 3"
+      },
+      {
+        "label": "Password",
+        "value": "Muffins, Queen, 15"
+      },
+      {
+        "label": "Garage code",
+        "value": "92665"
+      },
+      {
+        "label": "Car",
+        "value": "Vanessa's Pfister Growler (pink)"
+      },
+      {
+        "label": "Sells for",
+        "value": "$22,660 (IGN; $16,225 once registered)"
+      },
+      {
+        "label": "Bonus",
+        "value": "Del Rio Boulevard Garage"
+      }
+    ],
+    "chapter": 3,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "GTA 6 Laptop Password and Aunties Place La Perle Location",
+        "url": "https://www.ign.com/wikis/gta-6/GTA_6_Laptop_Password_and_Aunties_Place_La_Perle_Location",
+        "checkedAt": "2026-11-26",
+        "supports": "Password clues, garage location and code, car and garage reward"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:vehicles-throwback-vehicles",
+    "gameId": "gta-vi",
+    "slug": "vehicles-throwback-vehicles",
+    "category": "vehicles",
+    "title": "Throwback vehicles from GTA Vice City and GTA V",
+    "summary": "GTA Series Videos lists five throwback vehicles that nod to earlier games. We have one location so far; the others are coming once we've checked them.",
+    "steps": [
+      "The five: Bugstars Burrito, Cuban Hermes, Love Fist Shamal, Love Fist Youga and Malibu Zombie Bobber.",
+      "Bugstars Burrito: outside a house tented for pest control in southeast Capri (locked; from IGN's standout list).",
+      "The creator's video also covers how to keep their unique licence plates. We haven't watched it yet, so the rest isn't written up."
+    ],
+    "facts": [
+      {
+        "label": "Vehicles",
+        "value": "5"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "unconfirmed",
+    "sources": [
+      {
+        "publisher": "GTA Series Videos (YouTube)",
+        "title": "GTA 6 - All 5 Throwback Vehicles from GTA Vice City & GTA 5 (Locations & Unlock Guide)",
+        "url": "https://www.youtube.com/watch?v=pY-yRo7jodk",
+        "checkedAt": "2026-11-26",
+        "supports": "The five vehicle names (video chapter list; video not watched)"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Standout Vehicles",
+        "url": "https://www.ign.com/wikis/gta-6/Standout_Vehicles",
+        "checkedAt": "2026-11-26",
+        "supports": "Vehicle, location, access, type and sell value"
       }
     ],
     "platformNote": null,

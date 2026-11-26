@@ -214,3 +214,16 @@ test('walkthrough Chapter 4: listed with a jump button, plot behind Reveal, choi
   await e.getByRole('button', { name: /Reveal major spoiler/ }).click();
   await expect(e).toContainText('Gustavo');
 });
+
+test('standout vehicles: grouped location lists, access shown; the laptop-password secret is findable by its words', async ({ page }) => {
+  await page.goto(REAL + '/games/gta-vi/guides/vehicles/');
+  await page.waitForFunction(() => !document.querySelector('astro-island[ssr]'));
+  const fast = page.locator('li.entry', { hasText: 'Standout supercars' });
+  await fast.getByRole('button', { name: /More details/ }).click();
+  await expect(fast).toContainText('Granforma Tsunami Zorrusso');
+  await expect(fast).toContainText('Needs the Key Cloner');
+  await page.goto(REAL + '/games/gta-vi/guides/');
+  await page.waitForFunction(() => !document.querySelector('astro-island[ssr]'));
+  await page.getByRole('searchbox').first().fill('muffins queen');
+  await expect(page.locator('li.entry', { hasText: "Vanessa's pink Pfister Growler" })).toBeVisible();
+});
