@@ -1,0 +1,57 @@
+---
+/**
+ * Original card art for a game on the Games page (no publisher logos or artwork). GTA VI: a Vice City-style sunset with
+ * palm silhouettes and "GTA VI" set in our own type (founder choice, 2026-11-26). Other games fall back to a cosmic card.
+ */
+interface Props { gameId: string }
+const { gameId } = Astro.props;
+
+// One palm tree: a curved trunk and fronds drawn as tapered leaves from the crown.
+function palm(x: number, base: number, height: number, lean: number, scale = 1) {
+  const cx = x + lean, cy = base - height;
+  const trunk = `M${x - 3 * scale} ${base} Q${x + lean * 0.3} ${base - height * 0.55} ${cx - 1.5 * scale} ${cy} L${cx + 1.5 * scale} ${cy} Q${x + lean * 0.3 + 4 * scale} ${base - height * 0.55} ${x + 3 * scale} ${base} Z`;
+  const fronds = [-170, -140, -110, -70, -40, -10, 15, 165].map((deg) => {
+    const a = (deg * Math.PI) / 180, len = (34 + (Math.abs(deg) % 3) * 4) * scale;
+    const tx = cx + Math.cos(a) * len, ty = cy + Math.sin(a) * len + len * 0.35; // fronds droop
+    const mx = cx + Math.cos(a) * len * 0.5, my = cy + Math.sin(a) * len * 0.5 - 6 * scale;
+    const nx = -Math.sin(a) * 4 * scale, ny = Math.cos(a) * 4 * scale;
+    return `M${cx} ${cy} Q${mx + nx} ${my + ny} ${tx} ${ty} Q${mx - nx} ${my - ny} ${cx} ${cy} Z`;
+  });
+  return [trunk, ...fronds];
+}
+const palms = [
+  ...palm(26, 190, 150, 10, 1.15), ...palm(70, 190, 105, -8, 0.8), ...palm(300, 190, 160, -12, 1.2), ...palm(258, 190, 95, 6, 0.7),
+];
+---
+{gameId === 'gta-vi' ? (
+  <span class="art art-vc" aria-hidden="true">
+    <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <defs>
+        <linearGradient id="vc-sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#b13fbf" /><stop offset="0.55" stop-color="#e2509e" /><stop offset="1" stop-color="#ff8a7a" />
+        </linearGradient>
+        <radialGradient id="vc-sun" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stop-color="#ffd59a" stop-opacity="0.95" /><stop offset="1" stop-color="#ffd59a" stop-opacity="0" />
+        </radialGradient>
+      </defs>
+      <rect width="320" height="180" fill="url(#vc-sky)" />
+      <circle cx="160" cy="118" r="70" fill="url(#vc-sun)" />
+      <g fill="#7a1560" opacity="0.62">{palms.map((d) => <path d={d} />)}</g>
+    </svg>
+    <span class="vc-title"><small>GTA</small><b>VI</b></span>
+  </span>
+) : (
+  <span class="art art-cosmic" aria-hidden="true"></span>
+)}
+
+<style>
+  .art { position: relative; display: block; aspect-ratio: 16 / 9; border-radius: 12px; border: 1px solid var(--vc-line); overflow: hidden; }
+  .art svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  .art-cosmic { background: radial-gradient(ellipse at 75% 35%, rgba(139, 92, 246, 0.55), transparent 55%),
+    radial-gradient(ellipse at 20% 85%, rgba(46, 230, 214, 0.3), transparent 50%), linear-gradient(112deg, #05071a, #11163a 55%, #1a1150); }
+  .vc-title { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 8px; }
+  .vc-title small { font: 400 clamp(18px, 8cqw, 34px)/1 var(--head); color: #fff; text-shadow: 3px 3px 0 #3b0a4a; letter-spacing: 0.04em; }
+  .vc-title b { font: 400 clamp(64px, 30cqw, 132px)/0.85 var(--head); background: linear-gradient(180deg, #4f7bff 0%, #c86bff 45%, #ff5fa2 70%, #ffb35c 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent;
+    filter: drop-shadow(3px 3px 0 #3b0a4a) drop-shadow(0 0 1px #fff); }
+</style>
