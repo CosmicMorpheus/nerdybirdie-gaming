@@ -1,6 +1,6 @@
 # Adding guide content
 
-All guide entries live in **`content/games/gta-vi/entries.json`**, one object per entry. The site rebuilds from it; no layout
+All guide entries live in **`content/games/<game-id>/entries.json`** (GTA VI: `content/games/gta-vi/entries.json`), one object per entry. The site rebuilds from it; no layout
 changes are needed. `npm run build` refuses bad data (missing source, unknown section, spoiler text in the wrong field, and so on)
 and tells you what's wrong.
 
@@ -105,3 +105,32 @@ npm run build
 ```bash
 npm run verify
 ```
+
+## Recording an update (Updates page and home "Recently updated")
+
+Add an object at the **top** of `content/games/<id>/updates.json` (newest first; the build checks the order):
+
+```json
+{ "date": "2026-11-28", "title": "Short headline", "items": ["One spoiler-free line per change."] }
+```
+
+Only headlines appear on the home page; the full items appear on `/updates/`. Keep both spoiler-free.
+
+## Adding another game
+
+Nothing in the page code needs to change. Create `content/games/<new-id>/` with:
+
+| File | Required | Notes |
+|---|---|---|
+| `game.json` | Yes | Copy GTA VI's and change every value. Platforms must be officially confirmed, each with a source. Set `guideStatus` (`coming-soon` / `preview` / `available` / `archived`), `featured` (home page), `access` (`{ "tier": "free" }`; paid tiers fail the build until approved, see `docs/MONETIZATION.md`), optional `platformNote` |
+| `entries.json` | Yes (can be `[]`) | Ids start with `<new-id>:entry:` |
+| `objectives.json` | Yes (can be `[]`) | Ids start with `<new-id>:` |
+| `videos.json` | Optional | |
+| `updates.json` | Optional | Update history |
+| `map/pins.json` | Optional | Without it the Map link is hidden for that game |
+| `creators/youtube.json` | Optional | Daily creator feed |
+
+Then add the game's card art in `src/components/GameArt.astro` (original art only; other games get a neutral cosmic card) and a row in
+`docs/shared/PRODUCT_REGISTRY.md`. The library, game page, guides, tracker, search, ASK index and progress pick the game up automatically.
+Known single-game spots still to generalise when a second game arrives: the What's New creator feed and the map cross-reference
+(`src/lib/content/spots.ts`) only know GTA VI.

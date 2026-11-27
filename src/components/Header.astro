@@ -1,14 +1,16 @@
 ---
 import { BRAND, COZMC, PARENT_SITE_URL, SITE_NAME } from '../config';
-import { publicObjectives } from '../lib/content/load';
-interface Props { current?: string }
-const { current } = Astro.props;
+import { mapData, publicObjectives } from '../lib/content/load';
+interface Props { current?: string; gameId: string }
+const { current, gameId } = Astro.props;
+// Guide links follow the game the page belongs to (or the primary game on site-wide pages), so no title is hard-coded here.
+const g = `/games/${gameId}`;
 const nav = [
   { href: '/games/', label: 'Games', key: 'games' },
-  { href: '/games/gta-vi/guides/', label: 'Guides', key: 'guides' },
-  { href: '/games/gta-vi/map/', label: 'Map', key: 'map' },
+  { href: `${g}/guides/`, label: 'Guides', key: 'guides' },
+  ...(mapData(gameId) ? [{ href: `${g}/map/`, label: 'Map', key: 'map' }] : []),
   // Shown once a verified achievement list exists (the page itself stays reachable from the game page).
-  ...(publicObjectives('gta-vi').length ? [{ href: '/games/gta-vi/achievements/', label: 'Achievements', key: 'achievements' }] : []),
+  ...(publicObjectives(gameId).length ? [{ href: `${g}/achievements/`, label: 'Achievements', key: 'achievements' }] : []),
   { href: '/progress/', label: 'My Progress', key: 'progress' },
   { href: '/updates/', label: 'Updates', key: 'updates' },
 ];

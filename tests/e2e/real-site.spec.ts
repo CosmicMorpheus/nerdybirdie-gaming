@@ -271,6 +271,40 @@ for (const path of ['/', '/games/gta-vi/guides/robberies/', '/credits/']) {
     expect(await logo.evaluate((el) => getComputedStyle(el).boxShadow)).not.toBe('none');
     await page.keyboard.press('Enter');
     await expect(page).toHaveURL(REAL + '/games/');
-    await expect(page.getByRole('heading', { level: 1, name: 'Games' })).toBeVisible();
+    await expect(page.getByRole('heading', { level: 1, name: 'Game guides' })).toBeVisible();
   });
 }
+
+test('landing page: Explore Game Guides leads to the library; featured guide, recent updates and progress are on one page', async ({ page }) => {
+  await page.goto(REAL + '/');
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Get more out of the games you love');
+  const explore = page.getByRole('link', { name: /Explore Game Guides/ });
+  await expect(explore).toHaveAttribute('href', '/games/');
+  await expect(page.locator('.featured .gcard')).toHaveCount(1);
+  await expect(page.locator('.featured .gcard')).toContainText('Grand Theft Auto VI');
+  await expect(page.locator('.recent li')).toHaveCount(4);
+  await expect(page.locator('.recent li').first()).toContainText('GTA VI');
+  await expect(page.locator('.hud')).toBeVisible();
+  // Game-specific tools moved to the game's own page.
+  await expect(page.getByRole('heading', { name: 'Quest board' })).toHaveCount(0);
+  await explore.click();
+  await expect(page).toHaveURL(REAL + '/games/');
+});
+
+test('game landing page holds the quest board, how-to-100% and the sourced platform note', async ({ page }) => {
+  await page.goto(REAL + '/games/gta-vi/');
+  await expect(page.getByRole('heading', { name: 'Quest board' })).toBeVisible();
+  await expect(page.locator('.quests li').first()).toContainText(/\d+ entr(y|ies)/i);
+  await expect(page.getByRole('heading', { name: 'How to 100% it' })).toBeVisible();
+  await expect(page.getByText('Xbox Series X|S and PS5 lists are tracked separately.')).toBeVisible();
+  await expect(page.getByText(/PC isn't listed because Rockstar hasn't announced a PC version/)).toBeVisible();
+});
+
+test('Updates history renders from data, newest first, and the footer links back to the parent company', async ({ page }) => {
+  await page.goto(REAL + '/updates/');
+  const heads = await page.locator('main h2').filter({ hasText: /\d{4} ·/ }).allTextContents();
+  expect(heads.length).toBeGreaterThan(10);
+  expect(heads[0]).toMatch(/^27 November 2026 · /);
+  expect(heads.at(-1)).toBe('24 November 2026 · Preview');
+  await expect(page.locator('footer').getByRole('link', { name: 'NerdyBirdie LLC home' })).toHaveAttribute('href', 'https://nerdy-birdie.com/');
+});

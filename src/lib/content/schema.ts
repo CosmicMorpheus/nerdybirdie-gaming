@@ -49,6 +49,16 @@ export const Game = z.strictObject({
   summary: z.string().min(1),
   /** Our guide's release state on the Games page (separate from the game's own release). */
   guideStatus: z.enum(['coming-soon', 'preview', 'available', 'archived']).default('available'),
+  /** Featured on the home page. If no game is featured, every guide that isn't coming soon is shown. */
+  featured: z.boolean().default(false),
+  /**
+   * Who can use this guide. Founder decision A (27 Nov 2026): every guide is free. `premium` is reserved for a possible
+   * per-guide unlock (grant `guide:<id>` in src/lib/entitlements/model.ts) and is rejected by the validator until a
+   * server-side entitlement check exists and the founder approves paid guides (docs/MONETIZATION.md).
+   */
+  access: z
+    .strictObject({ tier: z.enum(['free', 'premium']), grant: z.string().regex(/^guide:[a-z0-9-]+$/).optional() })
+    .default({ tier: 'free' }),
   availability: z.strictObject({
     status: z.enum(['released', 'announced', 'unknown']),
     date: isoDate.nullable(),
@@ -65,6 +75,8 @@ export const Game = z.strictObject({
       }),
     )
     .min(1),
+  /** Optional note under the platform list on the game page, e.g. why a platform isn't listed. Must be sourced like any fact. */
+  platformNote: z.string().min(1).optional(),
   /** Achievement/trophy categories. */
   categories: z.array(Category).min(1),
   /** Guide sections, in display order (from the original brief's site structure). */
@@ -72,6 +84,13 @@ export const Game = z.strictObject({
   sources: z.array(Source),
 });
 export type Game = z.infer<typeof Game>;
+
+/** A game guide's public update history (content/games/<id>/updates.json), newest first. Spoiler-safe text only. */
+export const GameUpdates = z.strictObject({
+  schemaVersion: z.literal(1),
+  updates: z.array(z.strictObject({ date: isoDate, title: z.string().min(1), items: z.array(z.string().min(1)).min(1) })),
+});
+export type GameUpdate = z.infer<typeof GameUpdates>['updates'][number];
 
 export const Objective = z.strictObject({
   /** Immutable, namespaced by game: `gta-vi:xbox:...`. Never reuse or rename. */

@@ -6,7 +6,7 @@ export function getStaticPaths() { return games.filter((g) => mapData(g.id)).map
 const game = games.find((g) => g.id === Astro.params.game)!;
 const videos = videosFor(game.id).filter((v) => v.moments.some((m) => m.target.includes(':map:')));
 ---
-<Base title={`${game.shortTitle} map of Leonida`} current="map" description={`Interactive ${game.title} map: collectibles and activities you can mark as found, with search and filters. Spoiler-safe.`}>
+<Base gameId={game.id} title={`${game.shortTitle} map of Leonida`} current="map" description={`Interactive ${game.title} map: collectibles and activities you can mark as found, with search and filters. Spoiler-safe.`}>
   <div class="wrap head">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/games/">Games</a> / <a href={`/games/${game.id}/`}>{game.shortTitle}</a> / <span aria-current="page">Map</span></nav>
     <h1>Leonida map</h1>

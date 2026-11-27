@@ -9,7 +9,7 @@ const game = getGame(Astro.params.game!);
 const entries = publicEntries(game.id);
 const categories = game.guideCategories.map((c) => ({ ...c, entryIds: entries.filter((e) => e.category === c.id).map((e) => e.id) }));
 ---
-<Base title={`${game.shortTitle} guides`} current="guides" description={`Spoiler-safe ${game.title} guide entries you can check off. Every entry lists its sources and when they were checked.`}>
+<Base gameId={game.id} title={`${game.shortTitle} guides`} current="guides" description={`Spoiler-safe ${game.title} guide entries you can check off. Every entry lists its sources and when they were checked.`}>
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/games/">Games</a> / <a href={`/games/${game.id}/`}>{game.shortTitle}</a> / <span aria-current="page">Guides</span></nav>
     <p class="eyebrow">{game.shortTitle} · Quest board</p>

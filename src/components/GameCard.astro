@@ -1,0 +1,74 @@
+---
+/**
+ * One game guide in the library: art, status, access, platforms, counts and last update. Used on the home page (featured
+ * guides) and the Games page. Every fact comes from the guide's own content, so the card can't drift from what's published.
+ */
+import GameArt from './GameArt.astro';
+import { getPlatform, mapData, publicEntries, publicObjectives, updatesFor } from '../lib/content/load';
+import type { Game } from '../lib/content/schema';
+
+interface Props { game: Game; headingLevel?: 'h2' | 'h3'; quickLinks?: boolean }
+const { game: g, headingLevel: H = 'h2', quickLinks = false } = Astro.props;
+
+const STATUS: Record<Game['guideStatus'], string> = { 'coming-soon': 'Coming soon', preview: 'Preview', available: 'Available', archived: 'Archived' };
+const fmt = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+const entries = publicEntries(g.id);
+const lastChecked = entries.flatMap((e) => e.sources.map((s) => s.checkedAt)).concat(updatesFor(g.id).map((u) => u.date)).sort().at(-1);
+const objs = publicObjectives(g.id).filter((o) => o.kind === 'achievement' || o.kind === 'trophy');
+const achievements = g.platforms
+  .map((p) => {
+    const pl = getPlatform(p.platformId);
+    return { label: `${pl.family === 'xbox' ? 'Xbox' : pl.shortLabel} ${pl.objectiveNoun.toLowerCase()}`, n: objs.filter((o) => o.platformIds.includes(p.platformId)).length };
+  })
+  .filter((x) => x.n > 0);
+const sections = new Set(entries.map((e) => e.category)).size;
+const hasMap = mapData(g.id) !== null;
+const base = `/games/${g.id}`;
+---
+<article class="gcard">
+  <a class="cover" href={`${base}/`}>
+    <GameArt gameId={g.id} />
+    <H class="title">{g.title}<span class="sr-only"> guide</span></H>
+  </a>
+  <p class="meta">
+    <span class={`tag st-${g.guideStatus}`}>{STATUS[g.guideStatus]}</span>
+    {g.access.tier === 'free' && <span class="tag free">Free</span>}
+    <span class="muted small">{g.platforms.map((p) => getPlatform(p.platformId).shortLabel).join(' · ')}</span>
+  </p>
+  {g.guideStatus !== 'coming-soon' && (
+    <p class="muted small gfacts">
+      {entries.length} guide entries in {sections} sections{achievements.length > 0 && <> · {achievements.map((a) => `${a.n} ${a.label}`).join(', ')}</>}
+      {lastChecked && <><br />Last updated {fmt.format(new Date(lastChecked + 'T12:00:00Z'))}</>}
+    </p>
+  )}
+  {quickLinks && g.guideStatus !== 'coming-soon' && (
+    <ul class="quick" aria-label={`${g.shortTitle} guide sections`}>
+      <li><a href={`${base}/guides/`}>Guides</a></li>
+      {hasMap && <li><a href={`${base}/map/`}>Map</a></li>}
+      {objs.length > 0 && <li><a href={`${base}/achievements/`}>Achievements</a></li>}
+      <li><a href={`${base}/`}>Open guide →</a></li>
+    </ul>
+  )}
+</article>
+
+<style>
+  .gcard { display: flex; flex-direction: column; }
+  .cover { display: flex; flex-direction: column; gap: 6px; text-decoration: none; container-type: inline-size; }
+  .cover:hover :global(.art) { border-color: var(--vc-pink); }
+  .title { font: 600 18px var(--head); margin: 4px 0 0; }
+  .meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 8px 0 0; }
+  .gfacts { margin: 6px 0 0; }
+  .tag { font: 600 11px/1.6 var(--body); text-transform: uppercase; letter-spacing: 0.06em; padding: 1px 7px; border-radius: 4px; border: 1px solid var(--vc-line); color: var(--vc-muted); }
+  .tag.st-available, .tag.free { color: var(--vc-pink); border-color: currentColor; }
+  .quick { list-style: none; padding: 0; margin: 12px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .quick a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid var(--vc-line); border-radius: 10px;
+    background: var(--vc-slate); text-decoration: none; font-weight: 600; font-size: 15px; }
+  .quick a:hover { border-color: var(--vc-pink); }
+  .quick li:last-child a { color: var(--vc-sunset); }
+  /* Side by side when the card has room (e.g. the single featured guide on the home page). Needs a sized container parent. */
+  @container (min-width: 600px) {
+    .gcard { display: grid; grid-template-columns: minmax(260px, 46%) 1fr; column-gap: 22px; align-content: start; }
+    .cover { grid-row: 1 / span 4; }
+    .meta { margin-top: 0; }
+  }
+</style>

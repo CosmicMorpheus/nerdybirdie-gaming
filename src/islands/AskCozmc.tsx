@@ -7,14 +7,14 @@ import { useProgress } from './useProgress';
 import './ask.css';
 
 const NAME = 'ASK "COZMC"';
-interface Props { gameId: string; greeting: string; discord: string }
+interface Props { gameId: string; gameName: string; greeting: string; discord: string }
 type Msg = { role: 'player'; text: string } | { role: 'ask'; result: AskResult; offline?: boolean };
 
 /**
  * ASK "COZMC": free guide assistant. Searches our published guide first (on the server, with approved corrections);
  * only the missing part goes to outside sources. If the server can't be reached it still answers from our guide.
  */
-export default function AskCozmc({ gameId, greeting, discord }: Props) {
+export default function AskCozmc({ gameId, gameName, greeting, discord }: Props) {
   const { progress } = useProgress();
   const mode = progress.prefs.spoilerMode;
   const [open, setOpen] = useState(false);
@@ -106,7 +106,7 @@ export default function AskCozmc({ gameId, greeting, discord }: Props) {
       {open && (
         <section id="ask-panel" class="ask-panel" role="dialog" aria-label={NAME}>
           <header class="ask-head">
-            <h2>{NAME}<small>GTA VI guide helper</small></h2>
+            <h2>{NAME}<small>{gameName} guide helper</small></h2>
             <span class="ask-mode">Spoilers: {mode === 'safe' ? 'off' : mode === 'minor' ? 'minor' : 'all'}</span>
             <button type="button" class="ask-close" aria-label={`Close ${NAME}`} onClick={() => { setOpen(false); fab.current?.focus(); }}>✕</button>
           </header>

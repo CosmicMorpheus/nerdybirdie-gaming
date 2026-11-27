@@ -3,7 +3,7 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { INDEXABLE, SITE_NAME } from '../config';
-import { USING_FIXTURES } from '../lib/content/load';
+import { USING_FIXTURES, getGame, primaryGame } from '../lib/content/load';
 import AskCozmc from '../islands/AskCozmc';
 import askConfig from '../../content/ask/config.json';
 import { COZMC } from '../config';
@@ -15,8 +15,11 @@ interface Props {
   current?: string;
   /** Pages that must never be indexed (search results, etc). */
   noindex?: boolean;
+  /** Set on pages inside a game guide (/games/<id>/…). Header links and ASK "COZMC" then follow that game; elsewhere they follow the primary game. */
+  gameId?: string;
 }
-const { title, description, current, noindex = false } = Astro.props;
+const { title, description, current, noindex = false, gameId } = Astro.props;
+const game = gameId ? getGame(gameId) : primaryGame();
 const fullTitle = title === SITE_NAME ? title : `${title} · ${SITE_NAME}`;
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : null;
 const robots = !INDEXABLE || noindex || USING_FIXTURES ? 'noindex, nofollow' : 'index, follow';
@@ -41,11 +44,11 @@ const robots = !INDEXABLE || noindex || USING_FIXTURES ? 'noindex, nofollow' : '
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
-    {USING_FIXTURES && <div class="banner fixtures" role="note">TEST BUILD · objectives are fake fixtures, not GTA VI data</div>}
+    {USING_FIXTURES && <div class="banner fixtures" role="note">TEST BUILD · objectives are fake fixtures, not real game data</div>}
     {!USING_FIXTURES && !INDEXABLE && <div class="banner staging" role="note">Preview · not yet launched</div>}
-    <Header current={current} />
+    <Header current={current} gameId={game.id} />
     <main id="main" tabindex="-1"><slot /></main>
-    <Footer />
-    <AskCozmc client:load gameId="gta-vi" greeting={askConfig.greeting} discord={COZMC.gtaHelpChannel || COZMC.discord} />
+    <Footer gameId={game.id} />
+    <AskCozmc client:load gameId={game.id} gameName={game.shortTitle} greeting={askConfig.greeting} discord={COZMC.gtaHelpChannel || COZMC.discord} />
   </body>
 </html>

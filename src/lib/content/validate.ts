@@ -37,6 +37,9 @@ export function validateGameBundle(
   const objectives = os.data;
   const entries = gs.data;
   const videos = vs.data;
+  // Paid guides need a server-side entitlement check and founder approval first; a client-side flag is never access control.
+  if (game.access.tier !== 'free')
+    problems.push(`game ${game.id}: access tier "${game.access.tier}" is not allowed yet (every guide is free; see docs/MONETIZATION.md)`);
   const platformIds = new Set(platforms.map((p) => p.id));
   const gamePlatforms = new Set(game.platforms.map((p) => p.platformId));
   const sourceIds = new Set<string>();

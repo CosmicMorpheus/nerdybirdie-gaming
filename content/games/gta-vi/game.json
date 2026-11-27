@@ -5,6 +5,10 @@
   "shortTitle": "GTA VI",
   "summary": "Achievement and trophy tracking, verified guides and quick answers you can check on your phone mid-session. Spoiler-free unless you choose otherwise.",
   "guideStatus": "available",
+  "featured": true,
+  "access": {
+    "tier": "free"
+  },
   "availability": {
     "status": "released",
     "date": "2026-11-19",
@@ -30,6 +34,7 @@
       ]
     }
   ],
+  "platformNote": "PC isn't listed because Rockstar hasn't announced a PC version. We only list platforms Rockstar confirms.",
   "categories": [
     {
       "id": "story",

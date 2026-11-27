@@ -1,87 +1,77 @@
 ---
 import Base from '../layouts/Base.astro';
 import CozmcPanel from '../components/CozmcPanel.astro';
+import GameCard from '../components/GameCard.astro';
 import Hud from '../islands/Hud';
 import ContinueButton from '../islands/ContinueButton';
-import { getGame, getPlatform, publicEntries, publicObjectives, trackablePinIds } from '../lib/content/load';
-import { SITE_NAME, TAGLINE } from '../config';
+import { featuredGames, games, getPlatform, mapData, primaryGame, publicEntries, publicObjectives, recentUpdates, trackablePinIds } from '../lib/content/load';
+import { COZMC, SITE_NAME, TAGLINE } from '../config';
 
-const game = getGame('gta-vi');
+// The product landing page: what Nerdy Birdie Gaming Guides is, which guides exist, what changed, and your progress.
+// Game-specific tools (quest board, how-to-100%) live on each game's own page (/games/<id>/).
+const featured = featuredGames();
+const game = primaryGame();
 const objectives = publicObjectives(game.id);
 const entries = publicEntries(game.id);
 const platforms = game.platforms.map((gp) => {
   const p = getPlatform(gp.platformId);
   return { id: p.id, shortLabel: p.shortLabel, objectiveNoun: p.objectiveNoun, objectiveIds: objectives.filter((o) => o.platformIds.includes(p.id)).map((o) => o.id) };
 });
-const trackerHref = `/games/${game.id}/achievements/`;
-const hasAchievements = objectives.length > 0;
-const guidesHref = `/games/${game.id}/guides/`;
-const allQuests = game.guideCategories.map((c) => ({ ...c, count: entries.filter((e) => e.category === c.id).length }));
-const quests = allQuests.filter((q) => q.count > 0);
-const soon = allQuests.filter((q) => q.count === 0);
+const recent = recentUpdates(4);
+const fmt = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', timeZone: 'UTC' });
+const moreCount = games.length - featured.length;
 ---
-<Base title={SITE_NAME} description={`${TAGLINE} Free, spoiler-safe GTA VI achievement tracking and guide checklists, built for checking on your phone while you play.`}>
+<Base title={SITE_NAME} description={`${TAGLINE} Free, spoiler-safe game guides: walkthroughs, maps, checklists and achievement trackers, starting with ${game.title}.`}>
   <section class="hero">
     <div class="sky" aria-hidden="true"><div class="sun"></div><div class="grid"></div></div>
     <div class="wrap hero-inner">
-      <p class="eyebrow">Free, unofficial GTA VI companion · No account required</p>
-      <h1>{game.title}</h1>
-      <p class="promise">{game.summary}</p>
-      <ul class="platforms" aria-label="Platforms">
-        {game.platforms.map((p) => <li class="chip">{getPlatform(p.platformId).shortLabel}</li>)}
-      </ul>
+      <p class="eyebrow">Free, unofficial game guides · No account required</p>
+      <h1>Get more out of the games you love</h1>
+      <p class="promise">Spoiler-safe walkthroughs, maps, checklists and trackers you can check on your phone mid-session. Built with gamers, not just for them.</p>
       <div class="cta">
-        {/* While no achievement list is verified, lead with what's useful today. */}
-        {hasAchievements ? (
-          <><a class="btn btn-primary" href={trackerHref}>▶ Start tracking</a><a class="btn btn-ghost" href={guidesHref}>Guides</a></>
-        ) : (
-          <><a class="btn btn-primary" href={guidesHref}>▶ Explore guides</a><a class="btn btn-ghost" href={`/games/${game.id}/map/`}>Open the map</a></>
-        )}
-        {hasAchievements && <a class="btn btn-ghost" href={`/games/${game.id}/map/`}>Map</a>}
+        <a class="btn btn-primary" href="/games/">▶ Explore Game Guides</a>
+        <a class="btn btn-ghost" href="/progress/">My progress</a>
       </div>
       <div class="resume-row"><ContinueButton client:load /></div>
     </div>
   </section>
 
-  <section class="wrap block two">
-    <div class="panel">
-      <h2 class="sr-only">Your progress</h2>
-      <Hud client:load gameId={game.id} platforms={platforms} guideEntryIds={entries.map((e) => e.id)} trackerHref={trackerHref} guidesHref={guidesHref}
-        mapTotal={trackablePinIds(game.id).length} mapHref={`/games/${game.id}/map/`} />
-    </div>
-    <div class="how panel">
-      <h2>How to 100% it</h2>
-      <ol>
-        <li><span class="pixel">1</span><div><strong>Pick your platform</strong><br /><span class="muted small">Xbox and PS5 lists are tracked separately.</span></div></li>
-        <li><span class="pixel">2</span><div><strong>Tick off as you play</strong><br /><span class="muted small">Guide entries and map finds now; achievements once the lists are verified.</span></div></li>
-        <li><span class="pixel">3</span><div><strong>Clear the quest board</strong><br /><span class="muted small">Check off tips, missions and finds in every section.</span></div></li>
-        <li><span class="pixel">4</span><div><strong>Rank up</strong><br /><span class="muted small">Checkpoints at 25, 50, 75 and 100%.</span></div></li>
-      </ol>
-      <p class="small muted">Spoiler-free by default. Saved on this device, no sign-up. <a href="/progress/#move">Continue in another browser</a>.</p>
-    </div>
+  <section class="wrap block" aria-labelledby="featured-h">
+    <div class="head-row"><h2 id="featured-h">Featured guides</h2><a href="/games/">All game guides →</a></div>
+    <ul class="featured">
+      {featured.map((g) => <li><GameCard game={g} headingLevel="h3" quickLinks /></li>)}
+      <li class="next">
+        <p class="next-title">More guides on the way</p>
+        <p class="small muted">{moreCount > 0 ? `${moreCount} more in the library. ` : ''}{game.shortTitle} is our first guide. We're growing the library with the community, one game at a time.</p>
+        <p class="small"><a href="/games/">Browse the library</a>{COZMC.discord && <> · <a href={COZMC.discord} target="_blank" rel="noopener">Suggest a game<span class="sr-only"> in the COZMC Discord (opens in a new tab)</span></a></>}</p>
+      </li>
+    </ul>
   </section>
 
-  <section class="wrap block">
-    <div class="head-row"><h2>Quest board</h2><a href={guidesHref}>All guides →</a></div>
-    <ul class="quests">
-      {quests.map((q) => (
-        <li>
-          <a href={`${guidesHref}${q.id}/`}>
-            <span class="q-title">{q.label}</span>
-            <span class="small muted">{q.blurb}</span>
-            <span class="badge-px">{`${q.count} entr${q.count > 1 ? 'ies' : 'y'}`}</span>
-          </a>
-        </li>
-      ))}
-    </ul>
-    {soon.length > 0 && <p class="soon-line small muted">Coming as we verify them: {soon.map((q) => q.label).join(', ')}.</p>}
+  <section class="wrap block two">
+    <div class="panel">
+      <h2 class="panel-h">Your progress <span class="muted">· {game.shortTitle}</span></h2>
+      <Hud client:load gameId={game.id} platforms={platforms} guideEntryIds={entries.map((e) => e.id)} trackerHref={`/games/${game.id}/achievements/`}
+        guidesHref={`/games/${game.id}/guides/`} mapTotal={trackablePinIds(game.id).length} mapHref={mapData(game.id) ? `/games/${game.id}/map/` : `/games/${game.id}/`} />
+    </div>
+    <div class="panel recent" aria-labelledby="recent-h">
+      <div class="head-row"><h2 id="recent-h" class="panel-h">Recently updated</h2><a href="/updates/">All updates →</a></div>
+      {recent.length ? (
+        <ol>
+          {recent.map((u) => (
+            <li><time datetime={u.date}>{fmt.format(new Date(u.date + 'T12:00:00Z'))}</time>
+              <span><a href={`/games/${u.game.id}/`}>{u.game.shortTitle}</a> · {u.title}</span></li>
+          ))}
+        </ol>
+      ) : <p class="muted small">No updates yet.</p>}
+    </div>
   </section>
 
   <section class="wrap block"><CozmcPanel /></section>
 </Base>
 
 <style>
-  .hero { position: relative; overflow: hidden; min-height: 540px; display: flex; align-items: flex-end; border-bottom: 2px solid #000; }
+  .hero { position: relative; overflow: hidden; min-height: 440px; display: flex; align-items: flex-end; border-bottom: 2px solid #000; }
   /* Cosmic hero to match the Nerdy Birdie logo: starfield, purple nebula, a planet with a neon-green ring. */
   .sky { position: absolute; inset: 0; background:
       radial-gradient(ellipse at 72% 28%, rgba(139, 92, 246, 0.45), transparent 55%),
@@ -104,31 +94,30 @@ const soon = allQuests.filter((q) => q.count === 0);
   .hero::after { content: ''; position: absolute; inset: 0; pointer-events: none;
     background: linear-gradient(90deg, rgba(7, 10, 28, 0.92) 0%, rgba(7, 10, 28, 0.55) 45%, transparent 75%),
       repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.16) 0 1px, transparent 1px 3px); }
-  .hero-inner { position: relative; z-index: 1; width: 100%; padding-top: 72px; padding-bottom: 60px; }
-  h1 { max-width: 12ch; font-size: clamp(40px, 7vw, 84px); text-shadow: 4px 4px 0 #000; }
+  .hero-inner { position: relative; z-index: 1; width: 100%; padding-top: 56px; padding-bottom: 48px; }
+  h1 { max-width: 16ch; font-size: clamp(36px, 5.6vw, 68px); text-shadow: 4px 4px 0 #000; }
   .promise { font-size: 19px; color: #eef1ff; max-width: 52ch; margin: 0 0 18px; text-shadow: 0 1px 2px #000; }
-  .platforms { list-style: none; display: flex; gap: 8px; flex-wrap: wrap; padding: 0; margin: 0 0 26px; }
   .cta { display: flex; gap: 12px; flex-wrap: wrap; }
   .resume-row { margin-top: 12px; }
   .resume-row :global(.continue) { min-height: 44px; font-size: 15px; }
-  .block { padding-top: 48px; }
+  .block { padding-top: 40px; }
   .two { display: grid; grid-template-columns: 1.15fr 1fr; gap: 22px; align-items: start; }
-  .how h2 { font-size: 24px; }
-  .how ol { list-style: none; padding: 0; margin: 14px 0; display: flex; flex-direction: column; gap: 14px; }
-  .how li { display: grid; grid-template-columns: 36px 1fr; gap: 12px; align-items: start; }
-  .how .pixel { display: grid; place-items: center; width: 32px; height: 32px; background: var(--vc-pink); color: #1a0d16; border: 2px solid #000; box-shadow: 2px 2px 0 #000; font-size: 12px; }
   .head-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
   .head-row a { color: var(--vc-sunset); font-weight: 600; text-decoration: none; }
-  .quests { list-style: none; padding: 0; margin: 14px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
-  .soon-line { margin: 14px 0 0; }
-  .quests a { display: flex; flex-direction: column; gap: 8px; height: 100%; padding: 14px; border: 2px solid var(--vc-line); border-radius: 6px; background: var(--vc-slate);
-    text-decoration: none; box-shadow: var(--shadow-px); }
-  .quests a:hover { border-color: var(--vc-pink); transform: translate(-1px, -1px); }
-  .quests .soon a { background: transparent; border-style: dashed; box-shadow: none; }
-  .q-title { font: 700 19px/1.2 'Space Grotesk', var(--body); }
-  .quests .badge-px { margin-top: auto; align-self: flex-start; }
+  .featured { list-style: none; padding: 0; margin: 14px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+  .featured:has(> li:nth-child(2):last-child) { grid-template-columns: 2fr 1fr; }
+  .featured > li { container-type: inline-size; padding: 14px; border: 2px solid var(--vc-line); border-radius: 8px; background: var(--vc-slate); box-shadow: var(--shadow-px); }
+  .featured .next { display: flex; flex-direction: column; justify-content: center; gap: 4px; background: transparent; border-style: dashed; box-shadow: none; }
+  .next p { margin: 0; }
+  .next-title { font: 700 19px/1.2 'Space Grotesk', var(--body); }
+  .panel-h { font-size: 22px; margin: 0 0 12px; }
+  .panel-h .muted { font-size: 16px; font-weight: 500; }
+  .recent ol { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; }
+  .recent li { display: grid; grid-template-columns: 64px 1fr; gap: 12px; padding: 10px 0; border-top: 1px solid var(--vc-line); }
+  .recent li:first-child { border-top: 0; }
+  .recent time { color: var(--vc-muted); font-size: 14px; font-variant-numeric: tabular-nums; }
 
-  @media (max-width: 960px) { .two { grid-template-columns: 1fr; } }
+  @media (max-width: 960px) { .two { grid-template-columns: 1fr; } .featured:has(> li:nth-child(2):last-child) { grid-template-columns: 1fr; } }
   @media (max-width: 640px) {
     .hero { min-height: 420px; }
     .hero-inner { padding-top: 40px; padding-bottom: 36px; }
@@ -136,9 +125,7 @@ const soon = allQuests.filter((q) => q.count === 0);
     .hero::after { background: linear-gradient(180deg, rgba(7, 10, 28, 0.15) 0%, rgba(7, 10, 28, 0.85) 60%), repeating-linear-gradient(0deg, rgba(0,0,0,.16) 0 1px, transparent 1px 3px); }
     .promise { font-size: 17px; }
     .cta .btn { flex: 1; padding: 0 12px; white-space: nowrap; }
-    .quests { grid-template-columns: 1fr 1fr; }
-  }
-  @media (max-width: 400px) { .quests { grid-template-columns: 1fr; } }
+    }
   @media (prefers-reduced-motion: no-preference) {
     .grid { animation: drive 3s linear infinite; }
     @keyframes drive { to { background-position: 0 48px; } }

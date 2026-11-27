@@ -1,14 +1,23 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import CozmcInline from '../../../components/CozmcInline.astro';
-import { games, getGame, getPlatform, sourcesFor } from '../../../lib/content/load';
+import { games, getGame, getPlatform, mapData, publicEntries, publicObjectives, sourcesFor } from '../../../lib/content/load';
 
 export function getStaticPaths() { return games.map((g) => ({ params: { game: g.id } })); }
 const game = getGame(Astro.params.game!);
 const src = sourcesFor(game, game.availability.sourceIds);
+// This page is the game's own landing page: its tools, quest board and how-to-100% live here, not on the site home page.
+const entries = publicEntries(game.id);
+const hasAchievements = publicObjectives(game.id).length > 0;
+const hasMap = mapData(game.id) !== null;
+const platformNames = game.platforms.map((p) => getPlatform(p.platformId).shortLabel);
+const guidesHref = `/games/${game.id}/guides/`;
+const allQuests = game.guideCategories.map((c) => ({ ...c, count: entries.filter((e) => e.category === c.id).length }));
+const quests = allQuests.filter((q) => q.count > 0);
+const soon = allQuests.filter((q) => q.count === 0);
 const fmt = (d: string) => new Date(d + 'T12:00:00Z').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
 ---
-<Base title={game.title} current="games" description={`${game.title}: platforms, achievement tracker and verified guides. Spoiler-free by default.`}>
+<Base gameId={game.id} title={game.title} current="games" description={`${game.title}: platforms, achievement tracker and verified guides. Spoiler-free by default.`}>
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/games/">Games</a> / <span aria-current="page">{game.shortTitle}</span></nav>
     <p class="eyebrow">Game overview</p>
@@ -19,25 +28,71 @@ const fmt = (d: string) => new Date(d + 'T12:00:00Z').toLocaleDateString('en-US'
       <div><dt>Platforms</dt><dd>{game.platforms.map((p) => getPlatform(p.platformId).label).join(' · ')}</dd></div>
       <div><dt>Source</dt><dd>{src.map((s) => <a href={s.url} target="_blank" rel="noopener">{s.publisher}: {s.title}</a>)} <span class="muted">· checked {src[0]?.checkedAt}</span></dd></div>
     </dl>
+    {game.platformNote && <p class="muted small pnote">{game.platformNote}</p>}
     <h2>Pick a tool</h2>
     <ul class="tools">
-      <li><a href={`/games/${game.id}/achievements/`}><strong>Achievements &amp; trophies</strong><span>Tracker with separate Xbox and PS5 lists</span></a></li>
-      <li><a href={`/games/${game.id}/guides/`}><strong>Guides</strong><span>Verified guides as they're published</span></a></li>
+      {hasAchievements && <li><a href={`/games/${game.id}/achievements/`}><strong>Achievements &amp; trophies</strong><span>Tracker with separate {platformNames.join(' and ')} lists</span></a></li>}
+      <li><a href={guidesHref}><strong>Guides</strong><span>Verified guides you can check off as you play</span></a></li>
+      {hasMap && <li><a href={`/games/${game.id}/map/`}><strong>Map</strong><span>Find and mark collectibles and activities</span></a></li>}
       <li><a href="/progress/"><strong>My progress</strong><span>Back up or restore your ticks</span></a></li>
     </ul>
-    <p class="muted small">PC isn't listed because Rockstar hasn't announced a PC version. We only list platforms Rockstar confirms.</p>
-    <CozmcInline text="Playing GTA VI? Swap tips with the community." />
+
+    <section class="block" aria-labelledby="quests-h">
+      <div class="head-row"><h2 id="quests-h">Quest board</h2><a href={guidesHref}>All guides →</a></div>
+      <ul class="quests">
+        {quests.map((q) => (
+          <li>
+            <a href={`${guidesHref}${q.id}/`}>
+              <span class="q-title">{q.label}</span>
+              <span class="small muted">{q.blurb}</span>
+              <span class="badge-px">{`${q.count} entr${q.count > 1 ? 'ies' : 'y'}`}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      {soon.length > 0 && <p class="soon-line small muted">Coming as we verify them: {soon.map((q) => q.label).join(', ')}.</p>}
+    </section>
+
+    <section class="how panel block-gap" aria-labelledby="how-h">
+      <h2 id="how-h">How to 100% it</h2>
+      <ol>
+        <li><span class="pixel">1</span><div><strong>Pick your platform</strong><br /><span class="muted small">{platformNames.length > 1 ? `${platformNames.join(' and ')} lists are tracked separately.` : `Tracked for ${platformNames[0]}.`}</span></div></li>
+        <li><span class="pixel">2</span><div><strong>Tick off as you play</strong><br /><span class="muted small">Guide entries{hasMap ? ', map finds' : ''}{hasAchievements ? ' and achievements' : ''}, saved on this device.</span></div></li>
+        <li><span class="pixel">3</span><div><strong>Clear the quest board</strong><br /><span class="muted small">Check off tips, missions and finds in every section.</span></div></li>
+        <li><span class="pixel">4</span><div><strong>Rank up</strong><br /><span class="muted small">Checkpoints at 25, 50, 75 and 100%.</span></div></li>
+      </ol>
+      <p class="small muted">Spoiler-free by default. Saved on this device, no sign-up. <a href="/progress/#move">Continue in another browser</a>.</p>
+    </section>
+
+    <CozmcInline text={`Playing ${game.shortTitle}? Swap tips with the community.`} />
   </div>
 </Base>
 <style>
   .crumbs { font-size: 14px; color: var(--vc-muted); padding-top: 22px; }
   .lead { font-size: 18px; max-width: 60ch; color: #e2e0e8; }
-  .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 24px 0 36px; }
+  .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 24px 0 12px; }
+  .pnote { margin: 0 0 32px; }
   dt { font-size: 13px; color: var(--vc-muted); } dd { margin: 4px 0 0; font-weight: 600; }
   dd a { font-weight: 500; }
-  .tools { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 14px 0 24px; }
+  .tools { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 14px 0 24px; }
   .tools a { display: flex; flex-direction: column; gap: 6px; padding: 18px; border-radius: 12px; background: var(--vc-slate); border: 1px solid var(--vc-line); text-decoration: none; height: 100%; }
   .tools a:hover { border-color: var(--vc-pink); }
   .tools span { color: var(--vc-muted); font-size: 14px; }
-  @media (max-width: 760px) { .facts, .tools { grid-template-columns: 1fr; } }
+  .block { padding-top: 16px; }
+  .block-gap { margin: 32px 0 24px; }
+  .head-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .head-row a { color: var(--vc-sunset); font-weight: 600; text-decoration: none; }
+  .quests { list-style: none; padding: 0; margin: 14px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+  .quests a { display: flex; flex-direction: column; gap: 8px; height: 100%; padding: 14px; border: 2px solid var(--vc-line); border-radius: 6px; background: var(--vc-slate);
+    text-decoration: none; box-shadow: var(--shadow-px); }
+  .quests a:hover { border-color: var(--vc-pink); transform: translate(-1px, -1px); }
+  .quests .badge-px { margin-top: auto; align-self: flex-start; }
+  .q-title { font: 700 19px/1.2 'Space Grotesk', var(--body); }
+  .soon-line { margin: 14px 0 0; }
+  .how h2 { font-size: 24px; }
+  .how ol { list-style: none; padding: 0; margin: 14px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+  .how li { display: grid; grid-template-columns: 36px 1fr; gap: 12px; align-items: start; }
+  .how .pixel { display: grid; place-items: center; width: 32px; height: 32px; background: var(--vc-pink); color: #1a0d16; border: 2px solid #000; box-shadow: 2px 2px 0 #000; font-size: 12px; }
+  @media (max-width: 760px) { .facts { grid-template-columns: 1fr; } .quests { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 400px) { .quests { grid-template-columns: 1fr; } }
 </style>

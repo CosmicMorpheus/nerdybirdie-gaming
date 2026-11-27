@@ -1,10 +1,13 @@
 ---
 import Prose from '../layouts/Prose.astro';
 import Discoveries from '../islands/Discoveries';
-import { creatorsFor, getGame } from '../lib/content/load';
+import { creatorsFor, primaryGame, updatesFor } from '../lib/content/load';
 import { DISCOVERY_FEED } from '../config';
-const game = getGame('gta-vi');
+// The creator feed follows the primary game; the history below comes from content/games/<id>/updates.json.
+const game = primaryGame();
 const creators = creatorsFor(game.id);
+const updates = updatesFor(game.id).map((u, i) => ({ ...u, i }));
+const fmt = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
 ---
 <Prose title="Updates" current="updates" description="What's new on NerdyBirdie LLC Gaming Guides.">
   {DISCOVERY_FEED && (
@@ -14,7 +17,7 @@ const creators = creatorsFor(game.id);
   {DISCOVERY_FEED && creators.length > 0 && (
     <section class="creators" aria-labelledby="creators-h">
       <h2 id="creators-h">Creators we follow</h2>
-      <p class="small muted">We check these YouTube channels every day for new GTA VI videos. All credit for their videos goes to them.</p>
+      <p class="small muted">We check these YouTube channels every day for new {game.shortTitle} videos. All credit for their videos goes to them.</p>
       <ul>
         {creators.map((c) => (
           <li><a href={`https://www.youtube.com/channel/${c.channelId}`} target="_blank" rel="noopener noreferrer">{c.name}<span class="sr-only"> (YouTube channel, opens in a new tab)</span></a>
@@ -23,112 +26,12 @@ const creators = creatorsFor(game.id);
       </ul>
     </section>
   )}
-  <h2>27 November 2026 · Report a problem &amp; credits</h2>
-  <ul>
-    <li>Every guide entry now has a "Report a problem" link. It opens a short form that names the entry and builds a report you can paste into the COZMC Discord. Nothing is sent from the page.</li>
-    <li>New Credits page: where our guide facts come from, how creator videos and map data are used, and the licences for our fonts and software.</li>
-    <li>The Games page now shows each guide's status, how many entries and achievements it has, and when it was last updated.</li>
-  </ul>
-  <h2>26 November 2026 · Standout vehicles &amp; new robberies</h2>
-  <ul>
-    <li>Vehicles: standout vehicles explained (281 to find, needed for 100%), plus where to find 84 of them so far, grouped into supercars, muscle cars, vans and pickups, bikes, and boats and aircraft. Each one says whether it's unlocked, locked or needs the Key Cloner.</li>
-    <li>Secret: Vanessa's laptop password (Muffins, Queen, 15) and the hidden La Perle garage with her free pink Pfister Growler. It's missable: the laptop only works in Chapter 3.</li>
-    <li>Robberies: two new illegal operations (Watson Bay Safehouse and Palmer Fishing Warehouse), how to get the Snap Gun, and the 20 standout vehicles you can take from illegal operations, including two Progen Emerus worth $33,000 each.</li>
-    <li>The five throwback vehicles from GTA Vice City and GTA V, by name; locations are coming once we've checked them.</li>
-  </ul>
-  <h2>25 November 2026 · Chapter 4 &amp; choices</h2>
-  <ul>
-    <li>Walkthrough: all 27 Chapter 4 missions. Story details stay behind Reveal; choices are flagged (free company cars, VIPs at Headliners, and the big decisions at the end of the chapter).</li>
-    <li>What your choices change: Skunk Apeology 101's two endings, sparing or killing at the end of Child's Play, and why you should return the phone call after VCIA Takedown.</li>
-    <li>Weapons: six free unique weapons and a free rocket launcher you can grab in Chapter 1.</li>
-    <li>New: the UFO abduction mystery, Gellhorn's Missing Tourists, Ahol street art (in the Exploration checklist), and how to avoid the permanent "Irredeemable" criminal profile.</li>
-    <li>More achievement tips: four hidden story trophies now point to the right Chapter 4 missions.</li>
-  </ul>
-  <h2>25 November 2026 · Achievements &amp; trophies</h2>
-  <ul>
-    <li>The Achievements tab is back: all 54 Xbox achievements (1,000G) and 55 PS5 trophies, with grades and Gamerscore. Tick the ones you've earned; Xbox and PS5 are tracked separately and saved on your device.</li>
-    <li>Story trophies stay hidden until you choose to reveal them. Positive Mental Attitude is flagged as missable: one meditation spot is only in Chapter 1.</li>
-    <li>Every achievement has a how-to tip, with links straight to the matching guide, checklist or map filter. Tips for hidden story trophies stay hidden until you reveal them.</li>
-  </ul>
-  <h2>25 November 2026 · Exploration</h2>
-  <ul>
-    <li>New Exploration section (the purple side of 100%): a checklist of every exploration spot on the map (101 WAiNK scans, Kenton's shipwrecks, 10 meditation spots, 92 magazines, 7 playlists), in shades of purple on the map too.</li>
-    <li>Guides for WAiNK scanning, scuba diving and the metal detector, all five Kenton treasure sets (every treasure listed), underwater discoveries, meditation spots (including the missable one at Jason's house), magazines, cocaine flamingos, playlists and styles.</li>
-  </ul>
-  <h2>25 November 2026 · Robbery checklist</h2>
-  <ul>
-    <li>Robberies &amp; heists now has a full checklist of every robbery spot on the map, coloured like the game: illegal operations (yellow, 43), smash 'n' grabs (green, 35), stick-ups (light blue, 86), banks and payday loans. Each shows its area, security and take value, with a link to the map. Spots that IGN's guide also names are marked.</li>
-    <li>Ticking a spot here ticks it on the map too (and the other way round).</li>
-    <li>New guides for smash 'n' grabs, stick-ups, bank jobs, payday loans, vaults and the Dye Pack Jammer you need for banks.</li>
-    <li>The map now uses the game's colours and names for these: "Illegal operations" and "Stick-ups".</li>
-  </ul>
-  <h2>25 November 2026 · Card sets &amp; Dodos Rising</h2>
-  <ul>
-    <li>Collectibles: all 18 card sets as their own checklist items (481 cards in total), each linking to every card's location, plus the "three cards in every county" challenge for 100%.</li>
-    <li>Side missions: the Dodos Rising chain: Bring Out the Chimp, Sisters of the Sea and the Twin Flames finale.</li>
-    <li>New creator video linked: Girls' Trip, full mission (GTA Series Videos).</li>
-  </ul>
-  <h2>25 November 2026 · Robberies &amp; a tidier guide</h2>
-  <ul>
-    <li>New Robberies &amp; heists section: all 12 robbery spots IGN has covered so far, each with its area, gang, security level, every key valuable (cash, unique guns, standout cars), and where to find the safe code or whether you need one.</li>
-    <li>How safes, prying and sticky bombs work; Yasmani, your robbery contact; the robbery targets that count toward 100%; and a quick list of the story heists.</li>
-    <li>Long guide sections are now split by chapter, with jump buttons and a done count for each chapter.</li>
-    <li>The Guides page leads with the section board; the full list below is now a search that groups results by section.</li>
-  </ul>
-  <h2>24 November 2026 · Guide update</h2>
-  <ul>
-    <li>Money: the best early earners (Fishing Shacks camp, the parrot's stash, the crashed plane), how to compare fences, banking and savings goals, selling cars to Moses and cards at pawn shops.</li>
-    <li>Police: what each wanted-star colour means and how to clear every heat icon. Plus how Focus mode works.</li>
-    <li>Settings: control schemes, the hidden auto-drive, spoken GPS.</li>
-    <li>Weapons and vehicles: the 127 unique weapon variants, an early Rhino tank, keeping stolen cars, the free '72 Tulip, Randy's Wish List and the Gauntlet Hellfire.</li>
-    <li>Side missions: the Bigfoot hunt, the street racing storyline, Take Out Kitty Litter and the polar bear random event.</li>
-  </ul>
-  <h2>24 November 2026 · Launch</h2>
-  <ul>
-    <li>NerdyBirdie LLC Gaming Guides is live at nerdybirdiegameguides.netlify.app. Free, no account needed, spoiler-safe by default.</li>
-  </ul>
-  <h2>24 November 2026 · Preview 7</h2>
-  <ul>
-    <li>Walkthrough: all 68 story missions in Chapters 1–3, in story order, each with a spoiler-free objective, key steps, choices and missables. Plot details stay behind Reveal.</li>
-    <li>Chapter 1 missables: 11 items, outfits, a unique revolver and three side missions you can lose for good, plus a warning about money before Chapter 2.</li>
-    <li>What counts toward 100%, the 481 collectible cards, beginner tips and the Malibu Club easter egg.</li>
-    <li>Sources: IGN's GTA 6 guide and GTA Series Videos, linked on every entry.</li>
-  </ul>
-  <h2>24 November 2026 · Preview 6</h2>
-  <ul>
-    <li>What's New from creators: a daily check for new GTA VI videos from the creators we follow (GTA Series Videos, MKIceAndFire and TGG), shown here and in the matching guide sections. Titles and videos stay hidden until you choose to see spoilers, and nothing counts toward your progress.</li>
-    <li>ASK "COZMC" can point you to the right creator for walkthroughs, money, vehicles, secrets and tips.</li>
-  </ul>
-  <h2>24 November 2026 · Preview 5</h2>
-  <ul>
-    <li>ASK "COZMC": ask a question in your own words and get a short answer from our guide, with a link to the map or checklist.</li>
-    <li>Flashing arrows to the COZMC Discord and cozmc.us.</li>
-  </ul>
-  <h2>24 November 2026 · Preview 4</h2>
-  <ul>
-    <li>Leonida map with search, filters, shareable pin links and mark-as-found, shared with the guide checklists.</li>
-    <li>Creator videos from YouTube, Twitch and TikTok, opening at the right moment. Nothing loads until you press play.</li>
-    <li>"Continue where you left off" on the home page.</li>
-    <li>New NerdyBirdie and COZMC brand artwork.</li>
-  </ul>
-  <h2>24 November 2026 · Preview 3</h2>
-  <ul>
-    <li>First real guide entries, from Rockstar's official pages: platforms, Leonida's regions, the main characters (spoiler-gated), editions, GTA+ perks and the GTA+ Elegy.</li>
-    <li>Every entry shows whether it's Confirmed, Unconfirmed or a Rumor, with its sources and the date they were last checked.</li>
-    <li>Search and filter guide entries by section, spoiler level and verification. Progress by section on My Progress.</li>
-  </ul>
-  <h2>24 November 2026 · Preview 2</h2>
-  <ul>
-    <li>New retro arcade look.</li>
-    <li>Ranks, checkpoints at 25/50/75/100%, and "Next up" suggestions (missable items first).</li>
-    <li>Quest board with ten guide sections. Every guide is a checklist, every fact links to its source, and videos only load when you press play.</li>
-  </ul>
-  <h2>24 November 2026 · Preview</h2>
-  <ul>
-    <li>GTA VI platforms confirmed from Rockstar's launch announcement: PlayStation 5 and Xbox Series X|S.</li>
-    <li>Achievement and trophy tracker built: separate Xbox and PS5 lists, spoiler-free by default, saved on your device, backup and restore.</li>
-    <li>The achievement and trophy lists themselves are not published yet. They'll appear once verified.</li>
-  </ul>
+  {updates.map((u) => (
+    <section aria-labelledby={`u-${u.date}-${u.i}`}>
+      <h2 id={`u-${u.date}-${u.i}`}>{fmt.format(new Date(u.date + 'T12:00:00Z'))} · {u.title}</h2>
+      <ul>{u.items.map((item) => <li>{item}</li>)}</ul>
+    </section>
+  ))}
 </Prose>
 <style>
   .creators { margin: 0 0 28px; }

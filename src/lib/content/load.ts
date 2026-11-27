@@ -1,5 +1,5 @@
 import platformsJson from '../../../content/platforms.json';
-import { CreatorsFile, Platform, type Creator, type Game, type Objective, type PublicEntry, type PublicObjective, type Video } from './schema';
+import { CreatorsFile, GameUpdates, Platform, type Creator, type GameUpdate, type Game, type Objective, type PublicEntry, type PublicObjective, type Video } from './schema';
 import { isPublishable, validateGameBundle, type GameBundle } from './validate';
 import { z } from 'zod';
 import { parseVideoUrl, type ParsedVideo } from '../video';
@@ -51,6 +51,40 @@ export function getGame(id: string): Game {
   const g = games.find((x) => x.id === id);
   if (!g) throw new Error(`Unknown game ${id}`);
   return g;
+}
+
+/** Games featured on the home page: the ones marked `featured`, or else every guide that isn't coming soon. */
+export function featuredGames(): Game[] {
+  const marked = games.filter((g) => g.featured && g.guideStatus !== 'archived');
+  return marked.length ? marked : games.filter((g) => g.guideStatus !== 'coming-soon' && g.guideStatus !== 'archived');
+}
+
+/**
+ * The game that global links (header Guides/Map, ASK "COZMC", Updates) point to when a page isn't inside a game guide.
+ * Pages under /games/<id>/ pass their own game instead, so nothing in the shell is tied to one title.
+ */
+export function primaryGame(): Game {
+  const g = featuredGames()[0] ?? games[0];
+  if (!g) throw new Error('No games in content/games');
+  return g;
+}
+
+const updateFiles = import.meta.glob('/content/games/*/updates.json', { eager: true, import: 'default' });
+/** One game's public update history, newest first. Validated at build; a game without the file has no history yet. */
+export function updatesFor(gameId: string): GameUpdate[] {
+  if (USING_FIXTURES) return [];
+  const raw = updateFiles[`/content/games/${gameId}/updates.json`];
+  if (!raw) return [];
+  const list = GameUpdates.parse(raw).updates;
+  for (let i = 1; i < list.length; i++) if (list[i].date > list[i - 1].date) throw new Error(`${gameId}/updates.json must be newest first`);
+  return list;
+}
+
+/** The latest updates across every game guide, for the home page. */
+export function recentUpdates(limit: number): (GameUpdate & { game: Game })[] {
+  return games.flatMap((game) => updatesFor(game.id).map((u) => ({ ...u, game })))
+    .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0))
+    .slice(0, limit);
 }
 
 export function getPlatform(id: string): Platform {

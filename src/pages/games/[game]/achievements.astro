@@ -16,7 +16,7 @@ const platforms = game.platforms.map((gp) => {
 const objectiveSources = sourcesFor(game, [...new Set(objectives.flatMap((o) => o.sourceIds))]);
 const platformSources = sourcesFor(game, [...new Set(game.platforms.flatMap((p) => p.sourceIds))]);
 ---
-<Base title={`${game.shortTitle} achievements and trophies tracker`} current="achievements"
+<Base gameId={game.id} title={`${game.shortTitle} achievements and trophies tracker`} current="achievements"
   description={`Track ${game.title} achievements and trophies on Xbox and PlayStation. Spoiler-free by default, saved on your device, no sign-up.`}>
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/games/">Games</a> / <a href={`/games/${game.id}/`}>{game.shortTitle}</a> / <span aria-current="page">Achievements</span></nav>

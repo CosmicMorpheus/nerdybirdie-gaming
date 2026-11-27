@@ -1,16 +1,89 @@
-# NerdyBirdie LLC Gaming Guides
+# Nerdy Birdie Gaming Guides
 
-Free, spoiler-safe game guides and trackers, starting with Grand Theft Auto VI. Part of the COZMC community.
-Separate from the cozmc.us site and repo.
+Free, spoiler-safe game guides and trackers — walkthroughs, maps, checklists and achievement trackers — starting with Grand Theft Auto VI.
+A product of **Nerdy Birdie LLC**. Displayed on the site today as "NerdyBirdie LLC Gaming Guides" (see Remaining decisions).
 
-**Status:** Phase 1 preview. Not deployed. See `docs/MILESTONE_PHASE1.md`.
+**Status (27 Nov 2026):** built as the public version at https://gameguides-nerdy-birdie.live, **password-protected**, not indexed.
+This branch adds the ecosystem-alignment changes (`docs/ARCHITECTURE_AUDIT_2026-11-27.md`); not deployed.
+
+## Mission
+
+Give gamers the tools, knowledge and community resources they need to get more out of the games they love. We aren't just building
+guides for gamers; we're building them **with** gamers. Priorities, in order: **1. Gaming first. 2. Community second. 3. Monetization third.**
+
+## Parent company and ecosystem
+
+| Property | URL | Role |
+|---|---|---|
+| Nerdy Birdie LLC | https://nerdy-birdie.com | Corporate portfolio and directory of ventures. Linked from our footer, phone menu and About page; never duplicated here |
+| **Nerdy Birdie Gaming Guides** (this repo) | https://gameguides-nerdy-birdie.live | The gaming product |
+| COZMC community | https://cozmc.us/ + COZMC Discord | Optional connected community, with its own branding |
+
+Company-wide facts live in **`docs/shared/`** (vision, ecosystem architecture, brand guidelines, product registry, decision log, product spec,
+roadmap), maintained in every Nerdy Birdie project.
+
+## Product architecture
+
+| Layer | Where | State |
+|---|---|---|
+| Presentation | Astro 7 static pages + Preact islands (`src/pages`, `src/components`, `src/islands`) | Live |
+| Game content | `content/games/<game-id>/` JSON, validated with Zod at build | Live |
+| User progress | Browser storage (versioned), backup file, transfer link (`src/lib/progress/`) | Live |
+| Authentication | Supabase magic link (`src/lib/account/`, `docs/ACCOUNTS.md`) | Built, off |
+| Purchase entitlements | Store-agnostic ledger (`src/lib/entitlements/`, `docs/PRO_UNLOCK.md`) | Built and unit tested, off |
+| Server functions | Netlify Functions (`netlify/functions/`) | Creator feed built (needs keys); ASK server, queues off |
+
+Each layer is independent, so the same content, progress and entitlement code can serve the website and a future Android app.
+
+## Game guide library
+
+The landing page (`/`) introduces the product; **Explore Game Guides** opens the library (`/games/`); each game has its own landing page
+(`/games/<id>/`) with its guides, map, trackers, quest board and update history. One folder per game, configured in its `game.json`:
+`guideStatus`, `featured` (home page), `access` (free today), platforms with sources, guide sections, optional `platformNote`. Add
+`entries.json`, `objectives.json`, optional `map/`, `videos.json`, `updates.json`. Pages, navigation, library cards, search, ASK and progress
+pick a new game up without code changes. How-to: `docs/CONTENT_GUIDE.md` → Adding another game.
+
+## Monetization strategy
+
+Founder decision A (27 Nov 2026): the website and every guide stay **free**; revenue from an optional one-time **Pro** unlock in the Android
+app (cloud sync, offline, future premium tools). The ecosystem brief's ~$1.99-per-guide model is an **open decision**; the architecture
+supports per-guide entitlements, but a paid `access` tier fails the build until the founder approves it and server-side checks exist.
+No shared password as access control; store billing rules (Google Play, App Store) documented in `docs/MONETIZATION.md`.
+
+## Community integration
+
+COZMC links (Discord and cozmc.us, always two separate links) in the desktop header, phone menu, home panel, guide panels and footer.
+Always optional; never a gate. ASK "COZMC" is the in-guide assistant (browser-only search today; `docs/ASK_COZMC.md`).
+COZMC Arcade, Cozmlings and Web3-learning links are waiting for verified URLs.
+
+## Content verification workflow
+
+Sources first, our own words, every entry cited with check dates and labelled Confirmed / Unconfirmed / Rumor. Unverified discoveries (creator
+feed, ASK questions, reports) go to private queues, never straight into the guide. The brief's five statuses (newly discovered → needs
+community review → community verified → editorially verified → outdated/disputed) and what community review still needs: `docs/CONTENT_WORKFLOW.md`.
+
+## Mobile application roadmap
+
+Google Play first (Capacitor wrapper, Play Billing), App Store possibly later. Responsive, touch-friendly and accessible today; gaps (Terms,
+account deletion, offline, performance baseline, billing) in `docs/MOBILE_READINESS.md`.
+
+## Branding
+
+Supplied Nerdy Birdie logo used modestly (masters never edited); parent company as attribution; each game guide may carry its game's
+atmosphere (original art only, no publisher logos); COZMC keeps its purple/coral identity. `docs/shared/BRAND_GUIDELINES.md`.
+
+## Remaining decisions and next priorities
+
+Open founder decisions (monetization model, site display name, logo link target, vendor accounts and legal review, COZMC Arcade/Cozmlings URLs,
+second game) and the prioritised roadmap: `docs/shared/ROADMAP.md`.
 
 ## What's here
 
 | Page | What it does |
 |---|---|
-| `/` | Home: featured game, your progress, quick links, COZMC community panel |
-| `/games/gta-vi/` | Game overview: release date and platforms, with the official source |
+| `/` | Product landing page: Explore Game Guides, featured guides, recently updated, your progress, COZMC community panel |
+| `/games/` | Game guide library (one card per game in `content/games/`) |
+| `/games/gta-vi/` | Game landing page: release and platforms (sourced), tools, quest board, how to 100% |
 | `/games/gta-vi/achievements/` | Tracker: separate Xbox and PS5 lists, ranks, checkpoints, "Next up", spoiler modes, search, filters, saved items, notes, reset |
 | `/games/gta-vi/guides/` | Quest board (progress per section) plus every entry, searchable and filterable by section, spoiler level and verification |
 | `/games/gta-vi/guides/<section>/` | One section: check entries off, "More details", spoiler reveals, sources and last-checked dates |
@@ -45,7 +118,8 @@ All game data lives in `content/` as JSON and is checked at build time: a bad ID
 
 - `content/platforms.json`: platforms the site knows about.
 - `content/games/gta-vi/game.json`: title, release, platforms (each with a source), categories and the source list.
-- `content/games/gta-vi/objectives.json`: achievements and trophies. **Empty until verified.**
+- `content/games/gta-vi/objectives.json`: achievements and trophies (54 Xbox, 55 PS5).
+- `content/games/gta-vi/updates.json`: update history shown on Updates and the home page (newest first).
 
 An objective only shows on the public site when `publicationStatus` is `approved` and `verificationStatus` is `official_confirmed` or `independently_verified`.
 Spoiler text goes in `protected`, never in `safeTitle`/`safeSummary`. The build rejects a safe title that contains the protected title.
@@ -93,4 +167,6 @@ Live at **https://gameguides-nerdy-birdie.live** (custom domain; DNS records as 
 
 ## Docs
 
-`docs/02`–`05` (specs), `docs/06_PHASE0_PLAN.md`, `docs/DECISIONS.md`, `docs/MILESTONE_PHASE1.md`, screenshots in `docs/qa/phase1/`.
+`docs/shared/` (company source of truth; `PRODUCT_SPEC.md` there is the current spec), `docs/02`–`05` (original specs), `docs/DECISIONS.md` (product decision log),
+`docs/ARCHITECTURE_AUDIT_2026-11-27.md`, `docs/MONETIZATION.md`, `docs/MOBILE_READINESS.md`, `docs/CONTENT_WORKFLOW.md`, `docs/CONTENT_GUIDE.md`,
+`docs/PRO_UNLOCK.md`, `docs/COMMERCIAL_PLATFORM_AUDIT.md`, `docs/MILESTONE_PHASE1.md`, screenshots in `docs/qa/`.
