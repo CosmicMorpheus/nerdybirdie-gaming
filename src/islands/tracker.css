@@ -181,6 +181,8 @@
 .sources-box summary { cursor: pointer; font-weight: 600; min-height: 32px; display: flex; align-items: center; }
 .sources-box ul { margin: 6px 0 0; padding-left: 18px; }
 .sources-box a { color: var(--vc-cyan); }
+.report-link { display: inline-flex; align-items: center; min-height: 32px; font-size: 14px; color: var(--vc-muted); }
+.report-link:hover { color: var(--vc-sunset); }
 @media (max-width: 640px) {
   .entry-head { grid-template-columns: 40px minmax(0, 1fr); }
   .entry-more { margin-left: 0; }

@@ -47,6 +47,8 @@ export const Game = z.strictObject({
   title: z.string().min(1),
   shortTitle: z.string().min(1),
   summary: z.string().min(1),
+  /** Our guide's release state on the Games page (separate from the game's own release). */
+  guideStatus: z.enum(['coming-soon', 'preview', 'available', 'archived']).default('available'),
   availability: z.strictObject({
     status: z.enum(['released', 'announced', 'unknown']),
     date: isoDate.nullable(),

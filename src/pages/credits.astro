@@ -1,0 +1,57 @@
+---
+import Prose from '../layouts/Prose.astro';
+import { creatorsFor, games, publicEntries } from '../lib/content/load';
+// Who our guide facts come from, counted from the published entries' own source lists.
+const counts = new Map<string, number>();
+let total = 0;
+for (const g of games) for (const e of publicEntries(g.id)) {
+  total++;
+  for (const p of new Set(e.sources.map((s) => s.publisher))) counts.set(p, (counts.get(p) ?? 0) + 1);
+}
+const publishers = [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+const creators = games.flatMap((g) => creatorsFor(g.id));
+---
+<Prose title="Credits" description="Where our guide information comes from, what we use and under what terms.">
+  <p>We'd rather be clear than vague about this. Here's what the guides are built from, and how each thing is used.</p>
+
+  <h2>Guide text</h2>
+  <p>Every guide entry is written by us in our own words. We don't copy other guides' text. Each entry lists the pages its facts came from
+  and the date we checked them, under "Sources and last checked". Across our {total} published entries, these are cited:</p>
+  <ul class="pubs">
+    {publishers.map(([p, n]) => <li><strong>{p}</strong> <span class="muted">· {n} {n === 1 ? 'entry' : 'entries'}</span></li>)}
+  </ul>
+  <p class="muted small">Citing a source means we used it to check facts, not that the source endorses us or has given permission beyond what's listed below.</p>
+
+  <h2>Creator videos</h2>
+  <p>Videos stay on YouTube and play in YouTube's own player, only after you press play. All rights belong to the creators.
+  {creators.length > 0 && <>Creators whose public uploads we follow: {creators.map((c, i) => <>{i > 0 && ', '}<a href={`https://www.youtube.com/channel/${c.channelId}`} target="_blank" rel="noopener noreferrer">{c.name}</a></>)}.</>}
+  Our daily check uses the YouTube API Services (see <a href="/privacy/">Privacy</a>).</p>
+
+  <h2>Map</h2>
+  <p>Map locations and the coastline and road outlines come from <a href="https://github.com/fbritoferreira/gta6" target="_blank" rel="noopener">Open GTA 6 Map</a>
+  by fbritoferreira and contributors, under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.
+  We filtered the records, simplified the outlines and drew our own map and pins. No game map tiles, screenshots or art are used.</p>
+
+  <h2>Images and design</h2>
+  <ul>
+    <li>The game card art on the Games page is our own drawing. We don't use publisher logos, key art or screenshots.</li>
+    <li>The Nerdy Birdie logo and the "Brick by Brick" banner belong to NerdyBirdie LLC. COZMC's wordmark and mascots are used with COZMC's permission.</li>
+  </ul>
+
+  <h2>Software and fonts</h2>
+  <ul>
+    <li>Fonts: Inter, Space Grotesk, Pixelify Sans and Press Start 2P, under the SIL Open Font License, served from this site.</li>
+    <li>Built with Astro, Preact and Zod (MIT License). Map display by Leaflet (BSD 2-Clause License).</li>
+  </ul>
+
+  <h2>Trademarks</h2>
+  <p>NerdyBirdie LLC Gaming Guides is independent and unofficial. It is not affiliated with, endorsed or sponsored by Rockstar Games, Take-Two Interactive,
+  Microsoft/Xbox or Sony Interactive Entertainment/PlayStation. Grand Theft Auto and all related names are trademarks of their owners and are used
+  here only to say which game a guide is about.</p>
+
+  <h2>Something wrong?</h2>
+  <p>If you own something here and think it's used wrongly or without credit, or a source is missing, <a href="/corrections/#report">report it</a>.</p>
+</Prose>
+<style>
+  .pubs { columns: 2 220px; }
+</style>

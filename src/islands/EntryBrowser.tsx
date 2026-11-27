@@ -174,6 +174,7 @@ export default function EntryBrowser({ gameId, categories, entries: builtEntries
                           ))}
                         </ul>
                       </details>
+                      <a class="report-link" href={`/corrections/?entry=${encodeURIComponent(e.slug)}`}>Report a problem with this entry</a>
                     </div>
                   )}
                 </li>

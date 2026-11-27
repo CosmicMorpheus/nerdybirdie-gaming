@@ -1,14 +1,33 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { games, getPlatform } from '../../lib/content/load';
+import { games, getPlatform, publicEntries, publicObjectives } from '../../lib/content/load';
 import GameArt from '../../components/GameArt.astro';
+
+const STATUS: Record<string, string> = { 'coming-soon': 'Coming soon', preview: 'Preview', available: 'Available', archived: 'Archived' };
+const fmt = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+// Catalog facts come from the guide content itself, so they can't drift from what's published.
+const cards = games.map((g) => {
+  const entries = publicEntries(g.id);
+  const checked = entries.flatMap((e) => e.sources.map((s) => s.checkedAt)).sort().at(-1);
+  const objs = publicObjectives(g.id).filter((o) => o.kind === 'achievement' || o.kind === 'trophy');
+  const achievements = g.platforms.map((p) => ({ label: `${getPlatform(p.platformId).family === 'xbox' ? 'Xbox' : getPlatform(p.platformId).shortLabel} ${getPlatform(p.platformId).objectiveNoun.toLowerCase()}`, n: objs.filter((o) => o.platformIds.includes(p.platformId)).length })).filter((x) => x.n > 0);
+  return { g, entries: entries.length, sections: new Set(entries.map((e) => e.category)).size, achievements, updated: checked ? fmt.format(new Date(checked)) : null };
+});
 ---
 <Base title="Games" current="games" description="Games covered by NerdyBirdie LLC Gaming Guides.">
   <div class="wrap">
     <h1>Games</h1>
     <ul class="lib">
-      {games.map((g) => (
-        <li><a href={`/games/${g.id}/`}><GameArt gameId={g.id} /><strong>{g.title}</strong><span class="muted small">{g.platforms.map((p) => getPlatform(p.platformId).shortLabel).join(' · ')}</span></a></li>
+      {cards.map(({ g, entries, sections, achievements, updated }) => (
+        <li>
+          <a href={`/games/${g.id}/`}><GameArt gameId={g.id} /><strong>{g.title}</strong></a>
+          <p class="meta"><span class={`tag st-${g.guideStatus}`}>{STATUS[g.guideStatus]}</span><span class="tag free">Free</span>
+            <span class="muted small">{g.platforms.map((p) => getPlatform(p.platformId).shortLabel).join(' · ')}</span></p>
+          {g.guideStatus !== 'coming-soon' && (
+            <p class="muted small facts">{entries} guide entries in {sections} sections{achievements.length > 0 && <> · {achievements.map((a) => `${a.n} ${a.label}`).join(', ')}</>}
+              {updated && <><br />Last updated {updated}</>}</p>
+          )}
+        </li>
       ))}
     </ul>
     <p class="muted">More games will be added over time.</p>
@@ -17,8 +36,11 @@ import GameArt from '../../components/GameArt.astro';
 <style>
   h1 { padding-top: 28px; }
   .lib { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
-  .lib a { display: flex; flex-direction: column; gap: 6px; text-decoration: none; }
-  .lib a { container-type: inline-size; }
+  .lib a { display: flex; flex-direction: column; gap: 6px; text-decoration: none; container-type: inline-size; }
   .lib a:hover :global(.art) { border-color: var(--vc-pink); }
   strong { font: 600 18px var(--head); }
+  .meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 8px 0 0; }
+  .facts { margin: 6px 0 0; }
+  .tag { font: 600 11px/1.6 var(--body); text-transform: uppercase; letter-spacing: 0.06em; padding: 1px 7px; border-radius: 4px; border: 1px solid var(--vc-line); color: var(--vc-muted); }
+  .tag.st-available, .tag.free { color: var(--vc-pink); border-color: currentColor; }
 </style>

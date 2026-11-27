@@ -4,7 +4,7 @@ import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
 const REAL = 'http://localhost:4321';
-const PAGES = ['/', '/games/', '/games/gta-vi/', '/games/gta-vi/achievements/', '/games/gta-vi/guides/', '/games/gta-vi/guides/tips/', '/games/gta-vi/guides/walkthrough/', '/games/gta-vi/guides/collectibles/', '/games/gta-vi/map/', '/account/', '/progress/', '/search/', '/about/', '/privacy/', '/corrections/', '/updates/'];
+const PAGES = ['/', '/games/', '/games/gta-vi/', '/games/gta-vi/achievements/', '/games/gta-vi/guides/', '/games/gta-vi/guides/tips/', '/games/gta-vi/guides/walkthrough/', '/games/gta-vi/guides/collectibles/', '/games/gta-vi/map/', '/account/', '/progress/', '/search/', '/about/', '/privacy/', '/corrections/', '/credits/', '/updates/'];
 
 test('COZMC links are exact, separate, and open safely', async ({ page }) => {
   await page.goto(REAL + '/');
@@ -226,4 +226,35 @@ test('standout vehicles: grouped location lists, access shown; the laptop-passwo
   await page.waitForFunction(() => !document.querySelector('astro-island[ssr]'));
   await page.getByRole('searchbox').first().fill('muffins queen');
   await expect(page.locator('li.entry', { hasText: "Vanessa's pink Pfister Growler" })).toBeVisible();
+});
+
+test('report a problem: each entry links to a report helper that names the entry and builds the text; nothing is sent', async ({ page, context }) => {
+  await context.grantPermissions(['clipboard-read', 'clipboard-write']);
+  await page.goto(REAL + '/games/gta-vi/guides/secrets/');
+  await page.waitForFunction(() => !document.querySelector('astro-island[ssr]'));
+  const e = page.locator('li.entry', { hasText: "Vanessa's pink" });
+  await e.getByRole('button', { name: /More details/ }).click();
+  const requests: string[] = [];
+  page.on('request', (r) => requests.push(r.url()));
+  await e.getByRole('link', { name: 'Report a problem with this entry' }).click();
+  await expect(page.locator('#report-entry')).toContainText("Vanessa's pink Pfister Growler");
+  await page.getByLabel("What's the problem?").selectOption('Wrong or out of date');
+  await page.getByLabel('What did you see, and how do you know?').fill('Garage code did not work on PS5');
+  requests.length = 0;
+  await page.getByRole('button', { name: 'Copy report' }).click();
+  await expect(page.getByRole('status')).toContainText(/Copied|Select/);
+  await expect(page.locator('#r-out')).toHaveValue(/Problem: Wrong or out of date[\s\S]*Garage code did not work/);
+  expect(requests.filter((u) => !u.startsWith(REAL))).toEqual([]);
+});
+
+test('catalog and credits: the Games card shows status, counts and last update; Credits lists cited sources and the map licence', async ({ page }) => {
+  await page.goto(REAL + '/games/');
+  const card = page.locator('.lib li').first();
+  await expect(card).toContainText('Available');
+  await expect(card).toContainText('Free');
+  await expect(card).toContainText(/\d+ guide entries in \d+ sections/);
+  await expect(card).toContainText(/Last updated \d+ \w+ 2026/);
+  await page.goto(REAL + '/credits/');
+  await expect(page.locator('.pubs')).toContainText('IGN');
+  await expect(page.locator('main')).toContainText('CC BY 4.0');
 });

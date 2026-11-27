@@ -1,19 +1,93 @@
 ---
 import Prose from '../layouts/Prose.astro';
 import { COZMC, CONTACT_EMAIL } from '../config';
+import { games, publicEntries } from '../lib/content/load';
+// Safe titles only (spoiler text never leaves protected.json), so the report helper can name the entry it came from.
+const index: Record<string, { title: string; href: string }> = {};
+for (const g of games) for (const e of publicEntries(g.id)) index[e.slug] = { title: `${g.shortTitle}: ${e.title}`, href: `/games/${g.id}/guides/${e.category}/` };
 ---
-<Prose title="Corrections" description="How to report a mistake, and how we fix them.">
+<Prose title="Corrections" description="How to report a mistake, a spoiler or a copyright concern, and how we fix them.">
   <p>Accuracy matters more than speed here. If something is wrong, out of date or spoils something it shouldn't, please tell us.</p>
-  <h2>How to report</h2>
-  <p>Say which page, what's wrong, your platform, and how you know (a screenshot helps).
-  {CONTACT_EMAIL ? <>Email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>, or post</> : <>Post</>} in the{' '}
-  {COZMC.discord ? <a href={COZMC.discord} target="_blank" rel="noopener">COZMC Discord</a> : 'COZMC Discord'}.</p>
+
+  <h2 id="report">Report a problem</h2>
+  <p class="muted small">This builds a short report for you to paste into the COZMC Discord{CONTACT_EMAIL ? ' or an email' : ''}. Nothing is sent from this page.</p>
+  <form class="report" id="report-form">
+    <p class="about-entry" id="report-entry" hidden></p>
+    <label for="r-type">What's the problem?</label>
+    <select id="r-type" name="type">
+      <option>Wrong or out of date</option>
+      <option>Spoiler without a warning</option>
+      <option>Broken or wrong link</option>
+      <option>Missing information</option>
+      <option>Copyright or credit concern</option>
+      <option>Something else</option>
+    </select>
+    <label for="r-platform">Platform</label>
+    <select id="r-platform" name="platform">
+      <option>Not platform-specific</option>
+      <option>PS5</option>
+      <option>Xbox Series X|S</option>
+    </select>
+    <label for="r-details">What did you see, and how do you know?</label>
+    <textarea id="r-details" name="details" rows="5" maxlength="1500" placeholder="E.g. the car wasn't there at night; screenshot in Discord. Please don't include personal details."></textarea>
+    <div class="actions">
+      <button type="submit" class="btn btn-primary">Copy report</button>
+      {COZMC.discord && <a class="btn btn-ghost" href={COZMC.discord} target="_blank" rel="noopener">Open the COZMC Discord ↗<span class="sr-only"> (opens in a new tab)</span></a>}
+      {CONTACT_EMAIL && <a class="btn btn-ghost" id="r-mail" href={`mailto:${CONTACT_EMAIL}`}>Email it</a>}
+    </div>
+    <p class="status" id="r-status" role="status" aria-live="polite"></p>
+    <label for="r-out" class="sr-only">Your report</label>
+    <textarea id="r-out" readonly rows="6" hidden></textarea>
+  </form>
+
   <h2>What we do</h2>
   <ul>
     <li>Check the report against sources or in-game.</li>
     <li>Fix it, update the "last checked" date, and note it on <a href="/updates/">Updates</a>.</li>
     <li>Tracker items keep their IDs when corrected, so your ticks aren't lost.</li>
   </ul>
+  <h2>Copyright and credit</h2>
+  <p>We write our guides in our own words, link every fact to where it came from, and don't use game art or screenshots. If you own something
+  on this site and think we've used it wrongly or without credit, report it above and say what it is. We'll review it, and take it down while we check if needed.
+  What we use and how is listed on <a href="/credits/">Credits</a>.</p>
   <h2>Corrections log</h2>
   <p class="muted">No corrections yet.</p>
 </Prose>
+<script type="application/json" id="entry-index" set:html={JSON.stringify(index).replace(/</g, '\\u003c')} />
+<script>
+  const form = document.getElementById('report-form') as HTMLFormElement;
+  const out = document.getElementById('r-out') as HTMLTextAreaElement;
+  const status = document.getElementById('r-status')!;
+  const slug = new URLSearchParams(location.search).get('entry') ?? '';
+  let entry: { title: string; href: string } | undefined;
+  try { entry = (JSON.parse(document.getElementById('entry-index')!.textContent || '{}') as Record<string, { title: string; href: string }>)[slug]; } catch { /* no entry */ }
+  if (entry) {
+    const p = document.getElementById('report-entry')!;
+    p.textContent = 'About: ';
+    const a = document.createElement('a'); a.href = entry.href; a.textContent = entry.title; p.append(a); p.hidden = false;
+  }
+  form.addEventListener('submit', async (ev) => {
+    ev.preventDefault();
+    const d = new FormData(form);
+    const text = [
+      'Guide report (NerdyBirdie LLC Gaming Guides)',
+      entry ? `Entry: ${entry.title} (${location.origin}${entry.href})` : `Page: ${document.referrer || '(not given)'}`,
+      `Problem: ${d.get('type')}`,
+      `Platform: ${d.get('platform')}`,
+      `Details: ${String(d.get('details') || '').trim() || '(none)'}`,
+    ].join('\n');
+    out.value = text; out.hidden = false;
+    const mail = document.getElementById('r-mail') as HTMLAnchorElement | null;
+    if (mail) mail.href = `${mail.href.split('?')[0]}?subject=${encodeURIComponent('Guide report')}&body=${encodeURIComponent(text)}`;
+    try { await navigator.clipboard.writeText(text); status.textContent = 'Copied. Paste it into the Discord (or select the text below).'; }
+    catch { out.select(); status.textContent = 'Select the text below and copy it.'; }
+  });
+</script>
+<style>
+  .report { display: grid; gap: 8px; max-width: 560px; margin: 0 0 8px; }
+  .report label { font-weight: 600; margin-top: 6px; }
+  .report select, .report textarea { font: inherit; color: var(--vc-pearl); background: var(--vc-slate); border: 1px solid var(--vc-line); border-radius: 8px; padding: 10px; min-height: 44px; }
+  .about-entry { margin: 0; }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+  .status { min-height: 1.4em; margin: 0; }
+</style>
