@@ -154,6 +154,9 @@ tests for every item in the brief's §23. Android lives in a separate `app/` fol
 
 ## 14. Decisions for the founder
 
+**27 Nov 2026: the founder chose A (free site + optional app unlock) and accepted the recommendations below.** B, E, F and H are accepted
+(ids confirmed again before registering); C, D and G are actions for the founder. Progress is tracked in `docs/PRO_UNLOCK.md`.
+
 | # | Decision | Recommendation |
 |---|---|---|
 | A | Paid product at all, and what's paid: (1) free site + optional $1.99 Android Pro unlock, (2) paywall the guide everywhere, (3) stay free for now | (1) |
