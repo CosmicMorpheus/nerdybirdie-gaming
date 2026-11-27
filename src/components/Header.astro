@@ -68,9 +68,12 @@ const nav = [
   .search { display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border: 1px solid var(--vc-line); border-radius: 10px;
     background: var(--vc-slate); color: var(--vc-muted); font-size: 14px; text-decoration: none; min-width: 190px; }
   .search:hover { color: var(--vc-pearl); }
-  .cz-pill { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px; border-radius: 999px; font: 600 14px var(--body);
-    background: var(--cz-nebula); color: var(--cz-star); border: 1px solid var(--cz-violet); text-decoration: none; white-space: nowrap; }
-  .cz-pill i { width: 8px; height: 8px; border-radius: 50%; background: var(--cz-coral); }
+  /* COZMC's own Discord button (cozmc.us .btn--discord): square, blurple, hard shadow, pixel type. */
+  .cz-pill { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px; border-radius: 0; font: 700 11px/1 var(--cz-pixel);
+    letter-spacing: 0.04em; text-transform: uppercase; background: var(--cz-discord); color: #fff; border: 2px solid var(--cz-discord);
+    box-shadow: 3px 3px 0 var(--cz-discord-deep); text-decoration: none; white-space: nowrap; transition: transform 0.08s, box-shadow 0.08s; }
+  .cz-pill:hover { background: #6b77ff; transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--cz-discord-deep); }
+  .cz-pill i { width: 8px; height: 8px; background: var(--cz-phos); box-shadow: 0 0 8px var(--cz-phos); }
   .menu { display: none; position: relative; }
   @media (max-width: 1280px) {
     .row { gap: 18px; }
@@ -86,8 +89,8 @@ const nav = [
   .sheet nav { display: flex; flex-direction: column; }
   .sheet nav a { padding: 14px 4px; border-bottom: 1px solid var(--vc-line); text-decoration: none; font-size: 17px; font-weight: 600; }
   .sheet nav a[aria-current='page'] { color: var(--vc-pink); }
-  .m-cz { margin-top: 16px; display: flex; flex-direction: column; gap: 10px; background: var(--cz-space); border: 1px solid var(--cz-line); border-radius: 14px; padding: 16px; }
-  .m-cz p { margin: 0; font: 700 12px var(--body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--cz-coral); }
+  .m-cz { margin-top: 16px; display: flex; flex-direction: column; gap: 10px; background: var(--cz-bg-1); border: 1px solid var(--cz-line); border-radius: 0; padding: 16px; }
+  .m-cz p { margin: 0; font: 700 11px var(--cz-pixel); letter-spacing: 0.05em; text-transform: uppercase; color: var(--cz-phos); }
   @media (max-width: 960px) {
     .row { height: 56px; gap: 12px; }
     .nav, .cz-pill { display: none; }

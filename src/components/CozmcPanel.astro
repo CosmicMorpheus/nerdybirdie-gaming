@@ -1,7 +1,7 @@
 ---
 import CommunityLinks from './CommunityLinks.astro';
 import { BRAND } from '../config';
-/** Home-page community module, in COZMC's own purple/coral identity. */
+/** Community module in COZMC's own identity (cozmc.us v3: black, phosphor green, pixel + condensed type). */
 ---
 <section class="cozmc cz-panel" aria-labelledby="cozmc-heading">
   <div class="cz-copy">
@@ -9,7 +9,7 @@ import { BRAND } from '../config';
     <img class="wm" src={BRAND.cozmcWordmark.src} srcset={`${BRAND.cozmcWordmark.src} 1x, ${BRAND.cozmcWordmark.src2x} 2x`} alt="COZMC" width={Math.round(36 * BRAND.cozmcWordmark.ratio)} height="36" loading="lazy" decoding="async" />
     <img class="mascot" src={BRAND.cozmcMascotWave} alt="" width="56" height="56" loading="lazy" decoding="async" />
     </div>
-    <p class="cz-k">We Are All COZMC</p>
+    <p class="cz-k"><i class="dot" aria-hidden="true"></i>We Are All COZMC</p>
     <h2 id="cozmc-heading">Play together. Build together.</h2>
     <p class="cz-p">Connect with fellow gamers, share discoveries and grow with our community.</p>
   </div>
@@ -19,27 +19,34 @@ import { BRAND } from '../config';
 </section>
 
 <style>
+  /* Mirrors cozmc.us panels: black, square, green corner bracket, hard offset shadow, faint starfield. */
   .cz-panel {
-    position: relative; overflow: hidden; border-radius: 18px; padding: 40px;
-    background:
-      radial-gradient(1200px 400px at 85% -20%, rgba(145, 118, 222, 0.32), transparent 60%),
-      radial-gradient(600px 300px at 0% 120%, rgba(255, 111, 97, 0.2), transparent 60%),
-      var(--cz-space);
-    border: 1px solid var(--cz-line);
-    display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px; align-items: center;
+    position: relative; overflow: hidden; padding: clamp(24px, 3vw, 36px);
+    background: linear-gradient(160deg, #071105, var(--cz-bg-1) 70%);
+    border: 2px solid var(--cz-phos-deep); box-shadow: 6px 6px 0 #0c0c0c;
+    display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center;
   }
+  .cz-panel::before { content: ''; position: absolute; left: -2px; top: -2px; width: 14px; height: 14px; z-index: 1;
+    border-left: 2px solid var(--cz-phos); border-top: 2px solid var(--cz-phos); }
   .cz-panel::after {
-    content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.7;
+    content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.6;
     background-image: radial-gradient(1px 1px at 20% 30%, #fff, transparent), radial-gradient(1px 1px at 70% 62%, #fff, transparent),
       radial-gradient(1.5px 1.5px at 42% 82%, #fff, transparent), radial-gradient(1px 1px at 90% 18%, #fff, transparent),
       radial-gradient(1px 1px at 8% 76%, #fff, transparent);
   }
-  .brandrow { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .brandrow { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
   .cz-copy .wm { display: block; height: 36px; width: auto; }
   .mascot { width: 56px; height: 56px; }
-  .cz-k { margin: 0; font: 700 12px var(--body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--cz-coral); }
-  h2 { font-size: clamp(24px, 3vw, 30px); margin: 8px 0; }
-  .cz-p { color: var(--cz-soft); margin: 0; max-width: 46ch; }
-  .cz-ctas { display: flex; flex-direction: column; gap: 12px; position: relative; z-index: 1; }
-  @media (max-width: 960px) { .cz-panel { grid-template-columns: 1fr; padding: 28px 22px; } }
+  .cz-k { display: inline-flex; align-items: center; gap: 10px; margin: 0; font: 700 11px var(--cz-pixel); letter-spacing: 0.05em;
+    text-transform: uppercase; color: var(--cz-phos); }
+  .dot { width: 8px; height: 8px; background: var(--cz-phos); box-shadow: 0 0 10px var(--cz-phos); }
+  h2 { font: 800 clamp(1.8rem, 3.4vw, 2.6rem)/0.95 var(--cz-sans); font-stretch: 70%; text-transform: uppercase; color: var(--cz-text);
+    text-shadow: none; margin: 12px 0 14px; }
+  .cz-p { color: var(--cz-mist); margin: 0; max-width: 34rem; font-size: 16.5px; line-height: 1.6; }
+  .cz-ctas { display: flex; flex-direction: column; gap: 14px; position: relative; z-index: 1; }
+  @media (prefers-reduced-motion: no-preference) {
+    .dot { animation: cz-blink 1.6s steps(1) infinite; }
+    @keyframes cz-blink { 50% { opacity: 0; } }
+  }
+  @media (max-width: 960px) { .cz-panel { grid-template-columns: 1fr; } }
 </style>

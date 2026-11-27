@@ -9,7 +9,7 @@ Last updated: 27 November 2026 (Gaming Guides repo). Detailed visual tokens for 
 | **Nerdy Birdie LLC** | Parent company | Footer and About attribution, link to nerdy-birdie.com | Supplied Nerdy Birdie logo, used modestly. Never dominates a product |
 | **Nerdy Birdie Gaming Guides** | The gaming product | Header, page titles, library, app listing | Nerdy Birdie logo mark + product name; deep-space navy, neon-green accent, holographic wordmark (`--vc-*` tokens) |
 | **Each game guide** | One game inside the product | That game's pages | May reflect the game's atmosphere (e.g. GTA VI: Vice City-style card art) while keeping the product's navigation and interaction patterns |
-| **COZMC** | Connected community | Community panels, header pill, footer column | Its own deep-space purple and Living Coral (`--cz-*` tokens), COZMC wordmark and mascots. Never recoloured to match the product |
+| **COZMC** | Connected community | Community panels, header Discord button, phone menu block, in-guide strip, footer column, ASK "COZMC" | COZMC v3 "arcade after dark", matching cozmc.us: black panels with a phosphor-green corner bracket, phosphor green `#8dff6a`, Discord blurple `#5865f2` for Discord, COZMC cyan arrows, square buttons with hard shadows, Silkscreen labels and Saira condensed headings (`--cz-*` tokens, values copied from cozmc.us's stylesheet on 27 Nov 2026). COZMC wordmark and mascots. Never recoloured to match the product |
 
 ## Logo rules
 

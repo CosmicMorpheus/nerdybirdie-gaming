@@ -1,6 +1,6 @@
 ---
 /**
- * The two COZMC links, always separate, each with a flashing electric-blue arrow pointing at it (static when the
+ * The two COZMC links, always separate, each with a flashing arrow in COZMC's cyan pointing at it (static when the
  * viewer prefers reduced motion). If a link isn't configured it says so instead of linking nowhere.
  */
 import { COZMC } from '../config';
@@ -31,7 +31,7 @@ const arrow = `<svg viewBox="0 0 32 20" width="32" height="20" aria-hidden="true
   .cz-link-row { display: flex; align-items: center; gap: 10px; }
   .cz-link-row > :global(.cz-btn) { flex: 1; }
   .cz-link-row.compact > :global(.cz-btn) { flex: none; }
-  .cz-arrow { flex: none; display: inline-flex; color: #2ee6ff; filter: drop-shadow(0 0 4px rgba(46, 230, 255, 0.85)); }
+  .cz-arrow { flex: none; display: inline-flex; color: var(--cz-cyan); filter: drop-shadow(0 0 4px rgba(89, 230, 255, 0.85)); }
   .compact .cz-arrow :global(svg) { width: 24px; height: 15px; }
   @media (prefers-reduced-motion: no-preference) {
     /* ~1 flash per second, well under the WCAG limit of 3 per second */

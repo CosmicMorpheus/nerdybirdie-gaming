@@ -70,7 +70,7 @@ account deletion, offline, performance baseline, billing) in `docs/MOBILE_READIN
 ## Branding
 
 Supplied Nerdy Birdie logo used modestly (masters never edited); parent company as attribution; each game guide may carry its game's
-atmosphere (original art only, no publisher logos); COZMC keeps its purple/coral identity. `docs/shared/BRAND_GUIDELINES.md`.
+atmosphere (original art only, no publisher logos); COZMC keeps its own identity, taken from cozmc.us (COZMC v3: black, phosphor green, Discord blurple, Silkscreen + Saira type). `docs/shared/BRAND_GUIDELINES.md`.
 
 ## Remaining decisions and next priorities
 

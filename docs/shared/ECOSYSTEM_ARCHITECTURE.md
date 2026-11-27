@@ -23,7 +23,7 @@ Last updated: 27 November 2026 (Gaming Guides repo).
 |---|---|---|
 | Gaming Guides → Nerdy Birdie LLC | Footer ("A NerdyBirdie LLC site", "NerdyBirdie LLC home"), About page, phone menu | Professional attribution only. The corporate site is never copied into the product |
 | Nerdy Birdie LLC → Gaming Guides | Corporate site's ventures directory | Managed by the corporate site project |
-| Gaming Guides → COZMC | Header pill (desktop), phone menu, home panel, inline panels on guides, footer | Always optional; two separate links (Discord and cozmc.us); COZMC keeps its own purple/coral branding |
+| Gaming Guides → COZMC | Header pill (desktop), phone menu, home panel, inline panels on guides, footer | Always optional; two separate links (Discord and cozmc.us); COZMC keeps its own branding (as on cozmc.us) |
 | COZMC → Gaming Guides | Not tracked in this repo | — |
 
 ## Separation of concerns (Gaming Guides)

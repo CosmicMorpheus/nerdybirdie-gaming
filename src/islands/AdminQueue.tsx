@@ -66,7 +66,7 @@ export default function AdminQueue({ gameId }: { gameId: string }) {
           <ul class="pin-list">
             {items.map((i) => (
               <li key={i.id}><button type="button" class={i.id === sel ? 'on' : ''} onClick={() => { setSel(i.id); setDraft(JSON.stringify(i.draft, null, 2) ?? ''); }}>
-                <i style={{ background: i.status === 'open' ? 'var(--cz-coral)' : i.status === 'needs-verification' ? '#ffd98a' : '#59607a' }} aria-hidden="true" />
+                <i style={{ background: i.status === 'open' ? 'var(--cz-phos)' : i.status === 'needs-verification' ? '#ffd98a' : '#59607a' }} aria-hidden="true" />
                 <span>{i.title}<small>{i.status} · asked {i.count}× · {i.origin === 'source-check' ? 'source check' : 'players'}</small></span>
                 <b>{i.count}</b>
               </button></li>
