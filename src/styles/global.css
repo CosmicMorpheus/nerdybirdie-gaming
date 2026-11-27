@@ -9,7 +9,9 @@
 @import '@fontsource/press-start-2p/400.css';
 /* COZMC's own type (cozmc.us "v3 arcade after dark"), used only inside COZMC elements. Self-hosted, OFL. */
 @import '@fontsource/silkscreen/latin-700.css';
-@import '@fontsource-variable/saira/wdth.css';
+/* Only the two cuts COZMC elements use (body 400, condensed 800 headlines): ~32 KB instead of the 96 KB variable font. */
+@import '@fontsource/saira/latin-400.css';
+@import '@fontsource/saira-condensed/latin-800.css';
 
 /* ---- Tokens: three layers, kept apart (docs/03_DESIGN_SYSTEM.md) ---- */
 :root {
@@ -46,7 +48,9 @@
   --cz-discord: #5865f2;
   --cz-discord-deep: #2b3290;
   --cz-pixel: 'Silkscreen', ui-monospace, monospace;
-  --cz-sans: 'Saira Variable', 'Saira', system-ui, sans-serif;
+  --cz-sans: 'Saira', system-ui, sans-serif;
+  /* cozmc.us sets Saira at 70% width for headlines; Saira Condensed is the closest static cut. */
+  --cz-condensed: 'Saira Condensed', 'Saira', system-ui, sans-serif;
 
   /* Retro arcade layer (founder direction 2026-11-24): pixel type for headings and HUD labels only. */
   --head: 'Pixelify Sans', 'Space Grotesk', system-ui, sans-serif;

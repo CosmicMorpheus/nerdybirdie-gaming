@@ -132,5 +132,13 @@ Nothing in the page code needs to change. Create `content/games/<new-id>/` with:
 
 Then add the game's card art in `src/components/GameArt.astro` (original art only; other games get a neutral cosmic card) and a row in
 `docs/shared/PRODUCT_REGISTRY.md`. The library, game page, guides, tracker, search, ASK index and progress pick the game up automatically.
-Known single-game spots still to generalise when a second game arrives: the What's New creator feed and the map cross-reference
-(`src/lib/content/spots.ts`) only know GTA VI.
+Map cross-checks are per game (`content/games/<id>/map/crossref-*.json`, optional). The in-guide creator panel only appears for
+games with a `creators/youtube.json`.
+
+**Before a second game goes live, still GTA VI-only:**
+- The daily creator feed on the server (`netlify/lib/feed/`): creators file path, the "GTA VI" title filter, the title-to-section keyword
+  map, and the storage key `gta-vi/daily-v1`. Make these per-game settings and give each game its own key (keep `gta-vi/daily-v1` so the
+  saved feed isn't lost). The Updates page feed follows the primary game.
+- Robbery checklist counts (e.g. "39 count toward 100%") are written in `src/pages/games/[game]/guides/[category].astro`; move them to the
+  game's content if another game needs a checklist.
+- ASK "COZMC" server features (off): `src/lib/ask/queue.ts`, `netlify/functions/ask.mts` and `source-check.mts` assume GTA VI.

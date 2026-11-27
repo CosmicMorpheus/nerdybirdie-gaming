@@ -13,7 +13,7 @@ Last updated: 27 November 2026 (Gaming Guides repo). Order reflects the prioriti
 
 1. Founder playtest of the new landing page on a phone; gather feedback.
 2. More first-hand verification of GTA VI entries (founder/testers, own screenshots), reducing reliance on one outside source.
-3. Lighthouse / performance pass on mobile (never measured yet).
+3. ~~Lighthouse / performance pass on mobile~~ Done 27 Nov (baseline + map fix). Re-run on the live site after launch.
 4. Content template and checklist for a second game (no second game chosen yet — founder decision).
 
 ## Then — community

@@ -22,6 +22,8 @@ interface Props {
   /** One guide section only; omit for all discoveries (What's New). */
   category?: string;
   heading: string;
+  /** Short game name for the copy, e.g. "GTA VI". */
+  gameName: string;
   /** Inside guides: render only when this section has new videos (nothing while loading, off, unavailable or empty). */
   hideWhenOff?: boolean;
   endpoint?: string;
@@ -33,7 +35,7 @@ const CH = /^https:\/\/www\.youtube\.com\/channel\/UC[\w-]{22}$/;
 const when = (v: string | null) => (v ? new Date(v).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' }) : 'not yet');
 const day = (v: string) => new Date(v).toLocaleDateString(undefined, { dateStyle: 'medium' });
 
-export default function Discoveries({ sections, guidesHref, category, heading, hideWhenOff = false, endpoint = '/.netlify/functions/nb-feed' }: Props) {
+export default function Discoveries({ sections, guidesHref, category, heading, gameName, hideWhenOff = false, endpoint = '/.netlify/functions/nb-feed' }: Props) {
   const { progress, ready } = useProgress();
   const [chosen, setChosen] = useState<boolean | null>(null);
   const [load, setLoad] = useState<Load>({ state: 'loading' });
@@ -75,7 +77,7 @@ export default function Discoveries({ sections, guidesHref, category, heading, h
         )}
       </div>
       <p class="small muted">
-        New GTA VI videos from approved creators, found by our daily check. They're sources waiting for community review,
+        New {gameName} videos from approved creators, found by our daily check. They're sources waiting for community review,
         not confirmed guide facts, and they never count toward your progress.
       </p>
       <p class="disc-status small" role="status">

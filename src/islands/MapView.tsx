@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import type { MapPin } from '../lib/content/load';
-import { contextKey, emptyContext, setCompleted, setPrefs, setResume } from '../lib/progress/model';
+import { contextKey, setCompleted, setPrefs, setResume } from '../lib/progress/model';
 import { tally } from '../lib/progress/totals';
 import { search } from '../lib/search';
 import { modeAllows } from '../lib/spoilers';
@@ -24,6 +24,8 @@ const DEFAULT_GROUPS = ['Collectibles'];
 const REGION_LABEL = (r: string) => r.replace(/(^|-)([a-z])/g, (_, a, b) => (a ? ' ' : '') + b.toUpperCase());
 /** Source map units → Leaflet (CRS.Simple): origin top-left, x right, y down (so lat = -y). 0–1024 square. */
 const ll = (x: number, y: number): L.LatLngTuple => [-y, x];
+/** Shared "nothing found yet" record. A fresh object on every render made the pin layer redraw in a loop for new players. */
+const NONE_FOUND: Readonly<Record<string, string>> = Object.freeze({});
 
 /** Filters and view as a shareable query string. Spoiler settings are never in the link. */
 function readUrl() {
@@ -35,7 +37,7 @@ export default function MapView({ gameId, dataUrl, geometryUrl, protectedUrl, vi
   const state = useProgress();
   const { progress, update, remember, ready } = state;
   const key = contextKey(gameId, MAP_CONTEXT);
-  const done = (progress.contexts[key] ?? emptyContext()).completed;
+  const done = progress.contexts[key]?.completed ?? NONE_FOUND;
   const [data, setData] = useState<MapJson | null>(null);
   const [geo, setGeo] = useState<Geometry | null>(null);
   const [failed, setFailed] = useState(false);
@@ -116,18 +118,21 @@ export default function MapView({ gameId, dataUrl, geometryUrl, protectedUrl, vi
     m.attributionControl.setPrefix(false);
     layer.current = L.layerGroup().addTo(m);
     pinRenderer.current = L.canvas({ padding: 0.3 });
-    const sync = () => {
-      const b = m.getBounds(); const c = m.getCenter();
-      setInView((visibleRef.current ?? []).filter((p) => b.contains(ll(p.x, p.y))).sort((a, z) => Math.hypot(a.x - c.lng, -a.y - c.lat) - Math.hypot(z.x - c.lng, -z.y - c.lat)).slice(0, 40));
-      writeUrlRef.current();
-    };
-    m.on('moveend zoomend', sync);
+    // The player moved the map: refresh the "in view" list and save the view (URL + resume point).
+    m.on('moveend zoomend', () => { updateInViewRef.current(); writeUrlRef.current(); });
     map.current = m;
     setMapReady(true);
     return () => { m.remove(); map.current = null; setMapReady(false); };
   }, [geo]);
 
   const writeUrlRef = useRef(() => {});
+  /** Nearest 40 visible pins inside the current view. Cheap; never writes progress or the URL. */
+  const updateInViewRef = useRef(() => {});
+  updateInViewRef.current = () => {
+    const m = map.current; if (!m) return;
+    const b = m.getBounds(); const c = m.getCenter();
+    setInView(visibleRef.current.filter((p) => b.contains(ll(p.x, p.y))).sort((a, z) => Math.hypot(a.x - c.lng, -a.y - c.lat) - Math.hypot(z.x - c.lng, -z.y - c.lat)).slice(0, 40));
+  };
   const visibleRef = useRef<MapPin[]>([]);
   visibleRef.current = visible;
 
@@ -146,8 +151,8 @@ export default function MapView({ gameId, dataUrl, geometryUrl, protectedUrl, vi
         fillColor: c.colour, fillOpacity: found ? 0.3 : 1,
       }).on('click', () => select(p.src, false)).addTo(g);
     }
-    m.fire('moveend');
-  }, [visible, selected, done, data, map.current]);
+    updateInViewRef.current();
+  }, [visible, selected, done, data, mapReady]);
 
   const live = useRef({ cats, region, hideFound, selected });
   live.current = { cats, region, hideFound, selected };

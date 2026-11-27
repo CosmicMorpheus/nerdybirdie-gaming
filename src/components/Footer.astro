@@ -13,10 +13,10 @@ const g = `/games/${Astro.props.gameId}`;
         <div class="bbb">
           <span class="sr-only">Brick by Brick, WE Build.</span>
           <video class="bbb-anim" autoplay muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1"
-            width={BRAND.brickByBrick.videoWidth} height={BRAND.brickByBrick.videoHeight} poster={BRAND.brickByBrick.src}>
+            width={BRAND.brickByBrick.videoWidth} height={BRAND.brickByBrick.videoHeight} poster={BRAND.brickByBrick.small}>
             <source src={BRAND.brickByBrick.video} type="video/mp4" />
           </video>
-          <img class="bbb-still" src={BRAND.brickByBrick.src} alt="" width={BRAND.brickByBrick.width} height={BRAND.brickByBrick.height} loading="lazy" decoding="async" />
+          <img class="bbb-still" src={BRAND.brickByBrick.small} srcset={`${BRAND.brickByBrick.small} 680w, ${BRAND.brickByBrick.src} 1274w`} sizes="340px" alt="" width={BRAND.brickByBrick.width} height={BRAND.brickByBrick.height} loading="lazy" decoding="async" />
         </div>
       </div>
       <nav aria-label="Site">

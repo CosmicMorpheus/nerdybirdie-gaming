@@ -46,7 +46,7 @@ export const BRAND = {
   cozmcMascotFist: '/brand/cozmc/cozmc-mascot-fist.webp',
   /** "Brick by Brick, WE Build." banner: still image (transparent) and the animated version as a short looping video
    * on the footer colour (master: assets/brand/supplied-2026-11-25/brick-by-brick-animated.gif). */
-  brickByBrick: { src: '/brand/brick-by-brick.webp', width: 1274, height: 149, video: '/brand/brick-by-brick.mp4', videoWidth: 960, videoHeight: 106 },
+  brickByBrick: { src: '/brand/brick-by-brick.webp', small: '/brand/brick-by-brick-680.webp', width: 1274, height: 149, video: '/brand/brick-by-brick.mp4', videoWidth: 960, videoHeight: 106 },
 } as const;
 
 /** Videos still in the review queue are shown (clearly labelled) on preview builds only, never once the site is indexable. */

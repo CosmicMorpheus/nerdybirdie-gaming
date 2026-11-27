@@ -7,7 +7,7 @@
 | Responsive design | Phone-first layouts; e2e tests check no sideways scroll at phone and 320px widths | None known | Keep the phone tests on every new page |
 | App navigation | Sticky header + "Menu" sheet on phones; breadcrumbs on game pages | A native-feeling bottom tab bar may suit an app | Decide during the app milestone; the header already derives game links from config |
 | Touch targets | 44px+ on buttons, checkboxes and quick links (tracker test checks this) | None known | — |
-| Performance | Static pages, islands only where needed, self-hosted fonts | **Never measured** (no Lighthouse run recorded) | Run Lighthouse on a mobile profile before the app milestone |
+| Performance | Static pages, islands only where needed, self-hosted fonts. Lighthouse mobile baseline 27 Nov 2026 (local public build, gzip): 89–97 on content pages, 81 on the map; Accessibility 100 everywhere (details in `docs/RELEASE_CHECKLIST.md`) | Not yet measured on the live site or a real phone; map still downloads ~1.1 MB of pin data | Re-run on the live site once the password is off; consider splitting map data by region |
 | Authentication | Supabase magic link built, off | Magic links in a WebView need deep-link handling; Google sign-in likely wanted on Android | Plan Android App Links + optional Google sign-in |
 | Data persistence | Versioned localStorage, backup file, transfer link | WebView storage can be cleared by the OS | Cloud sync (account) for app users; keep local-first |
 | Offline | **No service worker**; manifest has `display: browser` | App "offline access" (Pro feature) not built | Bundle content in the app package, or add a service worker; decide with the app wrapper |
@@ -29,4 +29,4 @@
 
 ## Not checked in this review
 
-Real-device testing, Lighthouse scores, store policy review by a lawyer, Capacitor plugin compatibility.
+Real-device testing, Lighthouse on the live site, store policy review by a lawyer, Capacitor plugin compatibility.

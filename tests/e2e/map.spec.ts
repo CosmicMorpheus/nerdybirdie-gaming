@@ -143,3 +143,25 @@ test('Escape closes the pin panel and returns focus to the list', async ({ page 
   await expect(page.locator('.pin-detail')).toHaveCount(0);
   await expect(page.locator('.pin-list button', { hasText: 'Fixture card one' }).first()).toBeFocused();
 });
+
+test('a new player\'s map draws its pins a few times, not in a loop, and reserves its space before loading', async ({ page, request }) => {
+  // Real build: thousands of pins. Regression for the 27 Nov fix (a fresh empty "found" object each render redrew all pins ~40 times).
+  const html = await (await request.get('http://localhost:4321/games/gta-vi/map/')).text();
+  expect(html).toContain('class="map-loading"'); // same-size placeholder in the server HTML, so the footer doesn't jump
+  await page.addInitScript(() => {
+    const w = window as unknown as { L?: { LayerGroup: { prototype: { clearLayers: () => unknown } } }; __clears: number; __patched?: boolean };
+    w.__clears = 0;
+    const iv = setInterval(() => {
+      if (!w.L || w.__patched) return;
+      w.__patched = true; clearInterval(iv);
+      const orig = w.L.LayerGroup.prototype.clearLayers;
+      w.L.LayerGroup.prototype.clearLayers = function (this: unknown) { w.__clears++; return orig.call(this); };
+    }, 1);
+  });
+  await page.goto('http://localhost:4321/games/gta-vi/map/');
+  await mapReady(page);
+  await page.waitForTimeout(1500);
+  const clears = await page.evaluate(() => (window as unknown as { __clears: number; __patched?: boolean }).__patched ? (window as unknown as { __clears: number }).__clears : -1);
+  expect(clears).toBeGreaterThan(0); // the counter really hooked Leaflet
+  expect(clears).toBeLessThanOrEqual(6);
+});

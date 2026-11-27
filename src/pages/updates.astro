@@ -11,7 +11,7 @@ const fmt = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', ye
 ---
 <Prose title="Updates" current="updates" description="What's new on Nerdy Birdie Gaming Guides.">
   {DISCOVERY_FEED && (
-    <Discoveries client:load heading="What's New from creators" sections={game.guideCategories.map((c) => ({ id: c.id, label: c.label }))}
+    <Discoveries client:load heading="What's New from creators" gameName={game.shortTitle} sections={game.guideCategories.map((c) => ({ id: c.id, label: c.label }))}
       guidesHref={`/games/${game.id}/guides/`} />
   )}
   {DISCOVERY_FEED && creators.length > 0 && (

@@ -6,7 +6,7 @@ import MapChecklist from '../../../../islands/MapChecklist';
 import SpotChecklist from '../../../../islands/SpotChecklist';
 import Discoveries from '../../../../islands/Discoveries';
 import { DISCOVERY_FEED, DISCOVERY_SECTIONS } from '../../../../config';
-import { games, mapData, publicEntries, videosFor } from '../../../../lib/content/load';
+import { creatorsFor, games, mapData, publicEntries, videosFor } from '../../../../lib/content/load';
 
 export function getStaticPaths() {
   return games.flatMap((game) => game.guideCategories.map((section, i) => ({
@@ -16,6 +16,7 @@ export function getStaticPaths() {
 }
 const { game, section, next } = Astro.props;
 const entries = publicEntries(game.id).filter((e) => e.category === section.id);
+const hasCreators = creatorsFor(game.id).length > 0;
 ---
 <Base gameId={game.id} title={`${section.label} · ${game.shortTitle}`} current="guides" description={`${game.title}: ${section.blurb} Spoiler-safe, with sources.`}>
   <div class="wrap">
@@ -45,8 +46,9 @@ const entries = publicEntries(game.id).filter((e) => e.category === section.id);
     )}
     <EntryBrowser client:load gameId={game.id} categories={game.guideCategories} entries={entries} videos={videosFor(game.id)}
       protectedUrl={`/data/${game.id}/protected.json`} fixedCategory={section.id} />
-    {DISCOVERY_FEED && DISCOVERY_SECTIONS.includes(section.id) && (
-      <Discoveries client:idle heading="New creator videos for this section" category={section.id} hideWhenOff
+    {/* The daily feed only follows the primary game's creators (netlify/lib/feed), so only games with their own creators file show it. */}
+    {DISCOVERY_FEED && hasCreators && DISCOVERY_SECTIONS.includes(section.id) && (
+      <Discoveries client:idle heading="New creator videos for this section" gameName={game.shortTitle} category={section.id} hideWhenOff
         sections={game.guideCategories.map((c) => ({ id: c.id, label: c.label }))} guidesHref={`/games/${game.id}/guides/`} />
     )}
     <nav class="after" aria-label="More sections">
