@@ -74,7 +74,7 @@ atmosphere (original art only, no publisher logos); COZMC keeps its purple/coral
 
 ## Remaining decisions and next priorities
 
-Open founder decisions (logo link target, vendor accounts and legal review, COZMC Arcade/Cozmlings URLs, second game) and the prioritised roadmap: `docs/shared/ROADMAP.md`.
+Open founder decisions (vendor accounts and legal review, COZMC Arcade/Cozmlings URLs, second game) and the prioritised roadmap: `docs/shared/ROADMAP.md`.
 
 ## What's here
 
