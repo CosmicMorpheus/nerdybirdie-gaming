@@ -9,7 +9,7 @@ const creators = creatorsFor(game.id);
 const updates = updatesFor(game.id).map((u, i) => ({ ...u, i }));
 const fmt = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
 ---
-<Prose title="Updates" current="updates" description="What's new on NerdyBirdie LLC Gaming Guides.">
+<Prose title="Updates" current="updates" description="What's new on Nerdy Birdie Gaming Guides.">
   {DISCOVERY_FEED && (
     <Discoveries client:load heading="What's New from creators" sections={game.guideCategories.map((c) => ({ id: c.id, label: c.label }))}
       guidesHref={`/games/${game.id}/guides/`} />

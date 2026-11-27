@@ -19,9 +19,9 @@ Last updated: 27 November 2026 (Gaming Guides repo). Detailed visual tokens for 
 
 ## Names
 
-- Product name in the brief and the approved Android app name: **Nerdy Birdie Gaming Guides**.
-- The website currently displays **NerdyBirdie LLC Gaming Guides** (founder rename, 25 Nov 2026). Whether to switch the site to the
-  shorter product name, with "A NerdyBirdie LLC product" as attribution, is an open founder decision (see `ROADMAP.md`).
+- Product name, on the website and the Android app: **Nerdy Birdie Gaming Guides** (founder, 27 Nov 2026; replaces
+  "NerdyBirdie LLC Gaming Guides" from 25 Nov). The company appears as attribution only: "A NerdyBirdie LLC site" in the footer, About page.
+- Short name (phone home screen): "Nerdy Birdie Guides".
 - Tagline "Play Smarter. Discover More." is proposed, not final. Motto: "Brick by Brick, WE Build."
 
 ## Trademarks

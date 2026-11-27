@@ -150,7 +150,7 @@ test('backup: export, bad import rejected without data loss, good import restore
   const bad = join(dir, 'bad.json');
   writeFileSync(bad, '{"hello":1}');
   await page.locator('input[type=file]').setInputFiles(bad);
-  await expect(page.getByText(/isn't a NerdyBirdie LLC Gaming Guides backup. Nothing was changed/)).toBeVisible();
+  await expect(page.getByText(/isn't a Nerdy Birdie Gaming Guides backup. Nothing was changed/)).toBeVisible();
 
   // Untick, then restore the backup: preview first, then confirm.
   await open(page);

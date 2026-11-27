@@ -7,6 +7,7 @@ Last updated: 27 November 2026 (Gaming Guides repo). Order reflects the prioriti
 - Product landing page with **Explore Game Guides**, featured guides, recently updated, progress; GTA VI tools moved to its own game page.
 - Game configuration extended: `featured`, `access`, `platformNote`, per-game `updates.json`; shell (header, footer, ASK, Updates) no longer hard-codes GTA VI.
 - Shared source-of-truth docs; monetization/billing, mobile readiness and content workflow documented.
+- Decided: keep Option A (free guides + optional Android Pro); site renamed to **Nerdy Birdie Gaming Guides**.
 
 ## Next — gaming first
 
@@ -23,7 +24,7 @@ Last updated: 27 November 2026 (Gaming Guides repo). Order reflects the prioriti
 
 ## Later — monetization and apps
 
-8. Founder chooses the monetization model (Option A Pro unlock vs. per-guide unlock) and completes legal check.
+8. Legal check of the app name, terms and refund wording (monetization model settled: Option A, 27 Nov 2026).
 9. Separate staging Netlify project; Supabase staging; Terms, refund and account-deletion pages (lawyer-reviewed).
 10. Android app (Capacitor wrapper, Play Billing or permitted alternative), Google internal/closed testing. iOS later.
 
@@ -31,9 +32,7 @@ Last updated: 27 November 2026 (Gaming Guides repo). Order reflects the prioriti
 
 | # | Decision | Recommendation |
 |---|---|---|
-| 1 | Monetization: keep Option A (free guides + Android Pro) or switch to ~$1.99 per guide | Keep Option A for now; revisit after the app exists and demand is measured |
-| 2 | Site display name: "NerdyBirdie LLC Gaming Guides" (current) or "Nerdy Birdie Gaming Guides" (brief, app name) with LLC as attribution | Switch to "Nerdy Birdie Gaming Guides" so site and app match |
-| 3 | Header logo link: games list (current, your 27 Nov request) or the new landing page | Keep games list; the hero and "Explore Game Guides" cover the landing page |
-| 4 | Supabase account, contact email, Play Console account, legal review | Needed before any account or payment work |
-| 5 | Verified URLs for COZMC Arcade and Cozmlings | Needed before linking them |
-| 6 | Second game for the library | Pick one with strong demand and an achievable verification plan |
+| 1 | Header logo link: games list (current, your 27 Nov request) or the new landing page | Keep games list; the hero and "Explore Game Guides" cover the landing page |
+| 2 | Supabase account, contact email, Play Console account, legal review | Needed before any account or payment work |
+| 3 | Verified URLs for COZMC Arcade and Cozmlings | Needed before linking them |
+| 4 | Second game for the library | Pick one with strong demand and an achievable verification plan |

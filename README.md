@@ -1,7 +1,7 @@
 # Nerdy Birdie Gaming Guides
 
 Free, spoiler-safe game guides and trackers — walkthroughs, maps, checklists and achievement trackers — starting with Grand Theft Auto VI.
-A product of **Nerdy Birdie LLC**. Displayed on the site today as "NerdyBirdie LLC Gaming Guides" (see Remaining decisions).
+A product of **Nerdy Birdie LLC**, credited in the footer and on the About page.
 
 **Status (27 Nov 2026):** built as the public version at https://gameguides-nerdy-birdie.live, **password-protected**, not indexed.
 This branch adds the ecosystem-alignment changes (`docs/ARCHITECTURE_AUDIT_2026-11-27.md`); not deployed.
@@ -45,9 +45,9 @@ pick a new game up without code changes. How-to: `docs/CONTENT_GUIDE.md` → Add
 
 ## Monetization strategy
 
-Founder decision A (27 Nov 2026): the website and every guide stay **free**; revenue from an optional one-time **Pro** unlock in the Android
-app (cloud sync, offline, future premium tools). The ecosystem brief's ~$1.99-per-guide model is an **open decision**; the architecture
-supports per-guide entitlements, but a paid `access` tier fails the build until the founder approves it and server-side checks exist.
+Founder decision A (27 Nov 2026, confirmed again the same day over the brief's ~$1.99-per-guide proposal): the website and every guide stay
+**free**; revenue from an optional one-time **Pro** unlock in the Android app (cloud sync, offline, future premium tools). The architecture could
+support per-guide entitlements later, but a paid `access` tier fails the build unless the founder changes this decision and server-side checks exist.
 No shared password as access control; store billing rules (Google Play, App Store) documented in `docs/MONETIZATION.md`.
 
 ## Community integration
@@ -74,8 +74,7 @@ atmosphere (original art only, no publisher logos); COZMC keeps its purple/coral
 
 ## Remaining decisions and next priorities
 
-Open founder decisions (monetization model, site display name, logo link target, vendor accounts and legal review, COZMC Arcade/Cozmlings URLs,
-second game) and the prioritised roadmap: `docs/shared/ROADMAP.md`.
+Open founder decisions (logo link target, vendor accounts and legal review, COZMC Arcade/Cozmlings URLs, second game) and the prioritised roadmap: `docs/shared/ROADMAP.md`.
 
 ## What's here
 

@@ -14,9 +14,9 @@ The full Updates history was moved into data with **byte-identical rendered text
 
 | Conflict | Handling |
 |---|---|
-| Brief: ~$1.99 per premium guide. Founder decision A (same day): every guide free + optional Android Pro unlock | **Not resolved by me.** Recorded as an open decision; architecture supports both; paid tiers blocked at build |
+| Brief: ~$1.99 per premium guide. Founder decision A (same day): every guide free + optional Android Pro unlock | Founder decided (27 Nov): **keep Option A**. Paid tiers stay blocked at build |
 | Home page was the GTA VI page; brief wants a product landing page | **Changed** (see §6) |
-| Site name "NerdyBirdie LLC Gaming Guides" puts the parent company in the product name; brief and approved app name use "Nerdy Birdie Gaming Guides" | **Not changed** — founder branding decision (ROADMAP open decision 2) |
+| Site name "NerdyBirdie LLC Gaming Guides" puts the parent company in the product name; brief and approved app name use "Nerdy Birdie Gaming Guides" | Founder decided (27 Nov): renamed to **Nerdy Birdie Gaming Guides** on the site; NerdyBirdie LLC kept as attribution |
 | Brief lists `https://www.cozmc.us`; config uses the approved `https://cozmc.us/` | Kept the approved URL (tests assert it) |
 | Unmerged branch `claude/amazing-shannon-1ex2ep` has one decision-log commit ($1.99 guides + Discord invite) | Superseded: the invite is already in `cycle-02`'s log and decision A replaced the pricing note. Not merged |
 

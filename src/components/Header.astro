@@ -19,7 +19,7 @@ const nav = [
   <div class="wrap row">
     <a class="brand" href="/games/" aria-label={`${SITE_NAME}, games list`}>
       <img src={BRAND.mark.src} srcset={`${BRAND.mark.src} 1x, ${BRAND.mark.src2x} 2x`} alt="" width="40" height="40" />
-      <span>NerdyBirdie LLC <small>Gaming Guides</small></span>
+      <span>Nerdy Birdie <small>Gaming Guides</small></span>
     </a>
     <nav class="nav" aria-label="Main">
       {nav.map((n) => <a href={n.href} aria-current={current === n.key ? 'page' : undefined}>{n.label}</a>)}

@@ -10,7 +10,7 @@ to discover the product, find their game, get useful information, save their pro
 
 ## Customer journey
 
-Discover Gaming Guides → select a game → preview the guide → unlock applicable content (today: everything is free) → play and track progress
+Discover Gaming Guides → select a game → preview the guide → use it free (Pro adds cloud sync, offline and premium tools in the app) → play and track progress
 → optionally connect with the COZMC community.
 
 ## Landing page (`/`)
@@ -63,8 +63,8 @@ private review queue, never straight into the guide.
 
 ## Monetization
 
-Founder decision A (27 Nov 2026): the website and every guide stay free; optional one-time Pro unlock in the Android app. The ecosystem brief's
-$1.99-per-guide model is an open decision. Architecture supports both. Details and platform billing rules: `docs/MONETIZATION.md`.
+Founder decision A (27 Nov 2026, confirmed over the brief's $1.99-per-guide proposal): the website and every guide stay free; optional
+one-time Pro unlock in the Android app. Details and platform billing rules: `docs/MONETIZATION.md`.
 
 ## Hard rules (unchanged)
 

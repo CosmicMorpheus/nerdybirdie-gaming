@@ -70,7 +70,7 @@ for (const g of games) for (const e of publicEntries(g.id)) index[e.slug] = { ti
     ev.preventDefault();
     const d = new FormData(form);
     const text = [
-      'Guide report (NerdyBirdie LLC Gaming Guides)',
+      'Guide report (Nerdy Birdie Gaming Guides)',
       entry ? `Entry: ${entry.title} (${location.origin}${entry.href})` : `Page: ${document.referrer || '(not given)'}`,
       `Problem: ${d.get('type')}`,
       `Platform: ${d.get('platform')}`,

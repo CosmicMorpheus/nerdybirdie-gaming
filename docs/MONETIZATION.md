@@ -8,9 +8,9 @@
 |---|---|
 | Founder decision A (27 Nov 2026, `docs/PRO_UNLOCK.md`) | Website and every guide free; optional one-time **Pro** unlock in the Android app (cloud sync, offline, future premium tools) |
 | Ecosystem brief (27 Nov 2026) | Proposes ~$1.99 one-time purchase **per premium game guide**, independent per-guide access, free download and free preview. Described as "a working business decision" |
-| Conflict | The two models differ on whether guide content is ever paid. **Founder decision needed** (ROADMAP open decision 1). Until then Option A stands and CLAUDE.md's "free public guide" rule applies |
+| **Resolved (27 Nov 2026)** | Founder: "Keep Option A". Guide content is never paid; the per-guide model is not adopted. CLAUDE.md's "free public guide" rule stands |
 
-## 2. The architecture supports either model
+## 2. Architecture (Option A, with room to change later)
 
 | Need | How | Status |
 |---|---|---|

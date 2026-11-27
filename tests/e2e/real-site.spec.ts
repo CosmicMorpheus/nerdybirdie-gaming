@@ -262,7 +262,7 @@ test('catalog and credits: the Games card shows status, counts and last update; 
 for (const path of ['/', '/games/gta-vi/guides/robberies/', '/credits/']) {
   test(`header logo goes to the games list from ${path}, keeps its name and shows keyboard focus`, async ({ page }) => {
     await page.goto(REAL + path);
-    const logo = page.getByRole('link', { name: 'NerdyBirdie LLC Gaming Guides, games list', exact: true });
+    const logo = page.getByRole('link', { name: 'Nerdy Birdie Gaming Guides, games list', exact: true });
     await expect(logo).toHaveAttribute('href', '/games/');
     await expect(logo.locator('img')).toHaveAttribute('src', '/brand/nerdy-birdie-mark-96.webp');
     await page.keyboard.press('Tab');
