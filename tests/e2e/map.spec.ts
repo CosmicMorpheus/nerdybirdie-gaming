@@ -108,7 +108,7 @@ test('Continue where you left off returns to the last map pin', async ({ page })
 test('the map credits its data source and license', async ({ page }) => {
   await page.goto(M);
   await mapReady(page);
-  await expect(page.locator('.map-credit')).toContainText('CC BY 4.0');
+  await expect(page.locator('.leaflet-control-attribution')).toContainText('CC BY 4.0'); // map data credit, in the map's corner
 });
 
 test('@phone map uses a bottom sheet and stays usable', async ({ page }) => {
@@ -169,7 +169,7 @@ test('a new player\'s map draws its pins a few times, not in a loop, and reserve
 test('category filters: Show all / Hide all, and All / None per group, cover only categories that have pins', async ({ page }) => {
   await page.goto(M);
   await mapReady(page);
-  const sum = page.locator('.cat-groups summary');
+  const sum = page.locator('.cat-groups > summary');
   const box = (name: string) => page.locator('.cat-row', { hasText: name }).getByRole('checkbox');
   await expect(sum).toHaveText('Categories (1 of 2 on)'); // default: Collectibles only; the undrawn chance-spawn category isn't offered
   const showAll = page.getByRole('button', { name: 'Show all' });
@@ -204,4 +204,20 @@ test('a guide link with several places (?show=) lists and highlights them, turns
   await focus.getByRole('button', { name: 'Clear' }).click();
   await expect(focus).toHaveCount(0);
   await expect(page).not.toHaveURL(/show=/);
+});
+
+test('map panel: quick views set useful filters in one tap; groups fold, and start open only when something in them is on', async ({ page }) => {
+  await page.goto(M);
+  await mapReady(page);
+  const sum = page.locator('.cat-groups > summary');
+  const group = (name: string) => page.locator('details.cat-group', { has: page.locator('.grp-name', { hasText: name }) });
+  await expect(group('Collectibles')).toHaveAttribute('open', ''); // has categories on by default
+  await expect(group('Places')).not.toHaveAttribute('open', ''); // nothing on: starts folded
+  await expect(group('Places').locator('summary')).toContainText('0 of 1 on');
+  await page.getByRole('button', { name: 'Checklist only' }).click();
+  await expect(page.getByRole('button', { name: 'Checklist only' })).toHaveAttribute('aria-pressed', 'true');
+  await expect(sum).toHaveText('Categories (1 of 2 on)'); // the shop is reference-only, so it stays off
+  await group('Places').locator('summary').click();
+  await expect(group('Places')).toHaveAttribute('open', '');
+  await expect(page.locator('.cat-row', { hasText: 'Shops' }).getByRole('checkbox')).not.toBeChecked();
 });

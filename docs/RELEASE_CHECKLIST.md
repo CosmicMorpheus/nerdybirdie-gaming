@@ -14,7 +14,7 @@ Every box needs a name and a date. The founder signs off last. Until then the si
 - [x] 10–15 actionable, sourced guide entries (2026-11-24: 97 entries incl. 68 story missions)
 - [x] Paid items marked "Paid / optional" (2026-11-27: 3 entries flagged — editions, GTA+ perks, GTA+ Elegy; keyword scan of all 227 entries found no unflagged purchase items). Free alternatives: none verified yet
 - [x] Videos: only approved ones show on the public build (checked in a local public build, 2026-11-24: none shown)
-- [x] Map attribution visible: under the map, on About and on Credits (checked 2026-11-27)
+- [x] Map attribution visible: in the map's corner credit strip (moved there 2026-11-28), on About and on Credits
 - [ ] Rights for the traced map geometry reviewed (legal review recommended; founder)
 
 ## Configuration for the public build

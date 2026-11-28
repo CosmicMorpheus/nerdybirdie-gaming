@@ -106,6 +106,16 @@ export default function MapView({ gameId, dataUrl, geometryUrl, protectedUrl, vi
     }
   }, [data, ready, mapReady]);
   const focusSet = useMemo(() => new Set(focus ?? []), [focus]);
+  // Map data credit (CC BY 4.0) in the map's corner credit strip. Built from escaped text; never raw HTML from the data.
+  useEffect(() => {
+    const m = map.current; if (!m || !data) return;
+    const esc = (t: string) => t.replace(/[&<>"']/g, (ch) => `&#${ch.charCodeAt(0)};`);
+    const v = data.provenance;
+    const html = `${esc(v.credit)}, <a href="${esc(v.repo)}" target="_blank" rel="noopener">${esc(v.source)}</a> (rev ${esc(v.revision.slice(0, 7))}), `
+      + `<a href="${esc(v.licenseUrl)}" target="_blank" rel="noopener">${esc(v.license)}</a>. Simplified and redrawn by us; no game art.`;
+    m.attributionControl.addAttribution(html);
+    return () => { m.attributionControl.removeAttribution(html); };
+  }, [mapReady, data]);
 
   const visible = useMemo(() => (data?.pins ?? []).filter((p) =>
     cats?.has(p.kind) && (region === 'all' || p.region === region) && !(hideFound && p.id in done)), [data, cats, region, hideFound, done]);
@@ -113,9 +123,18 @@ export default function MapView({ gameId, dataUrl, geometryUrl, protectedUrl, vi
   // Build the base map once.
   useEffect(() => {
     if (!geo || !mapEl.current || map.current) return;
-    const m = L.map(mapEl.current, { crs: L.CRS.Simple, minZoom: 0, maxZoom: 6, zoomSnap: 0.5, preferCanvas: true, attributionControl: true });
+    const m = L.map(mapEl.current, { crs: L.CRS.Simple, minZoom: -1, maxZoom: 6, zoomSnap: 0.25, /* -1 lets short laptop screens see the whole island */ preferCanvas: true, attributionControl: true });
     const renderer = L.canvas({ padding: 0.3 });
-    m.fitBounds([ll(205, 210), ll(595, 770)]);
+    // Frame the whole island, and keep it framed while the box settles or the window resizes, until the player moves the map.
+    // The whole coastline, worked out from the land outline (falls back to the island's usual extent).
+    const landPts = geo.land.flatMap((poly) => poly.flatMap((ring) => ring.map(([x, y]) => ll(x, y))));
+    const home = landPts.length ? L.latLngBounds(landPts) : L.latLngBounds([ll(205, 210), ll(595, 770)]);
+    let autoFit = true, fitting = false;
+    const fit = () => { fitting = true; m.invalidateSize(); m.fitBounds(home, { padding: [16, 16] }); fitting = false; };
+    m.on('movestart', () => { if (!fitting) autoFit = false; });
+    fit();
+    const ro = new ResizeObserver(() => { if (autoFit) fit(); else m.invalidateSize(); });
+    ro.observe(mapEl.current);
     m.setMaxBounds([ll(100, 100), ll(700, 880)]);
     for (const poly of geo.land) L.polygon(poly.map((ring) => ring.map(([x, y]) => ll(x, y))), { renderer, stroke: true, color: '#3a4560', weight: 1, fillColor: '#1d2436', fillOpacity: 1, interactive: false }).addTo(m);
     for (const r of geo.roads) L.polyline(r.c.map(([x, y]) => ll(x, y)), { renderer, color: r.k === 'h' ? '#c9846a' : '#5d6680', weight: r.k === 'h' ? 1.6 : 1, opacity: 0.8, interactive: false }).addTo(m);
@@ -126,13 +145,14 @@ export default function MapView({ gameId, dataUrl, geometryUrl, protectedUrl, vi
       L.marker(ll(lb.x, lb.y), { interactive: false, keyboard: false, icon: L.divIcon({ className: 'map-label', html: el, iconSize: undefined }) }).addTo(m);
     }
     m.attributionControl.setPrefix(false);
+    m.attributionControl.setPosition('bottomleft'); // bottom-right is where the ASK button floats
     layer.current = L.layerGroup().addTo(m);
     pinRenderer.current = L.canvas({ padding: 0.3 });
     // The player moved the map: refresh the "in view" list and save the view (URL + resume point).
     m.on('moveend zoomend', () => { updateInViewRef.current(); writeUrlRef.current(); });
     map.current = m;
     setMapReady(true);
-    return () => { m.remove(); map.current = null; setMapReady(false); };
+    return () => { ro.disconnect(); m.remove(); map.current = null; setMapReady(false); };
   }, [geo]);
 
   const writeUrlRef = useRef(() => {});
@@ -227,6 +247,23 @@ export default function MapView({ gameId, dataUrl, geometryUrl, protectedUrl, vi
     const kinds = new Set((data?.pins ?? []).map((p) => p.kind));
     return (data?.categories ?? []).filter((c) => kinds.has(c.id));
   }, [data]);
+  /** One-tap filter presets. "Checklist only" hides the reference-only places (shops, food, transport…). */
+  const views = useMemo(() => {
+    const inGroup = (g: string) => available.filter((c) => c.group === g).map((c) => c.id);
+    return [
+      { id: 'checklist', label: 'Checklist only', hint: 'Everything that counts toward the map checklist; hides shops, food and other reference places', ids: available.filter((c) => c.trackable).map((c) => c.id) },
+      ...['Collectibles', 'Activities', 'Crime'].filter((g) => inGroup(g).length).map((g) => ({ id: g, label: g, hint: `Only ${g.toLowerCase()}`, ids: inGroup(g) })),
+    ].filter((v) => v.ids.length);
+  }, [available]);
+  const sameSet = (ids: string[]) => !!cats && ids.length === available.filter((c) => cats.has(c.id)).length && ids.every((id) => cats.has(id));
+  /** Category groups the player has open. Starts with the groups that have something switched on. */
+  const [openGroups, setOpenGroups] = useState<Set<string>>(new Set());
+  const groupsOpened = useRef(false);
+  useEffect(() => {
+    if (groupsOpened.current || !cats || !data) return;
+    groupsOpened.current = true;
+    setOpenGroups(new Set(available.filter((c) => cats.has(c.id)).map((c) => c.group)));
+  }, [cats, data]);
   /** Turn a set of categories on or off together (everything, or one group). Other categories keep their state. */
   const setMany = (ids: string[], on: boolean) => setCats((s) => {
     const n = new Set(s);
@@ -261,10 +298,10 @@ export default function MapView({ gameId, dataUrl, geometryUrl, protectedUrl, vi
             <p class="hud-label">Map checklist</p>
             <p class="big pixel">{ready ? `${overall.done}/${overall.total}` : '…'}</p>
             <div class="bar" role="progressbar" aria-label="Map collectibles found" aria-valuemin={0} aria-valuemax={overall.total} aria-valuenow={overall.done}><i style={{ width: `${overall.percent ?? 0}%` }} /></div>
-            <p class="small muted">Found, out of every checklist pin we publish. Filters never change this count. It isn't the game's own 100%, which hasn't been verified.</p>
             {data && (
               <details class="small muted counts">
-                <summary>Why do the numbers differ?</summary>
+                <summary>About these numbers</summary>
+                <p>Found, out of every checklist pin we publish. Filters never change this count. It isn't the game's own 100%, which hasn't been verified.</p>
                 <p>{data.pins.length.toLocaleString()} pins are drawn on the map. {overall.total.toLocaleString()} of them count toward the checklist; shops and places are for reference only.
                   {data.withheld ? ` ${data.withheld.toLocaleString()} chance spawns (vehicles, weapons, events) are held back until confirmed.` : ''} All pins are community-reported and Unconfirmed until checked; that doesn't mean they're wrong.</p>
               </details>
@@ -288,6 +325,14 @@ export default function MapView({ gameId, dataUrl, geometryUrl, protectedUrl, vi
           {results && (results.length ? <>{<p class="small muted">{results.length} result{results.length > 1 ? 's' : ''}</p>}{list(results)}</> : <p class="small muted">No pins match.</p>)}
           {!results && (
             <>
+              <div class="quick-views" role="group" aria-label="Quick views">
+                <p class="hud-label">Quick views</p>
+                <div class="qv-row">
+                  {views.map((v) => (
+                    <button key={v.id} type="button" aria-pressed={sameSet(v.ids)} onClick={() => setCats(new Set(v.ids))} title={v.hint}>{v.label}</button>
+                  ))}
+                </div>
+              </div>
               <div class="map-filters">
                 <label class="field-label compact">Region
                   <select value={region} onChange={(e) => setRegion((e.target as HTMLSelectElement).value)}>
@@ -306,14 +351,15 @@ export default function MapView({ gameId, dataUrl, geometryUrl, protectedUrl, vi
                 {groups.map((g) => {
                   const ids = available.filter((c) => c.group === g).map((c) => c.id);
                   if (!ids.length) return null;
+                  const on = ids.filter((id) => cats?.has(id)).length;
                   return (
-                  <fieldset key={g}>
-                    <legend>{g}
-                      <span class="grp-bulk">
-                        <button type="button" onClick={() => setMany(ids, true)} disabled={ids.every((id) => cats?.has(id))}>All<span class="sr-only"> {g}</span></button>
-                        <button type="button" onClick={() => setMany(ids, false)} disabled={!ids.some((id) => cats?.has(id))}>None<span class="sr-only"> {g}</span></button>
-                      </span>
-                    </legend>
+                  <details key={g} class="cat-group" open={openGroups.has(g)}
+                    onToggle={(e) => { const o = (e.currentTarget as HTMLDetailsElement).open; setOpenGroups((s) => { const n = new Set(s); o ? n.add(g) : n.delete(g); return n; }); }}>
+                    <summary><span class="grp-name">{g}</span><small>{on} of {ids.length} on</small></summary>
+                    <div class="grp-bulk">
+                      <button type="button" onClick={() => setMany(ids, true)} disabled={on === ids.length}>All<span class="sr-only"> {g}</span></button>
+                      <button type="button" onClick={() => setMany(ids, false)} disabled={on === 0}>None<span class="sr-only"> {g}</span></button>
+                    </div>
                     {data!.categories.filter((c) => c.group === g).map((c) => {
                       const pins = (data!.pins).filter((p) => p.kind === c.id);
                       if (!pins.length) return null;
@@ -330,7 +376,7 @@ export default function MapView({ gameId, dataUrl, geometryUrl, protectedUrl, vi
                         </label>
                       );
                     })}
-                  </fieldset>
+                  </details>
                   );
                 })}
               </details>
@@ -373,12 +419,6 @@ export default function MapView({ gameId, dataUrl, geometryUrl, protectedUrl, vi
           </div>
         )}
       </div>
-      {data && (
-        <p class="map-credit small muted">
-          {data.provenance.credit}: <a href={data.provenance.repo} target="_blank" rel="noopener">{data.provenance.source}</a> (revision {data.provenance.revision.slice(0, 7)}),{' '}
-          <a href={data.provenance.licenseUrl} target="_blank" rel="noopener">{data.provenance.license}</a>. Changed by us: simplified geometry, shortened notes, our own map drawing and pins. No game art or screenshots are used.
-        </p>
-      )}
     </div>
   );
 }

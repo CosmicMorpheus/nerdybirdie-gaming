@@ -3,6 +3,15 @@
   "updates": [
     {
       "date": "2026-11-28",
+      "title": "Tidier map",
+      "items": [
+        "On computers the map now fills the screen exactly, with a shorter title, so nothing hangs off the bottom and the page doesn't scroll while you zoom. The whole island fits on smaller laptop screens too.",
+        "Quick views: Checklist only (hides shops, food and transit), Collectibles, Activities and Crime, one tap each.",
+        "Category groups fold up and show how many are on; groups with nothing switched on start folded. Place names on the map no longer run into each other as much."
+      ]
+    },
+    {
+      "date": "2026-11-28",
       "title": "Guide entries on the map",
       "items": [
         "77 guide entries now link to their places on the map (was 10): illegal operations and their unique weapons, fences and pawn shops, story mission venues, optional mission starts, missable items, and whole sets like WAiNK scans, magazines, meditation spots and card sets.",
