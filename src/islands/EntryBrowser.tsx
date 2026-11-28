@@ -21,9 +21,14 @@ interface Props {
   protectedUrl: string;
   /** Set on a section page: hides the section filter. */
   fixedCategory?: string;
+  /** "Show on map" links per entry id, built at build time (entryMapLinks in lib/content/load). */
+  mapLinks?: Record<string, { href: string; label: string }[]>;
 }
 type Details = Record<string, { title: string; summary: string; steps?: string[] }>;
 type Status = 'all' | 'todo' | 'done';
+
+/** "Show on map: Delights →" for one place, "Show 20 places on the map →" for a set. */
+const mapLinkText = (label: string) => (/^\d+ places on the map$/.test(label) ? `Show ${label} →` : `Show on map: ${label} →`);
 
 export const SPOILER_LABEL: Record<SpoilerLevel, string> = { none: 'No spoilers', minor: 'Mild spoiler', major: 'Major spoiler' };
 const VERIFY: Record<PublicEntry['verification'], { label: string; cls: string; hint: string }> = {
@@ -36,7 +41,7 @@ const VERIFY: Record<PublicEntry['verification'], { label: string; cls: string; 
 /** Above this many entries, the all-sections view waits for a search or a section instead of listing everything. */
 const COLLAPSE_AT = 40;
 
-export default function EntryBrowser({ gameId, categories, entries: builtEntries, videos, protectedUrl, fixedCategory }: Props) {
+export default function EntryBrowser({ gameId, categories, entries: builtEntries, videos, protectedUrl, fixedCategory, mapLinks = {} }: Props) {
   const state = useProgress();
   const { progress, update, remember, ready } = state;
   const key = contextKey(gameId, GUIDES_CONTEXT);
@@ -139,8 +144,10 @@ export default function EntryBrowser({ gameId, categories, entries: builtEntries
                       {e.facts.length > 0 && (
                         <dl class="facts">{e.facts.map((f, i) => <div key={i}><dt>{f.label}</dt><dd>{f.value}</dd></div>)}</dl>
                       )}
-                      {e.mapPinIds.length > 0
-                        ? <p><a class="btn btn-quiet" href={`/games/${gameId}/map/?pin=${e.mapPinIds[0]!.split(':').pop()}`}>Show on map →</a></p>
+                      {mapLinks[e.id]?.length
+                        ? (mapLinks[e.id]!.length === 1
+                          ? <p><a class="btn btn-quiet" href={mapLinks[e.id]![0]!.href}>{mapLinkText(mapLinks[e.id]![0]!.label)}</a></p>
+                          : <div class="map-links"><p class="small muted">Show on map:</p><ul>{mapLinks[e.id]!.map((l) => <li key={l.href}><a class="btn btn-quiet" href={l.href}>{l.label} →</a></li>)}</ul></div>)
                         : (e.category === 'collectibles' || e.category === 'weapons' || e.category === 'vehicles') && <p class="small muted">Show on map: not available yet. No verified location.</p>}
                       {e.platformNote && <p class="small muted">Platform note: {e.platformNote}</p>}
                       {e.gameVersion && <p class="small muted">Checked on game version {e.gameVersion}</p>}

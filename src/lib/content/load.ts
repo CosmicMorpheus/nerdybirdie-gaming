@@ -191,3 +191,32 @@ export function creatorsFor(gameId: string): Creator[] {
   if (new Set(list.map((c) => c.channelId)).size !== list.length) throw new Error(`${gameId}: duplicate creator`);
   return list.filter((c) => c.status === 'approved');
 }
+
+/** A "Show on map" link for a guide entry. */
+export interface MapLink { href: string; label: string }
+
+/**
+ * Map links for guide entries, worked out at build time from each entry's mapPinIds:
+ * up to 6 places get a link each (named, so players can tell them apart); more get one link that shows them all, labelled
+ * with how many places are mapped (community data can be incomplete, so never "all").
+ * A set that is exactly every pin of its categories uses the category filter (?c=); any other set uses ?show=.
+ */
+export function entryMapLinks(gameId: string, entries: { id: string; mapPinIds: string[] }[]): Record<string, MapLink[]> {
+  const m = mapData(gameId);
+  if (!m) return {};
+  const base = `/games/${gameId}/map/`;
+  const byId = new Map(m.pins.map((p) => [p.id, p]));
+  const out: Record<string, MapLink[]> = {};
+  for (const e of entries) {
+    const pins = e.mapPinIds.map((id) => byId.get(id)).filter((p): p is MapPin => !!p);
+    if (!pins.length) continue;
+    if (pins.length <= 6) {
+      out[e.id] = pins.map((p) => ({ href: `${base}?pin=${p.src}`, label: p.area && !p.name.includes(p.area) ? `${p.name} · ${p.area}` : p.name }));
+      continue;
+    }
+    const kinds = [...new Set(pins.map((p) => p.kind))];
+    const wholeKinds = m.pins.filter((p) => kinds.includes(p.kind)).length === pins.length;
+    out[e.id] = [{ href: wholeKinds ? `${base}?c=${kinds.join(',')}` : `${base}?show=${pins.map((p) => p.src).join(',')}`, label: `${pins.length} places on the map` }];
+  }
+  return out;
+}

@@ -68,3 +68,9 @@
 }
 .counts summary { cursor: pointer; min-height: 32px; display: flex; align-items: center; }
 .counts p { margin: 6px 0 0 !important; }
+/* Places a guide entry linked to (?show=…): listed above "In view", highlighted on the map. */
+.focus-list { margin: 14px 0 4px; padding: 10px; border: 1px solid var(--vc-pink); border-radius: 10px; background: var(--vc-midnight); }
+.focus-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+.focus-head h2 { margin: 0; }
+.focus-head button { min-height: 32px; padding: 0 12px; border: 1px solid var(--vc-line); border-radius: 8px; background: transparent; color: var(--vc-pearl); font: 600 13px var(--body); cursor: pointer; }
+.focus-head button:hover { border-color: var(--vc-pink); }

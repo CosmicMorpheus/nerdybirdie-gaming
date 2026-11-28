@@ -3,7 +3,7 @@ import Base from '../../../../layouts/Base.astro';
 import CozmcInline from '../../../../components/CozmcInline.astro';
 import GuideBoard from '../../../../islands/GuideBoard';
 import EntryBrowser from '../../../../islands/EntryBrowser';
-import { games, getGame, publicEntries, videosFor } from '../../../../lib/content/load';
+import { games, getGame, publicEntries, videosFor, entryMapLinks } from '../../../../lib/content/load';
 export function getStaticPaths() { return games.map((g) => ({ params: { game: g.id } })); }
 const game = getGame(Astro.params.game!);
 const entries = publicEntries(game.id);
@@ -24,7 +24,7 @@ const categories = game.guideCategories.map((c) => ({ ...c, entryIds: entries.fi
     </p>
     <GuideBoard client:load gameId={game.id} base={`/games/${game.id}/guides/`} categories={categories} />
     <h2 class="browse-h">Search all guides</h2>
-    <EntryBrowser client:load gameId={game.id} categories={game.guideCategories} entries={entries} videos={videosFor(game.id)} protectedUrl={`/data/${game.id}/protected.json`} />
+    <EntryBrowser client:load gameId={game.id} categories={game.guideCategories} entries={entries} videos={videosFor(game.id)} mapLinks={entryMapLinks(game.id, entries)} protectedUrl={`/data/${game.id}/protected.json`} />
     <div style="margin-top:32px"><CozmcInline text="Found something? Share it in the community." /></div>
   </div>
 </Base>

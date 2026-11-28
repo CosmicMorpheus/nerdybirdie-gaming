@@ -6,7 +6,7 @@ import MapChecklist from '../../../../islands/MapChecklist';
 import SpotChecklist from '../../../../islands/SpotChecklist';
 import Discoveries from '../../../../islands/Discoveries';
 import { DISCOVERY_FEED, DISCOVERY_SECTIONS } from '../../../../config';
-import { creatorsFor, games, mapData, publicEntries, videosFor } from '../../../../lib/content/load';
+import { creatorsFor, games, mapData, publicEntries, videosFor, entryMapLinks } from '../../../../lib/content/load';
 
 export function getStaticPaths() {
   return games.flatMap((game) => game.guideCategories.map((section, i) => ({
@@ -44,7 +44,7 @@ const hasCreators = creatorsFor(game.id).length > 0;
         title="Robbery checklist" cls="robbery-list" colourNote="coloured like the in-game map (illegal operations yellow, smash 'n' grabs green, stick-ups light blue)"
         targets={{ gang: '39 count toward 100%', smash: '34 count toward 100%', store: '100 needed for 100%', bank: '22 bank jobs + 8 vaults', payday: '7 count toward 100%' }} />
     )}
-    <EntryBrowser client:load gameId={game.id} categories={game.guideCategories} entries={entries} videos={videosFor(game.id)}
+    <EntryBrowser client:load gameId={game.id} categories={game.guideCategories} entries={entries} videos={videosFor(game.id)} mapLinks={entryMapLinks(game.id, entries)}
       protectedUrl={`/data/${game.id}/protected.json`} fixedCategory={section.id} />
     {/* The daily feed only follows the primary game's creators (netlify/lib/feed), so only games with their own creators file show it. */}
     {DISCOVERY_FEED && hasCreators && DISCOVERY_SECTIONS.includes(section.id) && (

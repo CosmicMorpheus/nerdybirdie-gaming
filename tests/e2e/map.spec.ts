@@ -192,3 +192,16 @@ test('category filters: Show all / Hide all, and All / None per group, cover onl
   await showAll.click();
   await expect(page).toHaveURL(/[?&]c=(card,shop|shop,card)(&|$)/);
 });
+
+test('a guide link with several places (?show=) lists and highlights them, turns their categories on, and can be cleared', async ({ page }) => {
+  await page.goto(M + '?show=fx-card-1,fx-card-2,nope');
+  await mapReady(page);
+  const focus = page.locator('.focus-list');
+  await expect(focus.getByRole('heading')).toHaveText('From the guide · 2 places'); // unknown pin ids are ignored
+  await expect(focus.locator('.pin-list li')).toHaveCount(2);
+  await expect(page.locator('.cat-row', { hasText: 'Collectible cards' }).getByRole('checkbox')).toBeChecked();
+  await expect(page).toHaveURL(/show=fx-card-1,fx-card-2/); // stays shareable
+  await focus.getByRole('button', { name: 'Clear' }).click();
+  await expect(focus).toHaveCount(0);
+  await expect(page).not.toHaveURL(/show=/);
+});

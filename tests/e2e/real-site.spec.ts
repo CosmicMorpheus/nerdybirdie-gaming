@@ -309,3 +309,18 @@ test('Updates history renders from data, newest first, and the footer links back
   expect(heads.at(-1)).toBe('24 November 2026 · Preview');
   await expect(page.locator('footer').getByRole('link', { name: 'NerdyBirdie LLC home' })).toHaveAttribute('href', 'https://nerdy-birdie.com/');
 });
+
+test('guide entries link to their map places: one named link per place, or one link for a set', async ({ page }) => {
+  await page.goto(REAL + '/games/gta-vi/guides/robberies/');
+  const kingpin = page.locator('li', { hasText: 'Kingpin Bowling (illegal operation)' }).last();
+  await kingpin.getByRole('button', { name: /More details/ }).click();
+  const links = kingpin.locator('.map-links a');
+  await expect(links).toHaveCount(2);
+  await expect(links.first()).toHaveAttribute('href', '/games/gta-vi/map/?pin=gang-operation-004');
+  await expect(links.nth(1)).toContainText('Gutterball Moreland 850');
+  await page.goto(REAL + '/games/gta-vi/guides/collectibles/');
+  const delights = page.locator('li', { hasText: 'Delights card set (18 cards)' }).last();
+  await delights.getByRole('button', { name: /More details/ }).click();
+  const set = delights.getByRole('link', { name: /Show \d+ places on the map/ });
+  await expect(set).toHaveAttribute('href', /\/games\/gta-vi\/map\/\?show=card-delights-/);
+});

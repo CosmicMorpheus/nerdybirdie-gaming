@@ -30,7 +30,7 @@ const NONE_FOUND: Readonly<Record<string, string>> = Object.freeze({});
 /** Filters and view as a shareable query string. Spoiler settings are never in the link. */
 function readUrl() {
   const q = new URLSearchParams(location.search);
-  return { cats: q.get('c'), region: q.get('r'), hideFound: q.get('hf') === '1', pin: q.get('pin'), view: q.get('v') };
+  return { cats: q.get('c'), region: q.get('r'), hideFound: q.get('hf') === '1', pin: q.get('pin'), view: q.get('v'), show: q.get('show') };
 }
 
 export default function MapView({ gameId, dataUrl, geometryUrl, protectedUrl, videos, base }: Props) {
@@ -49,6 +49,8 @@ export default function MapView({ gameId, dataUrl, geometryUrl, protectedUrl, vi
   const [revealed, setRevealed] = useState<Set<string>>(new Set());
   const [sheet, setSheet] = useState(false);
   const [inView, setInView] = useState<MapPin[]>([]);
+  /** Pins a guide entry asked to show (?show=a,b,c): highlighted, listed and zoomed to. Cleared by the player. */
+  const [focus, setFocus] = useState<string[] | null>(null);
   const [copied, setCopied] = useState(false);
   const [hidden, setHidden] = useState<Record<string, { summary: string }> | null>(null);
   const [revealFailed, setRevealFailed] = useState(false);
@@ -95,7 +97,15 @@ export default function MapView({ gameId, dataUrl, geometryUrl, protectedUrl, vi
     const view = u.view ?? (location.search ? null : progress.prefs.map.view);
     if (view && map.current) { const [z, x, y] = view.split('/').map(Number); if ([z, x, y].every(Number.isFinite)) map.current.setView(ll(x!, y!), z!); }
     if (pin && pinBySrc.has(pin)) select(pin, !view);
+    // A guide entry's set of places: turn their categories on and frame them (unless the link also carries a view).
+    const shown = (u.show ?? '').split(',').filter((src) => pinBySrc.has(src));
+    if (shown.length) {
+      setFocus(shown);
+      setCats((cs) => { const n = new Set(cs); for (const src of shown) n.add(pinBySrc.get(src)!.kind); return n; });
+      if (!view && !pin && map.current) map.current.fitBounds(L.latLngBounds(shown.map((src) => { const p = pinBySrc.get(src)!; return ll(p.x, p.y); })).pad(0.15), { maxZoom: 5 });
+    }
   }, [data, ready, mapReady]);
+  const focusSet = useMemo(() => new Set(focus ?? []), [focus]);
 
   const visible = useMemo(() => (data?.pins ?? []).filter((p) =>
     cats?.has(p.kind) && (region === 'all' || p.region === region) && !(hideFound && p.id in done)), [data, cats, region, hideFound, done]);
@@ -142,20 +152,25 @@ export default function MapView({ gameId, dataUrl, geometryUrl, protectedUrl, vi
     if (!m || !g || !data) return;
     g.clearLayers();
     const renderer = pinRenderer.current!;
-    for (const p of visible) {
+    // Guide-set pins are drawn last so faded neighbours never cover them.
+    const order = focusSet.size ? [...visible].sort((a, z) => Number(focusSet.has(a.src)) - Number(focusSet.has(z.src))) : visible;
+    for (const p of order) {
       const c = catById.get(p.kind)!;
       const found = p.id in done;
       const sel = p.src === selected;
+      const inFocus = focusSet.has(p.src);
+      const faded = focusSet.size > 0 && !inFocus && !sel;
       L.circleMarker(ll(p.x, p.y), {
-        renderer, radius: sel ? 9 : 6, color: sel ? '#ffffff' : '#000', weight: sel ? 3 : 1.5,
-        fillColor: c.colour, fillOpacity: found ? 0.3 : 1,
+        // While a guide set is shown, the other pins fade back so the set stands out.
+        renderer, radius: sel ? 9 : inFocus ? 8 : faded ? 4 : 6, color: sel || inFocus ? '#ffffff' : '#000', weight: sel ? 3 : inFocus ? 2.5 : faded ? 0.5 : 1.5,
+        fillColor: c.colour, fillOpacity: faded ? 0.25 : found ? 0.3 : 1,
       }).on('click', () => select(p.src, false)).addTo(g);
     }
     updateInViewRef.current();
-  }, [visible, selected, done, data, mapReady]);
+  }, [visible, selected, done, data, mapReady, focusSet]);
 
-  const live = useRef({ cats, region, hideFound, selected });
-  live.current = { cats, region, hideFound, selected };
+  const live = useRef({ cats, region, hideFound, selected, focus });
+  live.current = { cats, region, hideFound, selected, focus };
   function writeUrl() {
     const { cats, region, hideFound, selected } = live.current;
     const m = map.current; if (!m || !cats || !restored.current) return;
@@ -165,6 +180,7 @@ export default function MapView({ gameId, dataUrl, geometryUrl, protectedUrl, vi
     if (region !== 'all') q.set('r', region);
     if (hideFound) q.set('hf', '1');
     if (selected) q.set('pin', selected);
+    if (live.current.focus?.length) q.set('show', live.current.focus.join(','));
     const view = `${m.getZoom()}/${Math.round(c.lng)}/${Math.round(-c.lat)}`;
     q.set('v', view);
     const qs = q.toString().replace(/%2C/g, ',').replace(/%2F/g, '/');
@@ -174,7 +190,7 @@ export default function MapView({ gameId, dataUrl, geometryUrl, protectedUrl, vi
     remember((s) => setResume(setPrefs(s, { map: { view, filters, pin: selected } }), { href: `${base}?${qs}`, label: sel ? `Map: ${sel.name}` : 'Leonida map', at: new Date().toISOString() }));
   }
   writeUrlRef.current = writeUrl;
-  useEffect(() => { if (restored.current) writeUrl(); }, [cats, region, hideFound, selected]);
+  useEffect(() => { if (restored.current) writeUrl(); }, [cats, region, hideFound, selected, focus]);
 
   function select(src: string, fly = true) {
     const p = pinBySrc.get(src); if (!p) return;
@@ -260,6 +276,15 @@ export default function MapView({ gameId, dataUrl, geometryUrl, protectedUrl, vi
             <span class="sr-only">Search the map</span>
             <input type="search" placeholder="Search pins, e.g. “Pricilla”" value={query} onInput={(e) => setQuery((e.target as HTMLInputElement).value)} />
           </label>
+            {focus && focus.length > 0 && (
+              <section class="focus-list" aria-labelledby="focus-h">
+                <div class="focus-head">
+                  <h2 id="focus-h" class="hud-label">From the guide · {focus.length} place{focus.length > 1 ? 's' : ''}</h2>
+                  <button type="button" onClick={() => setFocus(null)}>Clear</button>
+                </div>
+                {list(focus.map((src) => pinBySrc.get(src)!).filter(Boolean))}
+              </section>
+            )}
           {results && (results.length ? <>{<p class="small muted">{results.length} result{results.length > 1 ? 's' : ''}</p>}{list(results)}</> : <p class="small muted">No pins match.</p>)}
           {!results && (
             <>

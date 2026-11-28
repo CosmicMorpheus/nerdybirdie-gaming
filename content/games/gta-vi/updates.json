@@ -3,6 +3,15 @@
   "updates": [
     {
       "date": "2026-11-28",
+      "title": "Guide entries on the map",
+      "items": [
+        "77 guide entries now link to their places on the map (was 10): illegal operations and their unique weapons, fences and pawn shops, story mission venues, optional mission starts, missable items, and whole sets like WAiNK scans, magazines, meditation spots and card sets.",
+        "Entries with a few places get a named link for each one. Sets open the map with just those places highlighted and listed, and a Clear button.",
+        "Links only appear where the map has the same place. Map pins are community data and are still marked Unconfirmed."
+      ]
+    },
+    {
+      "date": "2026-11-28",
       "title": "Map filters",
       "items": [
         "Map: Show all and Hide all buttons for the categories, plus All and None for each group (Collectibles, Crime and so on). Your choice is saved in the map link like before.",

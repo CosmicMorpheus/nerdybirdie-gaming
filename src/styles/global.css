@@ -155,3 +155,7 @@ h3 { font-size: 18px; margin: 0 0 4px; }
 .scanlines { position: relative; }
 .scanlines::after { content: ''; position: absolute; inset: 0; pointer-events: none;
   background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.18) 0 1px, transparent 1px 3px); mix-blend-mode: multiply; }
+
+/* Guide entry with several map places: one named link each. */
+.map-links p { margin: 0 0 6px; }
+.map-links ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
