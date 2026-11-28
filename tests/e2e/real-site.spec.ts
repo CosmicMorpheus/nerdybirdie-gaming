@@ -304,7 +304,8 @@ test('Updates history renders from data, newest first, and the footer links back
   await page.goto(REAL + '/updates/');
   const heads = await page.locator('main h2').filter({ hasText: /\d{4} ·/ }).allTextContents();
   expect(heads.length).toBeGreaterThan(10);
-  expect(heads[0]).toMatch(/^27 November 2026 · /);
+  const first = JSON.parse(readFileSync('content/games/gta-vi/updates.json', 'utf8')).updates[0];
+  expect(heads[0]).toBe(`${new Date(first.date + 'T12:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })} · ${first.title}`);
   expect(heads.at(-1)).toBe('24 November 2026 · Preview');
   await expect(page.locator('footer').getByRole('link', { name: 'NerdyBirdie LLC home' })).toHaveAttribute('href', 'https://nerdy-birdie.com/');
 });

@@ -2,6 +2,15 @@
   "schemaVersion": 1,
   "updates": [
     {
+      "date": "2026-11-28",
+      "title": "Optional missions",
+      "items": [
+        "The Side missions section is now Optional missions & activities, matching what IGN calls these missions.",
+        "New: Pick Up a Gun and McKittrick Farm (Chapter 2), including how to get Kyle's chemical van for free. McKittrick Farm's later parts are behind a spoiler reveal.",
+        "Randy's Wish List moved here from Vehicles, now with all 20 cars on his list and which ones need his hint. Your tick carries over."
+      ]
+    },
+    {
       "date": "2026-11-27",
       "title": "Report a problem & credits",
       "items": [

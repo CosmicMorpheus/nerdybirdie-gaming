@@ -7278,17 +7278,32 @@
     "id": "gta-vi:entry:vehicles-randys-wish-list",
     "gameId": "gta-vi",
     "slug": "vehicles-randys-wish-list",
-    "category": "vehicles",
+    "category": "side-missions",
     "title": "Randy's Wish List (Chapter 3)",
-    "summary": "Randy, a car fence, gives you a list of cars to steal. After the first one he hands you the Key Cloner, which makes stealing far easier.",
+    "summary": "An optional mission chain from Randy, the Vice City car fence: steal the 20 cars on his list. The first one earns you the Key Cloner, which opens cars that need a digital key.",
     "steps": [
-      "Some cars are only found after Randy gives you a hint; talk to him at each drop-off for the next one.",
-      "Others can be found straight away at dealerships, upscale homes and car meets."
+      "After Clonin' Keys, Makin' Gs, steal the first car (the Granforma Zorrusso) and Randy gives you the Key Cloner.",
+      "Nine cars only appear after Randy hints at them: talk to him at every drop-off to get the next search area on your map. Going early won't work, as the car isn't there yet.",
+      "The other eleven can be hunted straight away. They park at dealerships, upscale homes and car meets, though which spot they use varies.",
+      "Before each drop-off, repair the car at the gas station across from Randy's place: pull up to a pump and choose repair.",
+      "Some hinted cars are guarded (armed guards, gang members or police), so arrive ready."
     ],
     "facts": [
       {
         "label": "Starts after",
         "value": "Clonin' Keys, Makin' Gs"
+      },
+      {
+        "label": "Cars",
+        "value": "20 (9 hinted by Randy, 11 found anywhere they spawn)"
+      },
+      {
+        "label": "Hinted cars",
+        "value": "Granforma Zorrusso, Invetero Coquette D10, Pegassi Vitello, Bravado Banshee, Ascot Paragon, Piccia Furia, Bravado Gauntlet Hellfire, Pegassi '96 Infernus, Pegassi Tempesta"
+      },
+      {
+        "label": "Find-anywhere cars",
+        "value": "Grotti Itali RSX, Ubermacht Cypher, Pegassi Toros, Pfister Growler, Buckingham Windsor Drop, Grotti Carbonizzare, Gallivanter Baller ST-D, Ocelot Jugular, Benefactor Dubsta, Pfister Neon, Buckingham Jubilee"
       },
       {
         "label": "Tool",
@@ -7305,21 +7320,33 @@
         "publisher": "IGN",
         "title": "Randy's Wish List - All Randy's Car Locations",
         "url": "https://www.ign.com/wikis/gta-6/Randy%27s_Wish_List_-_All_Randy%27s_Car_Locations",
-        "checkedAt": "2026-11-24",
-        "supports": "Facts in this entry"
+        "checkedAt": "2026-11-28",
+        "supports": "Car list, hints vs. free-roam cars, repair tip"
       },
       {
         "publisher": "IGN",
         "title": "Chapter 3 Optional Missions",
         "url": "https://www.ign.com/wikis/gta-6/Chapter_3_Optional_Missions",
-        "checkedAt": "2026-11-24",
+        "checkedAt": "2026-11-28",
         "supports": "How each optional mission starts"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Optional Missions",
+        "url": "https://www.ign.com/wikis/gta-6/Optional_Missions",
+        "checkedAt": "2026-11-28",
+        "supports": "Mission list, chapter and how each one starts"
       }
     ],
     "platformNote": null,
     "gameVersion": null,
-    "mapPinIds": [],
-    "objectiveIds": [],
+    "mapPinIds": [
+      "gta-vi:map:fence-009"
+    ],
+    "objectiveIds": [
+      "gta-vi:xbox:supply-demand",
+      "gta-vi:ps5:supply-demand"
+    ],
     "status": "published"
   },
   {
@@ -7413,6 +7440,137 @@
     "platformNote": null,
     "gameVersion": null,
     "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:side-pick-up-a-gun",
+    "gameId": "gta-vi",
+    "slug": "side-pick-up-a-gun",
+    "category": "side-missions",
+    "title": "Pick Up a Gun (Chapter 2)",
+    "summary": "One of the first optional missions in Chapter 2: arm Lucia at the Port Gellhorn gun shop. No reward, but you'll want a weapon for what comes next.",
+    "steps": [
+      "Head to Gellhorn Outfitters, the gun shop on the beach side of west Port Gellhorn. It's marked on your map.",
+      "Cheapest route: take your guns back out of the weapon locker inside. Anything you stored in a gun locker or your vehicle in Chapter 1 is there, and equipping it completes the mission.",
+      "Or buy one. Money is tight this early; the Scorpio Nipper .38 pistol at $495 is the most affordable option IGN lists, as most other guns cost $1,000 or more.",
+      "Leave the shop with a gun and the mission clears."
+    ],
+    "facts": [
+      {
+        "label": "Available from",
+        "value": "Chapter 2"
+      },
+      {
+        "label": "Starts",
+        "value": "Automatically"
+      },
+      {
+        "label": "Where",
+        "value": "Gellhorn Outfitters, Port Gellhorn"
+      },
+      {
+        "label": "Reward",
+        "value": "None"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "none",
+    "details": null,
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Optional Missions",
+        "url": "https://www.ign.com/wikis/gta-6/Optional_Missions",
+        "checkedAt": "2026-11-28",
+        "supports": "Mission list, chapter and how each one starts"
+      },
+      {
+        "publisher": "IGN",
+        "title": "Pick Up a Gun Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/Pick_Up_a_Gun_Walkthrough",
+        "checkedAt": "2026-11-28",
+        "supports": "Shop, locker option and cheapest pistol"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [
+      "gta-vi:map:ammu-nation-023"
+    ],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
+    "id": "gta-vi:entry:side-mckittrick-farm",
+    "gameId": "gta-vi",
+    "slug": "side-mckittrick-farm",
+    "category": "side-missions",
+    "title": "McKittrick Farm (Chapter 2)",
+    "summary": "A four-part optional mission for Kyle, a farmer with a busted arm who needs a pilot. Parts 1 and 2 pay $1,400 in total; how it ends is behind the spoiler reveal.",
+    "steps": [
+      "Start: once you control Lucia in Chapter 2 (after What's In the Bag begins), look at the \"pilot wanted\" flyer beside the Starlet Motel office door before you see Linda. Inspecting it marks McKittrick Farm on your map, about a mile away, east of Port Gellhorn.",
+      "Part 1, crop dusting: meet Kyle at the grass airstrip and take his plane up. Fly over the pink marker when he calls for it and hold R1 / RB to spray. Do it three times, then land back on the grass strip (approach wide and cut the power). Pays $400.",
+      "Part 2, chemicals: Kyle texts later asking for chemicals from the Farm Fix Meth Lab, the Final Chapter gang's illegal operation in Leonard County, north of Belville. Talk your way past the gate guard instead of fighting.",
+      "Free van: when the gang asks for money, choose Negotiate → Pay Later → offer collateral (Kyle's plane). Paying instead ($3,000 via Negotiate → Pay Less, or $5,000 outright) makes no difference later, so take it free. Stealing it by force is also possible but means fighting the gang.",
+      "Drive the van to Kyle's barn (marked) for $1,000. The giant strawberries are safe to eat and give you a short buff.",
+      "Parts 3 and 4 start by themselves later in Chapter 2 with texts from Kyle. Open the spoiler details for what happens."
+    ],
+    "facts": [
+      {
+        "label": "Available from",
+        "value": "Chapter 2"
+      },
+      {
+        "label": "Starts",
+        "value": "Flyer at the Starlet Motel office"
+      },
+      {
+        "label": "Parts",
+        "value": "4"
+      },
+      {
+        "label": "Pays",
+        "value": "$400 + $1,000 (parts 1–2)"
+      }
+    ],
+    "chapter": 2,
+    "mode": "story",
+    "spoilerLevel": "major",
+    "details": {
+      "summary": "Kyle's strawberries are mutating him. In part 3 he has turned into a huge, rampaging creature; in part 4 you track him to the meth lab, where he leaps away for good. Completing it earns the Western Searing Zombie Bobber, a standout motorcycle.",
+      "steps": [
+        "Part 3: after Kyle's increasingly garbled texts (the last one reads like \"I hurt\"), go back to the farm. It's surrounded by police. Offer to help, say you're Kyle's friend and that you feel fine, then put on the hazmat suit from the ambulance.",
+        "In the barn Kyle has mutated. He wrecks the police and their cars, so keep your distance until he calms down, then talk to him and tell him to leave. He asks for a hug (it costs a little health) and leaps off. Drop any gun and leave before more police arrive.",
+        "Part 4: no text tells you, but Kyle has gone back to the Farm Fix Meth Lab. The gate is smashed and the gang is in chaos. Use Focus Mode to spot him in the big building on the left, go up the stairs and talk to him. He jumps out through a skylight and the mission is complete (no on-screen notice).",
+        "With the gang scattered you can loot the warehouse unopposed: the safe in the upstairs office (its code is on a note in the side lab), the Throttler Verro weapon variant on the walkway, and the Western Searing Zombie Bobber standout motorcycle at the foot of the stairs."
+      ]
+    },
+    "verification": "confirmed",
+    "sources": [
+      {
+        "publisher": "IGN",
+        "title": "Optional Missions",
+        "url": "https://www.ign.com/wikis/gta-6/Optional_Missions",
+        "checkedAt": "2026-11-28",
+        "supports": "Mission list, chapter and how each one starts"
+      },
+      {
+        "publisher": "IGN",
+        "title": "McKittrick Farm Walkthrough",
+        "url": "https://www.ign.com/wikis/gta-6/McKittrick_Farm_Walkthrough",
+        "checkedAt": "2026-11-28",
+        "supports": "All four parts, payments, free-van dialogue and loot"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [
+      "gta-vi:map:safehouse-003",
+      "gta-vi:map:gang-operation-012"
+    ],
     "objectiveIds": [],
     "status": "published"
   },
