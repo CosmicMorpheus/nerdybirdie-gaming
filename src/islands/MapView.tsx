@@ -206,6 +206,17 @@ export default function MapView({ gameId, dataUrl, geometryUrl, protectedUrl, vi
   const selCat = sel ? catById.get(sel.kind) : null;
   const selVideos = sel ? videos.flatMap((v) => v.moments.filter((m) => m.target === sel.id).map((m) => ({ v, m }))) : [];
   const groups = [...new Set((data?.categories ?? []).map((c) => c.group))];
+  /** Categories that have at least one pin on this map: the ones the filter list shows, and what "Show all" turns on. */
+  const available = useMemo(() => {
+    const kinds = new Set((data?.pins ?? []).map((p) => p.kind));
+    return (data?.categories ?? []).filter((c) => kinds.has(c.id));
+  }, [data]);
+  /** Turn a set of categories on or off together (everything, or one group). Other categories keep their state. */
+  const setMany = (ids: string[], on: boolean) => setCats((s) => {
+    const n = new Set(s);
+    for (const id of ids) (on ? n.add(id) : n.delete(id));
+    return n;
+  });
 
   if (failed) return <p class="notice error">The map couldn't load. Check your connection and reload. The guide and checklists still work without it.</p>;
 
@@ -262,10 +273,22 @@ export default function MapView({ gameId, dataUrl, geometryUrl, protectedUrl, vi
                 <label class="toggle"><input type="checkbox" checked={hideFound} onChange={(e) => setHideFound((e.target as HTMLInputElement).checked)} /> Hide found</label>
               </div>
               <details class="cat-groups" open>
-                <summary>Categories ({cats?.size ?? 0} on)</summary>
-                {groups.map((g) => (
+                <summary>Categories ({available.filter((c) => cats?.has(c.id)).length} of {available.length} on)</summary>
+                <div class="cat-bulk" role="group" aria-label="All categories">
+                  <button type="button" onClick={() => setMany(available.map((c) => c.id), true)} disabled={available.every((c) => cats?.has(c.id))}>Show all</button>
+                  <button type="button" onClick={() => setMany(available.map((c) => c.id), false)} disabled={!available.some((c) => cats?.has(c.id))}>Hide all</button>
+                </div>
+                {groups.map((g) => {
+                  const ids = available.filter((c) => c.group === g).map((c) => c.id);
+                  if (!ids.length) return null;
+                  return (
                   <fieldset key={g}>
-                    <legend>{g}</legend>
+                    <legend>{g}
+                      <span class="grp-bulk">
+                        <button type="button" onClick={() => setMany(ids, true)} disabled={ids.every((id) => cats?.has(id))}>All<span class="sr-only"> {g}</span></button>
+                        <button type="button" onClick={() => setMany(ids, false)} disabled={!ids.some((id) => cats?.has(id))}>None<span class="sr-only"> {g}</span></button>
+                      </span>
+                    </legend>
                     {data!.categories.filter((c) => c.group === g).map((c) => {
                       const pins = (data!.pins).filter((p) => p.kind === c.id);
                       if (!pins.length) return null;
@@ -283,7 +306,8 @@ export default function MapView({ gameId, dataUrl, geometryUrl, protectedUrl, vi
                       );
                     })}
                   </fieldset>
-                ))}
+                  );
+                })}
               </details>
               <h2 class="hud-label inview-h">In view · nearest first</h2>
               {inView.length ? list(inView) : <p class="small muted">No pins in view. Zoom out or turn on more categories.</p>}

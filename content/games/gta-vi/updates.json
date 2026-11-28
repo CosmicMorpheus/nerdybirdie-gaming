@@ -3,6 +3,14 @@
   "updates": [
     {
       "date": "2026-11-28",
+      "title": "Map filters",
+      "items": [
+        "Map: Show all and Hide all buttons for the categories, plus All and None for each group (Collectibles, Crime and so on). Your choice is saved in the map link like before.",
+        "Phones: the zoom buttons no longer sit on top of the open filter panel."
+      ]
+    },
+    {
+      "date": "2026-11-28",
       "title": "Optional missions",
       "items": [
         "The Side missions section is now Optional missions & activities, matching what IGN calls these missions.",

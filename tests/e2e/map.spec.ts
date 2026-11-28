@@ -165,3 +165,30 @@ test('a new player\'s map draws its pins a few times, not in a loop, and reserve
   expect(clears).toBeGreaterThan(0); // the counter really hooked Leaflet
   expect(clears).toBeLessThanOrEqual(6);
 });
+
+test('category filters: Show all / Hide all, and All / None per group, cover only categories that have pins', async ({ page }) => {
+  await page.goto(M);
+  await mapReady(page);
+  const sum = page.locator('.cat-groups summary');
+  const box = (name: string) => page.locator('.cat-row', { hasText: name }).getByRole('checkbox');
+  await expect(sum).toHaveText('Categories (1 of 2 on)'); // default: Collectibles only; the undrawn chance-spawn category isn't offered
+  const showAll = page.getByRole('button', { name: 'Show all' });
+  const hideAll = page.getByRole('button', { name: 'Hide all' });
+  await showAll.click();
+  await expect(sum).toHaveText('Categories (2 of 2 on)');
+  await expect(showAll).toBeDisabled();
+  await expect(box('Collectible cards')).toBeChecked();
+  await hideAll.click();
+  await expect(sum).toHaveText('Categories (0 of 2 on)');
+  await expect(hideAll).toBeDisabled();
+  await expect(page.getByText('No pins in view. Zoom out or turn on more categories.')).toBeVisible();
+  // One group on its own; the other group is untouched.
+  await page.getByRole('button', { name: 'All Collectibles' }).click();
+  await expect(box('Collectible cards')).toBeChecked();
+  await expect(sum).toHaveText('Categories (1 of 2 on)');
+  await page.getByRole('button', { name: 'None Collectibles' }).click();
+  await expect(sum).toHaveText('Categories (0 of 2 on)');
+  // The choice is saved in the shareable link, like single checkboxes.
+  await showAll.click();
+  await expect(page).toHaveURL(/[?&]c=(card,shop|shop,card)(&|$)/);
+});

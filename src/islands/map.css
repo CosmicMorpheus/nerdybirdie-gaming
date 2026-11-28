@@ -11,7 +11,17 @@
 .toggle input, .cat-row input { width: 20px; height: 20px; accent-color: var(--vc-pink); }
 .cat-groups summary { cursor: pointer; font-weight: 600; min-height: 36px; display: flex; align-items: center; }
 .cat-groups fieldset { border: 0; padding: 0; margin: 8px 0 0; }
-.cat-groups legend { font: 400 9px/1.6 var(--pixel); text-transform: uppercase; color: var(--vc-muted); padding: 0; margin-bottom: 4px; }
+.cat-groups legend { display: flex; align-items: center; justify-content: space-between; gap: 8px; width: 100%;
+  font: 400 9px/1.6 var(--pixel); text-transform: uppercase; color: var(--vc-muted); padding: 0; margin-bottom: 4px; }
+/* Bulk on/off: all categories, then per group. Disabled when there's nothing to change. */
+.cat-bulk { display: flex; gap: 8px; margin: 6px 0 4px; }
+.cat-bulk button, .grp-bulk button { border: 1px solid var(--vc-line); background: var(--vc-midnight); color: var(--vc-pearl); border-radius: 8px; cursor: pointer;
+  font: 600 14px var(--body); text-transform: none; }
+.cat-bulk button { flex: 1; min-height: 44px; }
+.grp-bulk { display: inline-flex; gap: 6px; }
+.grp-bulk button { min-height: 32px; min-width: 52px; padding: 0 10px; font-size: 13px; }
+.cat-bulk button:hover:not(:disabled), .grp-bulk button:hover:not(:disabled) { border-color: var(--vc-pink); }
+.cat-bulk button:disabled, .grp-bulk button:disabled { opacity: 0.45; cursor: default; }
 .cat-row { display: grid; grid-template-columns: 20px 12px minmax(0, 1fr) auto; align-items: center; gap: 8px; min-height: 36px; font-size: 14px; cursor: pointer; }
 .cat-row i, .pin-list i, .pin-detail .hud-label i { width: 12px; height: 12px; border-radius: 50%; border: 1px solid #000; display: inline-block; }
 .cat-row small { color: var(--vc-muted); font-size: 12px; }
@@ -48,7 +58,7 @@
   .mapwrap { grid-template-columns: 1fr; border-radius: 0; border-left: 0; border-right: 0; }
   .map-stage { order: 1; height: calc(100dvh - 190px); min-height: 380px; }
   /* Bottom sheet on phones */
-  .map-panel { order: 2; position: fixed; left: 0; right: 0; bottom: 0; z-index: 900; min-height: 0; max-height: 52px; border-right: 0; border-top: 2px solid #000;
+  .map-panel { order: 2; position: fixed; left: 0; right: 0; bottom: 0; z-index: 1100; /* above Leaflet controls (1000) */ min-height: 0; max-height: 52px; border-right: 0; border-top: 2px solid #000;
     border-radius: 12px 12px 0 0; transition: max-height 200ms ease; box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.5); }
   .map-panel.open { max-height: 78dvh; }
   .sheet-handle { display: block; min-height: 52px; width: 100%; border: 0; background: var(--vc-raised); color: var(--vc-pearl); font: 600 15px var(--body); cursor: pointer; flex: none; }
