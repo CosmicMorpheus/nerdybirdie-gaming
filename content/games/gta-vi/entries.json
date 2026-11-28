@@ -11467,6 +11467,67 @@
     "status": "published"
   },
   {
+    "id": "gta-vi:entry:side-freddies-bunker-hurricanes",
+    "gameId": "gta-vi",
+    "slug": "side-freddies-bunker-hurricanes",
+    "category": "side-missions",
+    "title": "Freddie's bunker: unlock hurricanes",
+    "summary": "Break into a prepper's booby-trapped compound in North Leonard County, twice, to befriend Freddie. Finishing his side mission is how hurricanes get into your game, and it pays well.",
+    "steps": [
+      "Find the unmarked, high-security compound in North Leonard County, just north-west of Lake Leonida. A voice at the south gate tells you to leave, and the fence is electrified, so don't climb it.",
+      "First visit: walk north to the shipping containers. Use the bulldozer there to push the orange container aside and drop into the tunnel underneath.",
+      "Coming out of the tunnel, use Focus Mode to spot the mines (small red dots) and run past them. Focus doesn't drain while you have no weapon out. Stay on rooftops, crates and rubble where you can.",
+      "Drones launch from the bunker on your left. Shoot the first one and keep moving (shoot the next one too if you need a moment), then try the bunker's front door to meet Freddie.",
+      "He promises better defences and texts you a few in-game days later. Leave through the front gate; the mines and drones are switched off on the way out.",
+      "Second visit, after his text: the tunnel is blocked. Climb the tall tower north of the fence (one level up is enough) and jump onto the shed on the other side.",
+      "Dodge the mines and drones again (there are more this time). The bunker door shocks you, but Freddie lets you straight in.",
+      "Later a hurricane warning comes in and Freddie asks whether you stay or leave. Open the spoiler details to see what each choice does."
+    ],
+    "facts": [
+      {
+        "label": "Where",
+        "value": "North Leonard County, north-west of Lake Leonida"
+      },
+      {
+        "label": "Visits",
+        "value": "2 (wait for Freddie's text in between)"
+      },
+      {
+        "label": "Reward",
+        "value": "Money (up to $10,000, depending on the chapter) and Freddie's Dubsta, a standout vehicle"
+      },
+      {
+        "label": "Unlocks",
+        "value": "Hurricanes as random weather (per Polygon)"
+      }
+    ],
+    "chapter": null,
+    "mode": "story",
+    "spoilerLevel": "minor",
+    "details": {
+      "summary": "Stay, and you spend a week partying in the bunker waiting for the end of the world that never comes; outside, the sky is clear. Leave straight away, and you walk right into a hurricane (Polygon says you're unlikely to die). Polygon says hurricanes should become a permanent random weather event either way, but leaving is the only guaranteed way to see one now.",
+      "steps": [
+        "Either way Freddie pays you and you can take Freddie's Dubsta.",
+        "If you want the hurricane experience for certain, choose to leave."
+      ]
+    },
+    "verification": "unconfirmed",
+    "sources": [
+      {
+        "publisher": "Polygon",
+        "title": "How to unlock hurricanes in GTA 6",
+        "url": "https://www.polygon.com/gta-6-hurricanes-how-to-unlock-freddies-mission/",
+        "checkedAt": "2026-11-28",
+        "supports": "Compound location, both break-ins, the final choice, rewards and the hurricane unlock (article by Marloes Valentina Stella, 27 Nov 2026; text supplied by the founder)"
+      }
+    ],
+    "platformNote": null,
+    "gameVersion": null,
+    "mapPinIds": [],
+    "objectiveIds": [],
+    "status": "published"
+  },
+  {
     "id": "gta-vi:entry:exploration-ahol-street-art",
     "gameId": "gta-vi",
     "slug": "exploration-ahol-street-art",

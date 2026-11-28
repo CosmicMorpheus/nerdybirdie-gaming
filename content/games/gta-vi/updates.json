@@ -3,6 +3,13 @@
   "updates": [
     {
       "date": "2026-11-28",
+      "title": "Hurricanes",
+      "items": [
+        "New optional mission: Freddie's bunker. How to break into his compound in North Leonard County (twice), what it pays, and how it unlocks hurricanes. The choice at the end is behind a spoiler reveal. Marked Unconfirmed until a second source checks it."
+      ]
+    },
+    {
+      "date": "2026-11-28",
       "title": "Tidier map",
       "items": [
         "On computers the map now fills the screen exactly, with a shorter title, so nothing hangs off the bottom and the page doesn't scroll while you zoom. The whole island fits on smaller laptop screens too.",
